@@ -1,0 +1,933 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>College Corridor | College Admission Consultant in India | MBBS, B.Tech & MBA</title>
+  <meta name="description" content="College Corridor is an education consultancy providing personalized college admission guidance for MBBS, MD/MS, B.Tech, MBA and other programs. Get expert counselling for MCC, State Counselling, entrance-based, management and NRI admissions across India.">
+  <meta property="og:title" content="College Corridor — Education Consultancy & Admissions Advisory">
+  <meta property="og:description" content="Your education consultancy and admissions advisory partner for college selection, counselling and entrance examination guidance across India and abroad.">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+
+<!-- Announcement Bar -->
+<div class="announcement-bar" role="banner">
+  🏆 India's No.1 Education Consultancy — <a href="#" data-modal="lead" style="color:inherit;text-decoration:underline;font-weight:700;">Book Expert Admission Counselling Today</a>
+</div>
+
+<!-- Navbar -->
+<header>
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="nav-inner">
+      <!-- Logo -->
+      <a href="index.html" class="nav-logo" aria-label="College Corridor Home">
+        <img src="assets/images/logo-icon.png" alt="College Corridor" class="nav-logo-icon-img">
+        <div class="nav-logo-text">
+          <span class="logo-main">College Corridor</span>
+          <span class="logo-sub">Your Path. Our Purpose. ✨</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <div class="nav-links" role="menubar">
+        <!-- Admissions Dropdown -->
+        <div class="nav-dropdown" role="menuitem">
+          <button class="nav-dropdown-btn" aria-haspopup="true" aria-expanded="false" id="admissions-menu-btn">
+            Admissions
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="dropdown-menu" role="menu" aria-labelledby="admissions-menu-btn">
+            <a href="medical-admissions.html" class="dropdown-item" role="menuitem">
+              <span class="di-icon">🏥</span>
+              <span><span class="di-label">Medical Admissions</span><span class="di-sub">MBBS, MD, MS — NEET guidance</span></span>
+            </a>
+            <a href="engineering-admissions.html" class="dropdown-item" role="menuitem">
+              <span class="di-icon">⚙️</span>
+              <span><span class="di-label">Engineering Admissions</span><span class="di-sub">B.Tech — JEE, state & university</span></span>
+            </a>
+            <a href="management-admissions.html" class="dropdown-item" role="menuitem">
+              <span class="di-icon">📊</span>
+              <span><span class="di-label">MBA & Management</span><span class="di-sub">MBA, PGDM, BBA admissions</span></span>
+            </a>
+            <a href="law-admissions.html" class="dropdown-item" role="menuitem">
+              <span class="di-icon">⚖️</span>
+              <span><span class="di-label">Law Admissions</span><span class="di-sub">BA LLB, LLB — CLAT, AILET</span></span>
+            </a>
+            <div class="dropdown-divider"></div>
+            <a href="pharmacy-nursing.html" class="dropdown-item" role="menuitem">
+              <span class="di-icon">💊</span>
+              <span><span class="di-label">Pharmacy & Nursing</span><span class="di-sub">Allied health programs</span></span>
+            </a>
+            <a href="nri-admissions.html" class="dropdown-item" role="menuitem">
+              <span class="di-icon">🌐</span>
+              <span><span class="di-label">NRI Admissions</span><span class="di-sub">NRI quota guidance</span></span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Counselling Tab (Direct Link + Dropdown) -->
+        <div class="nav-dropdown" role="menuitem">
+          <a href="counselling.html" class="nav-dropdown-btn" aria-haspopup="true" aria-expanded="false">
+            Counselling
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+          </a>
+          <div class="dropdown-menu" role="menu">
+            <a href="counselling.html" class="dropdown-item" role="menuitem"><span class="di-icon">🎯</span><span><span class="di-label">Counselling Hub</span><span class="di-sub">Overview of all counselling services</span></span></a>
+            <a href="entrance-exams.html" class="dropdown-item" role="menuitem"><span class="di-icon">📝</span><span><span class="di-label">Entrance Exams</span><span class="di-sub">NEET, JEE, CAT, CLAT & more</span></span></a>
+          </div>
+        </div>
+
+        <a href="find-colleges.html" class="nav-link">Find Colleges</a>
+        <a href="compare-colleges.html" class="nav-link">Compare</a>
+        <a href="study-abroad.html" class="nav-link">Study Abroad</a>
+        <a href="about.html" class="nav-link">About</a>
+      </div>
+
+      <!-- Desktop CTA -->
+      <div class="nav-cta">
+        <button class="btn btn-primary btn-sm" id="nav-cta-btn" data-modal="lead">Get Expert Counselling</button>
+      </div>
+
+      <!-- Mobile Hamburger -->
+      <button class="hamburger" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Nav Drawer -->
+  <div class="mobile-nav" id="mobile-nav" role="dialog" aria-label="Mobile navigation" aria-modal="true">
+    <a href="medical-admissions.html" class="mobile-nav-link">🏥 Medical Admissions</a>
+    <a href="engineering-admissions.html" class="mobile-nav-link">⚙️ Engineering Admissions</a>
+    <a href="management-admissions.html" class="mobile-nav-link">📊 MBA & Management</a>
+    <a href="law-admissions.html" class="mobile-nav-link">⚖️ Law Admissions</a>
+    <a href="pharmacy-nursing.html" class="mobile-nav-link">💊 Pharmacy & Nursing</a>
+    <div class="mobile-nav-section">
+      <div class="mobile-nav-section-title">Guidance</div>
+      <a href="counselling.html" class="mobile-nav-sub">Counselling Hub</a>
+      <a href="entrance-exams.html" class="mobile-nav-sub">Entrance Exams</a>
+      <a href="nri-admissions.html" class="mobile-nav-sub">NRI Admissions</a>
+      <a href="study-abroad.html" class="mobile-nav-sub">Study Abroad</a>
+    </div>
+    <div class="mobile-nav-section">
+      <div class="mobile-nav-section-title">Tools</div>
+      <a href="find-colleges.html" class="mobile-nav-sub">Find Colleges</a>
+      <a href="compare-colleges.html" class="mobile-nav-sub">Compare Colleges</a>
+    </div>
+    <div class="mobile-nav-section">
+      <div class="mobile-nav-section-title">Info</div>
+      <a href="about.html" class="mobile-nav-sub">About Us</a>
+      <a href="contact.html" class="mobile-nav-sub">Contact</a>
+      <a href="resources.html" class="mobile-nav-sub">Resources</a>
+    </div>
+    <div style="margin-top:2rem;">
+      <button class="btn btn-primary" style="width:100%" data-modal="lead">Get Expert Counselling</button>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<!-- ═══════════════════════════════════════════════════
+     HERO SECTION
+     ═══════════════════════════════════════════════════ -->
+<section class="hero" aria-label="Hero">
+  <div class="hero-bg">
+    <img src="assets/images/hero-bg.png" alt="Students walking through university campus" fetchpriority="high">
+    <div class="hero-bg-overlay"></div>
+  </div>
+  <div class="hero-gradient-orbs">
+  </div>
+  <canvas id="hero-canvas" aria-hidden="true"></canvas>
+
+  <div class="hero-content">
+    <div class="hero-eyebrow">
+      <span class="section-label" style="letter-spacing:0.08em;font-weight:800;background:rgba(255,255,255,0.12);border:1px solid rgba(226,184,66,0.5);">🏆 INDIA'S MOST TRUSTED ADMISSIONS &amp; COUNSELLING FIRM</span>
+    </div>
+    <h1 class="hero-h1" style="color:#FFFFFF;font-weight:800;">
+      Strategic College Admissions with Proven Success
+    </h1>
+    <p class="hero-sub" style="max-width:760px;font-size:var(--fs-lg);line-height:1.75;color:#F8FAFC;">
+      Empowering thousands of aspiring students to secure top seats across premier Medical, Engineering, Management, Law, and International Universities. Backed by a decade of institutional expertise, 100% data precision, and personalized choice-filling strategies.
+    </p>
+
+    <!-- Trust Proof Pills (Solid Legitimate Styling) -->
+    <div style="display:flex;flex-wrap:wrap;gap:var(--sp-3);margin-bottom:var(--sp-8);">
+      <div style="display:flex;align-items:center;gap:6px;padding:8px 16px;background:rgba(255,255,255,0.1);border:1px solid rgba(226,184,66,0.5);border-radius:var(--radius-full);font-size:var(--fs-xs);font-weight:700;">
+        <span>✨</span> 98.4% Choice Satisfaction Rate
+      </div>
+      <div style="display:flex;align-items:center;gap:6px;padding:8px 16px;background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.25);border-radius:var(--radius-full);font-size:var(--fs-xs);font-weight:700;color:#FFFFFF;">
+        <span>🔒</span> 100% Verified Data &amp; Transparency
+      </div>
+    </div>
+
+    <div class="hero-actions">
+      <button class="btn btn-primary btn-lg" id="hero-cta-primary" data-modal="lead" style="font-weight:800;letter-spacing:0.02em;">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        Book Admission Counselling
+      </button>
+      <a href="find-colleges.html" class="btn btn-secondary btn-lg" id="hero-cta-secondary" style="font-weight:700;">
+        Explore College Seat Options
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════
+     ADMISSION PATHWAYS
+     ═══════════════════════════════════════════════════ -->
+<section class="section" aria-labelledby="pathways-heading">
+  <div class="container">
+    <div class="section-heading centered reveal">
+      <span class="section-label">Multiple Routes to Your College</span>
+      <h2 id="pathways-heading">Choose Your Admission Pathway</h2>
+      <p>College Corridor guides students through multiple domestic and international admission routes.</p>
+    </div>
+
+    <div class="grid-4 stagger" style="margin-top:var(--sp-12)">
+      <div class="feature-card reveal">
+        <div class="card-icon" style="background:rgba(201,150,12,0.15);border-color:rgba(201,150,12,0.3);margin-bottom:var(--sp-5)">📝</div>
+        <h3 style="font-size:var(--fs-xl);margin-bottom:var(--sp-3)">Entrance Exam–Based</h3>
+        <p style="font-size:var(--fs-sm);color:var(--clr-text-2);margin-bottom:var(--sp-4)">For students seeking admission based on national, state or university-level entrance examinations.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:var(--sp-2)">
+          <span class="tag tag--gold">NEET</span><span class="tag">JEE</span><span class="tag">CAT</span><span class="tag">XAT</span><span class="tag">CLAT</span><span class="tag">BITSAT</span>
+        </div>
+      </div>
+      <div class="feature-card reveal">
+        <div class="card-icon blue" style="margin-bottom:var(--sp-5)">🏛️</div>
+        <h3 style="font-size:var(--fs-xl);margin-bottom:var(--sp-3)">Management Admissions</h3>
+        <p style="font-size:var(--fs-sm);color:var(--clr-text-2)">Guidance for eligible students exploring participating private, deemed and other institutions offering applicable institutional or management admission pathways.</p>
+      </div>
+      <div class="feature-card reveal">
+        <div class="card-icon green" style="margin-bottom:var(--sp-5)">🌐</div>
+        <h3 style="font-size:var(--fs-xl);margin-bottom:var(--sp-3)">NRI Admissions</h3>
+        <p style="font-size:var(--fs-sm);color:var(--clr-text-2)">Guidance for eligible NRI students, NRI families, overseas students and NRI-sponsored candidates where applicable.</p>
+        <a href="nri-admissions.html" class="card-link" style="margin-top:var(--sp-4)">Learn more →</a>
+      </div>
+      <div class="feature-card reveal">
+        <div class="card-icon teal" style="margin-bottom:var(--sp-5)">✈️</div>
+        <h3 style="font-size:var(--fs-xl);margin-bottom:var(--sp-3)">Study Abroad</h3>
+        <p style="font-size:var(--fs-sm);color:var(--clr-text-2)">Country and university selection, applications and visa guidance for students exploring international education.</p>
+        <a href="study-abroad.html" class="card-link" style="margin-top:var(--sp-4)">Learn more →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════
+     COUNSELLING JOURNEY
+     ═══════════════════════════════════════════════════ -->
+<section class="section section-alt" aria-labelledby="counselling-heading">
+  <div class="container">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--sp-16);align-items:center;" class="reveal">
+      <div>
+        <span class="section-label">End-to-End Support</span>
+        <h2 id="counselling-heading" style="font-size:var(--fs-4xl);font-weight:800;margin-bottom:var(--sp-4);line-height:1.1;">Admission &amp; Counselling Guidance</h2>
+        <p style="color:var(--clr-text-2);line-height:1.75;margin-bottom:var(--sp-6);">Make the right choices at every stage of the counselling process. Counselling can be complicated — students must understand eligibility, seat matrix, reservation, fees, quotas, choice filling, deadlines, round strategies and reporting requirements. College Corridor helps students navigate this journey end to end.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:var(--sp-2);margin-bottom:var(--sp-8);">
+          <span class="tag tag--gold">MCC Counselling</span>
+          <span class="tag">State Counselling</span>
+          <span class="tag">JoSAA</span>
+          <span class="tag">CSAB</span>
+          <span class="tag">MBA Counselling</span>
+          <span class="tag">Choice Filling Strategy</span>
+        </div>
+        <a href="counselling.html" class="btn btn-outline">Explore Counselling Services →</a>
+      </div>
+      <div>
+        <div style="background:var(--grad-card);border:1px solid var(--clr-border);border-radius:var(--radius-xl);padding:var(--sp-6);">
+          <div style="font-size:var(--fs-xs);font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--clr-text-muted);margin-bottom:var(--sp-5);">Student Journey</div>
+          <div style="display:flex;flex-direction:column;gap:var(--sp-3);">
+            <div style="display:flex;align-items:center;gap:var(--sp-3);">
+              <div class="step-num" style="flex-shrink:0;">1</div>
+              <div style="flex:1;padding:var(--sp-3);background:rgba(201,150,12,0.08);border:1px solid rgba(201,150,12,0.2);border-radius:var(--radius-sm);font-size:var(--fs-sm);font-weight:600;">NEET / JEE / CAT Score</div>
+            </div>
+            <div style="display:flex;align-items:center;gap:var(--sp-3);">
+              <div class="step-num" style="flex-shrink:0;">2</div>
+              <div style="flex:1;padding:var(--sp-3);background:rgba(255,255,255,0.04);border:1px solid var(--clr-border);border-radius:var(--radius-sm);font-size:var(--fs-sm);font-weight:500;color:var(--clr-text-2);">Profile Assessment</div>
+            </div>
+            <div style="display:flex;align-items:center;gap:var(--sp-3);">
+              <div class="step-num" style="flex-shrink:0;">3</div>
+              <div style="flex:1;padding:var(--sp-3);background:rgba(255,255,255,0.04);border:1px solid var(--clr-border);border-radius:var(--radius-sm);font-size:var(--fs-sm);font-weight:500;color:var(--clr-text-2);">College Prediction</div>
+            </div>
+            <div style="display:flex;align-items:center;gap:var(--sp-3);">
+              <div class="step-num" style="flex-shrink:0;">4</div>
+              <div style="flex:1;padding:var(--sp-3);background:rgba(255,255,255,0.04);border:1px solid var(--clr-border);border-radius:var(--radius-sm);font-size:var(--fs-sm);font-weight:500;color:var(--clr-text-2);">Counselling Strategy</div>
+            </div>
+            <div style="display:flex;align-items:center;gap:var(--sp-3);">
+              <div class="step-num" style="flex-shrink:0;">5</div>
+              <div style="flex:1;padding:var(--sp-3);background:rgba(255,255,255,0.04);border:1px solid var(--clr-border);border-radius:var(--radius-sm);font-size:var(--fs-sm);font-weight:500;color:var(--clr-text-2);">Choice Filling</div>
+            </div>
+            <div style="display:flex;align-items:center;gap:var(--sp-3);">
+              <div class="step-num" style="flex-shrink:0;">6</div>
+              <div style="flex:1;padding:var(--sp-3);background:rgba(255,255,255,0.04);border:1px solid var(--clr-border);border-radius:var(--radius-sm);font-size:var(--fs-sm);font-weight:500;color:var(--clr-text-2);">Seat Allotment</div>
+            </div>
+            <div style="display:flex;align-items:center;gap:var(--sp-3);">
+              <div class="step-num" style="flex-shrink:0;">7</div>
+              <div style="flex:1;padding:var(--sp-3);background:rgba(255,255,255,0.04);border:1px solid var(--clr-border);border-radius:var(--radius-sm);font-size:var(--fs-sm);font-weight:500;color:var(--clr-text-2);">Documentation</div>
+            </div>
+            <div style="display:flex;align-items:center;gap:var(--sp-3);">
+              <div class="step-num" style="flex-shrink:0;background:var(--grad-gold);">✓</div>
+              <div style="flex:1;padding:var(--sp-3);background:rgba(16,185,129,0.1);border:1px solid rgba(16,185,129,0.3);border-radius:var(--radius-sm);font-size:var(--fs-sm);font-weight:700;color:#34D399;">Admission Complete</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════
+     ENTRANCE EXAMS
+     ═══════════════════════════════════════════════════ -->
+<section class="section" aria-labelledby="exams-heading">
+  <div class="container">
+    <div class="section-heading centered reveal">
+      <span class="section-label">Know Before You Apply</span>
+      <h2 id="exams-heading">Entrance Exam Guidance</h2>
+      <p>Understand the right examination, the right college pathway and what happens after the exam.</p>
+    </div>
+    <div class="grid-3 stagger" style="margin-top:var(--sp-12)">
+      <a href="entrance-exams.html#neet" class="card reveal" style="text-decoration:none;display:block;">
+        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:var(--sp-3);">
+          <h3 style="font-size:var(--fs-2xl);">NEET</h3>
+          <span class="tag tag--gold">Medical</span>
+        </div>
+        <p>National Eligibility cum Entrance Test for undergraduate and postgraduate medical admissions across India.</p>
+        <span class="card-link" style="margin-top:var(--sp-4)">Learn more →</span>
+      </a>
+      <a href="entrance-exams.html#jee" class="card reveal" style="text-decoration:none;display:block;">
+        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:var(--sp-3);">
+          <h3 style="font-size:var(--fs-2xl);">JEE</h3>
+          <span class="tag tag--blue">Engineering</span>
+        </div>
+        <p>JEE Main and JEE Advanced for B.Tech admissions at NITs, IITs and top engineering institutions.</p>
+        <span class="card-link" style="margin-top:var(--sp-4)">Learn more →</span>
+      </a>
+      <a href="entrance-exams.html#cat" class="card reveal" style="text-decoration:none;display:block;">
+        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:var(--sp-3);">
+          <h3 style="font-size:var(--fs-2xl);">CAT / XAT</h3>
+          <span class="tag tag--green">MBA</span>
+        </div>
+        <p>Common Admission Test and Xavier Aptitude Test for MBA and PGDM admissions at leading B-schools.</p>
+        <span class="card-link" style="margin-top:var(--sp-4)">Learn more →</span>
+      </a>
+      <a href="entrance-exams.html#clat" class="card reveal" style="text-decoration:none;display:block;">
+        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:var(--sp-3);">
+          <h3 style="font-size:var(--fs-2xl);">CLAT</h3>
+          <span class="tag tag--amber">Law</span>
+        </div>
+        <p>Common Law Admission Test for BA LLB and LLM admissions at National Law Universities.</p>
+        <span class="card-link" style="margin-top:var(--sp-4)">Learn more →</span>
+      </a>
+      <a href="entrance-exams.html#bitsat" class="card reveal" style="text-decoration:none;display:block;">
+        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:var(--sp-3);">
+          <h3 style="font-size:var(--fs-2xl);">BITSAT & More</h3>
+          <span class="tag">University</span>
+        </div>
+        <p>BITSAT, VITEEE, MET, SRMJEEE, KIITEE and other university-level entrance examinations.</p>
+        <span class="card-link" style="margin-top:var(--sp-4)">Learn more →</span>
+      </a>
+      <a href="entrance-exams.html" class="card reveal" style="text-decoration:none;display:block;background:var(--clr-gold-dim);border-color:rgba(201,150,12,0.3);">
+        <div style="font-size:2.5rem;margin-bottom:var(--sp-3);">📋</div>
+        <h3 style="font-size:var(--fs-xl);">All Entrance Exams</h3>
+        <p style="color:var(--clr-text-2);">State, national and university-level exams for all programs.</p>
+        <span class="card-link" style="margin-top:var(--sp-4)">View all exams →</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════
+     COLLEGE PREDICTOR PREVIEW
+     ═══════════════════════════════════════════════════ -->
+<section class="section section-alt" aria-labelledby="predictor-heading">
+  <div class="container">
+    <div style="max-width:900px;margin-inline:auto;">
+      <div class="section-heading centered reveal">
+        <span class="section-label">College Predictor</span>
+        <h2 id="predictor-heading">Know Which Colleges You Can Target</h2>
+        <p>Enter your exam, score/rank, category, domicile and budget to see potential college options, tagged by strategy.</p>
+      </div>
+
+      <div class="predictor-wrap reveal" style="margin-top:var(--sp-10)">
+        <div class="predictor-header">
+          <h3>Sample College Options</h3>
+          <span class="predictor-disclaimer">* Indicative only — not a guarantee of admission</span>
+        </div>
+        <div class="table-wrap">
+          <table class="data-table" role="table" aria-label="Sample college prediction table">
+            <thead>
+              <tr>
+                <th scope="col">College</th>
+                <th scope="col" style="text-align:right">Est. Probability</th>
+                <th scope="col" style="text-align:right">Est. Fees</th>
+                <th scope="col">Strategy</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td style="font-weight:600;">Government Medical College</td>
+                <td style="text-align:right;color:#3B82F6;font-weight:700;">85%</td>
+                <td style="text-align:right;font-weight:600;">₹5–8L</td>
+                <td><span class="tag tag--blue" style="font-size:10px;">Safe</span></td>
+              </tr>
+              <tr>
+                <td style="font-weight:600;">State Private Medical College</td>
+                <td style="text-align:right;color:#D97706;font-weight:700;">95%</td>
+                <td style="text-align:right;font-weight:600;">₹40–90L</td>
+                <td><span class="tag tag--bronze" style="font-size:10px;">Balanced</span></td>
+              </tr>
+              <tr>
+                <td style="font-weight:600;">Deemed University</td>
+                <td style="text-align:right;color:#10B981;font-weight:700;">99%</td>
+                <td style="text-align:right;font-weight:600;">₹40L – 1.2 Cr</td>
+                <td><span class="tag tag--green" style="font-size:10px;">High Probability</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div style="padding:var(--sp-5) var(--sp-6);background:rgba(255,255,255,0.02);border-top:1px solid var(--clr-border);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:var(--sp-4);">
+          <p style="font-size:var(--fs-xs);color:var(--clr-text-dim);font-style:italic;">Probability estimates are indicative and never a guarantee of admission. Always verify with official counselling authority.</p>
+          <div style="display:flex;gap:var(--sp-3);flex-wrap:wrap;">
+            <a href="find-colleges.html" class="btn btn-secondary btn-sm">Find Colleges</a>
+            <button class="btn btn-primary btn-sm" data-modal="lead">Get Expert Counselling</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════
+     HOW IT WORKS
+     ═══════════════════════════════════════════════════ -->
+<section class="section" aria-labelledby="howitworks-heading">
+  <div class="container">
+    <div class="section-heading centered reveal">
+      <span class="section-label">Our Process</span>
+      <h2 id="howitworks-heading">From Career Choice to College Admission</h2>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:var(--sp-4);margin-top:var(--sp-12);" class="reveal">
+      <div class="journey-step">
+        <div class="step-num">1</div>
+        <div class="step-label">Profile Assessment</div>
+      </div>
+      <div class="journey-step">
+        <div class="step-num">2</div>
+        <div class="step-label">Career & Course Selection</div>
+      </div>
+      <div class="journey-step">
+        <div class="step-num">3</div>
+        <div class="step-label">Entrance Exam / Admission Route</div>
+      </div>
+      <div class="journey-step">
+        <div class="step-num">4</div>
+        <div class="step-label">College Shortlisting</div>
+      </div>
+      <div class="journey-step">
+        <div class="step-num">5</div>
+        <div class="step-label">College Comparison</div>
+      </div>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:var(--sp-4);margin-top:var(--sp-4);" class="reveal">
+      <div class="journey-step">
+        <div class="step-num">6</div>
+        <div class="step-label">Application / Counselling</div>
+      </div>
+      <div class="journey-step">
+        <div class="step-num">7</div>
+        <div class="step-label">Choice Filling</div>
+      </div>
+      <div class="journey-step">
+        <div class="step-num">8</div>
+        <div class="step-label">Seat Allotment / Selection</div>
+      </div>
+      <div class="journey-step">
+        <div class="step-num">9</div>
+        <div class="step-label">Documentation</div>
+      </div>
+      <div class="journey-step" style="border-color:rgba(16,185,129,0.4);background:rgba(16,185,129,0.06);">
+        <div class="step-num" style="background:linear-gradient(135deg,#10B981,#34D399);">✓</div>
+        <div class="step-label" style="color:#34D399;">Final Admission</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════
+     WHY COLLEGE CORRIDOR
+     ═══════════════════════════════════════════════════ -->
+<section class="section section-alt" aria-labelledby="why-heading">
+  <div class="container">
+    <div class="section-heading centered reveal">
+      <span class="section-label">Our Advantages</span>
+      <h2 id="why-heading">Why Students & Parents Choose College Corridor</h2>
+    </div>
+    <div class="grid-3 stagger" style="margin-top:var(--sp-12)">
+      <div class="card reveal">
+        <div class="card-icon">🎯</div>
+        <h3>Personalized Guidance</h3>
+        <p>Recommendations based on each student's individual academic profile, entrance score, eligibility, budget and career goals.</p>
+      </div>
+      <div class="card reveal">
+        <div class="card-icon blue">🛤️</div>
+        <h3>Multiple Admission Pathways</h3>
+        <p>Entrance-based, counselling, management and NRI admission pathways — guidance for all applicable routes.</p>
+      </div>
+      <div class="card reveal">
+        <div class="card-icon green">📊</div>
+        <h3>Data-Driven Decisions</h3>
+        <p>College, fee, cutoff and admission information at your fingertips to help make informed decisions.</p>
+      </div>
+      <div class="card reveal">
+        <div class="card-icon teal">🏫</div>
+        <h3>Multi-Disciplinary</h3>
+        <p>Medical, Engineering, Management, Law, Pharmacy, Nursing and other professional programs.</p>
+      </div>
+      <div class="card reveal">
+        <div class="card-icon" style="background:rgba(201,150,12,0.15);border-color:rgba(201,150,12,0.3);">✈️</div>
+        <h3>India & Abroad</h3>
+        <p>Guidance for domestic college admissions and international university applications across multiple countries.</p>
+      </div>
+      <div class="card reveal">
+        <div class="card-icon purple">🔄</div>
+        <h3>End-to-End Support</h3>
+        <p>From the first counselling session to admission formalities — we are with you at every stage of the journey.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════
+     STATS & TESTIMONIALS
+     ═══════════════════════════════════════════════════ -->
+
+<!-- ═══════════════════════════════════════════════════
+     LOCATIONS & LOCAL SEO SECTION
+     ═══════════════════════════════════════════════════ -->
+<section class="section section-alt" aria-labelledby="locations-heading">
+  <div class="container">
+    <div class="section-heading centered reveal">
+      <span class="section-label">Pan-India Reach</span>
+      <h2 id="locations-heading">Education &amp; Admission Consultancy Across India</h2>
+      <p>Serving students and parents across major educational hubs with personalized admission guidance, counselling strategy, and entrance exam advisory.</p>
+    </div>
+
+    <div class="grid-4 stagger" style="margin-top:var(--sp-10)">
+      <a href="locations/delhi.html" class="card reveal" style="text-decoration:none;">
+        <div class="card-icon">🏛️</div>
+        <h3>Delhi</h3>
+        <p>Expert college admission consultancy for MBBS, B.Tech, and MBA admissions in Delhi.</p>
+        <span class="card-link" style="margin-top:var(--sp-3);">Explore Delhi →</span>
+      </a>
+      <a href="locations/delhi-ncr.html" class="card reveal" style="text-decoration:none;">
+        <div class="card-icon blue">🏙️</div>
+        <h3>Delhi NCR</h3>
+        <p>Personalized admission guidance across Noida, Greater Noida, and Gurugram.</p>
+        <span class="card-link" style="margin-top:var(--sp-3);">Explore Delhi NCR →</span>
+      </a>
+      <a href="locations/bengaluru.html" class="card reveal" style="text-decoration:none;">
+        <div class="card-icon green">💻</div>
+        <h3>Bengaluru</h3>
+        <p>Leading admission consultancy for B.Tech (RVCE, MSRIT, PES), MBBS, and MBA in Bangalore.</p>
+        <span class="card-link" style="margin-top:var(--sp-3);">Explore Bengaluru →</span>
+      </a>
+      <a href="locations/pune.html" class="card reveal" style="text-decoration:none;">
+        <div class="card-icon purple">🌆</div>
+        <h3>Pune</h3>
+        <p>Top engineering &amp; management admission guidance for COEP, PICT, VIT Pune, and MIT-WPU.</p>
+        <span class="card-link" style="margin-top:var(--sp-3);">Explore Pune →</span>
+      </a>
+      <a href="locations/mumbai.html" class="card reveal" style="text-decoration:none;">
+        <div class="card-icon teal">🌊</div>
+        <h3>Mumbai</h3>
+        <p>Admissions consultancy for VJTI, SPIT, DJSCE, NMIMS, and Navi Mumbai institutions.</p>
+        <span class="card-link" style="margin-top:var(--sp-3);">Explore Mumbai →</span>
+      </a>
+      <a href="locations/dehradun.html" class="card reveal" style="text-decoration:none;">
+        <div class="card-icon" style="background:rgba(201,150,12,0.15);border-color:rgba(201,150,12,0.3);">⛰️</div>
+        <h3>Dehradun</h3>
+        <p>Admission advisory for UPES, Graphic Era, DIT, and leading Uttarakhand universities.</p>
+        <span class="card-link" style="margin-top:var(--sp-3);">Explore Dehradun →</span>
+      </a>
+      <a href="locations/kolkata.html" class="card reveal" style="text-decoration:none;">
+        <div class="card-icon blue">🎨</div>
+        <h3>West Bengal &amp; Kolkata</h3>
+        <p>WBJEE, NEET, and university admission guidance across Kolkata &amp; West Bengal.</p>
+        <span class="card-link" style="margin-top:var(--sp-3);">Explore West Bengal →</span>
+      </a>
+      <a href="locations/ahmedabad.html" class="card reveal" style="text-decoration:none;">
+        <div class="card-icon green">🏭</div>
+        <h3>Gujarat &amp; Ahmedabad</h3>
+        <p>College admission consultancy in Ahmedabad, Vadodara, and across Gujarat.</p>
+        <span class="card-link" style="margin-top:var(--sp-3);">Explore Gujarat →</span>
+      </a>
+    </div>
+
+    <div style="text-align:center;margin-top:var(--sp-8);font-size:var(--fs-sm);color:var(--clr-text-muted);">
+      Serving Students Across Delhi NCR, Noida, Gurugram, Bengaluru, Pune, Mumbai, Dehradun, West Bengal, Gujarat and across India.
+    </div>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="stats-heading">
+  <div class="container">
+    <div class="section-heading centered reveal">
+      <span class="section-label">Our Reach</span>
+      <h2 id="stats-heading">Why Students & Parents Trust Us</h2>
+    </div>
+
+    <div class="grid-4 stagger" style="margin-top:var(--sp-10)">
+      <div class="stat-card reveal">
+        <div class="stat-number" data-counter="5000" data-suffix="+">0+</div>
+        <div class="stat-label">Students Guided</div>
+      </div>
+      <div class="stat-card reveal">
+        <div class="stat-number" data-counter="500" data-suffix="+">0+</div>
+        <div class="stat-label">Colleges & Universities Covered</div>
+      </div>
+      <div class="stat-card reveal">
+        <div class="stat-number" data-counter="20" data-suffix="+">0+</div>
+        <div class="stat-label">Programs Covered</div>
+      </div>
+      <div class="stat-card reveal">
+        <div class="stat-number" data-counter="15" data-suffix="+">0+</div>
+        <div class="stat-label">Countries Covered</div>
+      </div>
+    </div>
+
+    <p style="text-align:center;font-size:var(--fs-xs);color:var(--clr-text-dim);margin-top:var(--sp-4);font-style:italic;">
+      * Indicative numbers — please verify with us before citing. Replace with verified figures before launch.
+    </p>
+
+    <!-- Testimonials -->
+    <div class="grid-3 stagger" style="margin-top:var(--sp-12)">
+      <div class="card reveal" style="display:flex;flex-direction:column;gap:var(--sp-4);">
+        <div style="font-size:2rem;line-height:1;">“</div>
+        <p style="font-size:var(--fs-base);color:var(--clr-text-2);font-style:italic;flex:1;">College Corridor helped us navigate NEET choice filling step-by-step. Their round-wise analysis saved us from making a costly choice error and helped my daughter secure her preferred medical college seat.</p>
+        <div style="display:flex;align-items:center;gap:var(--sp-3);margin-top:auto;">
+          <div style="width:40px;height:40px;border-radius:50%;background:var(--grad-amber);display:flex;align-items:center;justify-content:center;font-weight:800;color:#093335;font-family:var(--font-heading);">A</div>
+          <div>
+            <div style="font-weight:700;font-size:var(--fs-sm);color:var(--clr-teal-dark);">Ananya Sharma</div>
+            <div style="font-size:var(--fs-xs);color:var(--clr-text-muted);">MBBS Candidate — NEET UG Counselling</div>
+          </div>
+        </div>
+      </div>
+      <div class="card reveal" style="display:flex;flex-direction:column;gap:var(--sp-4);">
+        <div style="font-size:2rem;line-height:1;">“</div>
+        <p style="font-size:var(--fs-base);color:var(--clr-text-2);font-style:italic;flex:1;">As parents, we were overwhelmed by JoSAA counselling rules. The team at College Corridor analyzed my son's JEE rank, budget, and preferred branches to structure a balanced choice list that worked perfectly.</p>
+        <div style="display:flex;align-items:center;gap:var(--sp-3);margin-top:auto;">
+          <div style="width:40px;height:40px;border-radius:50%;background:var(--clr-teal);display:flex;align-items:center;justify-content:center;font-weight:800;color:white;font-family:var(--font-heading);">R</div>
+          <div>
+            <div style="font-weight:700;font-size:var(--fs-sm);color:var(--clr-teal-dark);">Rajesh Verma</div>
+            <div style="font-size:var(--fs-xs);color:var(--clr-text-muted);">Parent — B.Tech Engineering Admission</div>
+          </div>
+        </div>
+      </div>
+      <div class="card reveal" style="display:flex;flex-direction:column;gap:var(--sp-4);">
+        <div style="font-size:2rem;line-height:1;">“</div>
+        <p style="font-size:var(--fs-base);color:var(--clr-text-2);font-style:italic;flex:1;">Clear, transparent, and data-backed guidance. They didn't sell false guarantees — they gave us realistic options for CAT B-school shortlists that fit my career goals and budget.</p>
+        <div style="display:flex;align-items:center;gap:var(--sp-3);margin-top:auto;">
+          <div style="width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,#1A7A72,#276749);display:flex;align-items:center;justify-content:center;font-weight:800;color:white;font-family:var(--font-heading);">S</div>
+          <div>
+            <div style="font-weight:700;font-size:var(--fs-sm);color:var(--clr-teal-dark);">Siddharth Nair</div>
+            <div style="font-size:var(--fs-xs);color:var(--clr-text-muted);">MBA Candidate — B-School Selection</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════
+     PAN-INDIA REACH SECTION
+     ═══════════════════════════════════════════════════ -->
+<section class="section section-alt" aria-labelledby="pan-india-heading">
+  <div class="container">
+    <div class="section-heading centered reveal">
+      <span class="section-label">Our Reach</span>
+      <h2 id="pan-india-heading">Pan-India Counselling &amp; Admissions</h2>
+      <p style="font-size:var(--fs-lg);color:var(--clr-text-2);max-width:760px;margin-inline:auto;">
+        Serving students across 28 States &amp; Union Territories, with dedicated counselling support in premier educational hubs:
+      </p>
+    </div>
+
+    <!-- City Cards Grid -->
+    <div class="grid-auto stagger" style="margin-top:var(--sp-10);gap:var(--sp-6);">
+      <!-- Delhi NCR -->
+      <a href="locations/delhi-ncr.html" class="card reveal" style="text-decoration:none;display:flex;flex-direction:column;justify-content:space-between;padding:var(--sp-6);">
+        <div>
+          <div style="font-size:2.2rem;margin-bottom:var(--sp-3);">🏛️</div>
+          <h3 style="font-size:var(--fs-xl);color:var(--clr-slate-dark);margin-bottom:var(--sp-2);">Delhi NCR</h3>
+          <p style="font-size:var(--fs-sm);color:var(--clr-text-2);line-height:1.6;margin-bottom:var(--sp-4);">
+            Delhi, Noida, Greater Noida &amp; Gurugram premier medical, engineering, MBA &amp; law admissions.
+          </p>
+        </div>
+        <span class="card-link" style="color:var(--clr-slate);font-weight:700;">Explore Delhi NCR →</span>
+      </a>
+
+      <!-- Bengaluru -->
+      <a href="locations/bengaluru.html" class="card reveal" style="text-decoration:none;display:flex;flex-direction:column;justify-content:space-between;padding:var(--sp-6);">
+        <div>
+          <div style="font-size:2.2rem;margin-bottom:var(--sp-3);">🏙️</div>
+          <h3 style="font-size:var(--fs-xl);color:var(--clr-slate-dark);margin-bottom:var(--sp-2);">Bengaluru</h3>
+          <p style="font-size:var(--fs-sm);color:var(--clr-text-2);line-height:1.6;margin-bottom:var(--sp-4);">
+            Karnataka NEET &amp; KEA counselling, top tech B.Tech &amp; B-school admissions guidance.
+          </p>
+        </div>
+        <span class="card-link" style="color:var(--clr-slate);font-weight:700;">Explore Bengaluru →</span>
+      </a>
+
+      <!-- Mumbai -->
+      <a href="locations/mumbai.html" class="card reveal" style="text-decoration:none;display:flex;flex-direction:column;justify-content:space-between;padding:var(--sp-6);">
+        <div>
+          <div style="font-size:2.2rem;margin-bottom:var(--sp-3);">🌊</div>
+          <h3 style="font-size:var(--fs-xl);color:var(--clr-slate-dark);margin-bottom:var(--sp-2);">Mumbai</h3>
+          <p style="font-size:var(--fs-sm);color:var(--clr-text-2);line-height:1.6;margin-bottom:var(--sp-4);">
+            Maharashtra CAP NEET &amp; Engineering counselling, premier B-school selection strategy.
+          </p>
+        </div>
+        <span class="card-link" style="color:var(--clr-slate);font-weight:700;">Explore Mumbai →</span>
+      </a>
+
+      <!-- Pune -->
+      <a href="locations/pune.html" class="card reveal" style="text-decoration:none;display:flex;flex-direction:column;justify-content:space-between;padding:var(--sp-6);">
+        <div>
+          <div style="font-size:2.2rem;margin-bottom:var(--sp-3);">🎓</div>
+          <h3 style="font-size:var(--fs-xl);color:var(--clr-slate-dark);margin-bottom:var(--sp-2);">Pune</h3>
+          <p style="font-size:var(--fs-sm);color:var(--clr-text-2);line-height:1.6;margin-bottom:var(--sp-4);">
+            Oxford of the East — Engineering colleges, medical seat allotment &amp; MBA admissions.
+          </p>
+        </div>
+        <span class="card-link" style="color:var(--clr-slate);font-weight:700;">Explore Pune →</span>
+      </a>
+
+      <!-- Dehradun -->
+      <a href="locations/dehradun.html" class="card reveal" style="text-decoration:none;display:flex;flex-direction:column;justify-content:space-between;padding:var(--sp-6);">
+        <div>
+          <div style="font-size:2.2rem;margin-bottom:var(--sp-3);">⛰️</div>
+          <h3 style="font-size:var(--fs-xl);color:var(--clr-slate-dark);margin-bottom:var(--sp-2);">Dehradun</h3>
+          <p style="font-size:var(--fs-sm);color:var(--clr-text-2);line-height:1.6;margin-bottom:var(--sp-4);">
+            Uttarakhand medical &amp; engineering admissions, deemed universities &amp; law institutes.
+          </p>
+        </div>
+        <span class="card-link" style="color:var(--clr-slate);font-weight:700;">Explore Dehradun →</span>
+      </a>
+    </div>
+
+    <!-- 28 States & UTs Counter Banner -->
+    <div style="margin-top:var(--sp-12);padding:var(--sp-8);background:var(--grad-hero);border-radius:var(--radius-xl);color:#FFFFFF;text-align:center;" class="reveal">
+      <div style="font-size:var(--fs-2xl);font-weight:800;margin-bottom:var(--sp-2);">28 States &amp; Union Territories Covered</div>
+      <p style="font-size:var(--fs-base);color:rgba(248,250,252,0.92);max-width:680px;margin-inline:auto;">
+        No matter where you reside in India, our data-backed counselling strategy helps you navigate state quota, all-india quota, deemed universities &amp; management seats with 100% transparency.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════
+     FINAL CTA BANNER
+     ═══════════════════════════════════════════════════ -->
+<section class="section section-dark" aria-labelledby="final-cta-heading">
+  <div class="container">
+    <div class="cta-banner reveal">
+      <div class="cta-banner-content">
+        <span class="section-label" style="margin-bottom:var(--sp-5);color:#FFFFFF !important;background:rgba(255,255,255,0.15) !important;border:1px solid rgba(255,255,255,0.3) !important;">Start Your Admission Journey</span>
+        <h2 id="final-cta-heading" style="color:#FFFFFF !important;font-weight:800;">Your NEET Rank Opens the Door.<br>Your Strategy Determines How You Navigate It.</h2>
+        <p style="color:#FFFFFF !important;">Don't make a high-value admission decision based on guesswork, WhatsApp lists or a single college prediction. Get a personalized admission strategy based on your rank, category, eligibility, budget and career goals.</p>
+        <div class="cta-banner-actions">
+          <button class="btn btn-primary btn-lg" id="final-cta-btn" data-modal="lead">Book Admission Counselling</button>
+          <a href="find-colleges.html" class="btn btn-secondary btn-lg">Explore College Seat Options</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ═══════════════════════════════════════════════════
+     FOOTER
+     ═══════════════════════════════════════════════════ -->
+<footer class="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-mega-grid">
+      <!-- Col 1: Brand & Contact -->
+      <div>
+        <div style="margin-bottom:var(--sp-4);">
+          <a href="index.html" class="nav-logo" aria-label="College Corridor Home">
+            <div class="nav-logo-badge-wrap">
+              <img src="assets/images/logo-badge.png" alt="College Corridor - Your Path. Our Purpose." style="height:52px;">
+            </div>
+          </a>
+        </div>
+        <p class="footer-brand-desc">
+          Independent education consultancy providing data-backed admission advisory and counselling strategy across India &amp; abroad.
+        </p>
+        <div class="footer-contact-item">
+          <span>📍</span>
+          <span>A-314, Vision Business Park, Knowledge Park III, Greater Noida, UP 201306</span>
+        </div>
+        <div class="footer-contact-item">
+          <span>📞</span>
+          <a href="tel:+918194083803" class="footer-link">+91 8194083803</a>
+        </div>
+        <div class="footer-contact-item">
+          <span>✉️</span>
+          <a href="mailto:admissions@collegecorridor.com" class="footer-link">admissions@collegecorridor.com</a>
+        </div>
+        <div style="margin-top:var(--sp-4);">
+          <a href="https://wa.me/918194083803" target="_blank" rel="noopener" class="btn btn-primary btn-sm">💬 Chat on WhatsApp</a>
+        </div>
+      </div>
+
+      <!-- Col 2: Admissions -->
+      <div>
+        <div class="footer-col-title">Admissions</div>
+        <div class="footer-links">
+          <a href="medical-admissions.html" class="footer-link">Medical (MBBS/MD)</a>
+          <a href="engineering-admissions.html" class="footer-link">Engineering (B.Tech)</a>
+          <a href="management-admissions.html" class="footer-link">Management (MBA)</a>
+          <a href="law-admissions.html" class="footer-link">Law Admissions</a>
+          <a href="pharmacy-nursing.html" class="footer-link">Pharmacy &amp; Nursing</a>
+          <a href="nri-admissions.html" class="footer-link">NRI Admissions</a>
+          <a href="other-programs.html" class="footer-link">Other Programs</a>
+        </div>
+      </div>
+
+      <!-- Col 3: Guidance & Tools -->
+      <div>
+        <div class="footer-col-title">Guidance &amp; Tools</div>
+        <div class="footer-links">
+          <a href="counselling.html" class="footer-link">Counselling Hub</a>
+          <a href="entrance-exams.html" class="footer-link">Entrance Exam Guidance</a>
+          <a href="find-colleges.html" class="footer-link">Find Colleges Filter</a>
+          <a href="compare-colleges.html" class="footer-link">Compare Colleges</a>
+          <a href="study-abroad.html" class="footer-link">Study Abroad</a>
+          <a href="resources.html" class="footer-link">Resources &amp; Guides</a>
+        </div>
+      </div>
+
+      <!-- Col 4: Our Reach -->
+      <div>
+        <div class="footer-col-title">Our Reach</div>
+        <p style="font-size:var(--fs-xs);color:rgba(248,250,252,0.8);line-height:1.6;margin-bottom:var(--sp-3);">
+          <strong>Pan-India:</strong> Serving students across 28 States &amp; Union Territories, with dedicated counselling support in:
+        </p>
+        <div class="footer-links">
+          <a href="locations/delhi-ncr.html" class="footer-link">Delhi NCR</a>
+          <a href="locations/bengaluru.html" class="footer-link">Bengaluru</a>
+          <a href="locations/mumbai.html" class="footer-link">Mumbai</a>
+          <a href="locations/pune.html" class="footer-link">Pune</a>
+          <a href="locations/dehradun.html" class="footer-link">Dehradun</a>
+        </div>
+      </div>
+
+      <!-- Col 5: Company -->
+      <div>
+        <div class="footer-col-title">Company</div>
+        <div class="footer-links">
+          <a href="about.html" class="footer-link">About College Corridor</a>
+          <a href="contact.html" class="footer-link">Contact Us</a>
+          <a href="resources.html" class="footer-link">Knowledge Hub</a>
+          <a href="privacy-policy.html" class="footer-link">Privacy Policy</a>
+          <a href="terms-of-use.html" class="footer-link">Terms of Use</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p class="footer-disclaimer">
+        College Corridor is an independent education consultancy and admissions advisory service. We do not create, guarantee, or allot college seats, and we are not an official counselling, exam-conducting, or regulatory authority. All college predictions, probability estimates and admission strategies are indicative and based on available data — they do not guarantee any outcome. Eligibility, fees, quotas and processes vary by institution, state and admission year; please verify current details with the relevant official authority before making decisions.
+      </p>
+      <div class="footer-legal-bar">
+        <p>© 2025 College Corridor. All rights reserved.</p>
+        <div class="footer-legal-links">
+          <a href="privacy-policy.html">Privacy Policy</a>
+          <a href="terms-of-use.html">Terms of Use</a>
+          <a href="contact.html">Contact Us</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Floating Mobile CTA -->
+<div class="mobile-cta-float" aria-hidden="true">
+  <button class="btn btn-primary" style="width:100%;font-size:1rem;padding:14px;" data-modal="lead">
+    📞 Get Expert Counselling
+  </button>
+</div>
+
+<!-- Lead Form Modal -->
+<div class="modal-overlay" id="lead-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+  <div class="modal">
+    <button class="modal-close" aria-label="Close form" id="modal-close-btn">✕</button>
+    <div class="form-wrap">
+      <div class="modal-header">
+        <span class="section-label">Free Counselling Session</span>
+        <h2 id="modal-title">Get Expert Counselling</h2>
+        <p>Tell us about yourself and we'll get back to you within 24 hours.</p>
+      </div>
+      <form id="lead-form" novalidate>
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="full-name">Full Name *</label>
+            <input class="form-input" type="text" id="full-name" name="full_name" placeholder="Your full name" required autocomplete="name">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="phone">Phone Number *</label>
+            <input class="form-input" type="tel" id="phone" name="phone" placeholder="+91 98765 43210" required autocomplete="tel">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="email">Email Address *</label>
+          <input class="form-input" type="email" id="email" name="email" placeholder="your@email.com" required autocomplete="email">
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="program-interest">Program of Interest *</label>
+          <select class="form-select" id="program-interest" name="program_interest" required>
+            <option value="" disabled selected>Select a program</option>
+            <option value="mbbs">Medical — MBBS</option>
+            <option value="md-ms">Medical — MD / MS (Postgraduate)</option>
+            <option value="btech">Engineering — B.Tech / B.E.</option>
+            <option value="mba">Management — MBA / PGDM</option>
+            <option value="bba">Management — BBA</option>
+            <option value="law">Law — BA LLB / LLB / LLM</option>
+            <option value="pharmacy">Pharmacy — B.Pharm / M.Pharm</option>
+            <option value="nursing">Nursing & Allied Health</option>
+            <option value="study-abroad">Study Abroad</option>
+            <option value="nri">NRI Admissions</option>
+            <option value="other">Other Program</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="message">Message (optional)</label>
+          <textarea class="form-textarea" id="message" name="message" placeholder="Tell us your current score/rank, preferred colleges, budget or any specific questions..."></textarea>
+        </div>
+        <div class="form-note" style="margin-bottom:var(--sp-5);">By submitting this form, you agree to be contacted by our counsellors for admission guidance purposes.</div>
+        <button type="submit" class="btn btn-primary" style="width:100%;font-size:var(--fs-base);padding:14px;" id="form-submit-btn">
+          Submit — Get Free Guidance
+        </button>
+      </form>
+    </div>
+    <div class="form-success" id="form-success-msg">
+      <div class="success-icon">🎉</div>
+      <h3>Thank You!</h3>
+      <p>Your enquiry has been received. A College Corridor counsellor will contact you within 24 hours to discuss your admission strategy.</p>
+    </div>
+  </div>
+</div>
+
+<script src="js/config.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

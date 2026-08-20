@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Find Your College — College Discovery Tool | College Corridor</title>
+  <meta name="description" content="Discover colleges based on your course, location, budget, type and admission route. Filter and explore the right institutions for you.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+<div id="announcement-bar-slot"></div>
+<header id="navbar-slot" data-active="find"></header>
+<main>
+
+<section class="page-hero" aria-labelledby="find-h1">
+  <div class="container page-hero-content">
+    <div class="page-hero-eyebrow"><span class="section-label">College Discovery</span></div>
+    <h1 id="find-h1">Find Your College</h1>
+    <p class="hero-sub" style="max-width:620px;">Use the filters below to discover colleges based on your preferences. For personalized shortlisting, talk to a counsellor.</p>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="container">
+    <!-- Filter Panel -->
+    <div style="background:var(--grad-card);border:1px solid var(--clr-border);border-radius:var(--radius-xl);padding:var(--sp-8);margin-bottom:var(--sp-10);" class="reveal" id="college-filter-panel">
+      <h2 style="font-size:var(--fs-2xl);margin-bottom:var(--sp-6);">🔍 Filter Colleges</h2>
+      <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:var(--sp-5);">
+        <div class="form-group">
+          <label class="form-label" for="filter-course">Course / Program</label>
+          <select class="form-select" id="filter-course">
+            <option value="">All Courses</option>
+            <option value="mbbs">MBBS</option>
+            <option value="btech">B.Tech / B.E.</option>
+            <option value="mba">MBA / PGDM</option>
+            <option value="bds">BDS</option>
+            <option value="law">Law (BA LLB / LLB)</option>
+            <option value="pharmacy">Pharmacy</option>
+            <option value="nursing">Nursing</option>
+            <option value="bba">BBA</option>
+            <option value="md-ms">MD / MS</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="filter-state">State / City</label>
+          <select class="form-select" id="filter-state">
+            <option value="">All India</option>
+            <option value="karnataka">Karnataka</option>
+            <option value="maharashtra">Maharashtra</option>
+            <option value="delhi">Delhi NCR</option>
+            <option value="tamilnadu">Tamil Nadu</option>
+            <option value="uttarakhand">Uttarakhand</option>
+            <option value="up">Uttar Pradesh</option>
+            <option value="rajasthan">Rajasthan</option>
+            <option value="wb">West Bengal</option>
+            <option value="telangana">Telangana</option>
+            <option value="ap">Andhra Pradesh</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="filter-budget">Budget (Total Course)</label>
+          <select class="form-select" id="filter-budget">
+            <option value="">Any Budget</option>
+            <option value="5">Up to ₹5 Lakh</option>
+            <option value="10">Up to ₹10 Lakh</option>
+            <option value="20">Up to ₹20 Lakh</option>
+            <option value="50">Up to ₹50 Lakh</option>
+            <option value="100">Up to ₹1 Crore</option>
+            <option value="above">₹1 Crore+</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="filter-type">College Type</label>
+          <select class="form-select" id="filter-type">
+            <option value="">All Types</option>
+            <option value="government">Government</option>
+            <option value="private">Private</option>
+            <option value="deemed">Deemed University</option>
+            <option value="autonomous">Autonomous</option>
+            <option value="university">University</option>
+            <option value="institute">Institute</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="filter-route">Admission Route</label>
+          <select class="form-select" id="filter-route">
+            <option value="">All Routes</option>
+            <option value="entrance">Entrance Exam-Based</option>
+            <option value="counselling">Counselling-Based</option>
+            <option value="management">Management / Institutional</option>
+            <option value="nri">NRI Quota</option>
+            <option value="merit">Merit-Based</option>
+          </select>
+        </div>
+        <div class="form-group" style="display:flex;align-items:flex-end;">
+          <button class="btn btn-primary" style="width:100%;" id="filter-search-btn">Search Colleges</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Results -->
+    <div id="college-results" class="reveal">
+      <div style="text-align:center;padding:var(--sp-16);background:var(--grad-card);border:1px solid var(--clr-border);border-radius:var(--radius-xl);">
+        <div style="font-size:3rem;margin-bottom:var(--sp-4);">🏫</div>
+        <h3 style="margin-bottom:var(--sp-3);">Personalized College Lists Available</h3>
+        <p style="font-size:var(--fs-sm);color:var(--clr-text-muted);max-width:480px;margin-inline:auto;margin-bottom:var(--sp-6);">This tool provides a starting point. For a comprehensive, data-driven college shortlist personalized to your profile, talk to a College Corridor counsellor.</p>
+        <div style="display:flex;gap:var(--sp-4);justify-content:center;flex-wrap:wrap;">
+          <button class="btn btn-primary" data-modal="lead">Get Personalized College List</button>
+          <a href="compare-colleges.html" class="btn btn-secondary">Compare Colleges</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="disclaimer-block" style="margin-top:var(--sp-6);">
+      College information is provided for guidance purposes only. Fees, eligibility, cutoffs, and seat availability vary by institution and admission year. Always verify current details with the relevant official authority.
+    </div>
+  </div>
+</section>
+
+</main>
+<div id="footer-slot"></div><div id="mobile-cta-slot"></div><div id="modal-slot"></div>
+<script src="js/shared.js"></script><script src="js/config.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
