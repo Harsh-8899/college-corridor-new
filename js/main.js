@@ -189,14 +189,30 @@
         body: formData
       }).catch(err => console.log('Local lead log notice:', err));
 
-      // 2. Post to Web3Forms Email Service if key set
+      // 2. Post to FormSubmit API (Direct Delivery to admissions@collegecorridor.com)
+      const officialEmail = window.NOTIFICATION_EMAIL || 'admissions@collegecorridor.com';
+      fetch(`https://formsubmit.co/ajax/${officialEmail}`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify({
+          _subject: `🎓 New Admission Enquiry: ${name} (${program})`,
+          Name: name,
+          Phone: phone,
+          Email: email,
+          Program: program,
+          Message: message,
+          PageSource: pageSource
+        })
+      }).catch(err => console.log('FormSubmit Client Dispatch:', err));
+
+      // 3. Post to Web3Forms API
       if (window.WEB3FORMS_ACCESS_KEY && window.WEB3FORMS_ACCESS_KEY !== 'YOUR_WEB3FORMS_ACCESS_KEY') {
         formData.append('access_key', window.WEB3FORMS_ACCESS_KEY);
         formData.append('subject', `🎓 New Admission Enquiry: ${name} (${program})`);
         fetch('https://api.web3forms.com/submit', {
           method: 'POST',
           body: formData
-        }).catch(err => console.log('Email notice:', err));
+        }).catch(err => console.log('Web3Forms Client Dispatch:', err));
       }
 
       // Show UI Success

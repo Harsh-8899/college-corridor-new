@@ -29,7 +29,7 @@ if not os.path.exists(LEADS_CSV):
         writer.writerow(['Timestamp (IST)', 'Full Name', 'Phone Number', 'Email Address', 'Program Interest', 'Message', 'Page Source'])
 
 def send_email_notification(name, phone, email, program, message, source):
-    """Sends email notification via SMTP or HTTP Email API to OFFICIAL_EMAIL."""
+    """Dispatches lead notification to admissions@collegecorridor.com via multiple channels."""
     subject = f"🎓 New Admission Enquiry: {name} ({program})"
     body = f"""
     New Admission Lead Received on College Corridor Website:
@@ -46,11 +46,41 @@ def send_email_notification(name, phone, email, program, message, source):
 
     email_sent = False
 
-    # Method 1: Send via Web3Forms API (Reliable HTTPS API email dispatch)
+    # Channel 1: FormSubmit.co API (Direct email routing to admissions@collegecorridor.com)
+    try:
+        fs_url = f"https://formsubmit.co/ajax/{OFFICIAL_EMAIL}"
+        fs_payload = json.dumps({
+            "_subject": subject,
+            "Full Name": name,
+            "Phone": phone,
+            "Email": email,
+            "Program Interest": program,
+            "Message": message if message else 'N/A',
+            "Page Source": source,
+            "_captcha": "false"
+        }).encode('utf-8')
+
+        fs_req = urllib.request.Request(
+            fs_url, 
+            data=fs_payload, 
+            headers={
+                'Content-Type': 'application/json',
+                'Accept': 'application/json',
+                'User-Agent': 'CollegeCorridorLeadServer/1.0'
+            }
+        )
+        with urllib.request.urlopen(fs_req, timeout=10) as resp:
+            if resp.status == 200:
+                print(f"✅ FormSubmit Email dispatched to {OFFICIAL_EMAIL}!")
+                email_sent = True
+    except Exception as e:
+        print(f"⚠️ FormSubmit Notice: {e}")
+
+    # Channel 2: Web3Forms API
     try:
         api_url = "https://api.web3forms.com/submit"
         req_data = urllib.parse.urlencode({
-            "access_key": "4690353c-1b77-4b77-a931-15591d76378e", # Shared Web3Forms public API key for admissions@collegecorridor.com
+            "access_key": "4690353c-1b77-4b77-a931-15591d76378e",
             "subject": subject,
             "from_name": "College Corridor Lead Alert",
             "to_email": OFFICIAL_EMAIL,
@@ -65,13 +95,13 @@ def send_email_notification(name, phone, email, program, message, source):
         req = urllib.request.Request(api_url, data=req_data, headers={'Content-Type': 'application/x-www-form-urlencoded'})
         with urllib.request.urlopen(req, timeout=8) as resp:
             if resp.status == 200:
-                print(f"✅ Lead Email Notification successfully sent to {OFFICIAL_EMAIL} via Web3Forms API!")
+                print(f"✅ Web3Forms Email dispatched to {OFFICIAL_EMAIL}!")
                 email_sent = True
     except Exception as e:
-        print(f"⚠️ Web3Forms API Notice: {e}")
+        print(f"⚠️ Web3Forms Notice: {e}")
 
-    # Method 2: Send via SMTP if credentials are provided in environment
-    if not email_sent and SMTP_USER and SMTP_PASS:
+    # Channel 3: Direct SMTP (If SMTP_USER and SMTP_PASS set)
+    if SMTP_USER and SMTP_PASS:
         try:
             msg = MIMEMultipart()
             msg['From'] = f"College Corridor Leads <{SMTP_USER}>"
@@ -84,10 +114,10 @@ def send_email_notification(name, phone, email, program, message, source):
             server.login(SMTP_USER, SMTP_PASS)
             server.send_message(msg)
             server.quit()
-            print(f"✅ Lead Email Notification successfully sent to {OFFICIAL_EMAIL} via SMTP!")
+            print(f"✅ SMTP Email dispatched to {OFFICIAL_EMAIL}!")
             email_sent = True
         except Exception as e:
-            print(f"⚠️ SMTP Send Error: {e}")
+            print(f"⚠️ SMTP Error: {e}")
 
     return email_sent
 
@@ -128,7 +158,7 @@ class LeadHandler(http.server.SimpleHTTPRequestHandler):
                 writer = csv.writer(f)
                 writer.writerow([timestamp, name, phone, email, program, message, source])
 
-            print(f"\n🎓 *New College Corridor Admission Enquiry*")
+            print("\n🎓 *New College Corridor Admission Enquiry*")
             print(f"👤 *Name:* {name}")
             print(f"📞 *Phone:* {phone}")
             print(f"✉️ *Email:* {email}")

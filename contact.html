@@ -171,14 +171,30 @@ document.addEventListener('DOMContentLoaded', function() {
         body: formData
       }).catch(err => console.log('Local lead log:', err));
 
-      // 2. Post to Web3Forms if Key configured
+      // 2. Post to FormSubmit API (Direct Delivery to admissions@collegecorridor.com)
+      const officialEmail = window.NOTIFICATION_EMAIL || 'admissions@collegecorridor.com';
+      fetch(`https://formsubmit.co/ajax/${officialEmail}`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify({
+          _subject: `🎓 Contact Page Enquiry: ${name} (${program})`,
+          Name: name,
+          Phone: phone,
+          Email: email,
+          Program: program,
+          Message: message,
+          PageSource: 'contact-page'
+        })
+      }).catch(err => console.log('FormSubmit Contact Dispatch:', err));
+
+      // 3. Post to Web3Forms API
       if (window.WEB3FORMS_ACCESS_KEY && window.WEB3FORMS_ACCESS_KEY !== 'YOUR_WEB3FORMS_ACCESS_KEY') {
         formData.append('access_key', window.WEB3FORMS_ACCESS_KEY);
         formData.append('subject', `🎓 Contact Page Enquiry: ${name} (${program})`);
         fetch('https://api.web3forms.com/submit', {
           method: 'POST',
           body: formData
-        }).catch(err => console.log('Email notice:', err));
+        }).catch(err => console.log('Web3Forms Contact Dispatch:', err));
       }
 
       form.style.display = 'none';
