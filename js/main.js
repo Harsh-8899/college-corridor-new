@@ -103,12 +103,13 @@
     const closeBtn = overlay.querySelector('.modal-close');
     const form     = overlay.querySelector('#lead-form');
 
-    // Open triggers (Event delegation on document for 100% reliability across all dynamically rendered elements)
+    // Open triggers (Event delegation on document for 100% reliability across all elements)
     document.addEventListener('click', (e) => {
-      const modalBtn = e.target.closest('[data-modal="lead"]');
-      if (modalBtn) {
+      const modalBtn = e.target.closest('[data-modal], .btn-blue, button:not(.hamburger):not(.modal-close):not(.mobile-nav-close-btn)');
+      if (modalBtn && (modalBtn.dataset.modal || modalBtn.textContent.includes('COUNSELLING') || modalBtn.textContent.includes('ADVISOR') || modalBtn.textContent.includes('OPTIONS') || modalBtn.textContent.includes('STRATEGY') || modalBtn.textContent.includes('GUIDANCE'))) {
+        if (modalBtn.getAttribute('type') === 'submit' || modalBtn.closest('form')) return;
         e.preventDefault();
-        openModal(modalBtn.dataset.program || '');
+        openModal(modalBtn.dataset.program || modalBtn.textContent.trim());
       }
     });
 
@@ -127,6 +128,11 @@
     }
 
     function openModal(program) {
+      const formWrap = overlay.querySelector('.form-wrap');
+      const success  = overlay.querySelector('.form-success');
+      if (formWrap) formWrap.style.display = 'block';
+      if (success)  success.classList.remove('show');
+
       overlay.classList.add('open');
       document.body.style.overflow = 'hidden';
 

@@ -3,108 +3,131 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About Us — College Corridor Education Consultancy</title>
-  <meta name="description" content="Learn about College Corridor, an education consultancy and admissions advisory platform helping students navigate premium college admissions across India.">
+  <title>About College Corridor — Philosophy & Strategic Advisory</title>
+  <meta name="description" content="College Corridor is an independent education consultancy built around a simple belief: Education is a once-in-a-lifetime investment. Data-backed admissions guidance.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/components.css">
   <link rel="stylesheet" href="css/animations.css">
+  <style>
+    :root {
+      --clr-gold: #C59B27;
+      --clr-gold-light: #FCD34D;
+      --clr-dark: #0F172A;
+      --clr-border-gold: rgba(197, 155, 39, 0.35);
+    }
+    .about-hero {
+      padding: var(--sp-12) 0 var(--sp-10) 0;
+      background: radial-gradient(circle at 50% 20%, rgba(197, 155, 39, 0.18) 0%, rgba(15, 23, 42, 0.98) 75%), #0F172A;
+      color: #FFFFFF;
+      text-align: center;
+      border-bottom: 2px solid var(--clr-border-gold);
+    }
+    .btn-gold {
+      background: linear-gradient(135deg, #C59B27 0%, #D97706 100%);
+      color: #0F172A !important;
+      font-weight: 900 !important;
+      font-size: 1.1rem !important;
+      padding: 16px 34px !important;
+      border-radius: var(--radius-md) !important;
+      box-shadow: 0 8px 25px rgba(197, 155, 39, 0.4) !important;
+      transition: all 0.3s ease !important;
+      border: 2px solid #FCD34D !important;
+      text-transform: uppercase;
+    }
+    .btn-gold:hover {
+      transform: translateY(-3px) scale(1.02);
+      box-shadow: 0 12px 35px rgba(197, 155, 39, 0.6) !important;
+      background: linear-gradient(135deg, #FCD34D 0%, #C59B27 100%);
+    }
+  </style>
 </head>
 <body>
+
 <div id="announcement-bar-slot"></div>
 <header id="navbar-slot" data-active="about"></header>
+
 <main>
 
-<section class="page-hero" aria-labelledby="about-h1">
-  <div class="container page-hero-content">
-    <div class="page-hero-eyebrow"><span class="section-label">About Us</span></div>
-    <h1 id="about-h1">About College Corridor</h1>
-  </div>
-</section>
+  <!-- HERO SECTION -->
+  <section class="about-hero" aria-labelledby="about-title">
+    <div class="container">
+      <span class="section-label" style="background: rgba(201,150,12,0.22); color: #FCD34D; border: 1px solid rgba(253,224,71,0.5);">
+        Our Brand Purpose
+      </span>
 
-<section class="section section-alt">
-  <div class="container">
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--sp-8);align-items:center;">
-      <div class="reveal">
-        <p style="font-size:var(--fs-lg);color:var(--clr-text-2);line-height:1.8;margin-bottom:var(--sp-6);">College Corridor is an education consultancy and admissions advisory platform helping students navigate premium college and university admissions across India.</p>
-        <p style="color:var(--clr-text-2);line-height:1.75;margin-bottom:var(--sp-6);">We work with students targeting leading institutions for B.Tech, MBBS, MBA, Law and other professional programs, providing personalized guidance based on academic profile, entrance performance, budget and career goals.</p>
-        <p style="color:var(--clr-text-2);line-height:1.75;">From college discovery and comparison to counselling, choice filling and final admission assistance, we help students make informed decisions at every stage.</p>
+      <h1 id="about-title" style="font-size: clamp(2.2rem, 5vw, 4rem); font-weight: 900; color: #FFFFFF !important; -webkit-text-fill-color: #FFFFFF !important; margin: 16px 0 12px 0; line-height: 1.12;">
+        WE BELIEVE YOUR COLLEGE DECISION DESERVES SERIOUS THOUGHT.
+      </h1>
+
+      <p style="font-size: 1.25rem; font-weight: 800; color: #FCD34D; max-width: 840px; margin: 0 auto;">
+        College Corridor was built around a simple belief: EDUCATION IS A ONCE-IN-A-LIFETIME INVESTMENT.
+      </p>
+    </div>
+  </section>
+
+  <!-- CORE BELIEFS SECTION -->
+  <section class="section" aria-labelledby="deserve-heading">
+    <div class="container">
+      <div class="section-heading centered reveal">
+        <span class="section-label">What We Stand For</span>
+        <h2 id="deserve-heading">WHAT STUDENTS & FAMILIES DESERVE</h2>
       </div>
-      <div class="reveal">
-        <div class="feature-card" style="background:rgba(201,150,12,0.06);border-color:rgba(201,150,12,0.2);">
-          <h3 style="font-size:var(--fs-3xl);margin-bottom:var(--sp-4);">Our Story</h3>
-          <p style="color:var(--clr-text-muted);font-style:italic;">College Corridor was founded to bring transparent, data-driven strategy to college admissions across India. We bridge the gap between entrance exam scores and seat allotment by helping students evaluate realistic options and make informed decisions.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
 
-<!-- OUR APPROACH -->
-<section class="section">
-  <div class="container">
-    <div class="section-heading centered reveal">
-      <span class="section-label">Our Approach</span>
-      <h2>Why Students & Parents Choose Us</h2>
-    </div>
-    <div class="grid-3 stagger" style="margin-top:var(--sp-10)">
-      <div class="card reveal"><div class="card-icon">🎯</div><h3>Personalized Guidance</h3><p>Recommendations based on each student's individual profile, not generic lists.</p></div>
-      <div class="card reveal"><div class="card-icon blue">🛤️</div><h3>Multiple Pathways</h3><p>Entrance, counselling, management and NRI admission pathways.</p></div>
-      <div class="card reveal"><div class="card-icon green">📊</div><h3>Data-Driven Decisions</h3><p>College, fee, cutoff and admission information at your fingertips.</p></div>
-      <div class="card reveal"><div class="card-icon teal">🏫</div><h3>Multi-Disciplinary</h3><p>Medical, Engineering, Management, Law and other programs.</p></div>
-      <div class="card reveal"><div class="card-icon">✈️</div><h3>India & Abroad</h3><p>Domestic and international education pathways.</p></div>
-      <div class="card reveal"><div class="card-icon purple">🔄</div><h3>End-to-End Support</h3><p>From the first session to admission formalities.</p></div>
-    </div>
-  </div>
-</section>
-
-<!-- TEAM -->
-<section class="section section-alt">
-  <div class="container">
-    <div class="section-heading centered reveal">
-      <span class="section-label">Our Team</span>
-      <h2>Our Advisory Panel & Counselling Team</h2>
-    </div>
-    <div style="text-align:center;padding:var(--sp-12);background:var(--grad-card);border:1px solid var(--clr-border);border-radius:var(--radius-xl);margin-top:var(--sp-10);" class="reveal">
-      <p style="font-size:var(--fs-lg);color:var(--clr-text-muted);font-style:italic;">Our counselling panel brings over a decade of collective experience across Medical (NEET UG/PG), Engineering (JEE/State CETs), MBA (CAT/XAT), Law, and International Education.</p>
-    </div>
-  </div>
-</section>
-
-<!-- OFFICE -->
-<section class="section">
-  <div class="container">
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--sp-12);align-items:center;">
-      <div class="reveal">
-        <span class="section-label">Our Office</span>
-        <h2 style="font-size:var(--fs-3xl);margin-bottom:var(--sp-5);">Visit Us</h2>
-        <div style="margin-bottom:var(--sp-6);">
-          <div style="display:flex;align-items:flex-start;gap:var(--sp-3);margin-bottom:var(--sp-4);">
-            <span style="font-size:1.2rem;">📍</span>
-            <div><div style="font-weight:600;margin-bottom:4px;">Office Address</div><div style="font-size:var(--fs-sm);color:var(--clr-text-muted);">A-314, Vision Business Park, Knowledge Park III, Greater Noida, Uttar Pradesh, India. Pin- 201306</div></div>
+      <div style="max-width: 840px; margin: 0 auto;" class="reveal">
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; margin-bottom: 32px;">
+          <div style="padding: 16px; background: var(--clr-surface); border: 1px solid var(--clr-border); border-radius: var(--radius-lg);">
+            <div style="font-size: 1.5rem; margin-bottom: 6px;">💡</div>
+            <h3 style="font-size: 1.1rem; color: #0F172A; margin-bottom: 4px;">Clarity</h3>
+            <p style="font-size: 13px; color: var(--clr-text-2); margin: 0;">Clarity instead of confusion.</p>
           </div>
-          <div style="display:flex;align-items:flex-start;gap:var(--sp-3);margin-bottom:var(--sp-4);">
-            <span style="font-size:1.2rem;">📞</span>
-            <div><div style="font-weight:600;margin-bottom:4px;">Phone</div><div style="font-size:var(--fs-sm);color:var(--clr-text-muted);"><a href="tel:+918194083803" style="color:inherit;text-decoration:none;">+91 8194083803</a></div></div>
+          <div style="padding: 16px; background: var(--clr-surface); border: 1px solid var(--clr-border); border-radius: var(--radius-lg);">
+            <div style="font-size: 1.5rem; margin-bottom: 6px;">🎯</div>
+            <h3 style="font-size: 1.1rem; color: #0F172A; margin-bottom: 4px;">Strategy</h3>
+            <p style="font-size: 13px; color: var(--clr-text-2); margin: 0;">Strategy instead of guesswork.</p>
           </div>
-          <div style="display:flex;align-items:flex-start;gap:var(--sp-3);">
-            <span style="font-size:1.2rem;">✉️</span>
-            <div><div style="font-weight:600;margin-bottom:4px;">Email</div><div style="font-size:var(--fs-sm);color:var(--clr-text-muted);"><a href="mailto:admissions@collegecorridor.com" style="text-decoration:underline;">admissions@collegecorridor.com</a></div></div>
+          <div style="padding: 16px; background: var(--clr-surface); border: 1px solid var(--clr-border); border-radius: var(--radius-lg);">
+            <div style="font-size: 1.5rem; margin-bottom: 6px;">🤝</div>
+            <h3 style="font-size: 1.1rem; color: #0F172A; margin-bottom: 4px;">Real Guidance</h3>
+            <p style="font-size: 13px; color: var(--clr-text-2); margin: 0;">Realistic advice instead of false promises.</p>
+          </div>
+          <div style="padding: 16px; background: var(--clr-surface); border: 1px solid var(--clr-border); border-radius: var(--radius-lg);">
+            <div style="font-size: 1.5rem; margin-bottom: 6px;">📋</div>
+            <h3 style="font-size: 1.1rem; color: #0F172A; margin-bottom: 4px;">Personalization</h3>
+            <p style="font-size: 13px; color: var(--clr-text-2); margin: 0;">Personalized advice instead of generic lists.</p>
           </div>
         </div>
-        <button class="btn btn-primary" data-modal="lead">Get in Touch</button>
-      </div>
-      <div class="reveal" style="background:var(--grad-card);border:1px solid var(--clr-border);border-radius:var(--radius-xl);padding:var(--sp-8);text-align:center;min-height:300px;display:flex;align-items:center;justify-content:center;">
-
       </div>
     </div>
-  </div>
-</section>
+  </section>
+
+  <!-- PHILOSOPHY SECTION -->
+  <section class="section section-alt" aria-labelledby="philosophy-heading">
+    <div class="container">
+      <div style="max-width: 860px; margin: 0 auto; background: #0F172A; color: #FFFFFF; border: 2px solid var(--clr-border-gold); border-radius: var(--radius-xl); padding: var(--sp-8); text-align: center;" class="reveal">
+        <span class="section-label" style="background: rgba(201,150,12,0.2); color: #FCD34D; margin-bottom: 12px;">Our Differentiator</span>
+        <h2 id="philosophy-heading" style="color: #FFFFFF !important; -webkit-text-fill-color: #FFFFFF !important; font-size: clamp(1.6rem, 3.5vw, 2.4rem); margin-bottom: 16px;">
+          WE DON'T WANT TO HELP YOU GET INTO "ANY" COLLEGE.
+        </h2>
+        <p style="color: #CBD5E1; font-size: 1.05rem; line-height: 1.7; margin-bottom: 20px;">
+          We want to help you understand: Where you can realistically go • What you should target • What alternatives exist • What the investment looks like • What risks exist • What decision makes sense.
+        </p>
+        <h3 style="font-size: clamp(1.4rem, 3vw, 2rem); font-weight: 900; color: #FCD34D !important; -webkit-text-fill-color: #FCD34D !important; margin-bottom: 24px;">
+          YOUR FUTURE DESERVES A STRATEGY.
+        </h3>
+        <button class="btn btn-gold" data-modal="lead" data-program="About Us Counselling Strategy">
+          BOOK YOUR COUNSELLING NOW
+        </button>
+      </div>
+    </div>
+  </section>
 
 </main>
-<div id="footer-slot"></div><div id="mobile-cta-slot"></div><div id="modal-slot"></div>
-<script src="js/shared.js"></script><script src="js/config.js"></script>
+
+<div id="footer-slot"></div>
+
+<script src="js/shared.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>

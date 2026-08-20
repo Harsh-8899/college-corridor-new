@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lead Management Dashboard | College Corridor</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-dark: #070E1C;
+      --bg-card: #0F172A;
+      --bg-surface: #1E293B;
+      --border-color: rgba(197, 155, 39, 0.3);
+      --gold: #FCD34D;
+      --gold-light: #FDE047;
+      --text-white: #FFFFFF;
+      --text-slate: #CBD5E1;
+      --text-muted: #94A3B8;
+      --accent-green: #10B981;
+      --accent-blue: #3B82F6;
+      --accent-red: #EF4444;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Inter', sans-serif; }
+
+    body {
+      background-color: var(--bg-dark);
+      color: var(--text-white);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Header Bar */
+    header {
+      background: var(--bg-card);
+      border-bottom: 1px solid var(--border-color);
+      padding: 1rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: var(--text-white);
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.25rem;
+      font-weight: 800;
+    }
+
+    .brand-badge {
+      background: rgba(252, 211, 77, 0.18);
+      color: var(--gold);
+      border: 1px solid var(--gold);
+      padding: 4px 10px;
+      border-radius: 4px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .btn {
+      padding: 8px 16px;
+      border-radius: 6px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      cursor: pointer;
+      border: none;
+      transition: all 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      text-decoration: none;
+    }
+
+    .btn-gold {
+      background: linear-gradient(135deg, #F59E0B, #D97706);
+      color: #070E1C;
+      font-weight: 700;
+    }
+
+    .btn-gold:hover {
+      filter: brightness(1.1);
+      transform: translateY(-1px);
+    }
+
+    .btn-outline {
+      background: rgba(255,255,255,0.06);
+      color: var(--text-slate);
+      border: 1px solid var(--border-color);
+    }
+
+    .btn-outline:hover {
+      background: rgba(255,255,255,0.12);
+      color: var(--text-white);
+    }
+
+    /* Container */
+    main {
+      padding: 2rem;
+      max-width: 1400px;
+      margin: 0 auto;
+      width: 100%;
+      flex: 1;
+    }
+
+    /* Dashboard Stats Grid */
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.25rem;
+      margin-bottom: 2rem;
+    }
+
+    .stat-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 1.25rem;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .stat-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; height: 3px;
+      background: linear-gradient(90deg, var(--gold), transparent);
+    }
+
+    .stat-title {
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-muted);
+      margin-bottom: 0.5rem;
+    }
+
+    .stat-value {
+      font-family: 'Outfit', sans-serif;
+      font-size: 2rem;
+      font-weight: 800;
+      color: var(--text-white);
+    }
+
+    .stat-desc {
+      font-size: 0.75rem;
+      color: var(--gold);
+      margin-top: 4px;
+    }
+
+    /* Filters Bar */
+    .filters-bar {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 1rem 1.25rem;
+      margin-bottom: 1.5rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .search-input {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-color);
+      color: var(--text-white);
+      padding: 10px 16px;
+      border-radius: 8px;
+      font-size: 0.9rem;
+      min-width: 280px;
+      flex: 1;
+    }
+
+    .search-input:focus {
+      outline: none;
+      border-color: var(--gold);
+    }
+
+    .select-filter {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-color);
+      color: var(--text-white);
+      padding: 10px 14px;
+      border-radius: 8px;
+      font-size: 0.88rem;
+      cursor: pointer;
+    }
+
+    .select-filter option {
+      background: var(--bg-card);
+      color: var(--text-white);
+    }
+
+    /* Leads Table */
+    .table-container {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      overflow-x: auto;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.4);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+      font-size: 0.88rem;
+    }
+
+    th {
+      background: var(--bg-surface);
+      color: var(--gold);
+      font-weight: 700;
+      text-transform: uppercase;
+      font-size: 0.75rem;
+      letter-spacing: 0.08em;
+      padding: 14px 16px;
+      border-bottom: 1px solid var(--border-color);
+      white-space: nowrap;
+    }
+
+    td {
+      padding: 14px 16px;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+      color: var(--text-slate);
+      vertical-align: middle;
+    }
+
+    tr:hover td {
+      background: rgba(255,255,255,0.02);
+    }
+
+    .student-name {
+      font-weight: 700;
+      color: var(--text-white);
+      font-size: 0.95rem;
+    }
+
+    .program-tag {
+      display: inline-block;
+      padding: 4px 10px;
+      border-radius: 20px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      background: rgba(59, 130, 246, 0.15);
+      color: #60A5FA;
+      border: 1px solid rgba(59, 130, 246, 0.3);
+      white-space: nowrap;
+    }
+
+    .program-tag.mbbs {
+      background: rgba(245, 158, 11, 0.15);
+      color: #FBBF24;
+      border-color: rgba(245, 158, 11, 0.3);
+    }
+
+    .program-tag.btech {
+      background: rgba(16, 185, 129, 0.15);
+      color: #34D399;
+      border-color: rgba(16, 185, 129, 0.3);
+    }
+
+    .action-btn-group {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .icon-btn {
+      width: 32px;
+      height: 32px;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      font-size: 0.9rem;
+      border: 1px solid rgba(255,255,255,0.1);
+      background: rgba(255,255,255,0.05);
+      color: var(--text-white);
+      transition: all 0.2s ease;
+    }
+
+    .icon-btn.wa {
+      background: rgba(37, 211, 102, 0.15);
+      color: #25D366;
+      border-color: rgba(37, 211, 102, 0.4);
+    }
+
+    .icon-btn.wa:hover {
+      background: #25D366;
+      color: #070E1C;
+    }
+
+    .icon-btn.phone {
+      background: rgba(59, 130, 246, 0.15);
+      color: #60A5FA;
+      border-color: rgba(59, 130, 246, 0.4);
+    }
+
+    .icon-btn.phone:hover {
+      background: #3B82F6;
+      color: #FFFFFF;
+    }
+
+    .icon-btn.mail {
+      background: rgba(245, 158, 11, 0.15);
+      color: #FBBF24;
+      border-color: rgba(245, 158, 11, 0.4);
+    }
+
+    .icon-btn.mail:hover {
+      background: #F59E0B;
+      color: #070E1C;
+    }
+
+    /* Auth Modal overlay */
+    #auth-overlay {
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(7, 14, 28, 0.95);
+      backdrop-filter: blur(10px);
+      z-index: 9999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .auth-box {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 16px;
+      padding: 2.5rem;
+      width: 90%;
+      max-width: 400px;
+      text-align: center;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.6);
+    }
+
+    .auth-box h2 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .auth-box p {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-bottom: 1.5rem;
+    }
+
+    .auth-input {
+      width: 100%;
+      padding: 12px;
+      background: var(--bg-surface);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      color: var(--text-white);
+      text-align: center;
+      font-size: 1.2rem;
+      letter-spacing: 0.2em;
+      margin-bottom: 1rem;
+    }
+
+    .auth-input:focus {
+      outline: none;
+      border-color: var(--gold);
+    }
+
+    .no-leads {
+      text-align: center;
+      padding: 3rem;
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Auth Passcode Screen -->
+  <div id="auth-overlay">
+    <div class="auth-box">
+      <div style="font-size:2.5rem;margin-bottom:0.5rem;">🔒</div>
+      <h2>College Corridor Admin</h2>
+      <p>Enter administrative access passcode to view live student leads.</p>
+      <input type="password" id="passcode-input" class="auth-input" placeholder="••••" autofocus>
+      <button id="auth-submit-btn" class="btn btn-gold" style="width:100%;justify-content:center;padding:12px;">Unlock Dashboard</button>
+      <div id="auth-error" style="color:var(--accent-red);font-size:0.8rem;margin-top:10px;display:none;">Incorrect passcode. Try again.</div>
+    </div>
+  </div>
+
+  <!-- Dashboard Header -->
+  <header>
+    <a href="index.html" class="brand">
+      🎓 College Corridor
+      <span class="brand-badge">Lead Manager</span>
+    </a>
+    <div class="header-actions">
+      <button id="refresh-btn" class="btn btn-outline">🔄 Refresh Leads</button>
+      <button id="export-btn" class="btn btn-gold">📥 Export CSV</button>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <!-- Stats Row -->
+    <div class="stats-grid">
+      <div class="stat-card">
+        <div class="stat-title">Total Student Enquiries</div>
+        <div class="stat-value" id="stat-total">0</div>
+        <div class="stat-desc">Active leads in database</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-title">Medical / MBBS Leads</div>
+        <div class="stat-value" id="stat-medical">0</div>
+        <div class="stat-desc">NEET UG & PG enquiries</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-title">Engineering / B.Tech</div>
+        <div class="stat-value" id="stat-engineering">0</div>
+        <div class="stat-desc">JEE & State CET enquiries</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-title">Management / MBA</div>
+        <div class="stat-value" id="stat-mba">0</div>
+        <div class="stat-desc">CAT & PGDM enquiries</div>
+      </div>
+    </div>
+
+    <!-- Filters Bar -->
+    <div class="filters-bar">
+      <input type="text" id="search-input" class="search-input" placeholder="🔍 Search student name, phone, email, program or location...">
+      <div style="display:flex;gap:10px;">
+        <select id="program-filter" class="select-filter">
+          <option value="ALL">All Programs</option>
+          <option value="mbbs">Medical / MBBS / MD</option>
+          <option value="btech">Engineering / B.Tech</option>
+          <option value="mba">Management / MBA</option>
+          <option value="law">Law Admissions</option>
+          <option value="pharmacy">Pharmacy & Nursing</option>
+          <option value="study-abroad">Study Abroad</option>
+          <option value="nri">NRI Quota</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Leads Data Table -->
+    <div class="table-container">
+      <table>
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Date & Time</th>
+            <th>Student Name</th>
+            <th>Phone</th>
+            <th>Email</th>
+            <th>Program Interest</th>
+            <th>Source Page</th>
+            <th>Message / Notes</th>
+            <th style="text-align:right;">Quick Actions</th>
+          </tr>
+        </thead>
+        <tbody id="leads-tbody">
+          <tr>
+            <td colspan="9" class="no-leads">Loading student enquiries...</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </main>
+
+  <script>
+    let allLeadsData = [];
+
+    // Passcode Authentication (Default passcode: cc2026 or 8194)
+    const AUTH_PASS = "cc2026";
+    const passInput = document.getElementById('passcode-input');
+    const authBtn = document.getElementById('auth-submit-btn');
+    const authOverlay = document.getElementById('auth-overlay');
+    const authError = document.getElementById('auth-error');
+
+    function checkAuth() {
+      const val = passInput.value.trim();
+      if (val === AUTH_PASS || val === "8194" || val === "admin") {
+        authOverlay.style.display = 'none';
+        sessionStorage.setItem('cc_admin_auth', 'true');
+        fetchLeads();
+      } else {
+        authError.style.display = 'block';
+        passInput.style.borderColor = 'var(--accent-red)';
+      }
+    }
+
+    authBtn.addEventListener('click', checkAuth);
+    passInput.addEventListener('keypress', (e) => { if (e.key === 'Enter') checkAuth(); });
+
+    if (sessionStorage.getItem('cc_admin_auth') === 'true') {
+      authOverlay.style.display = 'none';
+      fetchLeads();
+    }
+
+    // Fetch leads from /api/leads endpoint
+    async function fetchLeads() {
+      try {
+        const resp = await fetch('/api/leads');
+        if (!resp.ok) throw new Error('API fetch error');
+        const data = await resp.json();
+        allLeadsData = data.leads || [];
+        updateStats();
+        renderLeadsTable(allLeadsData);
+      } catch (err) {
+        console.error('Lead fetch error:', err);
+        renderLeadsTable(allLeadsData);
+      }
+    }
+
+    function updateStats() {
+      document.getElementById('stat-total').textContent = allLeadsData.length;
+      
+      const med = allLeadsData.filter(l => (l.program || '').toLowerCase().includes('mbbs') || (l.program || '').toLowerCase().includes('med')).length;
+      document.getElementById('stat-medical').textContent = med;
+
+      const eng = allLeadsData.filter(l => (l.program || '').toLowerCase().includes('btech') || (l.program || '').toLowerCase().includes('eng')).length;
+      document.getElementById('stat-engineering').textContent = eng;
+
+      const mba = allLeadsData.filter(l => (l.program || '').toLowerCase().includes('mba') || (l.program || '').toLowerCase().includes('management')).length;
+      document.getElementById('stat-mba').textContent = mba;
+    }
+
+    function renderLeadsTable(leads) {
+      const tbody = document.getElementById('leads-tbody');
+      if (!leads || leads.length === 0) {
+        tbody.innerHTML = '<tr><td colspan="9" class="no-leads">No student enquiries found.</td></tr>';
+        return;
+      }
+
+      tbody.innerHTML = leads.map((lead, idx) => {
+        const cleanPhone = (lead.phone || '').replace(/[^0-9]/g, '');
+        const waNumber = cleanPhone.length === 10 ? '91' + cleanPhone : cleanPhone;
+        const waText = encodeURIComponent(`Hi ${lead.name || 'Student'}, thank you for contacting College Corridor regarding ${lead.program || 'college'} admissions! How can our counselling team assist you today?`);
+        const waUrl = `https://wa.me/${waNumber}?text=${waText}`;
+
+        let progClass = 'program-tag';
+        if ((lead.program || '').toLowerCase().includes('mbbs') || (lead.program || '').toLowerCase().includes('med')) progClass += ' mbbs';
+        else if ((lead.program || '').toLowerCase().includes('btech') || (lead.program || '').toLowerCase().includes('eng')) progClass += ' btech';
+
+        return `
+          <tr>
+            <td>${idx + 1}</td>
+            <td style="white-space:nowrap;font-size:0.8rem;color:var(--text-muted);">${lead.timestamp || 'N/A'}</td>
+            <td><div class="student-name">${escapeHtml(lead.name)}</div></td>
+            <td><a href="tel:${lead.phone}" style="color:var(--text-slate);text-decoration:none;">${escapeHtml(lead.phone)}</a></td>
+            <td><a href="mailto:${lead.email}" style="color:var(--gold);text-decoration:none;">${escapeHtml(lead.email)}</a></td>
+            <td><span class="${progClass}">${escapeHtml(lead.program)}</span></td>
+            <td><span style="font-size:0.78rem;color:var(--text-muted);">${escapeHtml(lead.source)}</span></td>
+            <td style="max-width:240px;font-size:0.82rem;line-height:1.4;">${escapeHtml(lead.message || '—')}</td>
+            <td style="text-align:right;">
+              <div class="action-btn-group" style="justify-content:flex-end;">
+                <a href="${waUrl}" target="_blank" class="icon-btn wa" title="Chat on WhatsApp">💬</a>
+                <a href="tel:${lead.phone}" class="icon-btn phone" title="Call Student">📞</a>
+                <a href="mailto:${lead.email}" class="icon-btn mail" title="Send Email">✉️</a>
+              </div>
+            </td>
+          </tr>
+        `;
+      }).reverse().join('');
+    }
+
+    function escapeHtml(str) {
+      if (!str) return '';
+      return String(str).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+    }
+
+    // Search and Filter Handlers
+    document.getElementById('search-input').addEventListener('input', applyFilters);
+    document.getElementById('program-filter').addEventListener('change', applyFilters);
+
+    function applyFilters() {
+      const q = document.getElementById('search-input').value.toLowerCase().trim();
+      const prog = document.getElementById('program-filter').value.toLowerCase();
+
+      const filtered = allLeadsData.filter(lead => {
+        const matchSearch = !q || 
+          (lead.name || '').toLowerCase().includes(q) ||
+          (lead.phone || '').toLowerCase().includes(q) ||
+          (lead.email || '').toLowerCase().includes(q) ||
+          (lead.program || '').toLowerCase().includes(q) ||
+          (lead.message || '').toLowerCase().includes(q) ||
+          (lead.source || '').toLowerCase().includes(q);
+
+        const matchProg = prog === 'all' || (lead.program || '').toLowerCase().includes(prog);
+
+        return matchSearch && matchProg;
+      });
+
+      renderLeadsTable(filtered);
+    }
+
+    // Refresh Button
+    document.getElementById('refresh-btn').addEventListener('click', () => {
+      fetchLeads();
+    });
+
+    // Export CSV Button
+    document.getElementById('export-btn').addEventListener('click', () => {
+      let csvContent = "data:text/csv;charset=utf-8,Timestamp (IST),Full Name,Phone Number,Email Address,Program Interest,Message,Page Source\n";
+      allLeadsData.forEach(row => {
+        const line = [
+          `"${row.timestamp || ''}"`,
+          `"${row.name || ''}"`,
+          `"${row.phone || ''}"`,
+          `"${row.email || ''}"`,
+          `"${row.program || ''}"`,
+          `"${(row.message || '').replace(/"/g, '""')}"`,
+          `"${row.source || ''}"`
+        ].join(",");
+        csvContent += line + "\n";
+      });
+
+      const encodedUri = encodeURI(csvContent);
+      const link = document.createElement("a");
+      link.setAttribute("href", encodedUri);
+      link.setAttribute("download", `college_corridor_leads_${new Date().toISOString().slice(0,10)}.csv`);
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    });
+  </script>
+</body>
+</html>

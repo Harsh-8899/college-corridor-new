@@ -3,369 +3,272 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>B.Tech Admission Guidance — JEE, State & University Counselling | College Corridor</title>
-  <meta name="description" content="Get personalized B.Tech admission guidance across leading institutions in Bengaluru, Delhi NCR, Pune, Mumbai and Dehradun.">
+  <title>B.Tech Admissions & Engineering Counselling Strategy | College Corridor</title>
+  <meta name="description" content="Strategic engineering admission guidance for B.Tech aspirants across JoSAA, CSAB, State counselling & leading private universities in India.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/components.css">
   <link rel="stylesheet" href="css/animations.css">
+  <style>
+    :root {
+      --clr-engg: #3B82F6;
+      --clr-gold: #C59B27;
+      --clr-gold-light: #FCD34D;
+      --clr-dark: #0F172A;
+      --clr-border-gold: rgba(197, 155, 39, 0.35);
+    }
+    .engg-hero {
+      padding: var(--sp-12) 0 var(--sp-10) 0;
+      background: radial-gradient(circle at 50% 20%, rgba(59, 130, 246, 0.2) 0%, rgba(15, 23, 42, 0.98) 75%), #0F172A;
+      color: #FFFFFF;
+      text-align: center;
+      border-bottom: 2px solid var(--clr-border-gold);
+    }
+    .btn-gold {
+      background: linear-gradient(135deg, #C59B27 0%, #D97706 100%);
+      color: #0F172A !important;
+      font-weight: 900 !important;
+      font-size: 1.1rem !important;
+      padding: 16px 34px !important;
+      border-radius: var(--radius-md) !important;
+      box-shadow: 0 8px 25px rgba(197, 155, 39, 0.4) !important;
+      transition: all 0.3s ease !important;
+      border: 2px solid #FCD34D !important;
+      text-transform: uppercase;
+    }
+    .btn-gold:hover {
+      transform: translateY(-3px) scale(1.02);
+      box-shadow: 0 12px 35px rgba(197, 155, 39, 0.6) !important;
+      background: linear-gradient(135deg, #FCD34D 0%, #C59B27 100%);
+    }
+    .tag-cloud {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+      margin-top: 16px;
+    }
+    .tag-item {
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid var(--clr-border-gold);
+      padding: 8px 14px;
+      border-radius: 6px;
+      font-size: 13px;
+      font-weight: 700;
+      color: #F8FAFC;
+    }
+  </style>
 </head>
 <body>
+
 <div id="announcement-bar-slot"></div>
 <header id="navbar-slot" data-active="engineering"></header>
 
 <main>
 
-<!-- PAGE HERO -->
-<section class="page-hero" aria-labelledby="engg-h1">
-  <div class="container page-hero-content">
-    <div class="page-hero-eyebrow"><span class="section-label">Engineering Admissions</span></div>
-    <h1 id="engg-h1">Premium <span class="grad-text-blue">B.Tech</span> Admissions</h1>
-    <p class="page-hero-tagline">Guidance for Admissions to Leading Engineering & Technology Institutions</p>
-    <p class="hero-sub" style="margin-bottom:var(--sp-8);max-width:720px;">College Corridor provides personalized admission guidance for students seeking B.Tech/B.E. admissions at leading and premium universities across India, evaluated on Academic Profile | Entrance Exam Score | Branch | Budget | Location | Career Goals. We guide students across entrance-based, university-level, merit-based, management/institutional and NRI admission pathways where applicable.</p>
-    <div class="hero-actions">
-      <button class="btn btn-primary btn-lg" data-modal="lead" data-program="btech">Find My B.Tech College</button>
-      <a href="find-colleges.html" class="btn btn-secondary btn-lg">Explore Engineering Colleges</a>
-    </div>
-  </div>
+  <!-- HERO SECTION -->
+  <section class="engg-hero" aria-labelledby="engg-title">
+    <div class="container">
+      <span class="section-label" style="background: rgba(59,130,246,0.2); color: #60A5FA; border: 1px solid rgba(96,165,250,0.4);">
+        Engineering Admissions Advisory
+      </span>
 
-    <div style="margin-top:var(--sp-6);border-radius:var(--radius-xl);overflow:hidden;border:1px solid var(--clr-border);" class="reveal">
-      <img src="assets/images/iit-campus.png" alt="IIT Engineering Institute Campus — Premier Engineering Guidance" loading="lazy" style="width:100%;height:auto;max-height:380px;object-fit:cover;display:block;">
-      <div style="padding:var(--sp-3) var(--sp-4);background:rgba(15,23,42,0.7);color:rgba(248,250,252,0.85);font-size:11px;text-align:right;">
-        ⚙️ Representative Premier Engineering Campus Architecture • College Corridor Advisory
+      <h1 id="engg-title" style="font-size: clamp(2rem, 4.8vw, 3.8rem); font-weight: 900; color: #FFFFFF !important; -webkit-text-fill-color: #FFFFFF !important; margin: 16px 0 12px 0; line-height: 1.15;">
+        B.TECH ADMISSIONS.<br>DON'T JUST CHOOSE A COLLEGE. CHOOSE YOUR DIRECTION.
+      </h1>
+
+      <p style="font-size: 1.15rem; color: #CBD5E1; max-width: 820px; margin: 0 auto 24px auto;">
+        JEE Main • JoSAA • CSAB • State Counselling • Private University Admissions • Institutional Routes
+      </p>
+
+      <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 16px;">
+        <button class="btn btn-gold" data-modal="lead" data-program="B.Tech Strategy">
+          GET MY B.TECH STRATEGY
+        </button>
+        <button class="btn btn-secondary btn-lg" data-modal="lead" data-program="B.Tech Options">
+          MAP MY ADMISSION OPTIONS
+        </button>
       </div>
     </div>
+  </section>
 
-</section>
+  <!-- EMOTIONAL SECTION -->
+  <section class="section" aria-labelledby="fit-heading">
+    <div class="container">
+      <div class="section-heading centered reveal">
+        <span class="section-label">Fit & Opportunity</span>
+        <h2 id="fit-heading">FOUR YEARS IS A LONG TIME TO REALIZE YOU CHOSE THE WRONG FIT.</h2>
+      </div>
 
-<!-- CITY TABS -->
-<section class="section section-alt" aria-labelledby="cities-heading">
-  <div class="container">
-    <div class="section-heading centered reveal">
-      <span class="section-label">Leading Institutions We Guide Students For</span>
-      <h2 id="cities-heading">Top B.Tech Institutions by City</h2>
-      <p>Note: This list does not imply an exclusive partnership with every institution listed, and rankings/positioning may change year to year — verify current standing independently.</p>
+      <div style="max-width: 840px; margin: 0 auto; text-align: center;" class="reveal">
+        <p style="font-size: 1.1rem; color: var(--clr-text-main); line-height: 1.8; margin-bottom: 24px;">
+          When you select an engineering college, you are choosing your: <strong>College • Branch • City • Total Fee Investment • Peer Group • Academic Environment • Career Ecosystem • Placements • Future Specialization.</strong>
+        </p>
+
+        <div style="background: var(--clr-surface); border: 2px solid var(--clr-border); border-radius: var(--radius-xl); padding: var(--sp-8); box-shadow: var(--shadow-lg); margin-bottom: 24px;">
+          <h3 style="font-size: 1.3rem; color: #0F172A; font-weight: 900; margin-bottom: 12px;">
+            Don't make that decision from a single ranking or a friend's recommendation.
+          </h3>
+          <p style="font-size: 14px; color: var(--clr-text-2); margin: 0;">
+            An engineering degree should align with your academic strengths and long-term career ambition—not just convenience.
+          </p>
+        </div>
+
+        <button class="btn btn-primary btn-lg" data-modal="lead" data-program="Fit Evaluation">
+          EVALUATE MY FIT
+        </button>
+      </div>
     </div>
+  </section>
 
-    <div data-tabs style="margin-top:var(--sp-10)">
-      <div class="tab-nav reveal">
-        <button class="tab-btn active" data-tab="bengaluru">🏙️ Bengaluru</button>
-        <button class="tab-btn" data-tab="delhi">🏛️ Delhi NCR</button>
-        <button class="tab-btn" data-tab="dehradun">⛰️ Dehradun</button>
-        <button class="tab-btn" data-tab="pune">🌆 Pune</button>
-        <button class="tab-btn" data-tab="mumbai">🌊 Mumbai</button>
+  <!-- KNOWLEDGE SECTION -->
+  <section class="section section-alt" aria-labelledby="compare-heading">
+    <div class="container">
+      <div class="section-heading centered reveal">
+        <span class="section-label">Evaluation Matrix</span>
+        <h2 id="compare-heading">WHAT SHOULD YOU ACTUALLY COMPARE?</h2>
+        <p style="font-size: 1.1rem; color: #0F172A; font-weight: 700; margin-top: 8px;">Not just "Average Package."</p>
       </div>
 
-      <!-- BENGALURU -->
-      <div class="tab-panel active" data-panel="bengaluru">
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--sp-8);align-items:start;">
-          <div>
-            <div class="table-wrap">
-              <table class="data-table">
-                <thead><tr><th>#</th><th>Institution</th><th>Key Areas</th></tr></thead>
-                <tbody>
-                  <tr><td>1</td><td>RV College of Engineering (RVCE)</td><td>CSE, AI/ML, ECE, EEE</td></tr>
-                  <tr><td>2</td><td>MS Ramaiah Institute of Technology (MSRIT)</td><td>CSE, AI, ECE, EEE</td></tr>
-                  <tr><td>3</td><td>BMS College of Engineering (BMSCE)</td><td>CSE, AI/ML, ECE</td></tr>
-                  <tr><td>4</td><td>PES University</td><td>CSE, AI/ML, ECE</td></tr>
-                  <tr><td>5</td><td>RV University <em style="font-size:10px;color:var(--clr-text-muted);">(distinct from RVCE)</em></td><td>CSE, AI/ML, Data Science</td></tr>
-                  <tr><td>6</td><td>Christ (Deemed to be University)</td><td>CSE, AI/ML, Data Science</td></tr>
-                  <tr><td>7</td><td>Jain (Deemed-to-be University)</td><td>CSE, AI/ML, Data Science</td></tr>
-                  <tr><td>8</td><td>Dayananda Sagar University</td><td>CSE, AI/ML, ECE</td></tr>
-                  <tr><td>9</td><td>REVA University</td><td>CSE, AI/ML, Cyber Security</td></tr>
-                  <tr><td>10</td><td>CMR University</td><td>CSE, AI/ML, Data Science</td></tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-          <div>
-            <div class="feature-card">
-              <div class="card-icon blue" style="margin-bottom:var(--sp-5)">🏙️</div>
-              <h3 style="font-size:var(--fs-2xl);margin-bottom:var(--sp-3);">Bengaluru — India's Technology Capital</h3>
-              <p style="font-size:var(--fs-sm);color:var(--clr-text-2);line-height:1.7;margin-bottom:var(--sp-4);">College Corridor helps students explore premium B.Tech admission opportunities in Bengaluru, one of India's leading technology and engineering destinations. From RVCE, MSRIT, BMSCE and PES University to RV University, Christ, Jain, REVA and other leading institutions, our counsellors help students evaluate colleges, branches, admission routes and investment before making their final decision.</p>
-              <div style="display:flex;flex-wrap:wrap;gap:var(--sp-2);margin-bottom:var(--sp-5)">
-                <span class="tag">KCET</span><span class="tag">COMEDK</span><span class="tag">University Entrance</span><span class="tag">Management Quota</span>
-              </div>
-              <button class="btn btn-primary" data-modal="lead" data-program="btech">Explore Bengaluru Admissions</button>
-            </div>
-          </div>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 14px; margin: 24px 0;" class="reveal">
+        <div style="padding: 14px; background: var(--clr-surface); border: 1px solid var(--clr-border); border-radius: var(--radius-md); font-weight: 800; font-size: 13px; text-align: center;">💻 Branch Specialization</div>
+        <div style="padding: 14px; background: var(--clr-surface); border: 1px solid var(--clr-border); border-radius: var(--radius-md); font-weight: 800; font-size: 13px; text-align: center;">💰 Total Course Cost</div>
+        <div style="padding: 14px; background: var(--clr-surface); border: 1px solid var(--clr-border); border-radius: var(--radius-md); font-weight: 800; font-size: 13px; text-align: center;">📍 Location & Tech Hubs</div>
+        <div style="padding: 14px; background: var(--clr-surface); border: 1px solid var(--clr-border); border-radius: var(--radius-md); font-weight: 800; font-size: 13px; text-align: center;">⚙️ Industry Exposure</div>
+        <div style="padding: 14px; background: var(--clr-surface); border: 1px solid var(--clr-border); border-radius: var(--radius-md); font-weight: 800; font-size: 13px; text-align: center;">🚀 Internship Opportunities</div>
+        <div style="padding: 14px; background: var(--clr-surface); border: 1px solid var(--clr-border); border-radius: var(--radius-md); font-weight: 800; font-size: 13px; text-align: center;">🎓 Faculty & Research</div>
+        <div style="padding: 14px; background: var(--clr-surface); border: 1px solid var(--clr-border); border-radius: var(--radius-md); font-weight: 800; font-size: 13px; text-align: center;">🏛️ Infrastructure Labs</div>
+        <div style="padding: 14px; background: var(--clr-surface); border: 1px solid var(--clr-border); border-radius: var(--radius-md); font-weight: 800; font-size: 13px; text-align: center;">🌐 Student Ecosystem</div>
+      </div>
+
+      <div style="text-align: center;" class="reveal">
+        <h3 style="font-size: 1.3rem; color: #0F172A; font-weight: 900; margin-bottom: 16px;">
+          The "best college" is not identical for every student.
+        </h3>
+        <button class="btn btn-primary" data-modal="lead" data-program="B.Tech Comparison">
+          COMPARE MY OPTIONS
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- COUNSELLING SECTION -->
+  <section class="section" aria-labelledby="routes-heading">
+    <div class="container">
+      <div class="section-heading centered reveal">
+        <span class="section-label">Multiple Pathways</span>
+        <h2 id="routes-heading">YOUR JEE RANK IS ONLY THE STARTING POINT.</h2>
+      </div>
+
+      <div style="max-width: 820px; margin: 0 auto; background: var(--clr-surface); border: 1px solid var(--clr-border); border-radius: var(--radius-xl); padding: var(--sp-8);" class="reveal">
+        <h3 style="font-size: 1.1rem; color: #0F172A; font-weight: 800; margin-bottom: 16px; text-align: center;">
+          Engineering Counselling Pathways We Navigate:
+        </h3>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 10px; font-size: 13px; font-weight: 700;">
+          <div style="padding: 10px; background: rgba(15,23,42,0.04); border-radius: 6px;">🔹 JoSAA Counselling</div>
+          <div style="padding: 10px; background: rgba(15,23,42,0.04); border-radius: 6px;">🔹 CSAB Special Rounds</div>
+          <div style="padding: 10px; background: rgba(15,23,42,0.04); border-radius: 6px;">🔹 UPTAC / AKTU</div>
+          <div style="padding: 10px; background: rgba(15,23,42,0.04); border-radius: 6px;">🔹 JAC Delhi</div>
+          <div style="padding: 10px; background: rgba(15,23,42,0.04); border-radius: 6px;">🔹 IPU CET</div>
+          <div style="padding: 10px; background: rgba(15,23,42,0.04); border-radius: 6px;">🔹 MHT CET / CAP</div>
+          <div style="padding: 10px; background: rgba(15,23,42,0.04); border-radius: 6px;">🔹 KCET / KEA</div>
+          <div style="padding: 10px; background: rgba(15,23,42,0.04); border-radius: 6px;">🔹 COMEDK</div>
+          <div style="padding: 10px; background: rgba(15,23,42,0.04); border-radius: 6px;">🔹 WBJEE</div>
+          <div style="padding: 10px; background: rgba(15,23,42,0.04); border-radius: 6px;">🔹 Direct University Entrances</div>
         </div>
-      </div>
 
-      <!-- DELHI NCR -->
-      <div class="tab-panel" data-panel="delhi">
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--sp-8);align-items:start;">
-          <div>
-            <div class="table-wrap">
-              <table class="data-table">
-                <thead><tr><th>#</th><th>Institution</th><th>Location</th></tr></thead>
-                <tbody>
-                  <tr><td>1</td><td>Shiv Nadar University</td><td>Greater Noida</td></tr>
-                  <tr><td>2</td><td>Jaypee Institute of Information Technology (JIIT)</td><td>Noida</td></tr>
-                  <tr><td>3</td><td>Bennett University</td><td>Greater Noida</td></tr>
-                  <tr><td>4</td><td>Amity University</td><td>Noida</td></tr>
-                  <tr><td>5</td><td>NIIT University <em style="font-size:10px;color:var(--clr-text-muted);">(NCR-adjacent — Neemrana, Rajasthan)</em></td><td>Neemrana</td></tr>
-                  <tr><td>6</td><td>BML Munjal University</td><td>Gurugram</td></tr>
-                  <tr><td>7</td><td>Sharda University</td><td>Greater Noida</td></tr>
-                  <tr><td>8</td><td>Galgotias University</td><td>Greater Noida</td></tr>
-                  <tr><td>9</td><td>GL Bajaj Institute of Technology & Management</td><td>Greater Noida</td></tr>
-                  <tr><td>10</td><td>JSS Academy of Technical Education</td><td>Noida</td></tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-          <div>
-            <div class="feature-card">
-              <div class="card-icon purple" style="margin-bottom:var(--sp-5)">🏛️</div>
-              <h3 style="font-size:var(--fs-2xl);margin-bottom:var(--sp-3);">Delhi NCR — Premium University Hub</h3>
-              <p style="font-size:var(--fs-sm);color:var(--clr-text-2);line-height:1.7;margin-bottom:var(--sp-4);">College Corridor helps students target leading B.Tech universities and engineering institutions across Delhi NCR. From Shiv Nadar University and JIIT to Bennett, Amity, BML Munjal, NIIT, Sharda and Galgotias, we help students identify the right institution based on academic profile, preferred branch, budget and career goals.</p>
-              <div class="note-block" style="margin:var(--sp-4) 0;">NIIT University is located in Neemrana, Rajasthan — geographically NCR-adjacent, not within NCR proper.</div>
-              <button class="btn btn-primary" data-modal="lead" data-program="btech">Explore Delhi NCR Admissions</button>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- DEHRADUN -->
-      <div class="tab-panel" data-panel="dehradun">
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--sp-8);align-items:start;">
-          <div>
-            <div class="table-wrap">
-              <table class="data-table">
-                <thead><tr><th>#</th><th>Institution</th><th>Key Areas</th></tr></thead>
-                <tbody>
-                  <tr><td>1</td><td>UPES</td><td>CSE, AI/ML, Cybersecurity, Engineering</td></tr>
-                  <tr><td>2</td><td>Graphic Era University</td><td>CSE, AI/ML, Engineering</td></tr>
-                  <tr><td>3</td><td>DIT University</td><td>CSE, AI/ML, Engineering</td></tr>
-                  <tr><td>4</td><td>Uttaranchal University</td><td>CSE, AI/ML, Engineering</td></tr>
-                  <tr><td>5</td><td>Graphic Era Hill University</td><td>CSE, Engineering</td></tr>
-                  <tr><td>6</td><td>Swami Rama Himalayan University</td><td>Technology & Engineering</td></tr>
-                  <tr><td>7</td><td>Dev Bhoomi Uttarakhand University</td><td>Engineering & Technology</td></tr>
-                  <tr><td>8</td><td>ICFAI University, Dehradun</td><td>Engineering & Technology</td></tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-          <div>
-            <div class="feature-card">
-              <div class="card-icon teal" style="margin-bottom:var(--sp-5)">⛰️</div>
-              <h3 style="font-size:var(--fs-2xl);margin-bottom:var(--sp-3);">Dehradun — Premium Private Universities</h3>
-              <p style="font-size:var(--fs-sm);color:var(--clr-text-2);line-height:1.7;margin-bottom:var(--sp-4);">Looking for a premium private university in Dehradun? College Corridor provides admission guidance for leading institutions including UPES, Graphic Era University, DIT University, Uttaranchal University and other reputed universities. We help students compare programs, fees, admission pathways, specialization options and career opportunities.</p>
-              <button class="btn btn-primary" data-modal="lead" data-program="btech">Explore Dehradun Admissions</button>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- PUNE -->
-      <div class="tab-panel" data-panel="pune">
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--sp-8);align-items:start;">
-          <div>
-            <div class="table-wrap">
-              <table class="data-table">
-                <thead><tr><th>#</th><th>Institution</th><th>Positioning</th></tr></thead>
-                <tbody>
-                  <tr><td>1</td><td>COEP Technological University</td><td>Premier engineering institution</td></tr>
-                  <tr><td>2</td><td>PICT</td><td>Computer Science & IT</td></tr>
-                  <tr><td>3</td><td>Vishwakarma Institute of Technology (VIT Pune)</td><td>Engineering & Technology</td></tr>
-                  <tr><td>4</td><td>Symbiosis Institute of Technology (SIT)</td><td>Deemed university</td></tr>
-                  <tr><td>5</td><td>MIT World Peace University (MIT-WPU)</td><td>Premium private university</td></tr>
-                  <tr><td>6</td><td>Pimpri Chinchwad College of Engineering (PCCOE)</td><td>Engineering</td></tr>
-                  <tr><td>7</td><td>Bharati Vidyapeeth College of Engineering</td><td>Engineering</td></tr>
-                  <tr><td>8</td><td>VIIT (Vishwakarma Institute of Information Technology)</td><td>Technology</td></tr>
-                  <tr><td>9</td><td>Ajeenkya DY Patil University</td><td>Private university</td></tr>
-                  <tr><td>10</td><td>D. Y. Patil College of Engineering</td><td>Engineering</td></tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-          <div>
-            <div class="feature-card">
-              <div class="card-icon" style="background:rgba(201,150,12,0.15);border-color:rgba(201,150,12,0.3);margin-bottom:var(--sp-5)">🌆</div>
-              <h3 style="font-size:var(--fs-2xl);margin-bottom:var(--sp-3);">Pune — India's Engineering Ecosystem</h3>
-              <p style="font-size:var(--fs-sm);color:var(--clr-text-2);line-height:1.7;margin-bottom:var(--sp-4);">Pune offers one of India's strongest engineering ecosystems. College Corridor guides students exploring institutions such as COEP, PICT, VIT Pune, Symbiosis Institute of Technology and MIT-WPU. Our counsellors help students understand entrance requirements, branch options, fees, counselling processes and admission pathways.</p>
-              <div style="display:flex;flex-wrap:wrap;gap:var(--sp-2);margin-bottom:var(--sp-5)">
-                <span class="tag">MHT-CET</span><span class="tag">JEE</span><span class="tag">Institutional Entrance</span>
-              </div>
-              <button class="btn btn-primary" data-modal="lead" data-program="btech">Explore Pune Admissions</button>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- MUMBAI -->
-      <div class="tab-panel" data-panel="mumbai">
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--sp-8);align-items:start;">
-          <div>
-            <div class="table-wrap">
-              <table class="data-table">
-                <thead><tr><th>#</th><th>Institution</th><th>Positioning</th></tr></thead>
-                <tbody>
-                  <tr><td>1</td><td>VJTI</td><td>Premier engineering institution</td></tr>
-                  <tr><td>2</td><td>Sardar Patel Institute of Technology (SPIT)</td><td>Leading private engineering</td></tr>
-                  <tr><td>3</td><td>Dwarkadas J. Sanghvi College of Engineering (DJSCE)</td><td>Premium engineering</td></tr>
-                  <tr><td>4</td><td>KJ Somaiya School of Engineering</td><td>Leading private engineering</td></tr>
-                  <tr><td>5</td><td>MPSTME, NMIMS</td><td>Premium university ecosystem</td></tr>
-                  <tr><td>6</td><td>Thadomal Shahani Engineering College (TSEC)</td><td>Leading Mumbai engineering</td></tr>
-                  <tr><td>7</td><td>Fr. Conceicao Rodrigues College of Engineering</td><td>Engineering</td></tr>
-                  <tr><td>8</td><td>VESIT</td><td>Engineering & Technology</td></tr>
-                  <tr><td>9</td><td>SIES Graduate School of Technology</td><td>Navi Mumbai</td></tr>
-                  <tr><td>10</td><td>Pillai College of Engineering</td><td>Navi Mumbai</td></tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-          <div>
-            <div class="feature-card">
-              <div class="card-icon green" style="margin-bottom:var(--sp-5)">🌊</div>
-              <h3 style="font-size:var(--fs-2xl);margin-bottom:var(--sp-3);">Mumbai & Navi Mumbai — Leading Engineering</h3>
-              <p style="font-size:var(--fs-sm);color:var(--clr-text-2);line-height:1.7;margin-bottom:var(--sp-4);">College Corridor guides students seeking B.Tech admissions across Mumbai and Navi Mumbai's leading engineering institutions. Students can explore premium and established institutions including VJTI, SPIT, DJSCE, KJ Somaiya, NMIMS-MPSTME, TSEC and VESIT, subject to the applicable admission route and eligibility.</p>
-              <div style="display:flex;flex-wrap:wrap;gap:var(--sp-2);margin-bottom:var(--sp-5)">
-                <span class="tag">MHT-CET</span><span class="tag">JEE</span><span class="tag">Institutional Entrance</span>
-              </div>
-              <button class="btn btn-primary" data-modal="lead" data-program="btech">Explore Mumbai Admissions</button>
-            </div>
-          </div>
+        <div style="text-align: center; margin-top: 24px;">
+          <h3 style="font-size: 1.2rem; color: #0F172A; font-weight: 900; margin-bottom: 16px;">
+            THE MORE ROUTES YOU HAVE, THE MORE STRATEGIC THE DECISION BECOMES.
+          </h3>
+          <button class="btn btn-primary" data-modal="lead" data-program="Map Options">
+            MAP MY ADMISSION OPTIONS
+          </button>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- PREMIUM ADVISORY -->
-<section class="section" aria-labelledby="advisory-heading">
-  <div class="container">
-    <div class="section-heading centered reveal">
-      <span class="section-label">Personalized Advisory</span>
-      <h2 id="advisory-heading">Premium B.Tech Admissions Advisory</h2>
-      <p>For students targeting India's leading private universities & engineering institutions</p>
-    </div>
-
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--sp-12);margin-top:var(--sp-10);align-items:start;">
-      <div class="reveal">
-        <h3 style="font-size:var(--fs-2xl);margin-bottom:var(--sp-4);">What Our Counsellors Evaluate</h3>
-        <div style="display:flex;flex-direction:column;gap:var(--sp-3);">
-          <div style="display:flex;align-items:center;gap:var(--sp-3);padding:var(--sp-3) var(--sp-4);background:var(--clr-surface);border:1px solid var(--clr-border);border-radius:var(--radius-md);">
-            <span style="">✓</span><span style="font-size:var(--fs-sm);">Academic Profile & 12th PCM Score</span>
-          </div>
-          <div style="display:flex;align-items:center;gap:var(--sp-3);padding:var(--sp-3) var(--sp-4);background:var(--clr-surface);border:1px solid var(--clr-border);border-radius:var(--radius-md);">
-            <span style="">✓</span><span style="font-size:var(--fs-sm);">JEE / State / University Entrance Score</span>
-          </div>
-          <div style="display:flex;align-items:center;gap:var(--sp-3);padding:var(--sp-3) var(--sp-4);background:var(--clr-surface);border:1px solid var(--clr-border);border-radius:var(--radius-md);">
-            <span style="">✓</span><span style="font-size:var(--fs-sm);">Preferred Branch (CSE / AI/ML / ECE / Mechanical etc.)</span>
-          </div>
-          <div style="display:flex;align-items:center;gap:var(--sp-3);padding:var(--sp-3) var(--sp-4);background:var(--clr-surface);border:1px solid var(--clr-border);border-radius:var(--radius-md);">
-            <span style="">✓</span><span style="font-size:var(--fs-sm);">Budget & Total Investment Capacity</span>
-          </div>
-          <div style="display:flex;align-items:center;gap:var(--sp-3);padding:var(--sp-3) var(--sp-4);background:var(--clr-surface);border:1px solid var(--clr-border);border-radius:var(--radius-md);">
-            <span style="">✓</span><span style="font-size:var(--fs-sm);">Preferred Location(s)</span>
-          </div>
-          <div style="display:flex;align-items:center;gap:var(--sp-3);padding:var(--sp-3) var(--sp-4);background:var(--clr-surface);border:1px solid var(--clr-border);border-radius:var(--radius-md);">
-            <span style="">✓</span><span style="font-size:var(--fs-sm);">Admission Route Analysis</span>
-          </div>
-          <div style="display:flex;align-items:center;gap:var(--sp-3);padding:var(--sp-3) var(--sp-4);background:var(--clr-surface);border:1px solid var(--clr-border);border-radius:var(--radius-md);">
-            <span style="">✓</span><span style="font-size:var(--fs-sm);">Career Goals & Industry Preference</span>
-          </div>
-        </div>
+  <!-- TOP ENGINEERING INSTITUTIONS -->
+  <section class="section dark-section" style="background: #0F172A; color: #FFFFFF;" aria-labelledby="colleges-heading">
+    <div class="container">
+      <div class="section-heading centered reveal">
+        <span class="section-label" style="background: rgba(201,150,12,0.2); color: #FCD34D;">Leading Institutions</span>
+        <h2 id="colleges-heading" style="color: #FFFFFF !important; -webkit-text-fill-color: #FFFFFF !important;">
+          TOP B.TECH INSTITUTIONS WE GUIDE STUDENTS FOR
+        </h2>
       </div>
-      <div class="reveal">
-        <h3 style="font-size:var(--fs-2xl);margin-bottom:var(--sp-4);">Example Student Journey</h3>
-        <div style="background:var(--grad-card);border:1px solid var(--clr-border);border-radius:var(--radius-xl);padding:var(--sp-6);">
-          <div style="font-size:var(--fs-xs);font-weight:700;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:var(--sp-4);">Sample Student Profile</div>
-          <div style="display:flex;flex-direction:column;gap:var(--sp-2);margin-bottom:var(--sp-5);">
-            <div style="display:flex;justify-content:space-between;font-size:var(--fs-sm);padding:var(--sp-2) 0;border-bottom:1px solid rgba(255,255,255,0.05);">
-              <span style="color:var(--clr-text-muted);">12th PCM</span><span style="font-weight:600;">88%</span>
-            </div>
-            <div style="display:flex;justify-content:space-between;font-size:var(--fs-sm);padding:var(--sp-2) 0;border-bottom:1px solid rgba(255,255,255,0.05);">
-              <span style="color:var(--clr-text-muted);">JEE Main</span><span style="font-weight:600;">92 Percentile</span>
-            </div>
-            <div style="display:flex;justify-content:space-between;font-size:var(--fs-sm);padding:var(--sp-2) 0;border-bottom:1px solid rgba(255,255,255,0.05);">
-              <span style="color:var(--clr-text-muted);">Preferred Branch</span><span style="font-weight:600;">CSE / AI/ML</span>
-            </div>
-            <div style="display:flex;justify-content:space-between;font-size:var(--fs-sm);padding:var(--sp-2) 0;border-bottom:1px solid rgba(255,255,255,0.05);">
-              <span style="color:var(--clr-text-muted);">Budget</span><span style="font-weight:600;">₹15–20 Lakh</span>
-            </div>
-            <div style="display:flex;justify-content:space-between;font-size:var(--fs-sm);padding:var(--sp-2) 0;">
-              <span style="color:var(--clr-text-muted);">Preferred Locations</span><span style="font-weight:600;">Bengaluru / Delhi NCR</span>
-            </div>
-          </div>
-          <div style="font-size:var(--fs-xs);font-weight:700;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:var(--sp-3);">College Corridor Strategy</div>
-          <div style="display:flex;flex-direction:column;gap:var(--sp-2);">
-            <div style="display:flex;align-items:start;gap:var(--sp-3);">
-              <span class="tag tag--gold" style="flex-shrink:0;font-size:10px;">Premium</span>
-              <span style="font-size:var(--fs-xs);color:var(--clr-text-2);">RV University, PES University, Bennett University, JIIT</span>
-            </div>
-            <div style="display:flex;align-items:start;gap:var(--sp-3);">
-              <span class="tag strategy-balanced" style="flex-shrink:0;font-size:10px;">Balanced</span>
-              <span style="font-size:var(--fs-xs);color:var(--clr-text-2);">REVA University, Christ University, Sharda University</span>
-            </div>
-            <div style="display:flex;align-items:start;gap:var(--sp-3);">
-              <span class="tag strategy-safe" style="flex-shrink:0;font-size:10px;">Additional</span>
-              <span style="font-size:var(--fs-xs);color:var(--clr-text-2);">Selected institutions based on budget, eligibility and admission route</span>
-            </div>
-          </div>
-          <div style="margin-top:var(--sp-5);padding:var(--sp-3) var(--sp-4);background:rgba(16,185,129,0.08);border:1px solid rgba(16,185,129,0.2);border-radius:var(--radius-sm);">
-            <div style="font-size:var(--fs-xs);font-weight:700;color:#34D399;margin-bottom:4px;">Result</div>
-            <div style="font-size:var(--fs-xs);color:var(--clr-text-2);">A personalized admission portfolio instead of a random list of colleges</div>
-          </div>
-        </div>
+
+      <div class="tag-cloud reveal" style="max-width: 900px; margin: 24px auto;">
+        <span class="tag-item">BITS Pilani</span>
+        <span class="tag-item">VIT Vellore</span>
+        <span class="tag-item">Manipal Institute of Technology</span>
+        <span class="tag-item">Thapar Institute of Engineering & Technology</span>
+        <span class="tag-item">Amrita Vishwa Vidyapeetham</span>
+        <span class="tag-item">SRM Institute</span>
+        <span class="tag-item">Shiv Nadar University</span>
+        <span class="tag-item">KIIT Bhubaneswar</span>
+        <span class="tag-item">PES University</span>
+        <span class="tag-item">MIT World Peace University</span>
+        <span class="tag-item">JIIT Noida</span>
+        <span class="tag-item">Bennett University</span>
+        <span class="tag-item">UPES Dehradun</span>
+        <span class="tag-item">Graphic Era</span>
+        <span class="tag-item">RV University</span>
+        <span class="tag-item">Amity University</span>
+        <span class="tag-item">REVA University</span>
+        <span class="tag-item">Jain University</span>
+        <span class="tag-item">CMR University</span>
+        <span class="tag-item">Symbiosis Institute of Technology</span>
+        <span class="tag-item">RUAS</span>
+        <span class="tag-item">Christ University</span>
+        <span class="tag-item">Dayananda Sagar</span>
+        <span class="tag-item">VIT Pune</span>
+        <span class="tag-item">PCCOE</span>
+        <span class="tag-item">GL Bajaj</span>
+        <span class="tag-item">JSS Noida</span>
+        <span class="tag-item">KIET</span>
+        <span class="tag-item">MSIT / MAIT Delhi</span>
+      </div>
+
+      <div style="text-align: center; margin-top: 24px;" class="reveal">
+        <p style="color: #FCD34D; font-weight: 800; font-size: 1.1rem; margin-bottom: 16px;">
+          "Your objective shouldn't be to collect college offers. It should be to identify the offer that makes the most sense."
+        </p>
+        <button class="btn btn-gold" data-modal="lead" data-program="Discuss B.Tech Options">
+          DISCUSS MY B.TECH OPTIONS
+        </button>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-
-<!-- FREQUENTLY ASKED QUESTIONS (SEO / INFORMATIONAL INTENT) -->
-<section class="section section-alt" aria-labelledby="engg-faq-heading">
-  <div class="container">
-    <div class="section-heading centered reveal">
-      <span class="section-label">Common Questions</span>
-      <h2 id="engg-faq-heading">JEE, JoSAA &amp; B.Tech Counselling FAQs</h2>
-    </div>
-    <div style="max-width:900px;margin-inline:auto;margin-top:var(--sp-8);display:flex;flex-direction:column;gap:var(--sp-4);" class="reveal">
-      <div style="padding:var(--sp-5) var(--sp-6);background:#0F172A;border:1px solid rgba(197,155,39,0.35);border-radius:var(--radius-lg);box-shadow:0 4px 16px rgba(15,23,42,0.3);">
-        <h3 style="font-size:var(--fs-lg);color:#FFFFFF;margin-bottom:var(--sp-2);">What is the difference between JoSAA and CSAB counselling rounds?</h3>
-        <p style="font-size:var(--fs-sm);color:#E2E8F0;line-height:1.68;">JoSAA (Joint Seat Allocation Authority) conducts the main 6 rounds of counselling for admissions to IITs, NITs, IIITs, and GFTIs based on JEE Main and Advanced ranks. CSAB (Central Seat Allocation Board) conducts special vacancy rounds specifically for vacant seats in NITs, IIITs, and GFTIs after JoSAA rounds complete.</p>
-      </div>
-      <div style="padding:var(--sp-5) var(--sp-6);background:#0F172A;border:1px solid rgba(197,155,39,0.35);border-radius:var(--radius-lg);box-shadow:0 4px 16px rgba(15,23,42,0.3);">
-        <h3 style="font-size:var(--fs-lg);color:#FFFFFF;margin-bottom:var(--sp-2);">How should I choose between Computer Science (CSE) and AI/ML specializations?</h3>
-        <p style="font-size:var(--fs-sm);color:#E2E8F0;line-height:1.68;">Core Computer Science &amp; Engineering (CSE) provides broader foundational coverage including algorithms, systems, software engineering, and networking. AI/ML, Data Science, and Cybersecurity offer specialized coursework earlier in the degree. Choice depends on long-term career goals and university curriculum quality.</p>
-      </div>
-      <div style="padding:var(--sp-5) var(--sp-6);background:#0F172A;border:1px solid rgba(197,155,39,0.35);border-radius:var(--radius-lg);box-shadow:0 4px 16px rgba(15,23,42,0.3);">
-        <h3 style="font-size:var(--fs-lg);color:#FFFFFF;margin-bottom:var(--sp-2);">How do state entrance exams (KCET, MHT-CET, WBJEE) interact with JoSAA?</h3>
-        <p style="font-size:var(--fs-sm);color:#E2E8F0;line-height:1.68;">State engineering entrance exams run independent counselling schedules for state-recognized government and private institutions. Students can simultaneously participate in JoSAA and state counselling processes to maximize their admission options.</p>
+  <!-- ENGINEERING FOMO -->
+  <section class="section section-alt" aria-labelledby="fomo-heading">
+    <div class="container">
+      <div style="max-width: 820px; margin: 0 auto; text-align: center;" class="reveal">
+        <span class="section-label">Timing Sensitivity</span>
+        <h2 id="fomo-heading" style="font-size: clamp(1.6rem, 3.5vw, 2.4rem); margin: 12px 0;">
+          DON'T WAIT UNTIL COUNSELLING TO DISCOVER YOUR OPTIONS.
+        </h2>
+        <p style="font-size: 1.05rem; color: var(--clr-text-2); margin-bottom: 24px;">
+          By then you may be deciding under tight deadlines, heavy pressure, family expectations, and limited time to research from scratch.
+        </p>
+        <h3 style="font-size: 1.4rem; color: #0F172A; font-weight: 900; margin-bottom: 24px;">
+          BUILD YOUR SHORTLIST BEFORE YOU NEED IT.
+        </h3>
+        <button class="btn btn-primary btn-lg" data-modal="lead" data-program="Book B.Tech Counselling">
+          BOOK B.TECH COUNSELLING
+        </button>
       </div>
     </div>
-  </div>
-</section>
-
-
-<!-- CLOSING CTA -->
-<section class="section section-dark">
-  <div class="container">
-    <div class="cta-banner reveal">
-      <div class="cta-banner-content">
-        <span class="section-label">Start Your Journey</span>
-        <h2>Find Your Ideal B.Tech College</h2>
-        <p>Get a personalized B.Tech admission strategy based on your score, preferred branch, budget, location and career goals. We evaluate all applicable admission routes — not just JEE.</p>
-        <div class="cta-banner-actions">
-          <button class="btn btn-primary btn-lg" data-modal="lead" data-program="btech">Get B.Tech Counselling</button>
-          <a href="find-colleges.html" class="btn btn-secondary btn-lg">Find Engineering Colleges</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+  </section>
 
 </main>
 
 <div id="footer-slot"></div>
-<div id="mobile-cta-slot"></div>
-<div id="modal-slot"></div>
 
 <script src="js/shared.js"></script>
-<script src="js/config.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>

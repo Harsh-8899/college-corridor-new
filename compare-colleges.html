@@ -3,73 +3,117 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Compare Colleges — Side-by-Side Comparison | College Corridor</title>
-  <meta name="description" content="Compare colleges side by side on fees, placements, ranking, infrastructure, location and more before making your decision.">
+  <title>Compare Colleges & B-Schools | College Corridor Advisory</title>
+  <meta name="description" content="Side-by-side college comparison tool for medical, engineering and management colleges. Evaluate total fees, clinical exposure, placements and ROI.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/components.css">
   <link rel="stylesheet" href="css/animations.css">
+  <style>
+    :root {
+      --clr-gold: #C59B27;
+      --clr-gold-light: #FCD34D;
+      --clr-dark: #0F172A;
+      --clr-border-gold: rgba(197, 155, 39, 0.35);
+    }
+    .compare-hero {
+      padding: var(--sp-10) 0 var(--sp-8) 0;
+      background: radial-gradient(circle at 50% 20%, rgba(197, 155, 39, 0.18) 0%, rgba(15, 23, 42, 0.98) 75%), #0F172A;
+      color: #FFFFFF;
+      text-align: center;
+      border-bottom: 2px solid var(--clr-border-gold);
+    }
+    .btn-gold {
+      background: linear-gradient(135deg, #C59B27 0%, #D97706 100%);
+      color: #0F172A !important;
+      font-weight: 900 !important;
+      font-size: 1.1rem !important;
+      padding: 14px 28px !important;
+      border-radius: var(--radius-md) !important;
+      box-shadow: 0 8px 25px rgba(197, 155, 39, 0.4) !important;
+      transition: all 0.3s ease !important;
+      border: 2px solid #FCD34D !important;
+      text-transform: uppercase;
+    }
+    .btn-gold:hover {
+      transform: translateY(-3px) scale(1.02);
+      box-shadow: 0 12px 35px rgba(197, 155, 39, 0.6) !important;
+      background: linear-gradient(135deg, #FCD34D 0%, #C59B27 100%);
+    }
+  </style>
 </head>
 <body>
+
 <div id="announcement-bar-slot"></div>
 <header id="navbar-slot" data-active="compare"></header>
+
 <main>
 
-<section class="page-hero" aria-labelledby="compare-h1">
-  <div class="container page-hero-content">
-    <div class="page-hero-eyebrow"><span class="section-label">Compare Tool</span></div>
-    <h1 id="compare-h1">Compare Colleges Before You Decide</h1>
-    <p class="hero-sub" style="max-width:620px;">Compare multiple colleges on the factors that matter most — fees, courses, placements, ranking, infrastructure and more.</p>
-  </div>
-</section>
+  <!-- HERO SECTION -->
+  <section class="compare-hero" aria-labelledby="compare-title">
+    <div class="container">
+      <span class="section-label" style="background: rgba(201,150,12,0.22); color: #FCD34D; border: 1px solid rgba(253,224,71,0.5);">
+        Strategic Comparison Advisory
+      </span>
 
-<section class="section section-alt">
-  <div class="container">
-    <!-- Comparison Fields -->
-    <div style="background:var(--grad-card);border:1px solid var(--clr-border);border-radius:var(--radius-xl);padding:var(--sp-8);" class="reveal">
-      <h2 style="font-size:var(--fs-2xl);margin-bottom:var(--sp-4);">⚖️ Compare Colleges Side-by-Side</h2>
-      <p style="font-size:var(--fs-sm);color:var(--clr-text-muted);margin-bottom:var(--sp-6);">Select 2 to 3 colleges to compare fees, locations, admission routes, historical cutoffs, and campus facilities.</p>
-      
-      <!-- Selection Controls -->
-      <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:var(--sp-4);margin-bottom:var(--sp-8);">
-        <div class="form-group">
-          <label class="form-label" for="select-col-1">College 1</label>
-          <select class="form-select" id="select-col-1"></select>
-        </div>
-        <div class="form-group">
-          <label class="form-label" for="select-col-2">College 2</label>
-          <select class="form-select" id="select-col-2"></select>
-        </div>
-        <div class="form-group">
-          <label class="form-label" for="select-col-3">College 3 (Optional)</label>
-          <select class="form-select" id="select-col-3"></select>
+      <h1 id="compare-title" style="font-size: clamp(2rem, 4.5vw, 3.5rem); font-weight: 900; color: #FFFFFF !important; -webkit-text-fill-color: #FFFFFF !important; margin: 12px 0 8px 0; line-height: 1.15;">
+        DON'T COMPARE COLLEGES ON NAME ALONE.
+      </h1>
+
+      <p style="font-size: 1.1rem; color: #CBD5E1; max-width: 800px; margin: 0 auto 16px auto;">
+        Compare Total Fees • Course & Branch Fit • Career Outcomes • Location • Infrastructure • Clinical Exposure • Total Investment
+      </p>
+    </div>
+  </section>
+
+  <!-- COMPARISON TOOL SECTION -->
+  <section class="section" style="padding-top: var(--sp-6);">
+    <div class="container">
+      <div style="background: var(--clr-surface); border: 1px solid var(--clr-border); border-radius: var(--radius-xl); padding: var(--sp-6); box-shadow: var(--shadow-md); margin-bottom: 28px;">
+        <h3 style="font-size: 1.1rem; color: #0F172A; font-weight: 800; margin-bottom: 16px; text-align: center;">Select Colleges to Compare Side-by-Side:</h3>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+          <div>
+            <label style="font-size: 12px; font-weight: 800; color: #0F172A; display: block; margin-bottom: 4px;">College Option A</label>
+            <select id="compare-college-a" class="form-select"></select>
+          </div>
+          <div>
+            <label style="font-size: 12px; font-weight: 800; color: #0F172A; display: block; margin-bottom: 4px;">College Option B</label>
+            <select id="compare-college-b" class="form-select"></select>
+          </div>
         </div>
       </div>
 
-      <!-- Table Container -->
-      <div id="compare-table-container"></div>
+      <!-- COMPARISON RESULTS DISPLAY -->
+      <div id="comparison-display-wrap" style="margin-bottom: 32px;">
+        <!-- Rendered by JS -->
+      </div>
     </div>
+  </section>
 
-    <div class="disclaimer-block" style="margin-top:var(--sp-6);">
-      College data is indicative and based on available information. Fees, eligibility, placements and rankings may change year to year. Always verify with the official institution.
+  <!-- POST-COMPARE CONVERSION BANNER -->
+  <section class="section dark-section" style="background: #0F172A; color: #FFFFFF;" aria-labelledby="post-compare-heading">
+    <div class="container text-center">
+      <div style="max-width: 800px; margin: 0 auto;" class="reveal">
+        <span class="section-label" style="background: rgba(201,150,12,0.2); color: #FCD34D;">Second Opinion Advisory</span>
+        <h2 id="post-compare-heading" style="color: #FFFFFF !important; -webkit-text-fill-color: #FFFFFF !important; font-size: clamp(1.6rem, 3.5vw, 2.4rem); margin: 12px 0;">
+          STILL CAN'T DECIDE? GET A SECOND OPINION.
+        </h2>
+        <p style="color: #CBD5E1; font-size: 1.05rem; margin-bottom: 24px;">
+          Choosing between two admits involves hidden financial costs, location trade-offs, and long-term career momentum. Discuss your choices with our senior admissions strategist.
+        </p>
+        <button class="btn btn-gold" data-modal="lead" data-program="Talk to Advisor Second Opinion">
+          TALK TO AN ADVISOR
+        </button>
+      </div>
     </div>
-  </div>
-</section>
-
-<section class="section section-dark">
-  <div class="container"><div class="cta-banner reveal"><div class="cta-banner-content">
-    <h2>Don't Guess. Compare & Decide.</h2>
-    <p>Get a detailed comparison of your shortlisted colleges from a College Corridor counsellor.</p>
-    <div class="cta-banner-actions">
-      <button class="btn btn-primary btn-lg" data-modal="lead">Compare Colleges</button>
-    </div>
-  </div></div></div>
-</section>
+  </section>
 
 </main>
-<div id="footer-slot"></div><div id="mobile-cta-slot"></div><div id="modal-slot"></div>
-<script src="js/shared.js"></script><script src="js/config.js"></script>
+
+<div id="footer-slot"></div>
+
+<script src="js/shared.js"></script>
 <script src="js/college-database.js"></script>
 <script src="js/compare.js"></script>
 <script src="js/main.js"></script>

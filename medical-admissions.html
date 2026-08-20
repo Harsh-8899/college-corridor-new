@@ -3,13 +3,342 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MBBS, MD & MS Admission Consultancy — MCC & State Counselling | College Corridor</title>
-  <meta name="description" content="Expert guidance for MBBS, MD and MS admissions through MCC and state counselling. Personalized college shortlisting and choice-filling strategy.">
+  <title>MBBS & NEET Counselling Strategy — MCC & State Admissions | College Corridor</title>
+  <meta name="description" content="Strategic guidance for MBBS, BDS, MD & MS admissions. Expert MCC and State NEET counselling, choice filling strategy, cutoff analysis, and round planning.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/components.css">
   <link rel="stylesheet" href="css/animations.css">
+  
+  <style>
+    /* Premium Sales Landing Page Styles for Medical Counselling */
+    :root {
+      --clr-medical-accent: #C59B27;
+      --clr-medical-accent-light: #FCD34D;
+      --clr-medical-dark: #0F172A;
+      --clr-medical-card-bg: rgba(15, 23, 42, 0.7);
+      --clr-medical-border: rgba(197, 155, 39, 0.3);
+    }
+
+    /* Text contrast overrides for dark sections */
+    .section-dark-heading h2,
+    .section-dark-heading h3,
+    #fomo-heading,
+    #pg-heading,
+    #parents-heading,
+    #offer-heading,
+    #final-heading {
+      color: #FFFFFF !important;
+      -webkit-text-fill-color: #FFFFFF !important;
+    }
+
+    .sales-hero {
+      position: relative;
+      padding: var(--sp-12) 0 var(--sp-10) 0;
+      background: radial-gradient(circle at 50% 20%, rgba(197, 155, 39, 0.15) 0%, rgba(15, 23, 42, 0.98) 70%), #0F172A;
+      color: #FFFFFF;
+      overflow: hidden;
+      border-bottom: 1px solid var(--clr-medical-border);
+    }
+
+    .urgency-strip {
+      background: linear-gradient(90deg, #991B1B 0%, #D97706 50%, #991B1B 100%);
+      color: #FFFFFF;
+      padding: 10px 16px;
+      font-size: var(--fs-xs);
+      font-weight: 800;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      text-align: center;
+      border-radius: var(--radius-md);
+      box-shadow: 0 4px 15px rgba(217, 119, 6, 0.3);
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: var(--sp-6);
+      animation: pulseUrgency 3s infinite alternate;
+    }
+
+    @keyframes pulseUrgency {
+      0% { box-shadow: 0 0 10px rgba(217, 119, 6, 0.2); }
+      100% { box-shadow: 0 0 25px rgba(239, 68, 68, 0.6); }
+    }
+
+    .hero-title-main {
+      font-size: clamp(2.2rem, 5vw, 3.8rem);
+      font-weight: 900;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      margin-bottom: var(--sp-4);
+      background: linear-gradient(135deg, #FFFFFF 40%, var(--clr-medical-accent-light) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero-sub-p {
+      font-size: var(--fs-lg);
+      font-weight: 600;
+      color: #E2E8F0;
+      margin-bottom: var(--sp-4);
+      line-height: 1.5;
+    }
+
+    .hero-emotional {
+      font-size: var(--fs-base);
+      color: #F8FAFC;
+      background: rgba(239, 68, 68, 0.12);
+      border-left: 4px solid #EF4444;
+      padding: var(--sp-4) var(--sp-5);
+      border-radius: 0 var(--radius-md) var(--radius-md) 0;
+      margin-bottom: var(--sp-8);
+      max-width: 800px;
+    }
+
+    .cta-hero-box {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: var(--sp-4);
+      margin-bottom: var(--sp-6);
+    }
+
+    .btn-sales-primary {
+      background: linear-gradient(135deg, #C59B27 0%, #D97706 100%);
+      color: #0F172A !important;
+      font-weight: 900 !important;
+      font-size: 1.15rem !important;
+      padding: 16px 36px !important;
+      border-radius: var(--radius-lg) !important;
+      box-shadow: 0 8px 25px rgba(197, 155, 39, 0.4) !important;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+      border: 2px solid #FCD34D !important;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    .btn-sales-primary:hover {
+      transform: translateY(-3px) scale(1.02);
+      box-shadow: 0 12px 35px rgba(197, 155, 39, 0.6) !important;
+      background: linear-gradient(135deg, #FCD34D 0%, #C59B27 100%);
+    }
+
+    .btn-sales-secondary {
+      background: rgba(255, 255, 255, 0.08);
+      color: #FFFFFF !important;
+      font-weight: 700 !important;
+      font-size: 1rem !important;
+      padding: 16px 28px !important;
+      border-radius: var(--radius-lg) !important;
+      border: 1px solid rgba(255, 255, 255, 0.2) !important;
+      transition: all 0.3s ease !important;
+    }
+
+    .btn-sales-secondary:hover {
+      background: rgba(255, 255, 255, 0.18);
+      border-color: #FFFFFF !important;
+      transform: translateY(-2px);
+    }
+
+    .core-msg-box {
+      background: linear-gradient(135deg, rgba(15, 23, 42, 0.95) 0%, rgba(30, 41, 59, 0.95) 100%);
+      border: 2px solid var(--clr-medical-accent);
+      border-radius: var(--radius-xl);
+      padding: var(--sp-8);
+      text-align: center;
+      margin: var(--sp-10) 0;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    }
+
+    .core-msg-text {
+      font-size: clamp(1.2rem, 3vw, 1.8rem);
+      font-weight: 800;
+      color: #FCD34D;
+      line-height: 1.4;
+      font-style: italic;
+    }
+
+    .timeline-wrapper {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+      gap: 12px;
+      margin: var(--sp-8) 0;
+      position: relative;
+    }
+
+    .timeline-step {
+      background: rgba(15, 23, 42, 0.8);
+      border: 1px solid var(--clr-medical-border);
+      border-radius: var(--radius-md);
+      padding: 14px 10px;
+      text-align: center;
+      position: relative;
+    }
+
+    .timeline-step-num {
+      width: 28px;
+      height: 28px;
+      background: var(--clr-medical-accent);
+      color: #0F172A;
+      font-weight: 900;
+      font-size: 12px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 8px auto;
+    }
+
+    .timeline-step-title {
+      font-size: 12px;
+      font-weight: 700;
+      color: #F8FAFC;
+    }
+
+    .diy-table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0;
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+      border: 1px solid var(--clr-border);
+      margin-top: var(--sp-8);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .diy-table th {
+      padding: 16px 20px;
+      font-size: 1rem;
+      font-weight: 800;
+      text-align: left;
+    }
+
+    .diy-table td {
+      padding: 14px 20px;
+      border-top: 1px solid var(--clr-border);
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    .strategy-card {
+      background: var(--clr-surface);
+      border: 2px solid var(--clr-border);
+      border-radius: var(--radius-xl);
+      padding: var(--sp-6);
+      transition: all 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+
+    .strategy-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-xl);
+    }
+
+    .strategy-card.aggressive {
+      border-color: rgba(239, 68, 68, 0.4);
+      background: linear-gradient(180deg, rgba(239, 68, 68, 0.05) 0%, var(--clr-surface) 100%);
+    }
+
+    .strategy-card.balanced {
+      border-color: rgba(197, 155, 39, 0.6);
+      background: linear-gradient(180deg, rgba(197, 155, 39, 0.08) 0%, var(--clr-surface) 100%);
+      position: relative;
+    }
+
+    .strategy-card.safe {
+      border-color: rgba(16, 185, 129, 0.4);
+      background: linear-gradient(180deg, rgba(16, 185, 129, 0.05) 0%, var(--clr-surface) 100%);
+    }
+
+    .faq-item {
+      border: 1px solid var(--clr-border);
+      border-radius: var(--radius-lg);
+      margin-bottom: 12px;
+      background: var(--clr-surface);
+      overflow: hidden;
+      transition: all 0.2s ease;
+    }
+
+    .faq-question {
+      width: 100%;
+      padding: 18px 24px;
+      text-align: left;
+      background: none;
+      border: none;
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--clr-text-main);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      cursor: pointer;
+    }
+
+    .faq-answer {
+      padding: 0 24px 20px 24px;
+      display: none;
+      color: var(--clr-text-2);
+      line-height: 1.7;
+      font-size: 0.95rem;
+    }
+
+    .faq-item.active .faq-answer {
+      display: block;
+    }
+
+    .faq-item.active {
+      border-color: var(--clr-medical-accent);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    }
+
+    .faq-icon {
+      font-size: 1.2rem;
+      transition: transform 0.3s ease;
+    }
+
+    .faq-item.active .faq-icon {
+      transform: rotate(45deg);
+    }
+
+    .sticky-bar {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: #0F172A;
+      border-top: 2px solid var(--clr-medical-accent);
+      padding: 12px 20px;
+      z-index: 999;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 -5px 20px rgba(0,0,0,0.4);
+      transform: translateY(100%);
+      transition: transform 0.3s ease;
+    }
+
+    .sticky-bar.visible {
+      transform: translateY(0);
+    }
+
+    @media (max-width: 768px) {
+      .sticky-bar {
+        flex-direction: column;
+        gap: 8px;
+        text-align: center;
+        padding: 10px 14px;
+      }
+      .sticky-bar .sticky-text {
+        font-size: 12px;
+      }
+      .diy-table th, .diy-table td {
+        padding: 10px;
+        font-size: 12px;
+      }
+    }
+  </style>
 </head>
 <body>
 
@@ -18,432 +347,900 @@
 
 <main>
 
-<!-- PAGE HERO -->
-<section class="page-hero" aria-labelledby="medical-h1">
-  <div class="container page-hero-content">
-    <div class="page-hero-eyebrow">
-      <span class="section-label">Medical Admissions</span>
-    </div>
-    <h1 id="medical-h1">MBBS, MD & MS Admissions</h1>
-    <p class="page-hero-tagline">Medical Admission Consultancy & Counselling</p>
-    <p class="hero-sub" style="margin-bottom:var(--sp-8);max-width:720px;">Medical admissions are not simply about getting a NEET score. The final outcome depends on rank, category, domicile, eligibility, counselling authority, seat matrix, quota, college preference, choice filling, fees and round-wise seat movement. College Corridor provides specialized guidance for MBBS, MD and MS admissions, helping students and parents navigate MCC counselling and State Counselling with a structured, data-driven admission strategy.</p>
-        <div class="hero-actions">
-      <button class="btn btn-primary btn-lg" data-modal="lead" data-program="mbbs">Get MBBS Admission Guidance</button>
-      <a href="find-colleges.html" class="btn btn-secondary btn-lg">Find Medical Colleges</a>
-    </div>
-  </div>
+  <!-- 2. HERO SECTION -->
+  <section class="sales-hero" aria-labelledby="hero-title">
+    <div class="container">
+      <div class="urgency-strip">
+        <span>⏰ Time-Sensitive Process</span>
+        <span>•</span>
+        <span>Prepare Before Choice-Filling Opens</span>
+      </div>
 
-    <div style="margin-top:var(--sp-6);border-radius:var(--radius-xl);overflow:hidden;border:1px solid var(--clr-border);" class="reveal">
-      <img src="assets/images/aiims-campus.png" alt="AIIMS Medical Institute Campus — Premier Medical Guidance" loading="lazy" style="width:100%;height:auto;max-height:380px;object-fit:cover;display:block;">
-      <div style="padding:var(--sp-3) var(--sp-4);background:rgba(15,23,42,0.7);color:rgba(248,250,252,0.85);font-size:11px;text-align:right;">
-        🏥 Representative Premier Medical Campus Architecture • College Corridor Advisory
+      <h1 id="hero-title" class="hero-title-main">
+        MBBS & BDS Admissions.<br>Strategically Guided.
+      </h1>
+
+      <p class="hero-sub-p">
+        NEET MCC & State Counselling | College Selection | Choice Filling | Round Strategy | Admission Guidance
+      </p>
+
+      <div class="hero-emotional">
+        <strong>One wrong choice can cost you an entire counselling cycle.</strong> Don't leave your medical admission strategy to guesswork.
+      </div>
+
+      <div class="cta-hero-box">
+        <button class="btn btn-sales-primary" data-modal="lead" data-program="MBBS Counselling Strategy">
+          BOOK YOUR COUNSELLING NOW
+        </button>
+        <button class="btn btn-sales-secondary" data-modal="lead" data-program="Strategy Check">
+          Check My Admission Strategy
+        </button>
+      </div>
+
+      <div style="font-size: 12px; color: rgba(248, 250, 252, 0.7); display: flex; align-items: center; gap: 8px;">
+        <span style="color:#10B981">✓</span> Strategic Seat Allocation Analysis
+        <span style="margin:0 6px">•</span>
+        <span style="color:#10B981">✓</span> All 28 States & MCC AIQ Covered
       </div>
     </div>
+  </section>
 
-</section>
-
-<!-- WHAT WE COVER -->
-<section class="section section-alt" aria-labelledby="cover-heading">
-  <div class="container">
-    <div class="section-heading centered reveal">
-      <span class="section-label">Scope of Guidance</span>
-      <h2 id="cover-heading">What We Cover — MBBS Admissions</h2>
-    </div>
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--sp-8);margin-top:var(--sp-12);align-items:start;">
-      <div class="reveal">
-        <h3 style="font-size:var(--fs-2xl);margin-bottom:var(--sp-4);">College Types We Guide For</h3>
-        <div style="display:flex;flex-direction:column;gap:var(--sp-3);">
-          <div style="display:flex;align-items:center;gap:var(--sp-3);padding:var(--sp-3) var(--sp-4);background:var(--clr-surface);border:1px solid var(--clr-border);border-radius:var(--radius-md);">
-            <span style="font-size:1.2rem;">🏛️</span><span style="font-size:var(--fs-sm);font-weight:500;">Government Medical Colleges</span>
-          </div>
-          <div style="display:flex;align-items:center;gap:var(--sp-3);padding:var(--sp-3) var(--sp-4);background:var(--clr-surface);border:1px solid var(--clr-border);border-radius:var(--radius-md);">
-            <span style="font-size:1.2rem;">🏥</span><span style="font-size:var(--fs-sm);font-weight:500;">Private Medical Colleges</span>
-          </div>
-          <div style="display:flex;align-items:center;gap:var(--sp-3);padding:var(--sp-3) var(--sp-4);background:var(--clr-surface);border:1px solid var(--clr-border);border-radius:var(--radius-md);">
-            <span style="font-size:1.2rem;">🎓</span><span style="font-size:var(--fs-sm);font-weight:500;">Deemed Universities</span>
-          </div>
-          <div style="display:flex;align-items:center;gap:var(--sp-3);padding:var(--sp-3) var(--sp-4);background:var(--clr-surface);border:1px solid var(--clr-border);border-radius:var(--radius-md);">
-            <span style="font-size:1.2rem;">🌐</span><span style="font-size:var(--fs-sm);font-weight:500;">Central Universities</span>
-          </div>
-          <div style="display:flex;align-items:center;gap:var(--sp-3);padding:var(--sp-3) var(--sp-4);background:var(--clr-surface);border:1px solid var(--clr-border);border-radius:var(--radius-md);">
-            <span style="font-size:1.2rem;">🎯</span><span style="font-size:var(--fs-sm);font-weight:500;">AIQ & State Quota</span>
-          </div>
-          <div style="display:flex;align-items:center;gap:var(--sp-3);padding:var(--sp-3) var(--sp-4);background:var(--clr-surface);border:1px solid var(--clr-border);border-radius:var(--radius-md);">
-            <span style="font-size:1.2rem;">👨‍👩‍👧</span><span style="font-size:var(--fs-sm);font-weight:500;">NRI Admissions (where applicable)</span>
-          </div>
-        </div>
-      </div>
-      <div class="reveal">
-        <h3 style="font-size:var(--fs-2xl);margin-bottom:var(--sp-4);">Counselling Pathways</h3>
-        <div style="display:flex;flex-direction:column;gap:var(--sp-3);">
-          <div style="padding:var(--sp-4) var(--sp-5);background:rgba(201,150,12,0.08);border:1px solid rgba(201,150,12,0.25);border-radius:var(--radius-md);">
-            <div style="font-weight:700;font-size:var(--fs-sm);margin-bottom:4px;">MCC UG Counselling</div>
-            <div style="font-size:var(--fs-xs);color:var(--clr-text-muted);">All India Quota — centrally conducted by MCC</div>
-          </div>
-          <div style="padding:var(--sp-4) var(--sp-5);background:rgba(255,255,255,0.04);border:1px solid var(--clr-border);border-radius:var(--radius-md);">
-            <div style="font-weight:700;font-size:var(--fs-sm);margin-bottom:4px;">State NEET-UG Counselling</div>
-            <div style="font-size:var(--fs-xs);color:var(--clr-text-muted);">State quota — varies by state rules and eligibility</div>
-          </div>
-          <div style="padding:var(--sp-4) var(--sp-5);background:rgba(255,255,255,0.04);border:1px solid var(--clr-border);border-radius:var(--radius-md);">
-            <div style="font-weight:700;font-size:var(--fs-sm);margin-bottom:4px;">Deemed University Counselling</div>
-            <div style="font-size:var(--fs-xs);color:var(--clr-text-muted);">Separately conducted by deemed universities via MCC</div>
-          </div>
-          <div style="padding:var(--sp-4) var(--sp-5);background:rgba(255,255,255,0.04);border:1px solid var(--clr-border);border-radius:var(--radius-md);">
-            <div style="font-weight:700;font-size:var(--fs-sm);margin-bottom:4px;">Private Medical College Counselling</div>
-            <div style="font-size:var(--fs-xs);color:var(--clr-text-muted);">Institution-level management/NRI pathways</div>
-          </div>
-        </div>
+  <!-- 1. CORE POSITIONING -->
+  <section class="section" style="padding-top: var(--sp-10);">
+    <div class="container">
+      <div class="core-msg-box">
+        <span class="section-label" style="background:rgba(201,150,12,0.2);color:#FCD34D;border:1px solid rgba(201,150,12,0.4);margin-bottom:12px;">Core Medical Admissions Reality</span>
+        <blockquote class="core-msg-text">
+          "Your NEET score gets you into the counselling process. Your counselling strategy determines how effectively you use it."
+        </blockquote>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- MD MS SECTION -->
-<section class="section" id="md-ms" aria-labelledby="mdms-heading">
-  <div class="container">
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--sp-8);align-items:center;">
-      <div class="reveal">
-        <span class="section-label">Postgraduate Medical</span>
-        <h2 id="mdms-heading" style="font-size:var(--fs-4xl);font-weight:800;line-height:1.1;margin-bottom:var(--sp-5);">MD & MS Admissions</h2>
-        <p style="color:var(--clr-text-2);line-height:1.75;margin-bottom:var(--sp-5);">For NEET-PG candidates, we provide specialized guidance evaluating specialty preference, rank, category, domicile, college preference, budget, seat type and applicable counselling route.</p>
-        <h4 style="font-size:var(--fs-sm);font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:var(--clr-text-muted);margin-bottom:var(--sp-3);">Specialty Journey</h4>
-        <div style="display:flex;flex-wrap:wrap;gap:var(--sp-2);align-items:center;">
-          <span class="flow-chip">Specialty</span><span class="flow-arrow">→</span>
-          <span class="flow-chip">College</span><span class="flow-arrow">→</span>
-          <span class="flow-chip">Seat Type</span><span class="flow-arrow">→</span>
-          <span class="flow-chip">Fees</span><span class="flow-arrow">→</span>
-          <span class="flow-chip">Hospital Exposure</span><span class="flow-arrow">→</span>
-          <span class="flow-chip">Career Prospects</span>
-        </div>
-        <div style="margin-top:var(--sp-6);">
-          <button class="btn btn-primary" data-modal="lead" data-program="md-ms">Get PG Medical Guidance</button>
-        </div>
+  <!-- 4. EMOTIONAL HOOK -->
+  <section class="section section-alt" aria-labelledby="mistake-heading">
+    <div class="container">
+      <div class="section-heading centered reveal">
+        <span class="section-label">Critical Warning</span>
+        <h2 id="mistake-heading">The Biggest NEET Mistake Isn't Always a Low Score.</h2>
       </div>
-      <div class="reveal">
-        <h4 style="font-size:var(--fs-sm);font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:var(--clr-text-muted);margin-bottom:var(--sp-4);">MD Specialties We Guide For</h4>
-        <div style="display:flex;flex-wrap:wrap;gap:var(--sp-2);">
-          <span class="tag">MD General Medicine</span><span class="tag">MD Paediatrics</span>
-          <span class="tag">MD Anaesthesiology</span><span class="tag">MD Radiodiagnosis</span>
-          <span class="tag">MD Psychiatry</span><span class="tag">MD Dermatology</span>
-          <span class="tag">MD Respiratory</span><span class="tag">MD Pathology</span>
-          <span class="tag">MD Pharmacology</span><span class="tag">MD Microbiology</span>
+
+      <div style="max-width: 820px; margin: 0 auto;" class="reveal">
+        <p style="font-size: var(--fs-lg); line-height: 1.7; color: var(--clr-text-main); margin-bottom: var(--sp-6); text-align: center;">
+          A student can have a good NEET score and still miss a better opportunity. Why? Because counselling is not simply about knowing college names.
+        </p>
+
+        <div style="background: var(--clr-surface); border: 1px solid var(--clr-border); border-radius: var(--radius-xl); padding: var(--sp-8); box-shadow: var(--shadow-md); margin-bottom: var(--sp-8);">
+          <h3 style="font-size: var(--fs-xl); margin-bottom: var(--sp-5); color: #0F172A; text-align: center;">
+            Every Single Seat Allocation Depends On 14 Interconnected Factors:
+          </h3>
+
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px;">
+            <div style="padding: 10px 14px; background: rgba(15,23,42,0.03); border-radius: var(--radius-md); font-weight: 700; font-size: 13px; display: flex; align-items: center; gap: 8px;">📌 Counselling Eligibility</div>
+            <div style="padding: 10px 14px; background: rgba(15,23,42,0.03); border-radius: var(--radius-md); font-weight: 700; font-size: 13px; display: flex; align-items: center; gap: 8px;">🏷️ Category Reservations</div>
+            <div style="padding: 10px 14px; background: rgba(15,23,42,0.03); border-radius: var(--radius-md); font-weight: 700; font-size: 13px; display: flex; align-items: center; gap: 8px;">🏡 State Domicile Rules</div>
+            <div style="padding: 10px 14px; background: rgba(15,23,42,0.03); border-radius: var(--radius-md); font-weight: 700; font-size: 13px; display: flex; align-items: center; gap: 8px;">📊 All-India & State Rank</div>
+            <div style="padding: 10px 14px; background: rgba(15,23,42,0.03); border-radius: var(--radius-md); font-weight: 700; font-size: 13px; display: flex; align-items: center; gap: 8px;">💰 Fee Structures & Hidden Costs</div>
+            <div style="padding: 10px 14px; background: rgba(15,23,42,0.03); border-radius: var(--radius-md); font-weight: 700; font-size: 13px; display: flex; align-items: center; gap: 8px;">📋 Seat Matrix Variations</div>
+            <div style="padding: 10px 14px; background: rgba(15,23,42,0.03); border-radius: var(--radius-md); font-weight: 700; font-size: 13px; display: flex; align-items: center; gap: 8px;">📈 Multi-Year Allotment Trends</div>
+            <div style="padding: 10px 14px; background: rgba(15,23,42,0.03); border-radius: var(--radius-md); font-weight: 700; font-size: 13px; display: flex; align-items: center; gap: 8px;">🏥 Clinical Exposure & Bed Count</div>
+            <div style="padding: 10px 14px; background: rgba(15,23,42,0.03); border-radius: var(--radius-md); font-weight: 700; font-size: 13px; display: flex; align-items: center; gap: 8px;">🔢 Choice-Filling Priority Order</div>
+            <div style="padding: 10px 14px; background: rgba(15,23,42,0.03); border-radius: var(--radius-md); font-weight: 700; font-size: 13px; display: flex; align-items: center; gap: 8px;">🎯 Round 1 vs Round 2 Strategy</div>
+            <div style="padding: 10px 14px; background: rgba(15,23,42,0.03); border-radius: var(--radius-md); font-weight: 700; font-size: 13px; display: flex; align-items: center; gap: 8px;">🔄 Upgradation Rules</div>
+            <div style="padding: 10px 14px; background: rgba(15,23,42,0.03); border-radius: var(--radius-md); font-weight: 700; font-size: 13px; display: flex; align-items: center; gap: 8px;">⏳ Strict Reporting Deadlines</div>
+            <div style="padding: 10px 14px; background: rgba(15,23,42,0.03); border-radius: var(--radius-md); font-weight: 700; font-size: 13px; display: flex; align-items: center; gap: 8px;">🚫 Security Forfeiture & Exit Rules</div>
+            <div style="padding: 10px 14px; background: rgba(15,23,42,0.03); border-radius: var(--radius-md); font-weight: 700; font-size: 13px; display: flex; align-items: center; gap: 8px;">⚠️ Dynamic Seat Availability</div>
+          </div>
         </div>
-        <h4 style="font-size:var(--fs-sm);font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:var(--clr-text-muted);margin-bottom:var(--sp-4);margin-top:var(--sp-6);">MS Specialties We Guide For</h4>
-        <div style="display:flex;flex-wrap:wrap;gap:var(--sp-2);">
-          <span class="tag">MS General Surgery</span><span class="tag">MS Orthopaedics</span>
-          <span class="tag">MS ENT</span><span class="tag">MS Ophthalmology</span>
-          <span class="tag">Other MD/MS Specialties</span>
+
+        <p style="text-align: center; font-weight: 800; font-size: 1.1rem; color: #0F172A; margin-bottom: var(--sp-6);">
+          Thousands of students enter counselling every year. Not everyone approaches it strategically.
+        </p>
+
+        <div style="text-align: center;">
+          <button class="btn btn-primary btn-lg" data-modal="lead" data-program="Counselling Strategy Request">
+            I Want a Counselling Strategy →
+          </button>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- CHOICE FILLING STRATEGY -->
-<section class="section section-alt" aria-labelledby="strategy-heading">
-  <div class="container">
-    <div class="section-heading centered reveal">
-      <span class="section-label">Strategic Choice Filling</span>
-      <h2 id="strategy-heading">Don't Just Fill Choices. <br>Build an Admission Strategy.</h2>
-      <p>The order in which you fill your choices is as important as the colleges you select. We build a personalized choice strategy based on your rank, category, eligibility, budget and risk preference.</p>
-    </div>
-
-    <div class="grid-3 stagger" style="margin-top:var(--sp-12)">
-      <div class="strategy-card aggressive reveal">
-        <span class="strategy-badge">Aggressive</span>
-        <h3>Dream Colleges First</h3>
-        <p>Designed for students willing to take higher risk for preferred colleges and branches. Aspirational options placed high on the list.</p>
+  <!-- 5. REAL FOMO / TIMELINE SECTION -->
+  <section class="section" style="background: #0F172A; color: #FFFFFF;" aria-labelledby="fomo-heading">
+    <div class="container">
+      <div class="section-heading centered reveal section-dark-heading">
+        <span class="section-label" style="background: rgba(239, 68, 68, 0.2); color: #F87171; border-color: rgba(239, 68, 68, 0.4);">Time Sensitivity</span>
+        <h2 id="fomo-heading" style="color: #FFFFFF !important; -webkit-text-fill-color: #FFFFFF !important;">While You Are Still Deciding, Other Students Are Already Planning Their Choices.</h2>
       </div>
-      <div class="strategy-card balanced reveal" style="transform:scale(1.02)">
-        <span class="strategy-badge">⭐ Balanced</span>
-        <h3>Dream + Target + Safe</h3>
-        <p>A combination of aspirational, realistic and safer choices. Designed to maximize opportunity while ensuring a fallback.</p>
-        <div class="strategy-recommended">★ Recommended for most students</div>
+
+      <!-- Visual Timeline -->
+      <div class="timeline-wrapper reveal">
+        <div class="timeline-step">
+          <div class="timeline-step-num">1</div>
+          <div class="timeline-step-title">NEET Result</div>
+        </div>
+        <div class="timeline-step">
+          <div class="timeline-step-num">2</div>
+          <div class="timeline-step-title">Counselling Reg.</div>
+        </div>
+        <div class="timeline-step" style="border-color: #FCD34D; background: rgba(197,155,39,0.2);">
+          <div class="timeline-step-num" style="background:#FCD34D;">3</div>
+          <div class="timeline-step-title" style="color:#FCD34D;">Choice Filling Window</div>
+        </div>
+        <div class="timeline-step">
+          <div class="timeline-step-num">4</div>
+          <div class="timeline-step-title">Round 1 Allotment</div>
+        </div>
+        <div class="timeline-step">
+          <div class="timeline-step-num">5</div>
+          <div class="timeline-step-title">Upgrade Decision</div>
+        </div>
+        <div class="timeline-step">
+          <div class="timeline-step-num">6</div>
+          <div class="timeline-step-title">Round 2 Allotment</div>
+        </div>
+        <div class="timeline-step">
+          <div class="timeline-step-num">7</div>
+          <div class="timeline-step-title">Further Rounds</div>
+        </div>
+        <div class="timeline-step">
+          <div class="timeline-step-num">8</div>
+          <div class="timeline-step-title">Final Admission</div>
+        </div>
       </div>
-      <div class="strategy-card safe reveal">
-        <span class="strategy-badge">Safe</span>
-        <h3>Admission Security First</h3>
-        <p>Focuses on maximizing the possibility of securing an acceptable seat within the student's defined requirements and budget.</p>
+
+      <div style="max-width: 780px; margin: var(--sp-8) auto 0 auto; text-align: center;" class="reveal">
+        <p style="color: #CBD5E1; font-size: 1.05rem; line-height: 1.7; margin-bottom: var(--sp-6);">
+          Counselling windows can be short. Choices lock permanently once submitted. A poorly structured preference list can misallocate your seat or trigger severe exit penalties. Waiting until the last moment leaves families making critical choices under severe pressure.
+        </p>
+
+        <h3 style="font-size: var(--fs-2xl); color: #FCD34D; font-weight: 800; margin-bottom: var(--sp-6);">
+          Don't start thinking about your strategy after the choice-filling window opens.
+        </h3>
+
+        <button class="btn btn-sales-primary" data-modal="lead" data-program="Early Strategy Booking">
+          BOOK YOUR COUNSELLING NOW
+        </button>
       </div>
     </div>
+  </section>
 
-    <div class="disclaimer-block" style="margin-top:var(--sp-8);">
-      Probability estimates are indicative and never a guarantee of admission. Choice strategy recommendations are based on available data and individual student profiles — outcomes depend on seat availability, competition, reservation and counselling round dynamics.
+  <!-- 6. "CAN I DO IT MYSELF?" OBJECTION -->
+  <section class="section" aria-labelledby="diy-heading">
+    <div class="container">
+      <div class="section-heading centered reveal">
+        <span class="section-label">Decision Comparison</span>
+        <h2 id="diy-heading">"Can I Do Counselling Myself?"</h2>
+        <p style="font-size: 1.2rem; font-weight: 700; color: #0F172A; margin-top: 8px;">
+          Answer: <strong>Yes.</strong> But the real question is: <strong>Do you know enough to make every important decision correctly when the stakes are high?</strong>
+        </p>
+      </div>
+
+      <div style="overflow-x: auto;" class="reveal">
+        <table class="diy-table">
+          <thead>
+            <tr style="background: #0F172A; color: #FFFFFF;">
+              <th style="width: 50%;">🔴 DIY Unassisted Counselling</th>
+              <th style="width: 50%; background: var(--clr-medical-accent); color: #0F172A;">🟢 College Corridor Guided Strategy</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>❌ Search fragmented information yourself across dozens of PDFs</td>
+              <td><strong>✓ Structured Profile Assessment & Exact Seat Matrix Mapping</strong></td>
+            </tr>
+            <tr>
+              <td>❌ Try to manually compare conflicting previous-year cutoff trends</td>
+              <td><strong>✓ Multi-Year Cutoff & Category Rank Movement Analysis</strong></td>
+            </tr>
+            <tr>
+              <td>❌ Risk missing critical state registration deadlines & eligibility changes</td>
+              <td><strong>✓ Dedicated Real-Time Notifications & Application Tracking</strong></td>
+            </tr>
+            <tr>
+              <td>❌ Guess choice-filling order based on generic Internet lists</td>
+              <td><strong>✓ Personalized Strategic Choice List (Aggressive, Balanced & Safe)</strong></td>
+            </tr>
+            <tr>
+              <td>❌ Stress over Round 1 vs Round 2 seat holding and upgrade rules</td>
+              <td><strong>✓ Round-by-Round Expert Decision Support & Risk Management</strong></td>
+            </tr>
+            <tr>
+              <td>❌ Unexpected fee surprises, bond commitments, or security deposit forfeitures</td>
+              <td><strong>✓ Complete Fee Structure, Hidden Costs & Bond Terms Audit</strong></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div style="text-align: center; margin-top: var(--sp-8);" class="reveal">
+        <button class="btn btn-primary btn-lg" data-modal="lead" data-program="Guided Strategy Choice">
+          Don't Guess. Get Your Strategy.
+        </button>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- DATA-DRIVEN SHORTLISTING -->
-<section class="section" aria-labelledby="shortlist-heading">
-  <div class="container">
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--sp-8);align-items:center;">
-      <div class="reveal">
-        <span class="section-label">College Shortlisting</span>
-        <h2 id="shortlist-heading" style="font-size:var(--fs-4xl);font-weight:800;line-height:1.1;margin-bottom:var(--sp-5);">Data-Driven College Shortlisting</h2>
-        <p style="color:var(--clr-text-2);line-height:1.75;margin-bottom:var(--sp-6);">We don't simply give students a long list of colleges. We create a structured list based on their NEET rank, category, domicile, budget, eligibility and risk preference.</p>
-        <div style="display:flex;flex-direction:column;gap:var(--sp-3);">
-          <div style="display:flex;align-items:center;gap:var(--sp-3);padding:var(--sp-4);background:rgba(16,185,129,0.08);border:1px solid rgba(16,185,129,0.3);border-radius:var(--radius-md);">
-            <span style="font-size:1.3rem;">🟢</span>
+  <!-- 7. WHAT THE COUNSELLING INCLUDES -->
+  <section class="section section-alt" aria-labelledby="includes-heading">
+    <div class="container">
+      <div class="section-heading centered reveal">
+        <span class="section-label">Service Scope</span>
+        <h2 id="includes-heading">What You Get With College Corridor Counselling</h2>
+      </div>
+
+      <div class="grid-4 stagger" style="margin-top: var(--sp-8);">
+        <div class="card reveal" style="border-top: 4px solid var(--clr-medical-accent);">
+          <div style="font-size: 1.8rem; font-weight: 900; color: var(--clr-medical-accent); margin-bottom: 8px;">01</div>
+          <h3 style="font-size: 1.1rem; margin-bottom: 8px;">Profile Analysis</h3>
+          <p style="font-size: 13px; color: var(--clr-text-2); line-height: 1.6;">We evaluate your NEET score/rank, category, domicile, budget, and academic priorities.</p>
+        </div>
+        <div class="card reveal" style="border-top: 4px solid var(--clr-medical-accent);">
+          <div style="font-size: 1.8rem; font-weight: 900; color: var(--clr-medical-accent); margin-bottom: 8px;">02</div>
+          <h3 style="font-size: 1.1rem; margin-bottom: 8px;">Counselling Mapping</h3>
+          <p style="font-size: 13px; color: var(--clr-text-2); line-height: 1.6;">Identify all relevant MCC (All India) and State counselling pathways open to you.</p>
+        </div>
+        <div class="card reveal" style="border-top: 4px solid var(--clr-medical-accent);">
+          <div style="font-size: 1.8rem; font-weight: 900; color: var(--clr-medical-accent); margin-bottom: 8px;">03</div>
+          <h3 style="font-size: 1.1rem; margin-bottom: 8px;">College Shortlisting</h3>
+          <p style="font-size: 13px; color: var(--clr-text-2); line-height: 1.6;">Build realistic target, balanced, and safety college shortlists tailored to your rank.</p>
+        </div>
+        <div class="card reveal" style="border-top: 4px solid var(--clr-medical-accent);">
+          <div style="font-size: 1.8rem; font-weight: 900; color: var(--clr-medical-accent); margin-bottom: 8px;">04</div>
+          <h3 style="font-size: 1.1rem; margin-bottom: 8px;">Choice-Filling Strategy</h3>
+          <p style="font-size: 13px; color: var(--clr-text-2); line-height: 1.6;">Structure your preference list strategically instead of randomly ordering colleges.</p>
+        </div>
+        <div class="card reveal" style="border-top: 4px solid var(--clr-medical-accent);">
+          <div style="font-size: 1.8rem; font-weight: 900; color: var(--clr-medical-accent); margin-bottom: 8px;">05</div>
+          <h3 style="font-size: 1.1rem; margin-bottom: 8px;">Round Strategy</h3>
+          <p style="font-size: 13px; color: var(--clr-text-2); line-height: 1.6;">Understand how to navigate Round 1, Round 2, Mop-Up & Stray rounds for maximum upside.</p>
+        </div>
+        <div class="card reveal" style="border-top: 4px solid var(--clr-medical-accent);">
+          <div style="font-size: 1.8rem; font-weight: 900; color: var(--clr-medical-accent); margin-bottom: 8px;">06</div>
+          <h3 style="font-size: 1.1rem; margin-bottom: 8px;">College & Fee Audit</h3>
+          <p style="font-size: 13px; color: var(--clr-text-2); line-height: 1.6;">Compare colleges on patient inflow, infrastructure, total fees, and hidden charges.</p>
+        </div>
+        <div class="card reveal" style="border-top: 4px solid var(--clr-medical-accent);">
+          <div style="font-size: 1.8rem; font-weight: 900; color: var(--clr-medical-accent); margin-bottom: 8px;">07</div>
+          <h3 style="font-size: 1.1rem; margin-bottom: 8px;">Decision Support</h3>
+          <p style="font-size: 13px; color: var(--clr-text-2); line-height: 1.6;">Direct expert guidance when deciding whether to report, upgrade, or exit a round.</p>
+        </div>
+        <div class="card reveal" style="border-top: 4px solid var(--clr-medical-accent);">
+          <div style="font-size: 1.8rem; font-weight: 900; color: var(--clr-medical-accent); margin-bottom: 8px;">08</div>
+          <h3 style="font-size: 1.1rem; margin-bottom: 8px;">Admission Guidance</h3>
+          <p style="font-size: 13px; color: var(--clr-text-2); line-height: 1.6;">End-to-end assistance through document verification, fee payment, and reporting.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. THREE STRATEGY LEVELS -->
+  <section class="section" aria-labelledby="levels-heading">
+    <div class="container">
+      <div class="section-heading centered reveal">
+        <span class="section-label">Strategic Decision Framework</span>
+        <h2 id="levels-heading">Three Strategic Counselling Approaches</h2>
+        <p>We craft your choice list around your specific risk appetite and career goals.</p>
+      </div>
+
+      <div class="grid-3 stagger" style="margin-top: var(--sp-8);">
+        <div class="strategy-card aggressive reveal">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+            <span style="font-weight: 900; font-size: 1.1rem; color: #EF4444;">🔴 AGGRESSIVE</span>
+            <span style="font-size: 11px; padding: 3px 8px; background: rgba(239,68,68,0.1); color: #EF4444; border-radius: 4px; font-weight: 700;">Calculated Risk</span>
+          </div>
+          <p style="font-size: 14px; color: var(--clr-text-2); margin-bottom: var(--sp-4);">
+            For students aiming for top-tier institutions who are willing to take calculated risks across rounds to secure a superior medical seat.
+          </p>
+          <div style="margin-top: auto; font-weight: 700; font-size: 13px; color: #EF4444; background: rgba(239,68,68,0.06); padding: 10px; border-radius: 6px;">
+            ⚡ Maximum upside. Higher uncertainty.
+          </div>
+        </div>
+
+        <div class="strategy-card balanced reveal">
+          <div style="position: absolute; top: -12px; right: 20px; background: #C59B27; color: #0F172A; font-weight: 900; font-size: 10px; padding: 4px 10px; border-radius: 20px; text-transform: uppercase; letter-spacing: 0.05em;">Most Popular</div>
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+            <span style="font-weight: 900; font-size: 1.1rem; color: #B45309;">🟡 BALANCED</span>
+            <span style="font-size: 11px; padding: 3px 8px; background: rgba(197,155,39,0.15); color: #B45309; border-radius: 4px; font-weight: 700;">Optimal Ratio</span>
+          </div>
+          <p style="font-size: 14px; color: var(--clr-text-2); margin-bottom: var(--sp-4);">
+            A precise combination of ambitious dream options, highly achievable target colleges, and reliable fallback options.
+          </p>
+          <div style="margin-top: auto; font-weight: 700; font-size: 13px; color: #B45309; background: rgba(197,155,39,0.12); padding: 10px; border-radius: 6px;">
+            ⭐ Preferred strategy for 85%+ students.
+          </div>
+        </div>
+
+        <div class="strategy-card safe reveal">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+            <span style="font-weight: 900; font-size: 1.1rem; color: #059669;">🟢 SAFE</span>
+            <span style="font-size: 11px; padding: 3px 8px; background: rgba(16,185,129,0.1); color: #059669; border-radius: 4px; font-weight: 700;">Seat Assurance Focus</span>
+          </div>
+          <p style="font-size: 14px; color: var(--clr-text-2); margin-bottom: var(--sp-4);">
+            Prioritizes securing a verified, quality medical seat in early rounds while completely eliminating the risk of losing a academic year.
+          </p>
+          <div style="margin-top: auto; font-weight: 700; font-size: 13px; color: #059669; background: rgba(16,185,129,0.08); padding: 10px; border-radius: 6px;">
+            🛡️ Minimal risk. High predictability.
+          </div>
+        </div>
+      </div>
+
+      <div style="text-align: center; margin-top: var(--sp-8);" class="reveal">
+        <button class="btn btn-outline" data-modal="lead" data-program="Strategy Level Assessment">
+          Find My Strategy →
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3 & 9. MBBS & BDS SERVICE SECTIONS -->
+  <section class="section section-alt" aria-labelledby="mbbs-bds-heading">
+    <div class="container">
+      <div class="section-heading centered reveal">
+        <span class="section-label">Undergraduate Pathways</span>
+        <h2 id="mbbs-bds-heading">Your Medical Career Starts With the Right College.</h2>
+      </div>
+
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--sp-8); margin-top: var(--sp-8);">
+        <!-- MBBS Card -->
+        <div class="card reveal" style="background: var(--clr-surface); border: 2px solid var(--clr-medical-accent); padding: var(--sp-8); border-radius: var(--radius-xl);">
+          <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 16px;">
+            <span style="font-size: 2.2rem;">🏥</span>
             <div>
-              <div style="font-weight:700;font-size:var(--fs-sm);color:#34D399;">High Probability</div>
-              <div style="font-size:var(--fs-xs);color:var(--clr-text-muted);">Colleges where the student's profile is comparatively strong based on available data</div>
+              <h3 style="font-size: 1.4rem; margin: 0;">MBBS Admissions</h3>
+              <span style="font-size: 12px; color: var(--clr-text-muted); font-weight: 700;">NEET MCC + State Counselling</span>
             </div>
           </div>
-          <div style="display:flex;align-items:center;gap:var(--sp-3);padding:var(--sp-4);background:rgba(245,158,11,0.08);border:1px solid rgba(245,158,11,0.3);border-radius:var(--radius-md);">
-            <span style="font-size:1.3rem;">🟡</span>
+          <p style="font-size: 14px; color: var(--clr-text-2); line-height: 1.6; margin-bottom: 16px;">
+            Comprehensive admission guidance for students targeting:
+          </p>
+          <ul style="list-style: none; padding: 0; margin: 0 0 24px 0; font-size: 13px; color: var(--clr-text-main); display: flex; flex-direction: column; gap: 8px;">
+            <li>🏛️ Government Medical Colleges (AIQ 15% & State Quota 85%)</li>
+            <li>🏥 Top Private Medical Colleges across India</li>
+            <li>🎓 Deemed Medical Universities (100% All-India Quota)</li>
+            <li>💼 Management & Open State Quota Seats</li>
+          </ul>
+          <button class="btn btn-primary" style="width: 100%;" data-modal="lead" data-program="MBBS Counselling">
+            Get MBBS Counselling
+          </button>
+        </div>
+
+        <!-- BDS Card -->
+        <div class="card reveal" style="background: var(--clr-surface); border: 1px solid var(--clr-border); padding: var(--sp-8); border-radius: var(--radius-xl);">
+          <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 16px;">
+            <span style="font-size: 2.2rem;">🦷</span>
             <div>
-              <div style="font-weight:700;font-size:var(--fs-sm);color:#F59E0B;">Balanced</div>
-              <div style="font-size:var(--fs-xs);color:var(--clr-text-muted);">Realistic options with reasonable competition based on historical trends</div>
+              <h3 style="font-size: 1.4rem; margin: 0;">BDS Admissions</h3>
+              <span style="font-size: 12px; color: var(--clr-text-muted); font-weight: 700;">NEET BDS Counselling & Guidance</span>
             </div>
           </div>
-          <div style="display:flex;align-items:center;gap:var(--sp-3);padding:var(--sp-4);background:rgba(249,115,22,0.08);border:1px solid rgba(249,115,22,0.3);border-radius:var(--radius-md);">
-            <span style="font-size:1.3rem;">🟠</span>
-            <div>
-              <div style="font-weight:700;font-size:var(--fs-sm);color:#F97316;">Aggressive</div>
-              <div style="font-size:var(--fs-xs);color:var(--clr-text-muted);">Higher-preference options with greater uncertainty</div>
-            </div>
+          <p style="font-size: 14px; color: var(--clr-text-2); line-height: 1.6; margin-bottom: 16px;">
+            Expert counselling for dental aspirants targeting:
+          </p>
+          <ul style="list-style: none; padding: 0; margin: 0 0 24px 0; font-size: 13px; color: var(--clr-text-main); display: flex; flex-direction: column; gap: 8px;">
+            <li>🏛️ Government Dental Colleges</li>
+            <li>🏥 Premier Private Dental Institutions</li>
+            <li>🎓 Deemed Dental Universities</li>
+            <li>🔄 State Quota & Lateral/Upgrade Options</li>
+          </ul>
+          <button class="btn btn-outline" style="width: 100%;" data-modal="lead" data-program="BDS Counselling">
+            Get BDS Counselling
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 10. MCC COUNSELLING -->
+  <section class="section" aria-labelledby="mcc-heading">
+    <div class="container">
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--sp-10); align-items: center;">
+        <div class="reveal">
+          <span class="section-label">All-India Guidance</span>
+          <h2 id="mcc-heading" style="font-size: clamp(1.8rem, 3.5vw, 2.6rem); font-weight: 900; line-height: 1.1; margin-bottom: 16px;">
+            Don't Just Register. Build a Strategy.
+          </h2>
+          <h3 style="font-size: 1.2rem; font-weight: 800; color: var(--clr-medical-accent); margin-bottom: 16px;">
+            MCC Counselling — Don't Enter Without a Plan.
+          </h3>
+          <p style="color: var(--clr-text-2); line-height: 1.7; margin-bottom: 20px;">
+            MCC (Medical Counselling Committee) manages All India Quota (15%), Deemed Universities (100%), Central Universities (AIIMS, JIPMER, BHU, AMU), and ESIC quota seats.
+          </p>
+          <p style="color: var(--clr-text-2); line-height: 1.7; margin-bottom: 24px;">
+            Every round in MCC has unique rules regarding seat allotment, free exit, security deposit forfeiture, and eligibility for state rounds. <strong>We help you build a personalized MCC strategy around your exact score and category rank.</strong>
+          </p>
+          <button class="btn btn-primary btn-lg" data-modal="lead" data-program="MCC Counselling Strategy">
+            Book MCC Counselling
+          </button>
+        </div>
+
+        <div class="reveal" style="background: #0F172A; border: 1px solid var(--clr-medical-border); border-radius: var(--radius-xl); padding: var(--sp-8); color: #FFFFFF;">
+          <h4 style="color: #FCD34D; font-size: 1.1rem; font-weight: 800; margin-bottom: 16px; text-transform: uppercase; letter-spacing: 0.05em;">
+            MCC Decision Parameters We Handle
+          </h4>
+          <div style="display: flex; flex-direction: column; gap: 12px; font-size: 13px;">
+            <div style="padding: 10px 14px; background: rgba(255,255,255,0.06); border-radius: var(--radius-md);">✓ AIQ 15% Govt Medical College Preference Ranking</div>
+            <div style="padding: 10px 14px; background: rgba(255,255,255,0.06); border-radius: var(--radius-md);">✓ Deemed University Fee vs Quality Evaluation</div>
+            <div style="padding: 10px 14px; background: rgba(255,255,255,0.06); border-radius: var(--radius-md);">✓ AIIMS & Central University Cutoff Trends</div>
+            <div style="padding: 10px 14px; background: rgba(255,255,255,0.06); border-radius: var(--radius-md);">✓ Round 1 Free Exit vs Round 2 Upgrade Strategy</div>
+            <div style="padding: 10px 14px; background: rgba(255,255,255,0.06); border-radius: var(--radius-md);">✓ Stray Vacuum & Special Stray Round Risk Analysis</div>
           </div>
-          <div style="display:flex;align-items:center;gap:var(--sp-3);padding:var(--sp-4);background:rgba(239,68,68,0.08);border:1px solid rgba(239,68,68,0.3);border-radius:var(--radius-md);">
-            <span style="font-size:1.3rem;">🔴</span>
-            <div>
-              <div style="font-weight:700;font-size:var(--fs-sm);color:#F87171;">Aspirational</div>
-              <div style="font-size:var(--clr-text-muted);font-size:var(--fs-xs);">Highly competitive options that may be difficult but can be included strategically</div>
-            </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 11. STATE COUNSELLING -->
+  <section class="section section-alt" aria-labelledby="state-heading">
+    <div class="container">
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--sp-10); align-items: center;">
+        <div class="reveal" style="order: 2;">
+          <span class="section-label">State Quota Expertise</span>
+          <h2 id="state-heading" style="font-size: clamp(1.8rem, 3.5vw, 2.6rem); font-weight: 900; line-height: 1.1; margin-bottom: 16px;">
+            Every State Has Its Own Rules. Your Strategy Should Too.
+          </h2>
+          <h3 style="font-size: 1.2rem; font-weight: 800; color: #0F172A; margin-bottom: 16px;">
+            State Counselling Is Different.
+          </h3>
+          <p style="color: var(--clr-text-2); line-height: 1.7; margin-bottom: 20px;">
+            State counselling governs 85% of Government seats and 100% of Private college seats in each state. Rules differ completely across states regarding:
+          </p>
+          <ul style="list-style: none; padding: 0; margin: 0 0 24px 0; color: var(--clr-text-main); font-size: 14px; display: flex; flex-direction: column; gap: 8px;">
+            <td><strong>• Open vs Closed State Status:</strong> Which states allow non-domicile students in private colleges?</td>
+            <td><strong>• Domicile & Category Rules:</strong> State-specific reservations and documentation requirements.</td>
+            <td><strong>• Bank Guarantee & Fee Terms:</strong> Multi-year fee commitments and security deposits.</td>
+          </ul>
+          <button class="btn btn-primary btn-lg" data-modal="lead" data-program="State Counselling Strategy">
+            Get State Counselling Guidance
+          </button>
+        </div>
+
+        <div class="reveal" style="order: 1; background: var(--clr-surface); border: 1px solid var(--clr-border); border-radius: var(--radius-xl); padding: var(--sp-8); box-shadow: var(--shadow-lg);">
+          <h4 style="font-size: 1.1rem; font-weight: 800; color: #0F172A; margin-bottom: 16px;">
+            States Covered by College Corridor
+          </h4>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; font-size: 13px; font-weight: 600;">
+            <div style="padding: 8px 12px; background: rgba(15,23,42,0.04); border-radius: 6px;">📍 Uttar Pradesh (UPDGME)</div>
+            <div style="padding: 8px 12px; background: rgba(15,23,42,0.04); border-radius: 6px;">📍 Maharashtra (CET Cell)</div>
+            <div style="padding: 8px 12px; background: rgba(15,23,42,0.04); border-radius: 6px;">📍 Karnataka (KEA)</div>
+            <div style="padding: 8px 12px; background: rgba(15,23,42,0.04); border-radius: 6px;">📍 Haryana (DMER)</div>
+            <div style="padding: 8px 12px; background: rgba(15,23,42,0.04); border-radius: 6px;">📍 Rajasthan (State NEET)</div>
+            <div style="padding: 8px 12px; background: rgba(15,23,42,0.04); border-radius: 6px;">📍 Madhya Pradesh (DME)</div>
+            <div style="padding: 8px 12px; background: rgba(15,23,42,0.04); border-radius: 6px;">📍 West Bengal (WBMC)</div>
+            <div style="padding: 8px 12px; background: rgba(15,23,42,0.04); border-radius: 6px;">📍 Bihar (BCECEB) & More</div>
           </div>
         </div>
       </div>
+    </div>
+  </section>
 
-      <!-- Fee Table -->
-      <div class="reveal">
-        <h3 style="font-size:var(--fs-2xl);margin-bottom:var(--sp-5);">Medical College Fee Analysis</h3>
-        <p style="font-size:var(--fs-sm);color:var(--clr-text-muted);margin-bottom:var(--sp-4);">We help families compare the complete cost, not just tuition fees.</p>
-        <div class="table-wrap">
-          <table class="data-table">
-            <thead>
-              <tr><th>Factor</th><th>What We Evaluate</th></tr>
-            </thead>
-            <tbody>
-              <tr><td>Tuition Fee</td><td>Annual & total course cost</td></tr>
-              <tr><td>Hostel</td><td>Annual cost</td></tr>
-              <tr><td>Security Deposit</td><td>Refundable/non-refundable</td></tr>
-              <tr><td>Total Course Cost</td><td>Overall estimated investment</td></tr>
-              <tr><td>Stipend</td><td>Particularly important for PG</td></tr>
-              <tr><td>Bond</td><td>Where applicable</td></tr>
-              <tr><td>Refund Rules</td><td>Applicable withdrawal provisions</td></tr>
-              <tr><td>Seat Type</td><td>Govt / Private / Deemed / NRI</td></tr>
-              <tr><td>Hospital Exposure</td><td>Clinical environment quality</td></tr>
-              <tr><td>Patient Load</td><td>Relevant for clinical branches</td></tr>
-            </tbody>
-          </table>
+  <!-- 12. NEET PG COUNSELLING -->
+  <section class="section" style="background: linear-gradient(135deg, #0F172A 0%, #1E293B 100%); color: #FFFFFF;" aria-labelledby="pg-heading">
+    <div class="container">
+      <div class="section-heading centered reveal section-dark-heading">
+        <span class="section-label" style="background: rgba(201,150,12,0.2); color: #FCD34D;">Postgraduate Medical Guidance</span>
+        <h2 id="pg-heading" style="color: #FFFFFF !important; -webkit-text-fill-color: #FFFFFF !important; font-size: clamp(1.8rem, 3.5vw, 2.6rem); font-weight: 900;">NEET PG Counselling & Admission Guidance</h2>
+        <p style="color: #FCD34D; font-size: 1.2rem; font-weight: 700; margin-top: 8px;">
+          Your Rank Is Important. What You Do With It Matters Just as Much.
+        </p>
+      </div>
+
+      <div style="max-width: 850px; margin: var(--sp-8) auto 0 auto; background: rgba(255,255,255,0.05); border: 1px solid var(--clr-medical-border); border-radius: var(--radius-xl); padding: var(--sp-8);" class="reveal">
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; margin-bottom: 24px;">
+          <div style="padding: 12px; background: rgba(15,23,42,0.6); border-radius: var(--radius-md);">🩺 <strong>Branch Selection Strategy:</strong> Clinical vs Non-Clinical trade-offs</div>
+          <div style="padding: 12px; background: rgba(15,23,42,0.6); border-radius: var(--radius-md);">🏛️ <strong>MD / MS / DNB / Diploma:</strong> Equivalent evaluation & hospital surgical hands-on</div>
+          <div style="padding: 12px; background: rgba(15,23,42,0.6); border-radius: var(--radius-md);">📈 <strong>MCC PG & State PG Quota:</strong> Cross-counselling & upgrade mapping</div>
+          <div style="padding: 12px; background: rgba(15,23,42,0.6); border-radius: var(--radius-md);">💰 <strong>Stipend & Bond Audit:</strong> State-wise service bond penalties</div>
+        </div>
+
+        <div style="text-align: center;">
+          <button class="btn btn-sales-primary" data-modal="lead" data-program="NEET PG Counselling">
+            Book NEET PG Counselling
+          </button>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- MCC COUNSELLING -->
-<section class="section section-alt" aria-labelledby="mcc-heading">
-  <div class="container">
-    <div class="section-heading centered reveal">
-      <span class="section-label">MCC Guidance</span>
-      <h2 id="mcc-heading">MCC Medical Counselling</h2>
-      <p>MCC counselling involves multiple stages and changing seat availability, making timely monitoring and correct choice strategy particularly important.</p>
-    </div>
-    <div class="grid-4 stagger" style="margin-top:var(--sp-10)">
-      <div class="card reveal"><div class="card-icon">📋</div><h3>Registration Guidance</h3><p>Eligibility assessment, document preparation and MCC registration support.</p></div>
-      <div class="card reveal"><div class="card-icon blue">🎯</div><h3>Choice Filling Strategy</h3><p>Personalized choice order based on rank, category, seat matrix and budget.</p></div>
-      <div class="card reveal"><div class="card-icon green">🔄</div><h3>Round-Wise Strategy</h3><p>Reassess strategy between rounds — upgrade decisions, vacancy analysis and new opportunities.</p></div>
-      <div class="card reveal"><div class="card-icon teal">📝</div><h3>Reporting Guidance</h3><p>Documentation, fees, reporting and college admission formality support.</p></div>
-    </div>
-    <div class="grid-4 stagger" style="margin-top:var(--sp-4)">
-      <div class="card reveal"><div class="card-icon purple">📊</div><h3>Seat Matrix Analysis</h3><p>Category-wise, quota-wise and branch-wise seat availability tracking.</p></div>
-      <div class="card reveal"><div class="card-icon">🔍</div><h3>Vacancy Analysis</h3><p>Clear vacancies, virtual vacancies and newly participating institutions.</p></div>
-      <div class="card reveal"><div class="card-icon blue">⬆️</div><h3>Upgrade Strategy</h3><p>When to accept a seat vs participate in higher rounds for preferred options.</p></div>
-      <div class="card reveal"><div class="card-icon green">✅</div><h3>Admission Completion</h3><p>Assistance through final documentation and college admission formalities.</p></div>
-    </div>
-  </div>
-</section>
+  <!-- 13 & 14. PSYCHOLOGICAL CONVERSION: LOW SCORE vs HIGH SCORE -->
+  <section class="section" aria-labelledby="score-scenarios-heading">
+    <div class="container">
+      <div class="section-heading centered reveal">
+        <span class="section-label">Tailored Strategy For Every Rank</span>
+        <h2 id="score-scenarios-heading">From NEET Rank to the Right Seat.</h2>
+      </div>
 
-<!-- ROUND-WISE STRATEGY -->
-<section class="section" aria-labelledby="rounds-heading">
-  <div class="container">
-    <div class="section-heading centered reveal">
-      <span class="section-label" style="background:rgba(201,150,12,0.18);color:#FBBF24;border-left:3px solid #F59E0B;padding:4px 12px;border-radius:4px;font-weight:700;">Round-Wise Counselling</span>
-      <h2 id="rounds-heading" style="color:#FFFFFF;font-size:var(--fs-3xl);margin-top:var(--sp-3);">Round-Wise Counselling Strategy</h2>
-    </div>
-    <div class="grid-4 stagger" style="margin-top:var(--sp-10)">
-      <div style="text-align:center;padding:var(--sp-8);background:#0F172A;border:1px solid rgba(197,155,39,0.4);border-radius:var(--radius-xl);position:relative;box-shadow:0 8px 24px rgba(15,23,42,0.3);" class="reveal">
-        <div style="width:50px;height:50px;border-radius:50%;background:linear-gradient(135deg, #F59E0B, #D97706);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:1.2rem;color:#070E1C;margin:0 auto var(--sp-4);">1</div>
-        <h3 style="margin-bottom:var(--sp-3);color:#FFFFFF;font-size:var(--fs-xl);">Round 1</h3>
-        <p style="font-size:var(--fs-sm);color:#E2E8F0;line-height:1.6;">Initial Choice Filling → Seat Allotment → Upgrade Decision</p>
-      </div>
-      <div style="text-align:center;padding:var(--sp-8);background:#0F172A;border:1px solid rgba(197,155,39,0.4);border-radius:var(--radius-xl);box-shadow:0 8px 24px rgba(15,23,42,0.3);" class="reveal">
-        <div style="width:50px;height:50px;border-radius:50%;background:linear-gradient(135deg, #F59E0B, #D97706);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:1.2rem;color:#070E1C;margin:0 auto var(--sp-4);">2</div>
-        <h3 style="margin-bottom:var(--sp-3);color:#FFFFFF;font-size:var(--fs-xl);">Round 2</h3>
-        <p style="font-size:var(--fs-sm);color:#E2E8F0;line-height:1.6;">Reassessment → New Choices → Upgrade Strategy</p>
-      </div>
-      <div style="text-align:center;padding:var(--sp-8);background:#0F172A;border:1px solid rgba(197,155,39,0.4);border-radius:var(--radius-xl);box-shadow:0 8px 24px rgba(15,23,42,0.3);" class="reveal">
-        <div style="width:50px;height:50px;border-radius:50%;background:linear-gradient(135deg, #F59E0B, #D97706);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:1.2rem;color:#070E1C;margin:0 auto var(--sp-4);">3+</div>
-        <h3 style="margin-bottom:var(--sp-3);color:#FFFFFF;font-size:var(--fs-xl);">Further Rounds</h3>
-        <p style="font-size:var(--fs-sm);color:#E2E8F0;line-height:1.6;">Vacancy Analysis → Revised Strategy → Fresh Opportunities</p>
-      </div>
-      <div style="text-align:center;padding:var(--sp-8);background:#0F172A;border:1px solid rgba(197,155,39,0.5);border-radius:var(--radius-xl);box-shadow:0 8px 24px rgba(15,23,42,0.3);" class="reveal">
-        <div style="width:50px;height:50px;border-radius:50%;background:linear-gradient(135deg, #F59E0B, #D97706);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:1.1rem;color:#070E1C;margin:0 auto var(--sp-4);">★</div>
-        <h3 style="margin-bottom:var(--sp-3);color:#FFFFFF;font-size:var(--fs-xl);">Stray / Special</h3>
-        <p style="font-size:var(--fs-sm);color:#E2E8F0;line-height:1.6;">Where applicable, evaluate remaining opportunities per counselling authority rules.</p>
-      </div>
-    </div>
-    <p style="text-align:center;font-size:var(--fs-xs);color:#CBD5E1;margin-top:var(--sp-6);font-style:italic;">Actual rounds and rules vary by authority and admission year — always verify current schedules with the official counselling body.</p>
-  </div>
-</section>
-
-<!-- 9-STEP JOURNEY -->
-<section class="section section-alt" aria-labelledby="journey-heading">
-  <div class="container">
-    <div class="section-heading centered reveal">
-      <span class="section-label">Our Process</span>
-      <h2 id="journey-heading">Complete MBBS Admission Journey</h2>
-    </div>
-    <div style="display:flex;flex-direction:column;gap:var(--sp-4);margin-top:var(--sp-10);max-width:900px;margin-inline:auto;">
-      <div style="display:flex;align-items:center;gap:var(--sp-5);padding:var(--sp-5) var(--sp-6);background:rgba(201,150,12,0.08);border:1px solid rgba(201,150,12,0.25);border-radius:var(--radius-lg);" class="reveal">
-        <div class="step-num" style="flex-shrink:0;width:40px;height:40px;font-size:1rem;">1</div>
-        <div><div style="font-weight:700;margin-bottom:4px;">NEET Profile Assessment</div><div style="font-size:var(--fs-xs);color:var(--clr-text-muted);">Score • Rank • Category • Domicile • Budget</div></div>
-      </div>
-      <div style="display:flex;align-items:center;gap:var(--sp-5);padding:var(--sp-5) var(--sp-6);background:var(--clr-surface);border:1px solid var(--clr-border);border-radius:var(--radius-lg);" class="reveal">
-        <div class="step-num" style="flex-shrink:0;width:40px;height:40px;font-size:1rem;">2</div>
-        <div><div style="font-weight:700;margin-bottom:4px;">Eligibility Analysis</div><div style="font-size:var(--fs-xs);color:var(--clr-text-muted);">AIQ • State • Private • Deemed • NRI eligibility</div></div>
-      </div>
-      <div style="display:flex;align-items:center;gap:var(--sp-5);padding:var(--sp-5) var(--sp-6);background:var(--clr-surface);border:1px solid var(--clr-border);border-radius:var(--radius-lg);" class="reveal">
-        <div class="step-num" style="flex-shrink:0;width:40px;height:40px;font-size:1rem;">3</div>
-        <div><div style="font-weight:700;margin-bottom:4px;">College Prediction</div><div style="font-size:var(--fs-xs);color:var(--clr-text-muted);">High • Balanced • Aggressive • Aspirational options</div></div>
-      </div>
-      <div style="display:flex;align-items:center;gap:var(--sp-5);padding:var(--sp-5) var(--sp-6);background:var(--clr-surface);border:1px solid var(--clr-border);border-radius:var(--radius-lg);" class="reveal">
-        <div class="step-num" style="flex-shrink:0;width:40px;height:40px;font-size:1rem;">4</div>
-        <div><div style="font-weight:700;margin-bottom:4px;">College & Fee Comparison</div><div style="font-size:var(--fs-xs);color:var(--clr-text-muted);">College • Branch • Fees • Seat Type • Location comparison</div></div>
-      </div>
-      <div style="display:flex;align-items:center;gap:var(--sp-5);padding:var(--sp-5) var(--sp-6);background:var(--clr-surface);border:1px solid var(--clr-border);border-radius:var(--radius-lg);" class="reveal">
-        <div class="step-num" style="flex-shrink:0;width:40px;height:40px;font-size:1rem;">5</div>
-        <div><div style="font-weight:700;margin-bottom:4px;">Counselling Strategy</div><div style="font-size:var(--fs-xs);color:var(--clr-text-muted);">MCC • State • Applicable Quota strategy</div></div>
-      </div>
-      <div style="display:flex;align-items:center;gap:var(--sp-5);padding:var(--sp-5) var(--sp-6);background:var(--clr-surface);border:1px solid var(--clr-border);border-radius:var(--radius-lg);" class="reveal">
-        <div class="step-num" style="flex-shrink:0;width:40px;height:40px;font-size:1rem;">6</div>
-        <div><div style="font-weight:700;margin-bottom:4px;">Choice Filling</div><div style="font-size:var(--fs-xs);color:var(--clr-text-muted);">Personalized choice order — not a generic list</div></div>
-      </div>
-      <div style="display:flex;align-items:center;gap:var(--sp-5);padding:var(--sp-5) var(--sp-6);background:var(--clr-surface);border:1px solid var(--clr-border);border-radius:var(--radius-lg);" class="reveal">
-        <div class="step-num" style="flex-shrink:0;width:40px;height:40px;font-size:1rem;">7</div>
-        <div><div style="font-weight:700;margin-bottom:4px;">Round-Wise Monitoring</div><div style="font-size:var(--fs-xs);color:var(--clr-text-muted);">Allotment • Vacancy • Upgrade decisions • New opportunities</div></div>
-      </div>
-      <div style="display:flex;align-items:center;gap:var(--sp-5);padding:var(--sp-5) var(--sp-6);background:var(--clr-surface);border:1px solid var(--clr-border);border-radius:var(--radius-lg);" class="reveal">
-        <div class="step-num" style="flex-shrink:0;width:40px;height:40px;font-size:1rem;">8</div>
-        <div><div style="font-weight:700;margin-bottom:4px;">Seat Decision</div><div style="font-size:var(--fs-xs);color:var(--clr-text-muted);">Accept • Upgrade • Participate in next round</div></div>
-      </div>
-      <div style="display:flex;align-items:center;gap:var(--sp-5);padding:var(--sp-5) var(--sp-6);background:rgba(16,185,129,0.08);border:1px solid rgba(16,185,129,0.3);border-radius:var(--radius-lg);" class="reveal">
-        <div class="step-num" style="flex-shrink:0;width:40px;height:40px;font-size:1rem;background:linear-gradient(135deg,#10B981,#34D399);">✓</div>
-        <div><div style="font-weight:700;margin-bottom:4px;color:#34D399;">Admission Completion</div><div style="font-size:var(--fs-xs);color:var(--clr-text-muted);">Documents • Fees • Reporting • College Admission</div></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- WHY DIFFERENT -->
-<section class="section" aria-labelledby="why-diff-heading">
-  <div class="container">
-    <div class="section-heading centered reveal">
-      <span class="section-label">Our Differentiators</span>
-      <h2 id="why-diff-heading">What Makes College Corridor Different</h2>
-    </div>
-    <div class="grid-3 stagger" style="margin-top:var(--sp-10)">
-      <div class="card reveal"><div class="card-icon">👤</div><h3>Profile-Based Guidance</h3><p>Every student receives guidance based on their individual NEET rank, category, domicile, eligibility and budget — not a generic recommendation.</p></div>
-      <div class="card reveal"><div class="card-icon blue">🔗</div><h3>College + Counselling Together</h3><p>We connect college selection with the actual counselling process — not just a college list, but a counselling strategy.</p></div>
-      <div class="card reveal"><div class="card-icon green">📊</div><h3>Choice-Filling Strategy</h3><p>We help structure choices according to the student's risk preference, rank and seat availability data.</p></div>
-      <div class="card reveal"><div class="card-icon teal">🔄</div><h3>Round-Wise Monitoring</h3><p>Strategy can be reassessed as seats and vacancies change across rounds.</p></div>
-      <div class="card reveal"><div class="card-icon purple">💰</div><h3>Budget-Aware</h3><p>We consider the family's realistic financial range — including complete cost, not just tuition.</p></div>
-      <div class="card reveal"><div class="card-icon">🛤️</div><h3>Multiple Pathways</h3><p>MCC + State Counselling + Private + Deemed + Management + NRI — wherever applicable.</p></div>
-    </div>
-  </div>
-</section>
-
-
-<!-- FREQUENTLY ASKED QUESTIONS (SEO / INFORMATIONAL INTENT) -->
-<section class="section section-alt" aria-labelledby="med-faq-heading">
-  <div class="container">
-    <div class="section-heading centered reveal">
-      <span class="section-label">Common Questions</span>
-      <h2 id="med-faq-heading">NEET &amp; MBBS Counselling FAQs</h2>
-    </div>
-    <div style="max-width:900px;margin-inline:auto;margin-top:var(--sp-8);display:flex;flex-direction:column;gap:var(--sp-4);" class="reveal">
-      <div style="padding:var(--sp-5) var(--sp-6);background:#0F172A;border:1px solid rgba(197,155,39,0.35);border-radius:var(--radius-lg);box-shadow:0 4px 16px rgba(15,23,42,0.3);">
-        <h3 style="font-size:var(--fs-lg);color:#FFFFFF;margin-bottom:var(--sp-2);">What is the difference between MCC All India Quota (AIQ) and State Quota NEET counselling?</h3>
-        <p style="font-size:var(--fs-sm);color:#E2E8F0;line-height:1.68;">All India Quota (AIQ) covers 15% of seats in government medical colleges across India plus 100% of seats in Central Universities, AIIMS, JIPMER, and Deemed Universities, conducted centrally by the MCC. State Quota counselling covers the remaining 85% of seats in state government medical colleges and state private institutions, administered by respective state counselling authorities.</p>
-      </div>
-      <div style="padding:var(--sp-5) var(--sp-6);background:#0F172A;border:1px solid rgba(197,155,39,0.35);border-radius:var(--radius-lg);box-shadow:0 4px 16px rgba(15,23,42,0.3);">
-        <h3 style="font-size:var(--fs-lg);color:#FFFFFF;margin-bottom:var(--sp-2);">How does choice filling and choice locking strategy affect MBBS seat allotment?</h3>
-        <p style="font-size:var(--fs-sm);color:#E2E8F0;line-height:1.68;">Choice filling determines the exact sequence in which the counselling algorithm evaluates your preferences against available seats. A structured choice list balances aspirational, realistic, and safe options to prevent seat loss or locking into less preferred colleges in earlier rounds.</p>
-      </div>
-      <div style="padding:var(--sp-5) var(--sp-6);background:#0F172A;border:1px solid rgba(197,155,39,0.35);border-radius:var(--radius-lg);box-shadow:0 4px 16px rgba(15,23,42,0.3);">
-        <h3 style="font-size:var(--fs-lg);color:#FFFFFF;margin-bottom:var(--sp-2);">What happens during the Stray Vacancy &amp; Mop-Up rounds in NEET counselling?</h3>
-        <p style="font-size:var(--fs-sm);color:#E2E8F0;line-height:1.68;">The Mop-Up and Stray Vacancy rounds fill seats left vacant after Round 1 and Round 2. Rules vary between MCC AIQ and State Authorities — candidates must carefully evaluate security deposit forfeit rules, eligibility criteria, and offline vs online allotment procedures.</p>
-      </div>
-      <div style="padding:var(--sp-5) var(--sp-6);background:#0F172A;border:1px solid rgba(197,155,39,0.35);border-radius:var(--radius-lg);box-shadow:0 4px 16px rgba(15,23,42,0.3);">
-        <h3 style="font-size:var(--fs-lg);color:#FFFFFF;margin-bottom:var(--sp-2);">Does College Corridor provide guidance for PG Medical (MD / MS) admissions?</h3>
-        <p style="font-size:var(--fs-sm);color:#E2E8F0;line-height:1.68;">Yes. College Corridor provides end-to-end guidance for NEET-PG and INI-CET counselling — assisting doctor candidates in rank-wise specialty selection (General Medicine, Radiodiagnosis, Paediatrics, Orthopaedics, Surgery), clinical exposure evaluation, and fee analysis across government, private, and deemed institutes.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<!-- NRI SECTION -->
-<section class="section section-alt" aria-labelledby="nri-med-heading">
-  <div class="container">
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--sp-12);align-items:center;">
-      <div class="reveal">
-        <span class="section-label">NRI Candidates</span>
-        <h2 id="nri-med-heading" style="font-size:var(--fs-4xl);font-weight:800;line-height:1.1;margin-bottom:var(--sp-5);">NRI Medical Admissions</h2>
-        <p style="color:var(--clr-text-2);line-height:1.75;margin-bottom:var(--sp-6);">College Corridor provides specialized guidance for eligible NRI candidates for MBBS, MD and MS admissions where applicable.</p>
-        <div style="display:flex;flex-wrap:wrap;gap:var(--sp-2);margin-bottom:var(--sp-6);">
-          <span class="tag">NRI Eligibility</span><span class="tag">NRI Quota</span><span class="tag">Deemed Universities</span><span class="tag">Private Colleges</span><span class="tag">Fee Comparison</span><span class="tag">Documentation</span><span class="tag">Application</span><span class="tag">Counselling</span>
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--sp-8); margin-top: var(--sp-8);">
+        <!-- Low Score Card -->
+        <div class="card reveal" style="border: 1px solid var(--clr-border); padding: var(--sp-8); border-radius: var(--radius-xl); background: var(--clr-surface);">
+          <div style="font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.05em; color: #D97706; margin-bottom: 8px;">Borderline / Low Score Scenario</div>
+          <h3 style="font-size: 1.3rem; margin-bottom: 12px; color: #0F172A;">
+            "My Score Isn't Very High. Can Counselling Still Help Me?"
+          </h3>
+          <p style="font-weight: 700; color: var(--clr-medical-accent); font-size: 1rem; margin-bottom: 12px;">
+            Answer: Counselling doesn't change your score. It changes how intelligently you use the options available to you.
+          </p>
+          <p style="font-size: 13px; color: var(--clr-text-2); line-height: 1.6; margin-bottom: 20px;">
+            A borderline rank requires a data-backed search across open state private colleges, deemed universities, management quotas, and fee structures to find genuine opportunities that others overlook.
+          </p>
+          <button class="btn btn-outline" style="width: 100%;" data-modal="lead" data-program="Borderline Score Analysis">
+            Analyse My Options →
+          </button>
         </div>
-        <div class="note-block">NRI eligibility, documentation, fees and seat availability depend on the applicable institution and counselling authority. Please verify independently.</div>
-        <button class="btn btn-primary" data-modal="lead" data-program="nri" style="margin-top:var(--sp-5);">Get NRI Admission Guidance</button>
-      </div>
-      <div class="reveal">
-        <a href="nri-admissions.html" class="feature-card" style="display:block;text-decoration:none;">
-          <div class="card-icon green" style="margin-bottom:var(--sp-5);">🌐</div>
-          <h3 style="font-size:var(--fs-2xl);margin-bottom:var(--sp-3);">NRI Admissions Hub</h3>
-          <p style="color:var(--clr-text-2);">Visit our dedicated NRI Admissions page for comprehensive guidance on eligibility, documentation, fees and admission process across MBBS, engineering and other programs.</p>
-          <span class="card-link" style="margin-top:var(--sp-4);">Explore NRI Admissions →</span>
-        </a>
-      </div>
-    </div>
-  </div>
-</section>
 
-<!-- CLOSING CTA -->
-<section class="section section-dark" aria-labelledby="medical-cta-heading">
-  <div class="container">
-    <div class="cta-banner reveal">
-      <div class="cta-banner-content">
-        <span class="section-label">Start Your Admission Journey</span>
-        <h2 id="medical-cta-heading">Your NEET Rank Opens the Door. <br>Your Strategy Determines How You Navigate It.</h2>
-        <p>Don't make a high-value medical admission decision based on guesswork, WhatsApp lists or a single college prediction. Get a personalized MBBS / MD / MS admission strategy based on your rank, category, eligibility, budget and career goals.</p>
-        <div class="cta-banner-actions">
-          <button class="btn btn-primary btn-lg" data-modal="lead" data-program="mbbs">Get Medical Counselling</button>
-          <a href="find-colleges.html" class="btn btn-secondary btn-lg">Check My College Options</a>
+        <!-- High Score Card -->
+        <div class="card reveal" style="border: 1px solid var(--clr-border); padding: var(--sp-8); border-radius: var(--radius-xl); background: var(--clr-surface);">
+          <div style="font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.05em; color: #059669; margin-bottom: 8px;">Top Rank / High Score Scenario</div>
+          <h3 style="font-size: 1.3rem; margin-bottom: 12px; color: #0F172A;">
+            "I Have a Good Rank. Why Do I Need Counselling?"
+          </h3>
+          <p style="font-weight: 700; color: #059669; font-size: 1rem; margin-bottom: 12px;">
+            Answer: Because a good rank gives you more choices, not automatically the right decision.
+          </p>
+          <p style="font-size: 13px; color: var(--clr-text-2); line-height: 1.6; margin-bottom: 20px;">
+            With more options come complex decisions: AIIMS vs top state government college, patient load comparisons, PG quota benefits, internal reservation, and location preferences.
+          </p>
+          <button class="btn btn-outline" style="width: 100%;" data-modal="lead" data-program="High Rank Optimization">
+            Optimize My Choices →
+          </button>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
+
+  <!-- 15. PARENT-FOCUSED SECTION -->
+  <section class="section section-alt" aria-labelledby="parents-heading">
+    <div class="container">
+      <div style="max-width: 880px; margin: 0 auto; background: linear-gradient(135deg, #0F172A 0%, #1E293B 100%); color: #FFFFFF; border-radius: var(--radius-xl); padding: var(--sp-10); border: 2px solid var(--clr-medical-accent); box-shadow: var(--shadow-xl);" class="reveal">
+        <span class="section-label" style="background: rgba(201,150,12,0.2); color: #FCD34D; margin-bottom: 12px;">For Parents</span>
+        <h2 id="parents-heading" style="color: #FFFFFF !important; -webkit-text-fill-color: #FFFFFF !important; font-size: clamp(1.6rem, 3vw, 2.2rem); font-weight: 900; margin-bottom: 16px;">
+          Parents Don't Spend Years Planning Their Child's Future Just to Leave the Final Decision to Chance.
+        </h2>
+        <p style="color: #CBD5E1; font-size: 1.05rem; line-height: 1.7; margin-bottom: 20px;">
+          For parents, medical education is not just a financial investment. It represents years of their child's hard work, significant financial commitments, career expectations, and family dreams.
+        </p>
+        <p style="color: #FCD34D; font-weight: 800; font-size: 1.1rem; margin-bottom: 24px;">
+          The college decision deserves professional attention. We work directly with parents to provide clarity, transparent fee audits, and peace of mind.
+        </p>
+        <div style="text-align: center;">
+          <button class="btn btn-sales-primary" data-modal="lead" data-program="Parent + Student Counselling">
+            Book a Parent + Student Counselling Session
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 16. COST OF MAKING A WRONG DECISION -->
+  <section class="section" aria-labelledby="cost-heading">
+    <div class="container">
+      <div class="section-heading centered reveal">
+        <span class="section-label">Risk Perspective</span>
+        <h2 id="cost-heading">The Cost of a Poor Decision Can Be Much Higher Than the Cost of Good Guidance.</h2>
+      </div>
+
+      <div style="max-width: 800px; margin: var(--sp-8) auto 0 auto;" class="reveal">
+        <div style="background: rgba(239,68,68,0.05); border: 1px solid rgba(239,68,68,0.3); border-radius: var(--radius-xl); padding: var(--sp-8); margin-bottom: var(--sp-8);">
+          <h3 style="color: #991B1B; font-size: 1.1rem; font-weight: 800; margin-bottom: 16px;">
+            Common Consequences of Unguided Choice Filling:
+          </h3>
+          <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 12px; font-size: 14px; color: var(--clr-text-main);">
+            <li>❌ Missing out on a superior government or private college due to flawed preference ordering.</li>
+            <li>❌ Forfeiting security deposits (₹2 Lakhs+) by misunderstanding MCC exit/upgrade rules.</li>
+            <li>❌ Selecting a college without auditing hidden fees, hostel mandates, or bond penalties.</li>
+            <li>❌ Getting stuck with a low patient inflow institution where clinical exposure is severely limited.</li>
+            <li>❌ Making an emotional decision under pressure on the last day of choice locking.</li>
+          </ul>
+        </div>
+
+        <p style="text-align: center; font-size: 1.1rem; font-weight: 800; color: #0F172A; margin-bottom: var(--sp-6);">
+          Good guidance is not about guaranteeing an impossible outcome. It's about improving the quality of the decisions you make when they matter most.
+        </p>
+
+        <div style="text-align: center;">
+          <button class="btn btn-primary btn-lg" data-modal="lead" data-program="Professional Guidance">
+            Get Professional Guidance
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 17 & 18. OFFER / URGENCY PACKAGE CARD -->
+  <section class="section section-alt" aria-labelledby="offer-heading">
+    <div class="container">
+      <div style="max-width: 750px; margin: 0 auto; background: #0F172A; color: #FFFFFF; border: 2px solid var(--clr-medical-accent); border-radius: var(--radius-xl); padding: var(--sp-10); box-shadow: 0 20px 50px rgba(0,0,0,0.5); text-align: center;" class="reveal">
+        <span class="section-label" style="background: rgba(201,150,12,0.2); color: #FCD34D; margin-bottom: 12px;">Premium Advisory Offer</span>
+        <h2 id="offer-heading" style="color: #FFFFFF; font-size: clamp(1.8rem, 3.5vw, 2.5rem); margin-bottom: 16px;">
+          Get Your Personalised NEET Counselling Strategy
+        </h2>
+
+        <div style="text-align: left; background: rgba(255,255,255,0.05); border-radius: var(--radius-lg); padding: var(--sp-6); margin: 24px 0; display: flex; flex-direction: column; gap: 12px; font-size: 14px; color: #E2E8F0;">
+          <div>✓ Full Rank, Domicile & Category Profile Analysis</div>
+          <div>✓ MCC AIQ + State Counselling Pathway Mapping</div>
+          <div>✓ Realistic College Target, Balanced & Safety Shortlist</div>
+          <div>✓ Personalized Choice-Filling Priority Order</div>
+          <div>✓ Round 1, Round 2 & Upgrade Decision Strategy</div>
+          <div>✓ College Infrastructure, Patient Load & Fee Audit</div>
+          <div>✓ End-to-End Admission Process Guidance</div>
+        </div>
+
+        <button class="btn btn-sales-primary" style="width: 100%; margin-bottom: 16px;" data-modal="lead" data-program="Personalised NEET Counselling Package">
+          BOOK YOUR COUNSELLING NOW
+        </button>
+
+        <p style="font-size: 12px; color: #FCD34D; font-weight: 700; margin: 0;">
+          ⚠️ Limited counselling capacity maintained during active counselling periods to ensure individual attention.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 19. FAQ OBJECTION HANDLING -->
+  <section class="section" aria-labelledby="faq-heading">
+    <div class="container">
+      <div class="section-heading centered reveal">
+        <span class="section-label">Frequently Asked Questions</span>
+        <h2 id="faq-heading">Common Counselling Questions Answered</h2>
+      </div>
+
+      <div style="max-width: 820px; margin: var(--sp-8) auto 0 auto;" class="reveal">
+        <div class="faq-item active">
+          <button class="faq-question">
+            <span>Can I do MCC counselling myself?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            Yes, you can register and fill choices independently. However, professional guidance helps you structure your choices strategically based on multi-year cutoff trends, avoid security deposit forfeitures, and make informed upgradation decisions across rounds.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Do you guarantee a college admission?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            No. We strictly do not promise illegal or impossible outcomes. All admissions occur strictly through official merit-based counselling. We provide data-driven strategy and guidance based on your actual score, category, domicile, and realistic options.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Can you help with State Counselling?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            Yes! We guide for state counselling across 28 states and union territories, explaining open state opportunities, domicile quotas, reservation policies, and security deposit requirements.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Can you help if my score is low or borderline?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            Yes. A lower score requires a wider, data-backed approach to identify genuine private, deemed, or open state management seats that align with your budget and preferences.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Can you help if I have a high score / top rank?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            Yes. High rankers face complex comparisons between top AIIMS institutes, premier state medical colleges, internal PG quotas, and clinical exposure. We optimize your top-tier choice order.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Do you assist directly with choice filling?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            Yes. Choice-filling strategy is a core element of our service. We build customized, prioritized choice lists designed to maximize your allotment potential.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Do parents need to attend the counselling sessions?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            We strongly encourage joint parent-student participation, as major admission decisions involve financial planning, location preferences, and long-term career choices.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>When is the best time to book counselling?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            As early as possible before active registration and choice-filling windows open, allowing ample time for complete profile analysis, document preparation, and strategic planning.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 20. FINAL CONVERSION SECTION -->
+  <section class="section" style="background: linear-gradient(135deg, #0F172A 0%, #1E293B 100%); color: #FFFFFF; border-top: 2px solid var(--clr-medical-accent);" aria-labelledby="final-heading">
+    <div class="container">
+      <div style="max-width: 800px; margin: 0 auto; text-align: center;" class="reveal">
+        <span class="section-label" style="background: rgba(201,150,12,0.2); color: #FCD34D; margin-bottom: 16px;">Make Your Decision Count</span>
+        <h2 id="final-heading" style="color: #FFFFFF !important; -webkit-text-fill-color: #FFFFFF !important; font-size: clamp(2rem, 4vw, 3.2rem); font-weight: 900; line-height: 1.15; margin-bottom: 16px;">
+          You Worked Hard for Your NEET Rank.<br><span style="color: #FCD34D !important; -webkit-text-fill-color: #FCD34D !important;">Now Use It Wisely.</span>
+        </h2>
+        <p style="color: #CBD5E1; font-size: 1.2rem; line-height: 1.6; margin-bottom: 24px;">
+          Don't let uncertainty decide where you spend the next five years of your life.<br>
+          Get a strategy. Understand your options. Make your decision with confidence.
+        </p>
+
+        <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 16px; margin-bottom: 20px;">
+          <button class="btn btn-sales-primary" data-modal="lead" data-program="Final Conversion Booking">
+            BOOK YOUR COUNSELLING NOW
+          </button>
+          <button class="btn btn-sales-secondary" data-modal="lead" data-program="Talk to Expert">
+            Talk to an Expert
+          </button>
+        </div>
+
+        <p style="font-size: 13px; color: #FCD34D; font-weight: 700; margin: 0;">
+          ✨ Your future deserves more than guesswork.
+        </p>
+      </div>
+    </div>
+  </section>
 
 </main>
 
+<!-- FLOATING QUICK CTA BAR -->
+<div class="sticky-bar" id="floating-bar">
+  <div class="sticky-text" style="color: #FFFFFF; font-weight: 700;">
+    🎯 <span style="color: #FCD34D;">NEET Counselling Strategy:</span> Prepare Before Choice Filling Locks
+  </div>
+  <button class="btn btn-sales-primary btn-sm" style="font-size: 13px !important; padding: 8px 18px !important;" data-modal="lead" data-program="Floating Quick Bar">
+    BOOK YOUR COUNSELLING NOW
+  </button>
+</div>
+
+<!-- 22. DEDICATED HIGH-CONVERSION LEAD CAPTURE MODAL -->
+<div class="modal-overlay" id="lead-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+  <div class="modal" style="max-width: 620px;">
+    <button class="modal-close" aria-label="Close form" id="modal-close-btn">✕</button>
+    <div class="form-wrap">
+      <div class="modal-header" style="text-align: center;">
+        <span class="section-label" style="background: rgba(201,150,12,0.15); color: #B45309;">Personalized Advisory</span>
+        <h2 id="modal-title" style="font-size: var(--fs-2xl); margin-top: 4px;">Get Your NEET Counselling Strategy</h2>
+        <p style="font-size: 13px; color: var(--clr-text-2);">Fill in your details below. Our medical counsellor will analyze your profile and contact you.</p>
+      </div>
+
+      <form id="lead-form" novalidate>
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="full-name">Student Full Name *</label>
+            <input class="form-input" type="text" id="full-name" name="full_name" placeholder="Full Name" required autocomplete="name">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="phone">Mobile Number *</label>
+            <input class="form-input" type="tel" id="phone" name="phone" placeholder="+91 98765 43210" required autocomplete="tel">
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="neet-score">NEET Score / All-India Rank *</label>
+            <input class="form-input" type="text" id="neet-score" name="neet_score" placeholder="e.g. 580 Score / AIR 42000" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="category">Category *</label>
+            <select class="form-select" id="category" name="category" required>
+              <option value="" disabled selected>Select Category</option>
+              <option value="General / UR">General / UR</option>
+              <option value="OBC-NCL">OBC-NCL</option>
+              <option value="EWS">EWS</option>
+              <option value="SC">SC</option>
+              <option value="ST">ST</option>
+              <option value="NRI / Management">NRI / Management Quota</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="domicile-state">Domicile State *</label>
+            <input class="form-input" type="text" id="domicile-state" name="domicile_state" placeholder="e.g. Uttar Pradesh, Maharashtra" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="program-interest">Target Course *</label>
+            <select class="form-select" id="program-interest" name="program_interest" required>
+              <option value="MBBS Admissions">MBBS Admissions</option>
+              <option value="BDS Admissions">BDS Admissions</option>
+              <option value="NEET PG (MD / MS)">NEET PG (MD / MS)</option>
+              <option value="DNB / Diploma">DNB / Diploma</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="email">Email Address *</label>
+            <input class="form-input" type="email" id="email" name="email" placeholder="your@email.com" required autocomplete="email">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="budget">Preferred Budget / Quota *</label>
+            <select class="form-select" id="budget" name="budget" required>
+              <option value="Govt College (Nominal Fee)">Government College (Nominal Fee)</option>
+              <option value="Private College (Up to 10L/yr)">Private (Up to 10 Lakhs/yr)</option>
+              <option value="Private / Deemed (10L - 20L/yr)">Private / Deemed (10L - 20L/yr)</option>
+              <option value="Deemed / Management (20L+/yr)">Deemed / Management (20L+/yr)</option>
+              <option value="NRI Quota">NRI Quota</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="message">Counselling Requirement (optional)</label>
+          <textarea class="form-textarea" id="message" name="message" placeholder="Mention preferred states, target colleges, or specific counselling doubts..."></textarea>
+        </div>
+
+        <div class="form-note" style="margin-bottom: var(--sp-4); font-size: 11px;">
+          🔒 Your details are 100% confidential. No spam. Used only for strategic admission counselling.
+        </div>
+
+        <button type="submit" class="btn btn-sales-primary" style="width: 100%; border-radius: var(--radius-md) !important;" id="form-submit-btn">
+          GET MY COUNSELLING STRATEGY
+        </button>
+      </form>
+    </div>
+
+    <div class="form-success" style="display:none; text-align:center; padding: var(--sp-8);">
+      <div style="font-size: 3rem; margin-bottom: 12px;">🎓</div>
+      <h3 style="font-size: 1.5rem; color: #0F172A; margin-bottom: 8px;">Counselling Request Received!</h3>
+      <p style="color: var(--clr-text-2); font-size: 14px; line-height: 1.6;">
+        Thank you for submitting your profile. Our senior medical admissions strategist will analyze your rank and contact you shortly.
+      </p>
+      <button class="btn btn-outline" onclick="document.getElementById('lead-modal').classList.remove('open')" style="margin-top: 16px;">
+        Close Window
+      </button>
+    </div>
+  </div>
+</div>
+
 <div id="footer-slot"></div>
-<div id="mobile-cta-slot"></div>
-<div id="modal-slot"></div>
 
 <script src="js/shared.js"></script>
-<script src="js/config.js"></script>
 <script src="js/main.js"></script>
+<script>
+  // Page-specific interactive logic
+  document.addEventListener('DOMContentLoaded', () => {
+    // Accordion handler
+    const faqItems = document.querySelectorAll('.faq-item');
+    faqItems.forEach(item => {
+      const q = item.querySelector('.faq-question');
+      q.addEventListener('click', () => {
+        const isActive = item.classList.contains('active');
+        faqItems.forEach(i => i.classList.remove('active'));
+        if (!isActive) item.classList.add('active');
+      });
+    });
+
+    // Sticky floating quick bar on scroll
+    const floatingBar = document.getElementById('floating-bar');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 400) {
+        floatingBar.classList.add('visible');
+      } else {
+        floatingBar.classList.remove('visible');
+      }
+    }, { passive: true });
+  });
+</script>
 </body>
 </html>

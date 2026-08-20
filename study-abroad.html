@@ -3,105 +3,110 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Study Abroad Admission Consultancy | College Corridor</title>
-  <meta name="description" content="Guidance for university admissions in the UK, USA, Canada, Australia and more.">
+  <title>Study Abroad Counselling & Global Admissions | College Corridor</title>
+  <meta name="description" content="Global admissions advisory for UK, USA, Canada, Australia, Ireland, UAE & Europe. Evaluate university programs, post-study work rights & career ecosystems.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/components.css">
   <link rel="stylesheet" href="css/animations.css">
+  <style>
+    :root {
+      --clr-gold: #C59B27;
+      --clr-gold-light: #FCD34D;
+      --clr-dark: #0F172A;
+      --clr-border-gold: rgba(197, 155, 39, 0.35);
+    }
+    .abroad-hero {
+      padding: var(--sp-12) 0 var(--sp-10) 0;
+      background: radial-gradient(circle at 50% 20%, rgba(59, 130, 246, 0.2) 0%, rgba(15, 23, 42, 0.98) 75%), #0F172A;
+      color: #FFFFFF;
+      text-align: center;
+      border-bottom: 2px solid var(--clr-border-gold);
+    }
+    .btn-gold {
+      background: linear-gradient(135deg, #C59B27 0%, #D97706 100%);
+      color: #0F172A !important;
+      font-weight: 900 !important;
+      font-size: 1.1rem !important;
+      padding: 16px 34px !important;
+      border-radius: var(--radius-md) !important;
+      box-shadow: 0 8px 25px rgba(197, 155, 39, 0.4) !important;
+      transition: all 0.3s ease !important;
+      border: 2px solid #FCD34D !important;
+      text-transform: uppercase;
+    }
+    .btn-gold:hover {
+      transform: translateY(-3px) scale(1.02);
+      box-shadow: 0 12px 35px rgba(197, 155, 39, 0.6) !important;
+      background: linear-gradient(135deg, #FCD34D 0%, #C59B27 100%);
+    }
+  </style>
 </head>
 <body>
+
 <div id="announcement-bar-slot"></div>
 <header id="navbar-slot" data-active="abroad"></header>
+
 <main>
 
-<section class="page-hero" aria-labelledby="abroad-h1">
-  <div class="container page-hero-content">
-    <div class="page-hero-eyebrow"><span class="section-label">Study Abroad</span></div>
-    <h1 id="abroad-h1">International Admissions</h1>
-    <p class="hero-sub" style="margin-bottom:var(--sp-8);max-width:720px;">College Corridor also guides students seeking admission to universities outside India.</p>
-    <button class="btn btn-primary btn-lg" data-modal="lead" data-program="study-abroad">Explore Study Abroad Options</button>
-  </div>
-</section>
+  <!-- HERO SECTION -->
+  <section class="abroad-hero" aria-labelledby="abroad-title">
+    <div class="container">
+      <span class="section-label" style="background: rgba(59,130,246,0.2); color: #60A5FA; border: 1px solid rgba(96,165,250,0.4);">
+        Global Admissions Advisory
+      </span>
 
-<!-- COUNTRIES -->
-<section class="section section-alt">
-  <div class="container">
-    <div class="section-heading centered reveal">
-      <span class="section-label">Destinations</span>
-      <h2>Countries We Guide For</h2>
-    </div>
-    <div class="grid-4 stagger" style="margin-top:var(--sp-10)">
-      <div class="card reveal" style="text-align:center;">
-        <div style="font-size:2.5rem;margin-bottom:var(--sp-3);">🇬🇧</div>
-        <h3>United Kingdom</h3><p>University admissions, UCAS guidance, visa support</p>
-      </div>
-      <div class="card reveal" style="text-align:center;">
-        <div style="font-size:2.5rem;margin-bottom:var(--sp-3);">🇺🇸</div>
-        <h3>United States</h3><p>University applications, SAT/GRE/GMAT guidance</p>
-      </div>
-      <div class="card reveal" style="text-align:center;">
-        <div style="font-size:2.5rem;margin-bottom:var(--sp-3);">🇨🇦</div>
-        <h3>Canada</h3><p>University selection, SDS pathway, visa guidance</p>
-      </div>
-      <div class="card reveal" style="text-align:center;">
-        <div style="font-size:2.5rem;margin-bottom:var(--sp-3);">🇦🇺</div>
-        <h3>Australia</h3><p>University admissions, course selection, visa support</p>
-      </div>
-      <div class="card reveal" style="text-align:center;">
-        <div style="font-size:2.5rem;margin-bottom:var(--sp-3);">🇮🇪</div>
-        <h3>Ireland</h3><p>University admissions, post-study work visa guidance</p>
-      </div>
-      <div class="card reveal" style="text-align:center;">
-        <div style="font-size:2.5rem;margin-bottom:var(--sp-3);">🇦🇪</div>
-        <h3>UAE</h3><p>University selection across Dubai and Abu Dhabi</p>
-      </div>
-      <div class="card reveal" style="text-align:center;">
-        <div style="font-size:2.5rem;margin-bottom:var(--sp-3);">🇸🇬</div>
-        <h3>Singapore</h3><p>Top university admissions and scholarship guidance</p>
-      </div>
-      <div class="card reveal" style="text-align:center;">
-        <div style="font-size:2.5rem;margin-bottom:var(--sp-3);">🇪🇺</div>
-        <h3>Europe</h3><p>Germany, France, Netherlands and other EU destinations</p>
-      </div>
-    </div>
-  </div>
-</section>
+      <h1 id="abroad-title" style="font-size: clamp(2rem, 4.8vw, 3.8rem); font-weight: 900; color: #FFFFFF !important; -webkit-text-fill-color: #FFFFFF !important; margin: 16px 0 12px 0; line-height: 1.15;">
+        STUDY ABROAD IS NOT JUST ABOUT GETTING A VISA.<br>IT'S ABOUT CHOOSING YOUR NEXT CAREER ECOSYSTEM.
+      </h1>
 
-<!-- SERVICES -->
-<section class="section">
-  <div class="container">
-    <div class="section-heading centered reveal">
-      <span class="section-label">Our Services</span>
-      <h2>How We Help</h2>
-    </div>
-    <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:var(--sp-4);margin-top:var(--sp-10);" class="reveal">
-      <div class="journey-step"><div class="step-num">1</div><div class="step-label">Country & University Selection</div></div>
-      <div class="journey-step"><div class="step-num">2</div><div class="step-label">Course Selection & Eligibility</div></div>
-      <div class="journey-step"><div class="step-num">3</div><div class="step-label">SOP, LOR & Applications</div></div>
-      <div class="journey-step"><div class="step-num">4</div><div class="step-label">Scholarships & Visa</div></div>
-      <div class="journey-step" style="border-color:rgba(16,185,129,0.4);background:rgba(16,185,129,0.06);"><div class="step-num" style="background:linear-gradient(135deg,#10B981,#34D399);">✓</div><div class="step-label" style="color:#34D399;">Accommodation & Departure</div></div>
-    </div>
-    <div class="grid-3 stagger" style="margin-top:var(--sp-10)">
-      <div class="card reveal"><div class="card-icon">🌍</div><h3>Country Selection</h3><p>Choose the right country based on course availability, fees, post-study work rights and career opportunities.</p></div>
-      <div class="card reveal"><div class="card-icon blue">📝</div><h3>SOP & LOR</h3><p>Statement of Purpose and Letter of Recommendation guidance for strong applications.</p></div>
-      <div class="card reveal"><div class="card-icon green">🎓</div><h3>Scholarships</h3><p>Identify applicable scholarship opportunities to reduce the overall cost of international education.</p></div>
-    </div>
-  </div>
-</section>
+      <p style="font-size: 1.15rem; color: #FCD34D; font-weight: 800; max-width: 840px; margin: 0 auto 24px auto;">
+        UK • USA • Canada • Australia • Ireland • UAE • Singapore • Europe
+      </p>
 
-<section class="section section-dark">
-  <div class="container"><div class="cta-banner reveal"><div class="cta-banner-content">
-    <h2>Ready to Study Abroad?</h2>
-    <p>Get personalized guidance on country selection, university applications, scholarships and visa — from an experienced international education counsellor.</p>
-    <div class="cta-banner-actions"><button class="btn btn-primary btn-lg" data-modal="lead" data-program="study-abroad">Explore Study Abroad Options</button></div>
-  </div></div></div>
-</section>
+      <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 16px;">
+        <button class="btn btn-gold" data-modal="lead" data-program="Study Abroad Strategy">
+          GET STUDY ABROAD GUIDANCE
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- KNOWLEDGE & STRATEGY SECTION -->
+  <section class="section" aria-labelledby="outcome-heading">
+    <div class="container">
+      <div class="section-heading centered reveal">
+        <span class="section-label">Outcome-Focused Planning</span>
+        <h2 id="outcome-heading">DON'T CHOOSE THE COUNTRY FIRST. CHOOSE THE OUTCOME YOU WANT.</h2>
+      </div>
+
+      <div style="max-width: 840px; margin: 0 auto; text-align: center;" class="reveal">
+        <p style="font-size: 1.1rem; color: var(--clr-text-main); line-height: 1.8; margin-bottom: 24px;">
+          Global education requires evaluating: <strong>Country • University • Program • Tuition • Living Cost • Post-Study Work Rights • Scholarships • Visa Compliance.</strong>
+        </p>
+
+        <div style="background: var(--clr-surface); border: 2px solid var(--clr-border); border-radius: var(--radius-xl); padding: var(--sp-8); box-shadow: var(--shadow-lg); margin-bottom: 24px;">
+          <h3 style="font-size: 1.3rem; color: #0F172A; font-weight: 900; margin-bottom: 12px;">
+            We align your international application with long-term global career opportunities.
+          </h3>
+          <p style="font-size: 14px; color: var(--clr-text-2); margin: 0;">
+            Get objective guidance on SOP/LOR documentation, university shortlisting, scholarship applications, and visa interview preparation.
+          </p>
+        </div>
+
+        <button class="btn btn-primary btn-lg" data-modal="lead" data-program="Global Application Strategy">
+          BUILD MY GLOBAL STRATEGY
+        </button>
+      </div>
+    </div>
+  </section>
 
 </main>
-<div id="footer-slot"></div><div id="mobile-cta-slot"></div><div id="modal-slot"></div>
-<script src="js/shared.js"></script><script src="js/config.js"></script>
+
+<div id="footer-slot"></div>
+
+<script src="js/shared.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>

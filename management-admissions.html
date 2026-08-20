@@ -3,167 +3,213 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MBA & PGDM Admission Consultancy | College Corridor</title>
-  <meta name="description" content="Personalized MBA/PGDM admission guidance based on your CAT/XAT score, profile and career goals.">
+  <title>MBA & B-School Admissions Guidance — Investment & Career Strategy | College Corridor</title>
+  <meta name="description" content="Strategic MBA and PGDM admissions guidance across leading business schools in India. ROI analysis, profile evaluation, and offer selection.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/components.css">
   <link rel="stylesheet" href="css/animations.css">
+  <style>
+    :root {
+      --clr-mba: #8B5CF6;
+      --clr-gold: #C59B27;
+      --clr-gold-light: #FCD34D;
+      --clr-dark: #0F172A;
+      --clr-border-gold: rgba(197, 155, 39, 0.35);
+    }
+    .mba-hero {
+      padding: var(--sp-12) 0 var(--sp-10) 0;
+      background: radial-gradient(circle at 50% 20%, rgba(139, 92, 246, 0.2) 0%, rgba(15, 23, 42, 0.98) 75%), #0F172A;
+      color: #FFFFFF;
+      text-align: center;
+      border-bottom: 2px solid var(--clr-border-gold);
+    }
+    .btn-gold {
+      background: linear-gradient(135deg, #C59B27 0%, #D97706 100%);
+      color: #0F172A !important;
+      font-weight: 900 !important;
+      font-size: 1.1rem !important;
+      padding: 16px 34px !important;
+      border-radius: var(--radius-md) !important;
+      box-shadow: 0 8px 25px rgba(197, 155, 39, 0.4) !important;
+      transition: all 0.3s ease !important;
+      border: 2px solid #FCD34D !important;
+      text-transform: uppercase;
+    }
+    .btn-gold:hover {
+      transform: translateY(-3px) scale(1.02);
+      box-shadow: 0 12px 35px rgba(197, 155, 39, 0.6) !important;
+      background: linear-gradient(135deg, #FCD34D 0%, #C59B27 100%);
+    }
+    .bschool-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+      margin-top: 16px;
+    }
+    .bschool-tag {
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid var(--clr-border-gold);
+      padding: 8px 16px;
+      border-radius: 6px;
+      font-size: 13px;
+      font-weight: 800;
+      color: #F8FAFC;
+    }
+  </style>
 </head>
 <body>
+
 <div id="announcement-bar-slot"></div>
 <header id="navbar-slot" data-active="management"></header>
+
 <main>
 
-<!-- PAGE HERO -->
-<section class="page-hero" aria-labelledby="mba-h1">
-  <div class="container page-hero-content">
-    <div class="page-hero-eyebrow"><span class="section-label">Management Admissions</span></div>
-    <h1 id="mba-h1">MBA, PGDM & BBA Admissions</h1>
-    <p class="hero-sub" style="margin-bottom:var(--sp-8);max-width:720px;">We help students identify suitable management colleges based on their entrance score, academic profile, work experience, budget, career goals and preferred location.</p>
-    <div class="hero-actions">
-      <button class="btn btn-primary btn-lg" data-modal="lead" data-program="mba">Find My MBA College</button>
-      <a href="find-colleges.html" class="btn btn-secondary btn-lg">Explore B-Schools</a>
-    </div>
-  </div>
-</section>
+  <!-- HERO SECTION -->
+  <section class="mba-hero" aria-labelledby="mba-title">
+    <div class="container">
+      <span class="section-label" style="background: rgba(139,92,246,0.2); color: #A78BFA; border: 1px solid rgba(167,139,250,0.4);">
+        Strategic B-School Advisory
+      </span>
 
-<!-- ADMISSION ROUTES -->
-<section class="section section-alt" aria-labelledby="mba-routes-heading">
-  <div class="container">
-    <div class="section-heading centered reveal">
-      <span class="section-label">Admission Routes</span>
-      <h2 id="mba-routes-heading">Multiple Pathways to Your MBA</h2>
-      <p>We guide students through all applicable entrance exams and admission routes for MBA, PGDM and BBA programs.</p>
-    </div>
-    <div style="display:flex;flex-wrap:wrap;gap:var(--sp-3);justify-content:center;margin-top:var(--sp-10);" class="reveal">
-      <span class="tag tag--gold">CAT</span><span class="tag tag--gold">XAT</span>
-      <span class="tag">CMAT</span><span class="tag">MAT</span><span class="tag">NMAT</span><span class="tag">SNAP</span>
-      <span class="tag tag--blue">State Entrance Exams</span><span class="tag tag--blue">University Entrance Exams</span>
-      <span class="tag tag--green">Merit-Based Admissions</span><span class="tag">Institutional Pathways</span>
-    </div>
-  </div>
-</section>
+      <h1 id="mba-title" style="font-size: clamp(2.2rem, 5vw, 4rem); font-weight: 900; color: #FFFFFF !important; -webkit-text-fill-color: #FFFFFF !important; margin: 16px 0 12px 0; line-height: 1.12;">
+        YOUR MBA IS AN INVESTMENT.<br>TREAT IT LIKE ONE.
+      </h1>
 
-<!-- WHAT WE SUPPORT -->
-<section class="section" aria-labelledby="mba-support-heading">
-  <div class="container">
-    <div class="section-heading centered reveal">
-      <span class="section-label">Our Services</span>
-      <h2 id="mba-support-heading">End-to-End MBA Guidance</h2>
-    </div>
-    <div style="display:grid;grid-template-columns:repeat(6,1fr);gap:var(--sp-4);margin-top:var(--sp-10);" class="reveal">
-      <div class="journey-step"><div class="step-num">1</div><div class="step-label">College Shortlisting</div></div>
-      <div class="journey-step"><div class="step-num">2</div><div class="step-label">Application</div></div>
-      <div class="journey-step"><div class="step-num">3</div><div class="step-label">Selection Process</div></div>
-      <div class="journey-step"><div class="step-num">4</div><div class="step-label">WAT / GD / PI Guidance</div></div>
-      <div class="journey-step"><div class="step-num">5</div><div class="step-label">Offer Evaluation</div></div>
-      <div class="journey-step" style="border-color:rgba(16,185,129,0.4);background:rgba(16,185,129,0.06);"><div class="step-num" style="background:linear-gradient(135deg,#10B981,#34D399);">✓</div><div class="step-label" style="color:#34D399;">Final Admission</div></div>
-    </div>
-  </div>
-</section>
+      <p style="font-size: 1.2rem; font-weight: 800; color: #FCD34D; max-width: 820px; margin: 0 auto 24px auto;">
+        Strategic MBA & B-School Admission Guidance (CAT • XAT • NMAT • SNAP • CMAT • Executive Routes)
+      </p>
 
-<!-- MBA COUNSELLING & SELECTION -->
-<section class="section section-alt" aria-labelledby="mba-counselling-heading">
-  <div class="container">
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--sp-8);align-items:center;">
-      <div class="reveal">
-        <span class="section-label">B-School Guidance</span>
-        <h2 id="mba-counselling-heading" style="font-size:var(--fs-4xl);font-weight:800;line-height:1.1;margin-bottom:var(--sp-5);">MBA Counselling & Selection</h2>
-        <p style="color:var(--clr-text-2);line-height:1.75;margin-bottom:var(--sp-6);">We provide guidance for admission processes at India's leading B-schools, including IIMs, XLRI, MDI, FMS, SPJIMR, IIT B-schools and private B-schools. Our counsellors help evaluate each shortlist, application strategy, and offer based on your profile and goals.</p>
-        <div style="display:flex;flex-wrap:wrap;gap:var(--sp-2);margin-bottom:var(--sp-6);">
-          <span class="tag tag--gold">IIM Admission Processes</span>
-          <span class="tag">IIM CAP</span>
-          <span class="tag">XLRI</span>
-          <span class="tag">MDI</span>
-          <span class="tag">FMS</span>
-          <span class="tag">SPJIMR</span>
-          <span class="tag tag--blue">IIT B-Schools</span>
-          <span class="tag">Private B-Schools</span>
+      <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 16px;">
+        <button class="btn btn-gold" data-modal="lead" data-program="MBA Strategy">
+          GET MY MBA STRATEGY
+        </button>
+        <button class="btn btn-secondary btn-lg" data-modal="lead" data-program="MBA Second Opinion">
+          GET A SECOND OPINION
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- EMOTIONAL SECTION -->
+  <section class="section" aria-labelledby="investment-heading">
+    <div class="container">
+      <div class="section-heading centered reveal">
+        <span class="section-label">Opportunity Cost</span>
+        <h2 id="investment-heading">AN MBA CAN COST YOU MONEY. THE WRONG MBA CAN ALSO COST YOU TIME.</h2>
+      </div>
+
+      <div style="max-width: 840px; margin: 0 auto; text-align: center;" class="reveal">
+        <p style="font-size: 1.1rem; color: var(--clr-text-main); line-height: 1.8; margin-bottom: 24px;">
+          When pursuing an MBA, you are investing: <strong>Tuition Fees • Two Years • Opportunity Cost • Career Momentum • Relocation • Expectations.</strong>
+        </p>
+
+        <div style="background: var(--clr-surface); border: 2px solid var(--clr-border); border-radius: var(--radius-xl); padding: var(--sp-8); box-shadow: var(--shadow-lg); margin-bottom: 24px;">
+          <p style="font-size: 1.1rem; color: var(--clr-text-2); margin-bottom: 8px;">Therefore: Don't ask only <em>"Can I get admission?"</em></p>
+          <h3 style="font-size: clamp(1.4rem, 3vw, 2rem); font-weight: 900; color: #0F172A; margin: 0;">
+            "Is this MBA worth the investment for me?"
+          </h3>
         </div>
-        <button class="btn btn-primary" data-modal="lead" data-program="mba">Get MBA Counselling</button>
-      </div>
-      <div class="reveal">
-        <div style="background:var(--grad-card);border:1px solid var(--clr-border);border-radius:var(--radius-xl);padding:var(--sp-6);">
-          <div style="font-size:var(--fs-xs);font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--clr-text-muted);margin-bottom:var(--sp-5);">Selection Flow</div>
-          <div style="display:flex;flex-direction:column;gap:var(--sp-3);">
-            <div style="display:flex;align-items:center;gap:var(--sp-3);">
-              <div class="step-num" style="flex-shrink:0;">1</div>
-              <div style="flex:1;padding:var(--sp-3);background:rgba(201,150,12,0.08);border:1px solid rgba(201,150,12,0.2);border-radius:var(--radius-sm);font-size:var(--fs-sm);font-weight:600;">Exam Score (CAT/XAT/CMAT)</div>
-            </div>
-            <div style="display:flex;align-items:center;gap:var(--sp-3);">
-              <div class="step-num" style="flex-shrink:0;">2</div>
-              <div style="flex:1;padding:var(--sp-3);background:rgba(255,255,255,0.04);border:1px solid var(--clr-border);border-radius:var(--radius-sm);font-size:var(--fs-sm);font-weight:500;color:var(--clr-text-2);">Shortlist Analysis</div>
-            </div>
-            <div style="display:flex;align-items:center;gap:var(--sp-3);">
-              <div class="step-num" style="flex-shrink:0;">3</div>
-              <div style="flex:1;padding:var(--sp-3);background:rgba(255,255,255,0.04);border:1px solid var(--clr-border);border-radius:var(--radius-sm);font-size:var(--fs-sm);font-weight:500;color:var(--clr-text-2);">Application Strategy</div>
-            </div>
-            <div style="display:flex;align-items:center;gap:var(--sp-3);">
-              <div class="step-num" style="flex-shrink:0;">4</div>
-              <div style="flex:1;padding:var(--sp-3);background:rgba(255,255,255,0.04);border:1px solid var(--clr-border);border-radius:var(--radius-sm);font-size:var(--fs-sm);font-weight:500;color:var(--clr-text-2);">WAT / GD / PI Preparation</div>
-            </div>
-            <div style="display:flex;align-items:center;gap:var(--sp-3);">
-              <div class="step-num" style="flex-shrink:0;">5</div>
-              <div style="flex:1;padding:var(--sp-3);background:rgba(255,255,255,0.04);border:1px solid var(--clr-border);border-radius:var(--radius-sm);font-size:var(--fs-sm);font-weight:500;color:var(--clr-text-2);">Offer Evaluation</div>
-            </div>
-            <div style="display:flex;align-items:center;gap:var(--sp-3);">
-              <div class="step-num" style="flex-shrink:0;background:linear-gradient(135deg,#10B981,#34D399);">✓</div>
-              <div style="flex:1;padding:var(--sp-3);background:rgba(16,185,129,0.1);border:1px solid rgba(16,185,129,0.3);border-radius:var(--radius-sm);font-size:var(--fs-sm);font-weight:700;color:#34D399;">Final Admission</div>
-            </div>
-          </div>
-        </div>
+
+        <button class="btn btn-primary btn-lg" data-modal="lead" data-program="MBA Investment Audit">
+          AUDIT MY B-SCHOOL OPTIONS
+        </button>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-
-<!-- FREQUENTLY ASKED QUESTIONS (SEO / INFORMATIONAL INTENT) -->
-<section class="section section-alt" aria-labelledby="mgmt-faq-heading">
-  <div class="container">
-    <div class="section-heading centered reveal">
-      <span class="section-label">Common Questions</span>
-      <h2 id="mgmt-faq-heading">MBA &amp; CAT Admission FAQs</h2>
-    </div>
-    <div style="max-width:900px;margin-inline:auto;margin-top:var(--sp-8);display:flex;flex-direction:column;gap:var(--sp-4);" class="reveal">
-      <div style="padding:var(--sp-5) var(--sp-6);background:#0F172A;border:1px solid rgba(197,155,39,0.35);border-radius:var(--radius-lg);box-shadow:0 4px 16px rgba(15,23,42,0.3);">
-        <h3 style="font-size:var(--fs-lg);color:#FFFFFF;margin-bottom:var(--sp-2);">How are CAT percentile cutoffs evaluated for top MBA colleges?</h3>
-        <p style="font-size:var(--fs-sm);color:#E2E8F0;line-height:1.68;">Top B-schools evaluate candidates based on a composite score combining CAT sectional percentiles, academic consistency (10th, 12th, graduation marks), work experience, academic diversity, and WAT-GD-PI performance rather than entrance raw score alone.</p>
+  <!-- KNOWLEDGE SECTION -->
+  <section class="section section-alt" aria-labelledby="roi-heading">
+    <div class="container">
+      <div class="section-heading centered reveal">
+        <span class="section-label">Evaluation Matrix</span>
+        <h2 id="roi-heading">WHAT SHOULD YOU ACTUALLY COMPARE?</h2>
       </div>
-      <div style="padding:var(--sp-5) var(--sp-6);background:#0F172A;border:1px solid rgba(197,155,39,0.35);border-radius:var(--radius-lg);box-shadow:0 4px 16px rgba(15,23,42,0.3);">
-        <h3 style="font-size:var(--fs-lg);color:#FFFFFF;margin-bottom:var(--sp-2);">What is the difference between PGDM and University MBA programs?</h3>
-        <p style="font-size:var(--fs-sm);color:#E2E8F0;line-height:1.68;">PGDM (Post Graduate Diploma in Management) is offered by autonomous institutes approved by AICTE, allowing more frequent curriculum updates reflecting industry needs. University MBA degrees are awarded by state/deemed universities following university-defined academic frameworks.</p>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 14px; margin: 24px 0;" class="reveal">
+        <div style="padding: 14px; background: var(--clr-surface); border: 1px solid var(--clr-border); border-radius: var(--radius-md); font-weight: 800; font-size: 13px; text-align: center;">📈 Placement Outcomes</div>
+        <div style="padding: 14px; background: var(--clr-surface); border: 1px solid var(--clr-border); border-radius: var(--radius-md); font-weight: 800; font-size: 13px; text-align: center;">💰 Total Program Fees & ROI</div>
+        <div style="padding: 14px; background: var(--clr-surface); border: 1px solid var(--clr-border); border-radius: var(--radius-md); font-weight: 800; font-size: 13px; text-align: center;">🌐 Alumni Network Strength</div>
+        <div style="padding: 14px; background: var(--clr-surface); border: 1px solid var(--clr-border); border-radius: var(--radius-md); font-weight: 800; font-size: 13px; text-align: center;">🎯 Specialization Focus</div>
+        <div style="padding: 14px; background: var(--clr-surface); border: 1px solid var(--clr-border); border-radius: var(--radius-md); font-weight: 800; font-size: 13px; text-align: center;">📍 Location & Corporate Ties</div>
+        <div style="padding: 14px; background: var(--clr-surface); border: 1px solid var(--clr-border); border-radius: var(--radius-md); font-weight: 800; font-size: 13px; text-align: center;">📊 Profile Fit & Cohort</div>
       </div>
-    </div>
-  </div>
-</section>
 
-
-<!-- CLOSING CTA -->
-<section class="section section-dark">
-  <div class="container">
-    <div class="cta-banner reveal">
-      <div class="cta-banner-content">
-        <span class="section-label">Start Your MBA Journey</span>
-        <h2>Your Score Opens Doors. <br>Your Strategy Gets You In.</h2>
-        <p>Get a personalized MBA admission strategy based on your CAT/XAT score, academic profile, work experience, budget and career goals.</p>
-        <div class="cta-banner-actions">
-          <button class="btn btn-primary btn-lg" data-modal="lead" data-program="mba">Get MBA Counselling</button>
-          <a href="find-colleges.html" class="btn btn-secondary btn-lg">Find B-Schools</a>
-        </div>
+      <div style="text-align: center;" class="reveal">
+        <h3 style="font-size: 1.4rem; color: #0F172A; font-weight: 900; margin-bottom: 16px;">
+          A COLLEGE OFFER IS NOT THE SAME THING AS A GOOD DECISION.
+        </h3>
+        <button class="btn btn-primary" data-modal="lead" data-program="Compare B-Schools">
+          COMPARE B-SCHOOL OFFERINGS
+        </button>
       </div>
     </div>
-  </div>
-</section>
+  </section>
+
+  <!-- TOP B-SCHOOLS -->
+  <section class="section dark-section" style="background: #0F172A; color: #FFFFFF;" aria-labelledby="bschools-heading">
+    <div class="container">
+      <div class="section-heading centered reveal">
+        <span class="section-label" style="background: rgba(201,150,12,0.2); color: #FCD34D;">Leading Business Schools</span>
+        <h2 id="bschools-heading" style="color: #FFFFFF !important; -webkit-text-fill-color: #FFFFFF !important;">
+          TOP PRIVATE B-SCHOOLS WE GUIDE STUDENTS FOR
+        </h2>
+      </div>
+
+      <div class="bschool-grid reveal" style="max-width: 900px; margin: 24px auto;">
+        <span class="bschool-tag">XLRI Jamshedpur</span>
+        <span class="bschool-tag">SPJIMR Mumbai</span>
+        <span class="bschool-tag">MDI Gurugram</span>
+        <span class="bschool-tag">NMIMS Mumbai</span>
+        <span class="bschool-tag">SIBM Pune</span>
+        <span class="bschool-tag">IMT Ghaziabad</span>
+        <span class="bschool-tag">MICA Ahmedabad</span>
+        <span class="bschool-tag">XIM University</span>
+        <span class="bschool-tag">TAPMI Manipal</span>
+        <span class="bschool-tag">Great Lakes</span>
+        <span class="bschool-tag">IMI New Delhi</span>
+        <span class="bschool-tag">FORE School</span>
+        <span class="bschool-tag">KJ Somaiya</span>
+        <span class="bschool-tag">BIMTECH</span>
+        <span class="bschool-tag">IMI Kolkata</span>
+      </div>
+
+      <div style="text-align: center; margin-top: 24px;" class="reveal">
+        <p style="color: #FCD34D; font-weight: 800; font-size: 1.1rem; margin-bottom: 16px;">
+          "Don't choose an MBA only because you received an offer. Understand what you're buying with your time, money and career."
+        </p>
+        <button class="btn btn-gold" data-modal="lead" data-program="Discuss MBA Options">
+          DISCUSS MY MBA OPTIONS
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- MBA FOMO -->
+  <section class="section section-alt" aria-labelledby="fomo-heading">
+    <div class="container">
+      <div style="max-width: 820px; margin: 0 auto; text-align: center;" class="reveal">
+        <span class="section-label">Offer Decision Support</span>
+        <h2 id="fomo-heading" style="font-size: clamp(1.6rem, 3.5vw, 2.4rem); margin: 12px 0;">
+          DON'T WAIT UNTIL YOU HAVE AN OFFER TO START COMPARING.
+        </h2>
+        <p style="font-size: 1.05rem; color: var(--clr-text-2); margin-bottom: 24px;">
+          The difficult decision often comes after receiving multiple admits (College A vs College B, different fees, different locations, different career outcomes). That's when an objective second opinion becomes invaluable.
+        </p>
+        <button class="btn btn-primary btn-lg" data-modal="lead" data-program="MBA Second Opinion">
+          GET A SECOND OPINION
+        </button>
+      </div>
+    </div>
+  </section>
 
 </main>
+
 <div id="footer-slot"></div>
-<div id="mobile-cta-slot"></div>
-<div id="modal-slot"></div>
+
 <script src="js/shared.js"></script>
-<script src="js/config.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>
