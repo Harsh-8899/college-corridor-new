@@ -1191,5 +1191,5 @@ body.mobile-menu-open {
   height: 100dvh !important;
   z-index: 9999 !important;
   background: #0F172A !important;
-  padding-top: calc(var(--nav-h) + 1rem) !important;
+  padding-top: 1rem !important; padding-inline: 1rem !important;
 }
