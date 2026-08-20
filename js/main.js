@@ -136,13 +136,28 @@
       overlay.classList.add('open');
       document.body.style.overflow = 'hidden';
 
-      // Pre-select program if provided
+      // Pre-select program dropdown option intelligently
       const select = overlay.querySelector('#program-interest');
       if (select && program) {
-        for (let i = 0; i < select.options.length; i++) {
-          if (select.options[i].value.toLowerCase().includes(program.toLowerCase())) {
-            select.selectedIndex = i;
-            break;
+        const pLower = program.toLowerCase();
+        let targetVal = '';
+        if (pLower.includes('mbbs') || pLower.includes('bds') || pLower.includes('medical counselling')) targetVal = 'mbbs';
+        else if (pLower.includes('pg') || pLower.includes('md') || pLower.includes('ms')) targetVal = 'md-ms';
+        else if (pLower.includes('tech') || pLower.includes('engineering') || pLower.includes('jee')) targetVal = 'btech';
+        else if (pLower.includes('mba') || pLower.includes('management') || pLower.includes('b-school')) targetVal = 'mba';
+        else if (pLower.includes('law') || pLower.includes('clat')) targetVal = 'law';
+        else if (pLower.includes('pharmacy') || pLower.includes('nursing')) targetVal = 'pharmacy';
+        else if (pLower.includes('abroad')) targetVal = 'study-abroad';
+        else if (pLower.includes('nri')) targetVal = 'nri';
+
+        if (targetVal) {
+          select.value = targetVal;
+        } else {
+          for (let i = 0; i < select.options.length; i++) {
+            if (pLower.includes(select.options[i].text.toLowerCase()) || select.options[i].value.toLowerCase().includes(pLower)) {
+              select.selectedIndex = i;
+              break;
+            }
           }
         }
       }
