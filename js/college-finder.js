@@ -88,6 +88,4 @@ document.addEventListener('DOMContentLoaded', () => {
     filterSearchBtn.addEventListener('click', renderResults);
   }
 
-  // Initial load
-  renderResults();
 });
