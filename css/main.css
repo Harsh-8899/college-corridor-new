@@ -140,16 +140,17 @@ h1, h2, h3, h4, h5, h6 {
 
 .section-label {
   display: inline-block;
-  font-size: var(--fs-xs);
-  font-weight: 700;
-  letter-spacing: 0.12em;
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--clr-slate);
-  background: var(--clr-bronze-dim);
-  border: 1px solid rgba(197,155,39,0.45);
-  padding: 5px 16px;
+  color: #0F172A !important;
+  background: #FEF08A !important;
+  border: 1px solid #EAB308 !important;
+  padding: 6px 18px;
   border-radius: var(--radius-full);
   margin-bottom: var(--sp-4);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.06);
 }
 
 .section-heading { max-width: 720px; }
