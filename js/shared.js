@@ -124,7 +124,13 @@
     <button class="btn btn-primary" data-modal="lead" data-program="Desktop Floating CTA" style="background:#2563EB;box-shadow:0 8px 25px rgba(37,99,235,0.4);padding:14px 24px;border-radius:50px;font-weight:900;">
       💬 BOOK COUNSELLING
     </button>
-  </div>`;
+  </div>
+
+  <!-- FLOATING WHATSAPP TOGGLE BUTTON -->
+  <a href="https://wa.me/918194083803?text=Hi%20College%20Corridor%20Advisory%2C%20I%20would%20like%20to%20know%20more%20about%20counselling%20guidance." target="_blank" rel="noopener noreferrer" class="whatsapp-float-btn" style="position:fixed;bottom:24px;left:24px;z-index:999;background:#25D366;color:#FFFFFF;display:flex;align-items:center;gap:8px;padding:12px 20px;border-radius:50px;font-weight:900;font-size:13px;box-shadow:0 8px 25px rgba(37,211,102,0.45);text-decoration:none;transition:all 0.3s ease;" aria-label="Chat on WhatsApp">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.705 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-1.15 4.195 4.393-1.084z"/></svg>
+    <span>Chat on WhatsApp</span>
+  </a>`;
   }
 
   function ensureLeadModal() {
@@ -227,12 +233,25 @@
     function handleStickyDisplay() {
       const mobileBar = document.querySelector('.mobile-sticky-bar');
       const desktopCta = document.querySelector('.desktop-floating-cta');
+      const waBtn = document.querySelector('.whatsapp-float-btn');
       if (window.innerWidth <= 768) {
         if (mobileBar) mobileBar.style.display = 'flex';
         if (desktopCta) desktopCta.style.display = 'none';
+        if (waBtn) {
+          waBtn.style.bottom = '70px';
+          waBtn.style.left = '16px';
+          waBtn.style.padding = '10px 16px';
+          waBtn.style.fontSize = '12px';
+        }
       } else {
         if (mobileBar) mobileBar.style.display = 'none';
         if (desktopCta) desktopCta.style.display = 'block';
+        if (waBtn) {
+          waBtn.style.bottom = '24px';
+          waBtn.style.left = '24px';
+          waBtn.style.padding = '12px 20px';
+          waBtn.style.fontSize = '13px';
+        }
       }
     }
     window.addEventListener('resize', handleStickyDisplay);
