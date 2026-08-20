@@ -1,196 +1,93 @@
-/* =========================================================
-   College Corridor — college-finder.js
-   Interactive College Discovery Tool Logic
-   ========================================================= */
+/**
+ * College Corridor — Dynamic Find Colleges Engine
+ * Connects Filter UI on find-colleges.html with COLLEGE_DATABASE
+ */
 
-(function() {
-  'use strict';
+document.addEventListener('DOMContentLoaded', () => {
+  const filterCourse = document.getElementById('filter-course');
+  const filterState = document.getElementById('filter-state');
+  const filterBudget = document.getElementById('filter-budget');
+  const filterType = document.getElementById('filter-type');
+  const filterRoute = document.getElementById('filter-route');
+  const filterSearchBtn = document.getElementById('filter-search-btn');
+  const resultsContainer = document.getElementById('college-results');
 
-  // Sample College Dataset
-  const sampleColleges = [
-    {
-      id: 1,
-      name: "RV College of Engineering (RVCE)",
-      location: "Bengaluru, Karnataka",
-      state: "karnataka",
-      course: "btech",
-      type: "private",
-      route: "entrance",
-      budgetLakhs: 16,
-      cutoff: "KCET / COMEDK top ranks",
-      tags: ["CSE", "AI/ML", "ECE", "Autonomous"]
-    },
-    {
-      id: 2,
-      name: "MS Ramaiah Institute of Technology (MSRIT)",
-      location: "Bengaluru, Karnataka",
-      state: "karnataka",
-      course: "btech",
-      type: "private",
-      route: "counselling",
-      budgetLakhs: 15,
-      cutoff: "COMEDK / KCET",
-      tags: ["CSE", "AI", "ECE"]
-    },
-    {
-      id: 3,
-      name: "Shiv Nadar University",
-      location: "Greater Noida, Delhi NCR",
-      state: "delhi",
-      course: "btech",
-      type: "university",
-      route: "entrance",
-      budgetLakhs: 18,
-      cutoff: "SNUSAT / JEE Main",
-      tags: ["CSE", "AI/ML", "Research"]
-    },
-    {
-      id: 4,
-      name: "UPES Dehradun",
-      location: "Dehradun, Uttarakhand",
-      state: "uttarakhand",
-      course: "btech",
-      type: "university",
-      route: "entrance",
-      budgetLakhs: 18,
-      cutoff: "UPESEAT / JEE Main",
-      tags: ["CSE", "Cybersecurity", "AI"]
-    },
-    {
-      id: 5,
-      name: "COEP Technological University",
-      location: "Pune, Maharashtra",
-      state: "maharashtra",
-      course: "btech",
-      type: "government",
-      route: "counselling",
-      budgetLakhs: 6,
-      cutoff: "MHT-CET top ranks",
-      tags: ["Premier", "CSE", "ECE"]
-    },
-    {
-      id: 6,
-      name: "Kasturba Medical College (KMC)",
-      location: "Manipal, Karnataka",
-      state: "karnataka",
-      course: "mbbs",
-      type: "deemed",
-      route: "counselling",
-      budgetLakhs: 75,
-      cutoff: "NEET UG ~550+",
-      tags: ["Deemed", "MBBS", "Top Ranked"]
-    },
-    {
-      id: 7,
-      name: "St. John's Medical College",
-      location: "Bengaluru, Karnataka",
-      state: "karnataka",
-      course: "mbbs",
-      type: "private",
-      route: "counselling",
-      budgetLakhs: 35,
-      cutoff: "NEET UG High Rank",
-      tags: ["MBBS", "Private", "Clinical"]
-    },
-    {
-      id: 8,
-      name: "Symbiosis Institute of Business Management (SIBM)",
-      location: "Pune, Maharashtra",
-      state: "maharashtra",
-      course: "mba",
-      type: "deemed",
-      route: "entrance",
-      budgetLakhs: 24,
-      cutoff: "SNAP 98+ %ile",
-      tags: ["MBA", "SNAP", "Top B-School"]
-    }
-  ];
+  if (!resultsContainer || !window.COLLEGE_DATABASE) return;
 
-  document.addEventListener('DOMContentLoaded', function() {
-    const searchBtn = document.getElementById('filter-search-btn');
-    if (!searchBtn) return;
+  function renderResults() {
+    const courseVal = filterCourse ? filterCourse.value.toLowerCase() : '';
+    const stateVal = filterState ? filterState.value.toLowerCase() : '';
+    const budgetVal = filterBudget ? filterBudget.value : '';
+    const typeVal = filterType ? filterType.value.toLowerCase() : '';
+    const routeVal = filterRoute ? filterRoute.value.toLowerCase() : '';
 
-    searchBtn.addEventListener('click', filterColleges);
-    // Initial render
-    filterColleges();
-  });
-
-  function filterColleges() {
-    const course = (document.getElementById('filter-course')?.value || '').toLowerCase();
-    const state  = (document.getElementById('filter-state')?.value || '').toLowerCase();
-    const budgetVal = document.getElementById('filter-budget')?.value || '';
-    const type   = (document.getElementById('filter-type')?.value || '').toLowerCase();
-    const route  = (document.getElementById('filter-route')?.value || '').toLowerCase();
-
-    let budgetMax = Infinity;
-    if (budgetVal) {
-      if (budgetVal === 'above') budgetMax = 999;
-      else budgetMax = parseInt(budgetVal, 10);
-    }
-
-    const filtered = sampleColleges.filter(col => {
-      if (course && col.course !== course) return false;
-      if (state && col.state !== state) return false;
-      if (type && col.type !== type) return false;
-      if (route && col.route !== route) return false;
-      if (col.budgetLakhs > budgetMax) return false;
+    const filtered = window.COLLEGE_DATABASE.filter(col => {
+      if (courseVal && col.program.toLowerCase() !== courseVal) return false;
+      if (stateVal && col.state.toLowerCase() !== stateVal) return false;
+      if (typeVal && col.type.toLowerCase() !== typeVal) return false;
+      if (routeVal && !col.route.toLowerCase().includes(routeVal)) return false;
+      
+      if (budgetVal) {
+        const b = parseFloat(budgetVal);
+        if (!isNaN(b) && col.feeRange > b) return false;
+      }
       return true;
     });
 
-    renderResults(filtered);
-  }
-
-  function renderResults(list) {
-    const resultsContainer = document.getElementById('college-results');
-    if (!resultsContainer) return;
-
-    if (list.length === 0) {
+    if (filtered.length === 0) {
       resultsContainer.innerHTML = `
         <div style="text-align:center;padding:var(--sp-12);background:var(--grad-card);border:1px solid var(--clr-border);border-radius:var(--radius-xl);">
           <div style="font-size:3rem;margin-bottom:var(--sp-3);">🔍</div>
-          <h3 style="margin-bottom:var(--sp-2);">No colleges match all specific filters</h3>
-          <p style="font-size:var(--fs-sm);color:var(--clr-text-muted);margin-bottom:var(--sp-6);">Try adjusting your filters or talk directly with a counsellor to find options tailored to your rank and budget.</p>
-          <button class="btn btn-primary" data-modal="lead">Talk to a Counsellor</button>
+          <h3 style="margin-bottom:var(--sp-2);">No Exact Match Found</h3>
+          <p style="font-size:var(--fs-sm);color:var(--clr-text-muted);max-width:460px;margin-inline:auto;margin-bottom:var(--sp-6);">
+            We couldn't find colleges matching all selected filters. Try broadening your criteria or get a personalized list from an advisor.
+          </p>
+          <button class="btn btn-primary" data-modal="lead">Talk to a Counsellor for Options</button>
         </div>
       `;
       return;
     }
 
-    let html = `
-      <div style="margin-bottom:var(--sp-4);font-size:var(--fs-sm);color:var(--clr-text-muted);">
-        Showing <strong>${list.length}</strong> matching college options (sample preview):
+    let cardsHtml = `
+      <div style="margin-bottom:var(--sp-6);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:var(--sp-4);">
+        <h3 style="font-size:var(--fs-xl);">Showing ${filtered.length} Matching College Options</h3>
+        <span style="font-size:var(--fs-xs);color:var(--clr-text-muted);">* Indicative fees & cutoffs based on institutional data</span>
       </div>
-      <div class="grid-2 stagger">
+      <div class="grid-auto stagger" style="gap:var(--sp-6);">
     `;
 
-    list.forEach(col => {
-      html += `
-        <div class="card reveal" style="display:flex;flex-direction:column;justify-content:space-between;">
+    filtered.forEach(col => {
+      cardsHtml += `
+        <div class="card reveal visible" style="display:flex;flex-direction:column;justify-content:space-between;padding:var(--sp-6);">
           <div>
-            <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:var(--sp-3);margin-bottom:var(--sp-3);">
-              <h3 style="font-size:var(--fs-xl);line-height:1.2;">${col.name}</h3>
-              <span class="tag tag--gold" style="font-size:10px;text-transform:uppercase;">${col.type}</span>
+            <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:var(--sp-3);">
+              <span class="tag tag--gold" style="font-size:10px;">${col.programLabel}</span>
+              <span class="tag" style="font-size:10px;">${col.typeLabel}</span>
             </div>
-            <div style="font-size:var(--fs-xs);color:var(--clr-text-muted);margin-bottom:var(--sp-4);">📍 ${col.location}</div>
-            <div style="display:flex;flex-wrap:wrap;gap:var(--sp-2);margin-bottom:var(--sp-4);">
-              ${col.tags.map(t => `<span class="tag">${t}</span>`).join('')}
-            </div>
-            <div style="font-size:var(--fs-xs);color:var(--clr-text-2);margin-bottom:var(--sp-2);">
-              <strong>Estimated Cost:</strong> ~₹${col.budgetLakhs} Lakhs total
-            </div>
-            <div style="font-size:var(--fs-xs);color:var(--clr-text-2);">
-              <strong>Cutoff Benchmark:</strong> ${col.cutoff}
+            <h3 style="font-size:var(--fs-lg);color:var(--clr-slate-dark);margin-bottom:var(--sp-2);">${col.name}</h3>
+            <p style="font-size:var(--fs-xs);color:var(--clr-text-2);margin-bottom:var(--sp-3);">📍 ${col.city}, ${col.state.toUpperCase()}</p>
+            <div style="padding:var(--sp-3);background:rgba(255,255,255,0.04);border:1px solid var(--clr-border);border-radius:var(--radius-sm);margin-bottom:var(--sp-4);">
+              <div style="font-size:var(--fs-xs);color:var(--clr-text-muted);margin-bottom:2px;">Est. Course Fees:</div>
+              <div style="font-weight:700;color:var(--clr-slate);font-size:var(--fs-sm);">${col.feesDisplay}</div>
+              <div style="font-size:11px;color:var(--clr-text-muted);margin-top:4px;">Cutoff Range: ${col.cutoffNote}</div>
             </div>
           </div>
-          <div style="margin-top:var(--sp-6);display:flex;gap:var(--sp-3);align-items:center;">
-            <button class="btn btn-primary btn-sm" style="flex:1;" data-modal="lead" data-program="${col.course}">Enquire Admission</button>
-            <a href="compare-colleges.html" class="btn btn-secondary btn-sm">Compare</a>
+          <div style="display:flex;gap:var(--sp-2);margin-top:var(--sp-2);">
+            <button class="btn btn-primary btn-sm" style="flex:1;" data-modal="lead" data-program="${col.program}">Get Guidance</button>
+            <a href="compare-colleges.html?col1=${col.id}" class="btn btn-secondary btn-sm">Compare</a>
           </div>
         </div>
       `;
     });
 
-    html += `</div>`;
-    resultsContainer.innerHTML = html;
+    cardsHtml += `</div>`;
+    resultsContainer.innerHTML = cardsHtml;
   }
-})();
+
+  if (filterSearchBtn) {
+    filterSearchBtn.addEventListener('click', renderResults);
+  }
+
+  // Initial load
+  renderResults();
+});

@@ -28,24 +28,27 @@
   <div class="container">
     <!-- Comparison Fields -->
     <div style="background:var(--grad-card);border:1px solid var(--clr-border);border-radius:var(--radius-xl);padding:var(--sp-8);" class="reveal">
-      <h2 style="font-size:var(--fs-2xl);margin-bottom:var(--sp-6);">📊 Comparison Factors</h2>
-      <div style="display:flex;flex-wrap:wrap;gap:var(--sp-2);margin-bottom:var(--sp-8);">
-        <span class="tag tag--gold">Fees</span><span class="tag">Courses</span><span class="tag tag--blue">Eligibility</span>
-        <span class="tag">Cutoffs</span><span class="tag tag--green">Seats</span><span class="tag">Placements</span>
-        <span class="tag">Ranking</span><span class="tag">Infrastructure</span><span class="tag">Hostel</span>
-        <span class="tag">Location</span><span class="tag">Accreditation</span><span class="tag">Admission Route</span>
-        <span class="tag">Campus Facilities</span>
-      </div>
-
-      <div style="text-align:center;padding:var(--sp-12);background:var(--clr-surface);border:1px dashed var(--clr-border-2);border-radius:var(--radius-lg);">
-        <div style="font-size:3rem;margin-bottom:var(--sp-4);">⚖️</div>
-        <h3 style="margin-bottom:var(--sp-3);">Personalized Comparisons Available</h3>
-        <p style="font-size:var(--fs-sm);color:var(--clr-text-muted);max-width:480px;margin-inline:auto;margin-bottom:var(--sp-6);">Our counsellors can create a detailed, side-by-side comparison of your shortlisted colleges based on the factors most important to you and your family.</p>
-        <div style="display:flex;gap:var(--sp-4);justify-content:center;flex-wrap:wrap;">
-          <button class="btn btn-primary" data-modal="lead">Get Personalized Comparison</button>
-          <a href="find-colleges.html" class="btn btn-secondary">Find Colleges First</a>
+      <h2 style="font-size:var(--fs-2xl);margin-bottom:var(--sp-4);">⚖️ Compare Colleges Side-by-Side</h2>
+      <p style="font-size:var(--fs-sm);color:var(--clr-text-muted);margin-bottom:var(--sp-6);">Select 2 to 3 colleges to compare fees, locations, admission routes, historical cutoffs, and campus facilities.</p>
+      
+      <!-- Selection Controls -->
+      <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:var(--sp-4);margin-bottom:var(--sp-8);">
+        <div class="form-group">
+          <label class="form-label" for="select-col-1">College 1</label>
+          <select class="form-select" id="select-col-1"></select>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="select-col-2">College 2</label>
+          <select class="form-select" id="select-col-2"></select>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="select-col-3">College 3 (Optional)</label>
+          <select class="form-select" id="select-col-3"></select>
         </div>
       </div>
+
+      <!-- Table Container -->
+      <div id="compare-table-container"></div>
     </div>
 
     <div class="disclaimer-block" style="margin-top:var(--sp-6);">
@@ -67,6 +70,8 @@
 </main>
 <div id="footer-slot"></div><div id="mobile-cta-slot"></div><div id="modal-slot"></div>
 <script src="js/shared.js"></script><script src="js/config.js"></script>
+<script src="js/college-database.js"></script>
+<script src="js/compare.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>

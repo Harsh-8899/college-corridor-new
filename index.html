@@ -18,7 +18,7 @@
 
 <!-- Announcement Bar -->
 <div class="announcement-bar" role="banner">
-  🏆 India's No.1 Education Consultancy — <a href="#" data-modal="lead" style="color:inherit;text-decoration:underline;font-weight:700;">Book Expert Admission Counselling Today</a>
+  🏆 India's No.1 Education Consultancy — <a href="javascript:void(0)" data-modal="lead" style="color:inherit;text-decoration:underline;font-weight:700;">Book Expert Admission Counselling Today</a>
 </div>
 
 <!-- Navbar -->
@@ -357,47 +357,70 @@
         <p>Enter your exam, score/rank, category, domicile and budget to see potential college options, tagged by strategy.</p>
       </div>
 
-      <div class="predictor-wrap reveal" style="margin-top:var(--sp-10)">
+            <div class="predictor-wrap reveal" style="margin-top:var(--sp-10)">
+        <!-- Predictor Input Form -->
+        <form id="predictor-form" style="padding:var(--sp-6);background:var(--grad-card);border-bottom:1px solid var(--clr-border);">
+          <div style="display:grid;grid-template-columns:1fr 1fr 1fr 1fr auto;gap:var(--sp-4);align-items:end;">
+            <div class="form-group" style="margin-bottom:0;">
+              <label class="form-label" for="pred-program" style="font-size:11px;">Program</label>
+              <select class="form-select" id="pred-program" style="padding:8px 12px;font-size:var(--fs-xs);">
+                <option value="mbbs">NEET-UG (MBBS)</option>
+                <option value="btech">JEE Main (B.Tech)</option>
+                <option value="mba">CAT (MBA)</option>
+                <option value="law">CLAT (Law)</option>
+              </select>
+            </div>
+            <div class="form-group" style="margin-bottom:0;">
+              <label class="form-label" for="pred-rank" style="font-size:11px;">AIR Rank / Percentile</label>
+              <input type="number" class="form-input" id="pred-rank" placeholder="e.g. 25000" value="25000" style="padding:8px 12px;font-size:var(--fs-xs);">
+            </div>
+            <div class="form-group" style="margin-bottom:0;">
+              <label class="form-label" for="pred-category" style="font-size:11px;">Category</label>
+              <select class="form-select" id="pred-category" style="padding:8px 12px;font-size:var(--fs-xs);">
+                <option value="general">General (UR)</option>
+                <option value="obc">OBC-NCL</option>
+                <option value="sc">SC</option>
+                <option value="st">ST</option>
+                <option value="ews">EWS</option>
+              </select>
+            </div>
+            <div class="form-group" style="margin-bottom:0;">
+              <label class="form-label" for="pred-budget" style="font-size:11px;">Max Budget</label>
+              <select class="form-select" id="pred-budget" style="padding:8px 12px;font-size:var(--fs-xs);">
+                <option value="100">Any Budget</option>
+                <option value="10">Up to ₹10 Lakh</option>
+                <option value="30">Up to ₹30 Lakh</option>
+                <option value="80">Up to ₹80 Lakh</option>
+              </select>
+            </div>
+            <div>
+              <button type="submit" class="btn btn-primary btn-sm" style="padding:10px 16px;white-space:nowrap;">Predict Options 🚀</button>
+            </div>
+          </div>
+        </form>
+
         <div class="predictor-header">
-          <h3>Sample College Options</h3>
-          <span class="predictor-disclaimer">* Indicative only — not a guarantee of admission</span>
+          <h3 id="predictor-header-title">Predicted College Options</h3>
+          <span class="predictor-disclaimer">* Indicative estimates based on historical cutoffs</span>
         </div>
         <div class="table-wrap">
-          <table class="data-table" role="table" aria-label="Sample college prediction table">
+          <table class="data-table" role="table" aria-label="College prediction results table">
             <thead>
               <tr>
-                <th scope="col">College</th>
+                <th scope="col">College &amp; Location</th>
                 <th scope="col" style="text-align:right">Est. Probability</th>
                 <th scope="col" style="text-align:right">Est. Fees</th>
                 <th scope="col">Strategy</th>
               </tr>
             </thead>
-            <tbody>
-              <tr>
-                <td style="font-weight:600;">Government Medical College</td>
-                <td style="text-align:right;color:#3B82F6;font-weight:700;">85%</td>
-                <td style="text-align:right;font-weight:600;">₹5–8L</td>
-                <td><span class="tag tag--blue" style="font-size:10px;">Safe</span></td>
-              </tr>
-              <tr>
-                <td style="font-weight:600;">State Private Medical College</td>
-                <td style="text-align:right;color:#D97706;font-weight:700;">95%</td>
-                <td style="text-align:right;font-weight:600;">₹40–90L</td>
-                <td><span class="tag tag--bronze" style="font-size:10px;">Balanced</span></td>
-              </tr>
-              <tr>
-                <td style="font-weight:600;">Deemed University</td>
-                <td style="text-align:right;color:#10B981;font-weight:700;">99%</td>
-                <td style="text-align:right;font-weight:600;">₹40L – 1.2 Cr</td>
-                <td><span class="tag tag--green" style="font-size:10px;">High Probability</span></td>
-              </tr>
+            <tbody id="predictor-results-tbody">
             </tbody>
           </table>
         </div>
         <div style="padding:var(--sp-5) var(--sp-6);background:rgba(255,255,255,0.02);border-top:1px solid var(--clr-border);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:var(--sp-4);">
           <p style="font-size:var(--fs-xs);color:var(--clr-text-dim);font-style:italic;">Probability estimates are indicative and never a guarantee of admission. Always verify with official counselling authority.</p>
           <div style="display:flex;gap:var(--sp-3);flex-wrap:wrap;">
-            <a href="find-colleges.html" class="btn btn-secondary btn-sm">Find Colleges</a>
+            <a href="find-colleges.html" class="btn btn-secondary btn-sm">Find All Colleges</a>
             <button class="btn btn-primary btn-sm" data-modal="lead">Get Expert Counselling</button>
           </div>
         </div>
@@ -587,19 +610,19 @@
 
     <div class="grid-4 stagger" style="margin-top:var(--sp-10)">
       <div class="stat-card reveal">
-        <div class="stat-number" data-counter="5000" data-suffix="+">0+</div>
+        <div class="stat-number" data-counter="5000" data-suffix="+">5,000+</div>
         <div class="stat-label">Students Guided</div>
       </div>
       <div class="stat-card reveal">
-        <div class="stat-number" data-counter="500" data-suffix="+">0+</div>
+        <div class="stat-number" data-counter="500" data-suffix="+">500+</div>
         <div class="stat-label">Colleges & Universities Covered</div>
       </div>
       <div class="stat-card reveal">
-        <div class="stat-number" data-counter="20" data-suffix="+">0+</div>
+        <div class="stat-number" data-counter="20" data-suffix="+">20+</div>
         <div class="stat-label">Programs Covered</div>
       </div>
       <div class="stat-card reveal">
-        <div class="stat-number" data-counter="15" data-suffix="+">0+</div>
+        <div class="stat-number" data-counter="15" data-suffix="+">15+</div>
         <div class="stat-label">Countries Covered</div>
       </div>
     </div>
@@ -928,6 +951,8 @@
 </div>
 
 <script src="js/config.js"></script>
+<script src="js/college-database.js"></script>
+<script src="js/predictor.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>

@@ -6,7 +6,7 @@
   function getAnnouncement() {
     const p = getPathPrefix();
     return `<div class="announcement-bar" role="banner">
-      🏆 India's No.1 Education Consultancy — <a href="#" data-modal="lead" style="color:inherit;text-decoration:underline;font-weight:700;">Book Expert Admission Counselling Today</a>
+      🏆 India's No.1 Education Consultancy — <a href="javascript:void(0)" data-modal="lead" style="color:inherit;text-decoration:underline;font-weight:700;">Book Expert Admission Counselling Today</a>
     </div>`;
   }
 
