@@ -1051,3 +1051,82 @@ a[href*="wa.me"]:hover {
   border-radius: 4px !important;
   margin-bottom: var(--sp-3) !important;
 }
+
+
+/* =========================================================
+   COMPREHENSIVE MOBILE RESPONSIVE OVERRIDES (320px–768px)
+   ========================================================= */
+
+@media (max-width: 768px) {
+  /* 1. Reflow all hardcoded multi-column inline grids to single column on mobile */
+  div[style*="grid-template-columns:1fr 1fr"],
+  div[style*="grid-template-columns: 1fr 1fr"],
+  div[style*="grid-template-columns:1fr 1fr 1fr"],
+  div[style*="grid-template-columns: 1fr 1fr 1fr"],
+  div[style*="grid-template-columns:repeat(5,1fr)"],
+  div[style*="grid-template-columns: repeat(5,1fr)"] {
+    grid-template-columns: 1fr !important;
+    gap: var(--sp-6) !important;
+  }
+
+  /* 2. Optimize 9-Step Journey & Flex Step Items for Mobile */
+  div[style*="display:flex;align-items:center;gap:var(--sp-5)"],
+  div[style*="display: flex; align-items: center; gap: var(--sp-5)"] {
+    padding: 12px 14px !important;
+    gap: 12px !important;
+  }
+
+  .step-num {
+    width: 32px !important;
+    height: 32px !important;
+    font-size: 0.85rem !important;
+  }
+
+  /* 3. Hero & Section Spacing for Smartphones */
+  .page-hero {
+    padding-top: clamp(1.25rem, 4vw, 2.25rem) !important;
+    padding-bottom: clamp(1.5rem, 5vw, 2.5rem) !important;
+  }
+
+  /* 4. Table Scroll Wrapper on Mobile */
+  .table-wrap {
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    margin-inline: calc(-1 * var(--sp-4)) !important;
+    padding-inline: var(--sp-4) !important;
+  }
+
+  /* 5. Strategy Cards & Feature Cards on Small Screens */
+  .strategy-card {
+    padding: var(--sp-6) !important;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Extra tight smartphone adjustment for 320px–428px */
+  .container {
+    padding-inline: 14px !important;
+  }
+
+  .hero-h1, h1 {
+    font-size: clamp(1.65rem, 6.5vw, 2.15rem) !important;
+    line-height: 1.2 !important;
+  }
+
+  h2 {
+    font-size: clamp(1.35rem, 5.5vw, 1.75rem) !important;
+    line-height: 1.25 !important;
+  }
+
+  .btn-lg {
+    padding: 12px 18px !important;
+    font-size: 0.9rem !important;
+    width: 100% !important;
+    justify-content: center !important;
+  }
+
+  .hero-actions, .cta-banner-actions {
+    flex-direction: column !important;
+    width: 100% !important;
+  }
+}
