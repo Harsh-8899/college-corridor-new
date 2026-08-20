@@ -62,8 +62,8 @@
   </nav>
   <div class="mobile-nav" id="mobile-nav-drawer" role="dialog" aria-label="Mobile navigation" aria-modal="true">
     <div class="mobile-nav-header" style="position:sticky;top:0;z-index:10000;background:#0F172A;display:flex;align-items:center;justify-content:space-between;padding:12px 16px;margin:-1rem -1rem 1rem -1rem;border-bottom:1px solid rgba(255,255,255,0.2);box-shadow:0 4px 12px rgba(0,0,0,0.3);">
-      <span style="font-weight:700;font-size:1.05rem;color:#FFFFFF;letter-spacing:0.02em;display:flex;align-items:center;gap:8px;">
-        <span style="color:var(--clr-bronze-light);">✨</span> Navigation Pages
+      <span style="font-weight:700;font-size:1.1rem;color:#FFFFFF;letter-spacing:0.02em;display:flex;align-items:center;gap:8px;">
+        <img src="${p}assets/images/logo-icon.png" alt="College Corridor" style="height:26px;width:auto;object-fit:contain;"> College Corridor
       </span>
       <button class="mobile-nav-close-btn" aria-label="Close navigation menu" style="display:flex;align-items:center;gap:6px;background:#EF4444;padding:8px 16px;border-radius:24px;color:#FFFFFF;font-weight:800;font-size:0.9rem;border:none;cursor:pointer;box-shadow:0 2px 8px rgba(239,68,68,0.4);">
         <span>Close</span>
