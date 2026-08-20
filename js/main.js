@@ -80,6 +80,12 @@
       }
     });
 
+    
+    const closeBtn = mobileNav.querySelector('.mobile-nav-close-btn');
+    if (closeBtn) {
+      closeBtn.addEventListener('click', closeMobileMenu);
+    }
+
     function closeMobileMenu() {
       hamburger.classList.remove('open');
       mobileNav.classList.remove('open');

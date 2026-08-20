@@ -61,6 +61,13 @@
     </div>
   </nav>
   <div class="mobile-nav" id="mobile-nav-drawer" role="dialog" aria-label="Mobile navigation" aria-modal="true">
+    <div class="mobile-nav-header" style="display:flex;align-items:center;justify-content:space-between;padding-bottom:1rem;margin-bottom:1rem;border-bottom:1px solid rgba(255,255,255,0.15);">
+      <span style="font-weight:700;font-size:1.05rem;color:var(--clr-bronze-light);letter-spacing:0.02em;">College Corridor Menu</span>
+      <button class="mobile-nav-close-btn" aria-label="Close navigation menu" style="display:flex;align-items:center;gap:6px;background:rgba(239,68,68,0.15);padding:6px 14px;border-radius:20px;color:#FFFFFF;font-weight:700;font-size:0.85rem;border:1px solid rgba(239,68,68,0.4);cursor:pointer;">
+        <span>Close</span>
+        <span style="font-size:1.1rem;line-height:1;">✕</span>
+      </button>
+    </div>
     <a href="${p}medical-admissions.html" class="mobile-nav-link">🏥 Medical Admissions</a>
     <a href="${p}engineering-admissions.html" class="mobile-nav-link">⚙️ Engineering Admissions</a>
     <a href="${p}management-admissions.html" class="mobile-nav-link">📊 MBA & Management</a>
