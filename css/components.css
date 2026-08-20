@@ -668,8 +668,8 @@
 }
 .footer-legal-links a:hover { color: var(--clr-bronze-light); }
 
-.section-alt { background: #F1F5F9; }
-.section-dark { background: #0F172A; color: #FFFFFF; }
+.section-alt { background: #1C2541; border-top: 1px solid rgba(212,175,55,0.2); border-bottom: 1px solid rgba(212,175,55,0.2); }
+.section-dark { background: #070D1F; color: #FFFFFF; }
 
 /* =========================================================
    COMPREHENSIVE CONTRAST & VISIBILITY ENFORCEMENT

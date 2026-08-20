@@ -8,42 +8,42 @@
 
 /* ── Design Tokens ────────────────────────────────────── */
 :root {
-  /* Slate & Warm Bronze Palette */
-  --clr-bg:          #F1F5F9;       /* Soft Ice Slate Background */
-  --clr-bg-2:        #F8FAFC;       /* Soft Card Surface */
-  --clr-bg-3:        #E2E8F0;       /* Mid Slate Accent */
-  --clr-surface:     rgba(30, 41, 59, 0.05);
-  --clr-surface-2:   rgba(30, 41, 59, 0.10);
-  --clr-border:      rgba(30, 41, 59, 0.15);
-  --clr-border-2:    rgba(30, 41, 59, 0.25);
+  /* Luxury Midnight Navy & Gold Palette */
+  --clr-bg:          #0B132B;       /* Rich Dark Sapphire Navy */
+  --clr-bg-2:        #1C2541;       /* Deep Slate Card Surface */
+  --clr-bg-3:        #1E293B;       /* Midnight Slate Accent */
+  --clr-surface:     rgba(255, 255, 255, 0.06);
+  --clr-surface-2:   rgba(255, 255, 255, 0.12);
+  --clr-border:      rgba(212, 175, 55, 0.3);
+  --clr-border-2:    rgba(212, 175, 55, 0.5);
 
-  --clr-slate:       #1E293B;       /* Primary Deep Slate */
-  --clr-slate-mid:   #334155;       /* Medium Slate */
-  --clr-slate-dark:  #0F172A;       /* Midnight Slate */
-  --clr-slate-dim:   rgba(30, 41, 59, 0.08);
+  --clr-slate:       #F8FAFC;
+  --clr-slate-mid:   #E2E8F0;
+  --clr-slate-dark:  #FFFFFF;
+  --clr-slate-dim:   rgba(255, 255, 255, 0.1);
 
-  --clr-bronze:      #C59B27;       /* Rich Warm Bronze */
-  --clr-bronze-light:#E2B842;       /* Bright Warm Bronze */
-  --clr-bronze-dark: #A17B16;       /* Deep Antique Bronze */
-  --clr-bronze-dim:  rgba(197, 155, 39, 0.16);
+  --clr-bronze:      #D4AF37;       /* Rich Warm Metallic Gold */
+  --clr-bronze-light:#FCD34D;       /* Bright Warm Gold */
+  --clr-bronze-dark: #B48A16;       /* Deep Antique Gold */
+  --clr-bronze-dim:  rgba(212, 175, 55, 0.22);
 
-  --clr-blue:        #2563EB;       /* Academic Royal Blue */
-  --clr-teal:        #0D9488;       /* Academic Teal */
-  --clr-green:       #16A34A;       /* Deep Emerald Green */
-  --clr-amber:       #D97706;       /* Warm Amber */
-  --clr-red:         #DC2626;       /* Crimson Red */
+  --clr-blue:        #2563EB;
+  --clr-teal:        #38BDF8;
+  --clr-green:       #10B981;
+  --clr-amber:       #F59E0B;
+  --clr-red:         #EF4444;
 
-  --clr-text:        #0F172A;       /* Midnight Slate Text */
-  --clr-text-2:      #334155;       /* Subdued Slate Text */
-  --clr-text-muted:  #64748B;       /* Muted Text */
-  --clr-text-dim:    #94A3B8;       /* Dim Text */
+  --clr-text:        #FFFFFF;       /* Crisp White Body Text */
+  --clr-text-2:      #CBD5E1;       /* Soft Ice Blue Subtext */
+  --clr-text-muted:  #94A3B8;
+  --clr-text-dim:    #64748B;
 
   /* Gradients */
-  --grad-hero:       linear-gradient(135deg, #0F172A 0%, #1E293B 55%, #334155 100%);
-  --grad-bronze:     linear-gradient(135deg, #C59B27, #E2B842);
-  --grad-slate:      linear-gradient(135deg, #1E293B, #334155);
-  --grad-card:       linear-gradient(145deg, #FFFFFF 0%, #F8FAFC 100%);
-  --grad-section:    linear-gradient(180deg, #F8FAFC 0%, #F1F5F9 100%);
+  --grad-hero:       radial-gradient(circle at 50% 20%, rgba(37, 99, 235, 0.2) 0%, #0B132B 80%);
+  --grad-bronze:     linear-gradient(135deg, #D4AF37, #FCD34D);
+  --grad-slate:      linear-gradient(135deg, #1C2541, #0B132B);
+  --grad-card:       linear-gradient(145deg, #1C2541 0%, #0B132B 100%);
+  --grad-section:    linear-gradient(180deg, #0B132B 0%, #1C2541 100%);
 
   /* Typography */
   --font-heading:    'Outfit', system-ui, sans-serif;
