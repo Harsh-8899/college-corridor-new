@@ -9,13 +9,13 @@
 /* ── Design Tokens ────────────────────────────────────── */
 :root {
   /* Slate & Warm Bronze Palette */
-  --clr-bg:          #F8FAFC;       /* Soft Ice White Background */
-  --clr-bg-2:        #FFFFFF;       /* Pure White Card Background */
-  --clr-bg-3:        #F1F5F9;       /* Light Warm Slate Surface */
-  --clr-surface:     rgba(30, 41, 59, 0.04);
-  --clr-surface-2:   rgba(30, 41, 59, 0.08);
-  --clr-border:      rgba(30, 41, 59, 0.12);
-  --clr-border-2:    rgba(30, 41, 59, 0.22);
+  --clr-bg:          #F1F5F9;       /* Soft Ice Slate Background */
+  --clr-bg-2:        #F8FAFC;       /* Soft Card Surface */
+  --clr-bg-3:        #E2E8F0;       /* Mid Slate Accent */
+  --clr-surface:     rgba(30, 41, 59, 0.05);
+  --clr-surface-2:   rgba(30, 41, 59, 0.10);
+  --clr-border:      rgba(30, 41, 59, 0.15);
+  --clr-border-2:    rgba(30, 41, 59, 0.25);
 
   --clr-slate:       #1E293B;       /* Primary Deep Slate */
   --clr-slate-mid:   #334155;       /* Medium Slate */
