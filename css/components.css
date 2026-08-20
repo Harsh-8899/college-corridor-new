@@ -739,7 +739,8 @@
 
 .section h1, .section h2, .section h3, .section h4,
 .section-alt h1, .section-alt h2, .section-alt h3, .section-alt h4 {
-  color: #0F172A;
+  color: #F5D97A !important;
+  -webkit-text-fill-color: #F5D97A !important;
 }
 
 .card,
@@ -984,15 +985,15 @@ header {
   text-shadow: none !important;
 }
 
-/* All headings inside light containers: Solid Dark Slate */
+/* All headings inside sections: Light Gold for dark navy visibility */
 .section h1, .section h2, .section h3, .section h4, .section h5, .section h6,
 .section-alt h1, .section-alt h2, .section-alt h3, .section-alt h4, .section-alt h5, .section-alt h6,
 .card h1, .card h2, .card h3, .card h4, .card h5, .card h6,
 .feature-card h1, .feature-card h2, .feature-card h3, .feature-card h4, .feature-card h5, .feature-card h6,
 .section .grad-text, .section-alt .grad-text, .card .grad-text {
-  color: #0F172A !important;
+  color: #F5D97A !important;
   background: none !important;
-  -webkit-text-fill-color: #0F172A !important;
+  -webkit-text-fill-color: #F5D97A !important;
   text-shadow: none !important;
 }
 
