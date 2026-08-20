@@ -100,21 +100,40 @@
     const overlay = document.getElementById('lead-modal');
     if (!overlay) return;
 
+    // Enable iOS Safari event delegation
+    document.body.setAttribute('onclick', '');
+
     const closeBtn = overlay.querySelector('.modal-close');
     const form     = overlay.querySelector('#lead-form');
+    let lastModalTrigger = 0;
 
-    // Open triggers (Event delegation on document for 100% reliability across all elements)
-    document.addEventListener('click', (e) => {
+    function handleTrigger(e) {
+      const now = Date.now();
+      if (now - lastModalTrigger < 250) return;
+
       const modalBtn = e.target.closest('[data-modal], .btn-blue, button:not(.hamburger):not(.modal-close):not(.mobile-nav-close-btn)');
-      if (modalBtn && (modalBtn.dataset.modal || modalBtn.textContent.includes('COUNSELLING') || modalBtn.textContent.includes('ADVISOR') || modalBtn.textContent.includes('OPTIONS') || modalBtn.textContent.includes('STRATEGY') || modalBtn.textContent.includes('GUIDANCE'))) {
-        if (modalBtn.getAttribute('type') === 'submit' || modalBtn.closest('form')) return;
-        e.preventDefault();
-        openModal(modalBtn.dataset.program || modalBtn.textContent.trim());
+      if (modalBtn) {
+        // Exclude form submits and navbar buttons
+        if (modalBtn.getAttribute('type') === 'submit' || modalBtn.closest('form') || modalBtn.classList.contains('hamburger') || modalBtn.classList.contains('mobile-nav-close-btn')) return;
+
+        const txt = (modalBtn.textContent || '').trim().toUpperCase();
+        if (modalBtn.dataset.modal || txt.includes('COUNSELLING') || txt.includes('ADVISOR') || txt.includes('OPTIONS') || txt.includes('STRATEGY') || txt.includes('GUIDANCE') || txt.includes('EXPLORE') || txt.includes('MBBS') || txt.includes('B.TECH') || txt.includes('MBA') || txt.includes('SERVICES')) {
+          e.preventDefault();
+          lastModalTrigger = now;
+          openModal(modalBtn.dataset.program || modalBtn.textContent.trim());
+        }
       }
-    });
+    }
+
+    // Bind both click and touchend for 100% iOS Safari & Android Mobile support
+    document.addEventListener('click', handleTrigger, true);
+    document.addEventListener('touchend', handleTrigger, { passive: false });
 
     // Close
-    if (closeBtn) closeBtn.addEventListener('click', closeModal);
+    if (closeBtn) {
+      closeBtn.addEventListener('click', closeModal);
+      closeBtn.addEventListener('touchend', (e) => { e.preventDefault(); closeModal(); });
+    }
     overlay.addEventListener('click', (e) => { if (e.target === overlay) closeModal(); });
 
     // Escape key
