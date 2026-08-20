@@ -1171,3 +1171,25 @@ a[href*="wa.me"]:hover {
     gap: var(--sp-6) !important;
   }
 }
+
+
+/* Dynamic Mobile Menu: Hide page content when mobile drawer opens */
+body.mobile-menu-open > *:not(header):not(#announcement-bar-slot) {
+  display: none !important;
+}
+
+body.mobile-menu-open {
+  background-color: #0F172A !important;
+}
+
+.mobile-nav {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  height: 100dvh !important;
+  z-index: 9999 !important;
+  background: #0F172A !important;
+  padding-top: calc(var(--nav-h) + 1rem) !important;
+}

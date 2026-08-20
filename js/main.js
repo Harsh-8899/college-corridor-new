@@ -63,6 +63,7 @@
     hamburger.addEventListener('click', () => {
       const isOpen = hamburger.classList.toggle('open');
       mobileNav.classList.toggle('open', isOpen);
+      document.body.classList.toggle('mobile-menu-open', isOpen);
       document.body.style.overflow = isOpen ? 'hidden' : '';
       hamburger.setAttribute('aria-expanded', isOpen);
     });
@@ -82,6 +83,7 @@
     function closeMobileMenu() {
       hamburger.classList.remove('open');
       mobileNav.classList.remove('open');
+      document.body.classList.remove('mobile-menu-open');
       document.body.style.overflow = '';
       hamburger.setAttribute('aria-expanded', 'false');
     }
