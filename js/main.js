@@ -103,12 +103,13 @@
     const closeBtn = overlay.querySelector('.modal-close');
     const form     = overlay.querySelector('#lead-form');
 
-    // Open triggers
-    document.querySelectorAll('[data-modal="lead"]').forEach(btn => {
-      btn.addEventListener('click', (e) => {
+    // Open triggers (Event delegation on document for 100% reliability across all dynamically rendered elements)
+    document.addEventListener('click', (e) => {
+      const modalBtn = e.target.closest('[data-modal="lead"]');
+      if (modalBtn) {
         e.preventDefault();
-        openModal(btn.dataset.program || '');
-      });
+        openModal(modalBtn.dataset.program || '');
+      }
     });
 
     // Close
