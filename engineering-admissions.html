@@ -3,61 +3,118 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>B.Tech Admissions & Engineering Counselling Strategy | College Corridor</title>
-  <meta name="description" content="Strategic engineering admission guidance for B.Tech aspirants across JoSAA, CSAB, State counselling & leading private universities in India.">
+  <title>Engineering Admissions Advisory | JoSAA, CSAB & B.Tech Strategy | College Corridor</title>
+  <meta name="description" content="Strategic engineering admission guidance for JEE Main, JEE Advanced, JoSAA, CSAB, State CET & leading private engineering institutions in India.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/components.css">
   <link rel="stylesheet" href="css/animations.css">
   <style>
-    :root {
-      --clr-engg: #3B82F6;
-      --clr-gold: #C59B27;
-      --clr-gold-light: #FCD34D;
-      --clr-dark: #0F172A;
-      --clr-border-gold: rgba(197, 155, 39, 0.35);
-    }
-    .engg-hero {
-      padding: var(--sp-12) 0 var(--sp-10) 0;
-      background: radial-gradient(circle at 50% 20%, rgba(59, 130, 246, 0.2) 0%, rgba(15, 23, 42, 0.98) 75%), #0F172A;
-      color: #FFFFFF;
-      text-align: center;
-      border-bottom: 2px solid var(--clr-border-gold);
-    }
-    .btn-gold {
-      background: linear-gradient(135deg, #C59B27 0%, #D97706 100%);
-      color: #0F172A !important;
-      font-weight: 900 !important;
-      font-size: 1.1rem !important;
-      padding: 16px 34px !important;
-      border-radius: var(--radius-md) !important;
-      box-shadow: 0 8px 25px rgba(197, 155, 39, 0.4) !important;
-      transition: all 0.3s ease !important;
-      border: 2px solid #FCD34D !important;
-      text-transform: uppercase;
-    }
-    .btn-gold:hover {
-      transform: translateY(-3px) scale(1.02);
-      box-shadow: 0 12px 35px rgba(197, 155, 39, 0.6) !important;
-      background: linear-gradient(135deg, #FCD34D 0%, #C59B27 100%);
-    }
-    .tag-cloud {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      justify-content: center;
-      margin-top: 16px;
-    }
-    .tag-item {
-      background: rgba(255, 255, 255, 0.06);
-      border: 1px solid var(--clr-border-gold);
-      padding: 8px 14px;
-      border-radius: 6px;
-      font-size: 13px;
-      font-weight: 700;
-      color: #F8FAFC;
-    }
+  body { background: var(--ivory); }
+  .idx-eyebrow { display:flex;align-items:center;gap:12px;margin-bottom:1.5rem; }
+  .idx-eyebrow-line { width:28px;height:1px;background:var(--gold);flex-shrink:0; }
+  .idx-eyebrow-text { font-family:var(--font-sans);font-size:.6875rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--gold); }
+  .reveal { opacity:0;transform:translateY(22px);transition:opacity .6s ease,transform .6s ease; }
+  .reveal.in { opacity:1;transform:translateY(0); }
+
+  /* Hero */
+  .eng-hero {
+    background:var(--navy);
+    min-height:90vh;
+    display:grid;
+    grid-template-columns:1.1fr .9fr;
+    overflow:hidden;
+    position:relative;
+  }
+  .eng-hero-left {
+    display:flex;flex-direction:column;justify-content:center;
+    padding:clamp(4rem,8vw,7rem) clamp(2rem,5vw,5rem);
+    z-index:2;
+  }
+  .eng-h1 { font-family:var(--font-serif);font-weight:400;font-size:clamp(2.5rem,4.8vw,4rem);color:#fff;line-height:1.06;letter-spacing:-.025em;margin-bottom:1rem; }
+  .eng-h1 em { font-style:italic;color:var(--gold); }
+  .eng-h1 strong { font-weight:500;display:block;font-size:clamp(1.125rem,2.2vw,1.6rem);letter-spacing:.05em;text-transform:uppercase;font-family:var(--font-sans);color:rgba(248,250,252,.45);margin-top:.75rem; }
+  .eng-hero-body { font-size:var(--fs-md);color:rgba(248,250,252,.6);line-height:1.75;max-width:440px;margin-bottom:2.5rem; }
+
+  .eng-hero-right {
+    position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center;
+  }
+  .eng-hero-bg-img {
+    width:100%;height:100%;object-fit:cover;object-position:center;
+    filter:brightness(0.6) contrast(1.1);
+  }
+  .eng-hero-overlay {
+    position:absolute;inset:0;
+    background:linear-gradient(to right, var(--navy) 0%, rgba(11,18,32,0.4) 50%, transparent 100%);
+    pointer-events:none;
+  }
+  .eng-hero-card {
+    position:absolute;z-index:3;
+    background:rgba(11,18,32,0.85);backdrop-filter:blur(12px);
+    border:1px solid rgba(37,99,235,0.3);border-radius:8px;
+    padding:1.75rem;max-width:360px;width:90%;
+  }
+
+  /* Visual Asset 02 - Dilemma Box */
+  .dilemma-box {
+    background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.1);
+    border-radius:6px;padding:2rem;margin-top:2rem;
+  }
+
+  /* Visual Asset 03 - Branch Ecosystem */
+  .branch-grid { display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:1px solid var(--border); }
+  .branch-card { padding:2rem 1.5rem;border-right:1px solid var(--border);border-bottom:1px solid var(--border);background:var(--white);transition:background var(--trans-fast); }
+  .branch-card:nth-child(3n) { border-right:none; }
+  .branch-card:hover { background:var(--ivory); }
+  .branch-tag { font-size:.625rem;font-weight:700;letter-spacing:.14em;color:var(--blue);text-transform:uppercase;margin-bottom:.5rem; }
+
+  /* Visual Asset 04 - Split Comparison */
+  .eng-vs-split { display:grid;grid-template-columns:1fr 1fr;gap:2rem;margin-top:2.5rem; }
+  .eng-vs-box { padding:2.25rem;background:var(--white);border:1px solid var(--border); }
+  .eng-vs-box.smart { border-color:var(--gold-border);background:rgba(201,162,39,.03); }
+
+  /* Visual Asset 05 - Campus Life Annotated */
+  .campus-annotated-wrap {
+    position:relative;border-radius:6px;overflow:hidden;margin-top:2rem;
+    max-height:460px;
+  }
+  .campus-annotated-wrap img { width:100%;height:100%;object-fit:cover;display:block; }
+  .campus-marker {
+    position:absolute;background:rgba(11,18,32,0.88);backdrop-filter:blur(6px);
+    border:1px solid var(--gold);color:#fff;font-size:var(--fs-xs);font-weight:600;
+    padding:6px 14px;border-radius:100px;display:inline-flex;align-items:center;gap:6px;
+    box-shadow:0 4px 12px rgba(0,0,0,0.3);
+  }
+
+  /* Visual Asset 06 - Flowchart */
+  .flowchart-wrap {
+    display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;
+    padding:2rem;background:var(--navy-soft);border:1px solid rgba(255,255,255,0.08);
+    border-radius:6px;margin-top:2rem;
+  }
+  .flow-step { text-align:center;flex:1;min-width:120px; }
+  .flow-num { font-family:var(--font-serif);font-size:1.5rem;color:var(--gold);margin-bottom:.25rem; }
+  .flow-lbl { font-size:var(--fs-xs);font-weight:700;letter-spacing:.08em;color:#fff;text-transform:uppercase; }
+  .flow-sub { font-size:.6875rem;color:rgba(248,250,252,0.5);margin-top:2px; }
+  .flow-arrow { color:var(--gold);font-size:1.25rem;opacity:0.6; }
+
+  /* Visual Asset 07 - Advisor Photo */
+  .advisor-photo-wrap {
+    display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center;
+    background:var(--white);border:1px solid var(--border);padding:2.5rem;
+  }
+  .advisor-photo-wrap img { width:100%;height:100%;max-height:360px;object-fit:cover;border-radius:4px; }
+
+  @media(max-width:900px){
+    .eng-hero { grid-template-columns:1fr; }
+    .eng-hero-right { min-height:320px; }
+    .branch-grid { grid-template-columns:1fr; }
+    .eng-vs-split { grid-template-columns:1fr; }
+    .advisor-photo-wrap { grid-template-columns:1fr; }
+    .flowchart-wrap { flex-direction:column; }
+    .flow-arrow { transform:rotate(90deg); }
+  }
   </style>
 </head>
 <body>
@@ -67,207 +124,306 @@
 
 <main>
 
-  <!-- HERO SECTION -->
-  <section class="engg-hero" aria-labelledby="engg-title">
-    <div class="container">
-      <span class="section-label" style="background: rgba(59,130,246,0.2); color: #60A5FA; border: 1px solid rgba(96,165,250,0.4);">
-        Engineering Admissions Advisory
-      </span>
+<!-- 01. HERO WITH VISUAL ASSET 01 -->
+<section class="eng-hero" aria-labelledby="eng-h1">
+  <div class="eng-hero-left">
+    <div class="idx-eyebrow reveal"><span class="idx-eyebrow-line"></span><span class="idx-eyebrow-text">College Corridor Engineering Advisory</span></div>
+    <h1 id="eng-h1" class="eng-h1 reveal" style="transition-delay:.08s">
+      Your rank opens doors.<br>
+      <em>The strategy decides which one you walk through.</em>
+      <strong>JoSAA, CSAB, State Quota &amp; Private B.Tech Strategy</strong>
+    </h1>
+    <p class="eng-hero-body reveal" style="transition-delay:.15s">
+      Engineering admissions are not just about rank. The best college is not always the best decision when branch fit, total cost, lab infrastructure, and placement trajectory mismatch.
+    </p>
+    <div class="reveal" style="transition-delay:.22s">
+      <button class="btn btn-primary" data-modal="lead" data-program="Engineering Advisory" style="background:var(--blue);border-color:var(--blue);color:#fff;">Compare My Engineering Options &rarr;</button>
+    </div>
+  </div>
 
-      <h1 id="engg-title" style="font-size: clamp(2rem, 4.8vw, 3.8rem); font-weight: 900; color: #FFFFFF !important; -webkit-text-fill-color: #FFFFFF !important; margin: 16px 0 12px 0; line-height: 1.15;">
-        B.TECH ADMISSIONS.<br>DON'T JUST CHOOSE A COLLEGE. CHOOSE YOUR DIRECTION.
-      </h1>
-
-      <p style="font-size: 1.15rem; color: #CBD5E1; max-width: 820px; margin: 0 auto 24px auto;">
-        JEE Main • JoSAA • CSAB • State Counselling • Private University Admissions • Institutional Routes
-      </p>
-
-      <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 16px;">
-        <button class="btn btn-gold" data-modal="lead" data-program="B.Tech Strategy">
-          GET MY B.TECH STRATEGY
-        </button>
-        <button class="btn btn-secondary btn-lg" data-modal="lead" data-program="B.Tech Options">
-          MAP MY ADMISSION OPTIONS
-        </button>
+  <div class="eng-hero-right">
+    <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1200&q=80" alt="Indian Engineering Students in Institute Campus" class="eng-hero-bg-img">
+    <div class="eng-hero-overlay"></div>
+    <div class="eng-hero-card reveal">
+      <div style="font-size:.625rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--blue);margin-bottom:.75rem;">JoSAA / CSAB Decision Board</div>
+      <div style="display:flex;flex-direction:column;gap:.5rem;font-size:.75rem;color:rgba(248,250,252,.75);">
+        <div style="display:flex;justify-content:space-between;border-bottom:1px solid rgba(255,255,255,.08);padding-bottom:.375rem;"><span>Target Path</span><span style="font-weight:700;color:#fff;">IIT / NIT / IIIT / GFTI</span></div>
+        <div style="display:flex;justify-content:space-between;border-bottom:1px solid rgba(255,255,255,.08);padding-bottom:.375rem;"><span>Specialisation</span><span style="font-weight:700;color:var(--gold);">CSE vs ECE vs Core</span></div>
+        <div style="display:flex;justify-content:space-between;border-bottom:1px solid rgba(255,255,255,.08);padding-bottom:.375rem;"><span>Counselling</span><span style="font-weight:700;color:#fff;">JoSAA / CSAB / State CET</span></div>
+        <div style="display:flex;justify-content:space-between;"><span>Evaluation</span><span style="font-weight:700;color:#fff;">Branch + ROI + Placement</span></div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- EMOTIONAL SECTION -->
-  <section class="section" aria-labelledby="fit-heading">
-    <div class="container">
-      <div class="section-heading centered reveal">
-        <span class="section-label">Fit & Opportunity</span>
-        <h2 id="fit-heading">FOUR YEARS IS A LONG TIME TO REALIZE YOU CHOSE THE WRONG FIT.</h2>
-      </div>
+<!-- 02. CHAPTER 01 WITH VISUAL ASSET 02 -->
+<section style="background:var(--navy-soft);padding:clamp(5rem,8vw,7rem) 0;" aria-labelledby="eng-ch1">
+  <div class="container" style="max-width:840px;">
+    <div class="idx-eyebrow reveal"><span class="idx-eyebrow-line"></span><span class="idx-eyebrow-text">Chapter 01 — The Choice</span></div>
+    <h2 id="eng-ch1" style="font-family:var(--font-serif);font-size:clamp(1.85rem,3.8vw,3rem);color:#fff;font-weight:400;margin-bottom:1.5rem;line-height:1.15;">
+      The branch can matter<br><em>as much as the college.</em>
+    </h2>
+    <p style="font-size:var(--fs-base);color:rgba(248,250,252,.65);line-height:1.8;margin-bottom:2rem;">
+      "Should I take Computer Science at a tier-2 institute or Core Mechanical at a top NIT?" Every year, tens of thousands of engineering families face this exact choice. Generic advice on WhatsApp or YouTube doesn't account for your specific rank, financial budget, or career aspirations.
+    </p>
 
-      <div style="max-width: 840px; margin: 0 auto; text-align: center;" class="reveal">
-        <p style="font-size: 1.1rem; color: var(--clr-text-main); line-height: 1.8; margin-bottom: 24px;">
-          When you select an engineering college, you are choosing your: <strong>College • Branch • City • Total Fee Investment • Peer Group • Academic Environment • Career Ecosystem • Placements • Future Specialization.</strong>
-        </p>
-
-        <div style="background: var(--clr-surface); border: 2px solid var(--clr-border); border-radius: var(--radius-xl); padding: var(--sp-8); box-shadow: var(--shadow-lg); margin-bottom: 24px;">
-          <h3 style="font-size: 1.3rem; color: #0F172A; font-weight: 900; margin-bottom: 12px;">
-            Don't make that decision from a single ranking or a friend's recommendation.
-          </h3>
-          <p style="font-size: 14px; color: var(--clr-text-2); margin: 0;">
-            An engineering degree should align with your academic strengths and long-term career ambition—not just convenience.
-          </p>
-        </div>
-
-        <button class="btn btn-primary btn-lg" data-modal="lead" data-program="Fit Evaluation">
-          EVALUATE MY FIT
-        </button>
+    <!-- VISUAL ASSET 02: DILEMMA BREAKDOWN -->
+    <div class="dilemma-box reveal">
+      <div style="font-size:.6875rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem;">Strategic Decision Equation</div>
+      <div style="display:flex;align-items:center;justify-content:space-around;flex-wrap:wrap;gap:1rem;text-align:center;">
+        <div><div style="font-size:1.25rem;font-weight:700;color:#fff;">RANK</div><div style="font-size:.6875rem;color:rgba(248,250,252,.5);">JEE Main / Advanced</div></div>
+        <div style="color:var(--gold);font-weight:700;">+</div>
+        <div><div style="font-size:1.25rem;font-weight:700;color:var(--gold);">BRANCH</div><div style="font-size:.6875rem;color:rgba(248,250,252,.5);">CSE / ECE / Core</div></div>
+        <div style="color:var(--gold);font-weight:700;">+</div>
+        <div><div style="font-size:1.25rem;font-weight:700;color:#fff;">COLLEGE</div><div style="font-size:.6875rem;color:rgba(248,250,252,.5);">IIT / NIT / State / Private</div></div>
+        <div style="color:var(--gold);font-weight:700;">=</div>
+        <div><div style="font-size:1.25rem;font-weight:700;color:#34D399;">BETTER DECISION</div><div style="font-size:.6875rem;color:rgba(248,250,252,.5);">Long-Term Career Fit</div></div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- KNOWLEDGE SECTION -->
-  <section class="section section-alt" aria-labelledby="compare-heading">
-    <div class="container">
-      <div class="section-heading centered reveal">
-        <span class="section-label">Evaluation Matrix</span>
-        <h2 id="compare-heading">WHAT SHOULD YOU ACTUALLY COMPARE?</h2>
-        <p style="font-size: 1.1rem; color: #0F172A; font-weight: 700; margin-top: 8px;">Not just "Average Package."</p>
+<!-- 03. VISUAL ASSET 03 — BRANCH ECOSYSTEM -->
+<section style="background:var(--ivory);padding:clamp(5rem,8vw,7rem) 0;" aria-labelledby="branch-heading">
+  <div class="container">
+    <div class="idx-eyebrow reveal"><span class="idx-eyebrow-line"></span><span class="idx-eyebrow-text">Specialisation Intelligence</span></div>
+    <h2 id="branch-heading" style="font-family:var(--font-sans);font-weight:700;font-size:clamp(1.25rem,2.5vw,1.75rem);letter-spacing:.04em;text-transform:uppercase;color:var(--heading);margin-bottom:2.5rem;" class="reveal">
+      Evaluating Engineering Disciplines
+    </h2>
+
+    <div class="branch-grid">
+      <div class="branch-card reveal">
+        <div class="branch-tag">CSE &amp; IT</div>
+        <div style="font-weight:700;font-size:var(--fs-md);color:var(--heading);margin-bottom:.5rem;">Computer Science &amp; Engineering</div>
+        <p style="font-size:var(--fs-xs);color:var(--muted);line-height:1.5;">High current placement demand, fast industry evolution. Requires strong algorithmic fundamentals and continuous self-learning.</p>
       </div>
 
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 14px; margin: 24px 0;" class="reveal">
-        <div style="padding: 14px; background: var(--clr-surface); border: 1px solid var(--clr-border); border-radius: var(--radius-md); font-weight: 800; font-size: 13px; text-align: center;">💻 Branch Specialization</div>
-        <div style="padding: 14px; background: var(--clr-surface); border: 1px solid var(--clr-border); border-radius: var(--radius-md); font-weight: 800; font-size: 13px; text-align: center;">💰 Total Course Cost</div>
-        <div style="padding: 14px; background: var(--clr-surface); border: 1px solid var(--clr-border); border-radius: var(--radius-md); font-weight: 800; font-size: 13px; text-align: center;">📍 Location & Tech Hubs</div>
-        <div style="padding: 14px; background: var(--clr-surface); border: 1px solid var(--clr-border); border-radius: var(--radius-md); font-weight: 800; font-size: 13px; text-align: center;">⚙️ Industry Exposure</div>
-        <div style="padding: 14px; background: var(--clr-surface); border: 1px solid var(--clr-border); border-radius: var(--radius-md); font-weight: 800; font-size: 13px; text-align: center;">🚀 Internship Opportunities</div>
-        <div style="padding: 14px; background: var(--clr-surface); border: 1px solid var(--clr-border); border-radius: var(--radius-md); font-weight: 800; font-size: 13px; text-align: center;">🎓 Faculty & Research</div>
-        <div style="padding: 14px; background: var(--clr-surface); border: 1px solid var(--clr-border); border-radius: var(--radius-md); font-weight: 800; font-size: 13px; text-align: center;">🏛️ Infrastructure Labs</div>
-        <div style="padding: 14px; background: var(--clr-surface); border: 1px solid var(--clr-border); border-radius: var(--radius-md); font-weight: 800; font-size: 13px; text-align: center;">🌐 Student Ecosystem</div>
+      <div class="branch-card reveal">
+        <div class="branch-tag">AI &amp; DATA</div>
+        <div style="font-weight:700;font-size:var(--fs-md);color:var(--heading);margin-bottom:.5rem;">AI, ML &amp; Data Science</div>
+        <p style="font-size:var(--fs-xs);color:var(--muted);line-height:1.5;">Specialised software track. We evaluate curriculum depth vs core CSE to avoid superficial rebrandings by private universities.</p>
       </div>
 
-      <div style="text-align: center;" class="reveal">
-        <h3 style="font-size: 1.3rem; color: #0F172A; font-weight: 900; margin-bottom: 16px;">
-          The "best college" is not identical for every student.
-        </h3>
-        <button class="btn btn-primary" data-modal="lead" data-program="B.Tech Comparison">
-          COMPARE MY OPTIONS
-        </button>
-      </div>
-    </div>
-  </section>
-
-  <!-- COUNSELLING SECTION -->
-  <section class="section" aria-labelledby="routes-heading">
-    <div class="container">
-      <div class="section-heading centered reveal">
-        <span class="section-label">Multiple Pathways</span>
-        <h2 id="routes-heading">YOUR JEE RANK IS ONLY THE STARTING POINT.</h2>
+      <div class="branch-card reveal">
+        <div class="branch-tag">ECE</div>
+        <div style="font-weight:700;font-size:var(--fs-md);color:var(--heading);margin-bottom:.5rem;">Electronics &amp; Communication</div>
+        <p style="font-size:var(--fs-xs);color:var(--muted);line-height:1.5;">Versatile engineering branch bridging hardware, semiconductor VLSI design, robotics, and software careers.</p>
       </div>
 
-      <div style="max-width: 820px; margin: 0 auto; background: var(--clr-surface); border: 1px solid var(--clr-border); border-radius: var(--radius-xl); padding: var(--sp-8);" class="reveal">
-        <h3 style="font-size: 1.1rem; color: #0F172A; font-weight: 800; margin-bottom: 16px; text-align: center;">
-          Engineering Counselling Pathways We Navigate:
-        </h3>
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 10px; font-size: 13px; font-weight: 700;">
-          <div style="padding: 10px; background: rgba(15,23,42,0.04); border-radius: 6px;">🔹 JoSAA Counselling</div>
-          <div style="padding: 10px; background: rgba(15,23,42,0.04); border-radius: 6px;">🔹 CSAB Special Rounds</div>
-          <div style="padding: 10px; background: rgba(15,23,42,0.04); border-radius: 6px;">🔹 UPTAC / AKTU</div>
-          <div style="padding: 10px; background: rgba(15,23,42,0.04); border-radius: 6px;">🔹 JAC Delhi</div>
-          <div style="padding: 10px; background: rgba(15,23,42,0.04); border-radius: 6px;">🔹 IPU CET</div>
-          <div style="padding: 10px; background: rgba(15,23,42,0.04); border-radius: 6px;">🔹 MHT CET / CAP</div>
-          <div style="padding: 10px; background: rgba(15,23,42,0.04); border-radius: 6px;">🔹 KCET / KEA</div>
-          <div style="padding: 10px; background: rgba(15,23,42,0.04); border-radius: 6px;">🔹 COMEDK</div>
-          <div style="padding: 10px; background: rgba(15,23,42,0.04); border-radius: 6px;">🔹 WBJEE</div>
-          <div style="padding: 10px; background: rgba(15,23,42,0.04); border-radius: 6px;">🔹 Direct University Entrances</div>
-        </div>
+      <div class="branch-card reveal">
+        <div class="branch-tag">EEE / EE</div>
+        <div style="font-weight:700;font-size:var(--fs-md);color:var(--heading);margin-bottom:.5rem;">Electrical Engineering</div>
+        <p style="font-size:var(--fs-xs);color:var(--muted);line-height:1.5;">Rigorous core discipline with strong opportunities in EV technology, power systems, PSU GATE jobs, and higher studies.</p>
+      </div>
 
-        <div style="text-align: center; margin-top: 24px;">
-          <h3 style="font-size: 1.2rem; color: #0F172A; font-weight: 900; margin-bottom: 16px;">
-            THE MORE ROUTES YOU HAVE, THE MORE STRATEGIC THE DECISION BECOMES.
-          </h3>
-          <button class="btn btn-primary" data-modal="lead" data-program="Map Options">
-            MAP MY ADMISSION OPTIONS
-          </button>
-        </div>
+      <div class="branch-card reveal">
+        <div class="branch-tag">MECH &amp; AERO</div>
+        <div style="font-weight:700;font-size:var(--fs-md);color:var(--heading);margin-bottom:.5rem;">Mechanical &amp; Aerospace</div>
+        <p style="font-size:var(--fs-xs);color:var(--muted);line-height:1.5;">Core manufacturing, automotive, and defence engineering. Best pursued at institutions with established laboratory infrastructure.</p>
+      </div>
+
+      <div class="branch-card reveal">
+        <div class="branch-tag">CIVIL &amp; OTHER</div>
+        <div style="font-weight:700;font-size:var(--fs-md);color:var(--heading);margin-bottom:.5rem;">Civil, Chemical &amp; Biotech</div>
+        <p style="font-size:var(--fs-xs);color:var(--muted);line-height:1.5;">Specialised core fields offering distinct public sector, research, global master's, and niche corporate career paths.</p>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- TOP ENGINEERING INSTITUTIONS -->
-  <section class="section dark-section" style="background: #0F172A; color: #FFFFFF;" aria-labelledby="colleges-heading">
-    <div class="container">
-      <div class="section-heading centered reveal">
-        <span class="section-label" style="background: rgba(201,150,12,0.2); color: #FCD34D;">Leading Institutions</span>
-        <h2 id="colleges-heading" style="color: #FFFFFF !important; -webkit-text-fill-color: #FFFFFF !important;">
-          TOP B.TECH INSTITUTIONS WE GUIDE STUDENTS FOR
+<!-- 04. VISUAL ASSET 04 — COLLEGE VS BRANCH SPLIT -->
+<section style="background:var(--white);padding:clamp(5rem,8vw,7rem) 0;" aria-labelledby="vs-heading">
+  <div class="container">
+    <div class="idx-eyebrow reveal"><span class="idx-eyebrow-line"></span><span class="idx-eyebrow-text">Strategic Decision Split</span></div>
+    <h2 id="vs-heading" style="font-family:var(--font-sans);font-weight:700;font-size:clamp(1.25rem,2.5vw,1.75rem);letter-spacing:.04em;text-transform:uppercase;color:var(--heading);margin-bottom:.5rem;" class="reveal">
+      A Great College with the Wrong Branch May Not Be Your Best Decision
+    </h2>
+    <p style="font-size:var(--fs-base);color:var(--body);max-width:620px;margin-bottom:2rem;" class="reveal">
+      What most families evaluate versus what actually determines a successful B.Tech journey.
+    </p>
+
+    <div class="eng-vs-split">
+      <div class="eng-vs-box reveal-left">
+        <div style="font-size:.6875rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:1rem;">What Most Families See</div>
+        <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:.75rem;font-size:var(--fs-sm);color:var(--body);">
+          <li>❌ Highest placement CTC headline in brochures</li>
+          <li>❌ Overall institutional rank integer</li>
+          <li>❌ Campus building photos &amp; marketing claims</li>
+          <li>❌ Unverified peer opinions in WhatsApp groups</li>
+          <li>❌ Popularity of college name alone</li>
+        </ul>
+      </div>
+
+      <div class="eng-vs-box smart reveal-right">
+        <div style="font-size:.6875rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem;">What College Corridor Evaluates</div>
+        <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:.75rem;font-size:var(--fs-sm);color:var(--heading);font-weight:500;">
+          <li>✓ Median package &amp; actual branch placement %</li>
+          <li>✓ JoSAA / CSAB cutoff trends &amp; round movement</li>
+          <li>✓ Industry internship network &amp; location advantage</li>
+          <li>✓ Faculty quality, lab equipment &amp; research output</li>
+          <li>✓ Category, domicile &amp; multi-counselling seat allocation</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 05. VISUAL ASSET 05 — ANNOTATED CAMPUS PHOTOGRAPHY -->
+<section style="background:var(--navy);padding:clamp(5rem,8vw,7rem) 0;" aria-labelledby="campus-h2">
+  <div class="container">
+    <div class="idx-eyebrow reveal"><span class="idx-eyebrow-line"></span><span class="idx-eyebrow-text">Campus Environment</span></div>
+    <h2 id="campus-h2" style="font-family:var(--font-serif);font-size:clamp(2rem,4vw,3.25rem);color:#fff;font-weight:400;line-height:1.1;margin-bottom:1rem;" class="reveal">
+      You are not just choosing where you will study.<br>
+      <em style="color:var(--gold);">You are choosing where you will spend four years.</em>
+    </h2>
+
+    <div class="campus-annotated-wrap reveal">
+      <img src="assets/images/iit-campus.png" alt="Indian Engineering Campus Environment">
+      <div class="campus-marker" style="top:20%;left:15%;"><span>🔬</span> LAB INFRASTRUCTURE</div>
+      <div class="campus-marker" style="top:35%;right:18%;"><span>🎓</span> FACULTY &amp; RESEARCH</div>
+      <div class="campus-marker" style="bottom:30%;left:30%;"><span>👥</span> PEER NETWORK</div>
+      <div class="campus-marker" style="bottom:18%;right:25%;"><span>🏢</span> RECRUITER ACCESS</div>
+    </div>
+  </div>
+</section>
+
+<!-- 06. VISUAL ASSET 06 — CAREER FLOWCHART -->
+<section style="background:var(--ivory);padding:clamp(5rem,8vw,7rem) 0;" aria-labelledby="flow-h2">
+  <div class="container">
+    <div class="idx-eyebrow reveal"><span class="idx-eyebrow-line"></span><span class="idx-eyebrow-text">Backward Decision Mapping</span></div>
+    <h2 id="flow-h2" style="font-family:var(--font-sans);font-weight:700;font-size:clamp(1.25rem,2.5vw,1.75rem);letter-spacing:.04em;text-transform:uppercase;color:var(--heading);margin-bottom:.5rem;" class="reveal">
+      The Decision Should Work Backwards From Your Goal
+    </h2>
+    <p style="font-size:var(--fs-base);color:var(--body);max-width:580px;" class="reveal">
+      We connect your current rank to multi-year academic and career milestones.
+    </p>
+
+    <div class="flowchart-wrap reveal">
+      <div class="flow-step"><div class="flow-num">01</div><div class="flow-lbl">PROFILE</div><div class="flow-sub">Score &amp; Domicile</div></div>
+      <div class="flow-arrow">&rarr;</div>
+      <div class="flow-step"><div class="flow-num">02</div><div class="flow-lbl">BRANCH</div><div class="flow-sub">Aptitude &amp; Fit</div></div>
+      <div class="flow-arrow">&rarr;</div>
+      <div class="flow-step"><div class="flow-num">03</div><div class="flow-lbl">COLLEGE</div><div class="flow-sub">Shortlist &amp; ROI</div></div>
+      <div class="flow-arrow">&rarr;</div>
+      <div class="flow-step"><div class="flow-num">04</div><div class="flow-lbl">INTERNSHIP</div><div class="flow-sub">Industry Access</div></div>
+      <div class="flow-arrow">&rarr;</div>
+      <div class="flow-step"><div class="flow-num">05</div><div class="flow-lbl">CAREER</div><div class="flow-sub">Long-Term Growth</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- 07. VISUAL ASSET 07 — ADVISOR CONSULTATION PHOTO PANEL -->
+<section style="background:var(--white);padding:clamp(5rem,8vw,7rem) 0;" aria-labelledby="adv-h2">
+  <div class="container">
+    <div class="advisor-photo-wrap reveal">
+      <div>
+        <div class="idx-eyebrow"><span class="idx-eyebrow-line"></span><span class="idx-eyebrow-text">Advisory Session</span></div>
+        <h2 id="adv-h2" style="font-family:var(--font-serif);font-size:clamp(1.75rem,3.2vw,2.5rem);font-weight:400;color:var(--heading);line-height:1.2;margin-bottom:1.5rem;">
+          We don't just ask<br>
+          <em>"Where can you get in?"</em><br>
+          We ask<br>
+          <strong>"What makes sense for you?"</strong>
         </h2>
-      </div>
-
-      <div class="tag-cloud reveal" style="max-width: 900px; margin: 24px auto;">
-        <span class="tag-item">BITS Pilani</span>
-        <span class="tag-item">VIT Vellore</span>
-        <span class="tag-item">Manipal Institute of Technology</span>
-        <span class="tag-item">Thapar Institute of Engineering & Technology</span>
-        <span class="tag-item">Amrita Vishwa Vidyapeetham</span>
-        <span class="tag-item">SRM Institute</span>
-        <span class="tag-item">Shiv Nadar University</span>
-        <span class="tag-item">KIIT Bhubaneswar</span>
-        <span class="tag-item">PES University</span>
-        <span class="tag-item">MIT World Peace University</span>
-        <span class="tag-item">JIIT Noida</span>
-        <span class="tag-item">Bennett University</span>
-        <span class="tag-item">UPES Dehradun</span>
-        <span class="tag-item">Graphic Era</span>
-        <span class="tag-item">RV University</span>
-        <span class="tag-item">Amity University</span>
-        <span class="tag-item">REVA University</span>
-        <span class="tag-item">Jain University</span>
-        <span class="tag-item">CMR University</span>
-        <span class="tag-item">Symbiosis Institute of Technology</span>
-        <span class="tag-item">RUAS</span>
-        <span class="tag-item">Christ University</span>
-        <span class="tag-item">Dayananda Sagar</span>
-        <span class="tag-item">VIT Pune</span>
-        <span class="tag-item">PCCOE</span>
-        <span class="tag-item">GL Bajaj</span>
-        <span class="tag-item">JSS Noida</span>
-        <span class="tag-item">KIET</span>
-        <span class="tag-item">MSIT / MAIT Delhi</span>
-      </div>
-
-      <div style="text-align: center; margin-top: 24px;" class="reveal">
-        <p style="color: #FCD34D; font-weight: 800; font-size: 1.1rem; margin-bottom: 16px;">
-          "Your objective shouldn't be to collect college offers. It should be to identify the offer that makes the most sense."
+        <p style="font-size:var(--fs-base);color:var(--body);line-height:1.7;margin-bottom:2rem;">
+          Our senior advisors analyze your complete academic profile, JoSAA/CSAB choice order, financial budget, and state domicile eligibility to build a clear, confident strategy.
         </p>
-        <button class="btn btn-gold" data-modal="lead" data-program="Discuss B.Tech Options">
-          DISCUSS MY B.TECH OPTIONS
-        </button>
+        <button class="btn btn-primary" data-modal="lead" data-program="Engineering Strategy Session" style="background:var(--blue);border-color:var(--blue);color:#fff;">Build My Engineering Strategy &rarr;</button>
+      </div>
+
+      <div>
+        <img src="assets/images/counselling-session.png" alt="College Corridor Advisory Meeting">
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- ENGINEERING FOMO -->
-  <section class="section section-alt" aria-labelledby="fomo-heading">
-    <div class="container">
-      <div style="max-width: 820px; margin: 0 auto; text-align: center;" class="reveal">
-        <span class="section-label">Timing Sensitivity</span>
-        <h2 id="fomo-heading" style="font-size: clamp(1.6rem, 3.5vw, 2.4rem); margin: 12px 0;">
-          DON'T WAIT UNTIL COUNSELLING TO DISCOVER YOUR OPTIONS.
-        </h2>
-        <p style="font-size: 1.05rem; color: var(--clr-text-2); margin-bottom: 24px;">
-          By then you may be deciding under tight deadlines, heavy pressure, family expectations, and limited time to research from scratch.
-        </p>
-        <h3 style="font-size: 1.4rem; color: #0F172A; font-weight: 900; margin-bottom: 24px;">
-          BUILD YOUR SHORTLIST BEFORE YOU NEED IT.
-        </h3>
-        <button class="btn btn-primary btn-lg" data-modal="lead" data-program="Book B.Tech Counselling">
-          BOOK B.TECH COUNSELLING
-        </button>
+<!-- 08. ADVISORY FRAMEWORK -->
+<section style="background:var(--navy);padding:clamp(5rem,8vw,7rem) 0;" aria-labelledby="fw-heading">
+  <div class="container">
+    <div class="idx-eyebrow reveal"><span class="idx-eyebrow-line"></span><span class="idx-eyebrow-text">Our Methodology</span></div>
+    <h2 id="fw-heading" style="font-family:var(--font-sans);font-weight:700;font-size:clamp(1.25rem,2.5vw,1.75rem);letter-spacing:.04em;text-transform:uppercase;color:#fff;margin-bottom:2.5rem;" class="reveal">
+      The Engineering Admission Framework™
+    </h2>
+
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem;">
+      <div style="padding:1.5rem;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);" class="reveal">
+        <div style="font-family:var(--font-serif);font-size:1.5rem;color:var(--gold);margin-bottom:.5rem;">01</div>
+        <div style="font-weight:700;font-size:var(--fs-xs);letter-spacing:.1em;text-transform:uppercase;color:#fff;margin-bottom:.375rem;">Rank Audit</div>
+        <p style="font-size:var(--fs-xs);color:rgba(248,250,252,.5);line-height:1.5;">JEE Main percentile, rank, category rank, state entrance ranks.</p>
+      </div>
+
+      <div style="padding:1.5rem;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);" class="reveal">
+        <div style="font-family:var(--font-serif);font-size:1.5rem;color:var(--gold);margin-bottom:.5rem;">02</div>
+        <div style="font-weight:700;font-size:var(--fs-xs);letter-spacing:.1em;text-transform:uppercase;color:#fff;margin-bottom:.375rem;">Branch Fit</div>
+        <p style="font-size:var(--fs-xs);color:rgba(248,250,252,.5);line-height:1.5;">Aptitude, career preference, core vs computer science alignment.</p>
+      </div>
+
+      <div style="padding:1.5rem;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);" class="reveal">
+        <div style="font-family:var(--font-serif);font-size:1.5rem;color:var(--gold);margin-bottom:.5rem;">03</div>
+        <div style="font-weight:700;font-size:var(--fs-xs);letter-spacing:.1em;text-transform:uppercase;color:#fff;margin-bottom:.375rem;">Shortlist</div>
+        <p style="font-size:var(--fs-xs);color:rgba(248,250,252,.5);line-height:1.5;">Dream, Target, and Safe institutions based on cut-off data.</p>
+      </div>
+
+      <div style="padding:1.5rem;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);" class="reveal">
+        <div style="font-family:var(--font-serif);font-size:1.5rem;color:var(--gold);margin-bottom:.5rem;">04</div>
+        <div style="font-weight:700;font-size:var(--fs-xs);letter-spacing:.1em;text-transform:uppercase;color:#fff;margin-bottom:.375rem;">JoSAA Filling</div>
+        <p style="font-size:var(--fs-xs);color:rgba(248,250,252,.5);line-height:1.5;">Optimised choice hierarchy for JoSAA, CSAB, and State rounds.</p>
       </div>
     </div>
-  </section>
+  </div>
+</section>
+
+<!-- 09. PRICING TABLE -->
+<section style="background:var(--ivory);padding:clamp(5rem,8vw,7rem) 0;" aria-labelledby="pricing-heading">
+  <div class="container">
+    <div class="idx-eyebrow reveal"><span class="idx-eyebrow-line"></span><span class="idx-eyebrow-text">Engineering Advisory Plans</span></div>
+    <h2 id="pricing-heading" style="font-family:var(--font-sans);font-weight:700;font-size:clamp(1.25rem,2.5vw,1.75rem);letter-spacing:.04em;text-transform:uppercase;color:var(--heading);margin-bottom:2.5rem;" class="reveal">
+      Choose the Depth of Strategy You Need
+    </h2>
+
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;">
+      <div style="padding:2.5rem 2rem;background:var(--white);border:1px solid var(--border);" class="reveal">
+        <div style="font-size:.625rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:.5rem;">STRATEGIC</div>
+        <div style="font-family:var(--font-serif);font-size:2rem;font-weight:700;color:var(--heading);margin-bottom:1rem;">₹25,000</div>
+        <p style="font-size:var(--fs-xs);color:var(--muted);margin-bottom:1.5rem;line-height:1.5;">For families seeking structured JoSAA/CSAB choice strategy and college evaluation.</p>
+        <button class="btn btn-primary btn-sm" style="width:100%;background:var(--navy);border-color:var(--navy);color:#fff;" data-modal="lead" data-program="Engineering Strategic Plan">Choose Strategic Plan</button>
+      </div>
+
+      <div style="padding:2.5rem 2rem;background:var(--white);border:2px solid var(--gold);position:relative;" class="reveal">
+        <div style="position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:var(--gold);color:#0B1220;font-size:.5625rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;padding:2px 10px;border-radius:2px;">RECOMMENDED</div>
+        <div style="font-size:.625rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:.5rem;">PREMIUM ⭐</div>
+        <div style="font-family:var(--font-serif);font-size:2rem;font-weight:700;color:var(--heading);margin-bottom:1rem;">₹50,000</div>
+        <p style="font-size:var(--fs-xs);color:var(--muted);margin-bottom:1.5rem;line-height:1.5;">For multi-state strategy, JoSAA + CSAB + State Counselling &amp; Senior Advisor access.</p>
+        <button class="btn btn-primary btn-sm" style="width:100%;background:var(--blue);border-color:var(--blue);color:#fff;" data-modal="lead" data-program="Engineering Premium Plan">Choose Premium Plan</button>
+      </div>
+
+      <div style="padding:2.5rem 2rem;background:var(--navy);border:1px solid rgba(255,255,255,.1);color:#fff;" class="reveal">
+        <div style="font-size:.625rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:.5rem;">ELITE</div>
+        <div style="font-family:var(--font-serif);font-size:2rem;font-weight:700;color:#fff;margin-bottom:1rem;">₹1,00,000</div>
+        <p style="font-size:var(--fs-xs);color:rgba(248,250,252,.5);margin-bottom:1.5rem;line-height:1.5;">Full concierge advisory covering all government, private &amp; international engineering options.</p>
+        <button class="btn btn-primary btn-sm" style="width:100%;background:var(--gold);border-color:var(--gold);color:#0B1220;" data-modal="lead" data-program="Engineering Elite Plan">Choose Elite Plan</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 10. FINAL CLOSE -->
+<section style="background:var(--navy);padding:clamp(5rem,9vw,8rem) 0;text-align:center;" aria-labelledby="eng-final">
+  <div class="container" style="max-width:640px;">
+    <h2 id="eng-final" style="font-family:var(--font-serif);font-size:clamp(2.25rem,4.8vw,3.5rem);color:#fff;font-weight:400;line-height:1.08;margin-bottom:1.5rem;">
+      Your engineering degree will take four years.<br>
+      <em style="color:var(--gold);font-style:italic;">Your decision can shape much more than that.</em>
+    </h2>
+    <p style="font-size:var(--fs-md);color:rgba(248,250,252,.5);line-height:1.7;margin-bottom:2.5rem;">
+      Tell us your score, percentile, domicile, and target branch.<br>We'll help you build a clear admission roadmap.
+    </p>
+    <button class="btn btn-primary" data-modal="lead" data-program="Engineering Final CTA" style="background:var(--blue);border-color:var(--blue);color:#fff;">Speak With College Corridor</button>
+  </div>
+</section>
 
 </main>
 
 <div id="footer-slot"></div>
-
 <script src="js/shared.js"></script>
 <script src="js/main.js"></script>
 </body>

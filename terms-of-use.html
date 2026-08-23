@@ -3,56 +3,64 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Terms of Use | College Corridor</title>
-  <meta name="description" content="Terms of Use for College Corridor independent education consultancy and admissions advisory platform.">
+  <title>Terms of Use | College Corridor Advisory</title>
+  <meta name="description" content="College Corridor Terms of Use governing site usage, advisory scope, and disclaimers.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/components.css">
   <link rel="stylesheet" href="css/animations.css">
+  <style>
+  body { background: var(--ivory); }
+  .idx-eyebrow { display:flex;align-items:center;gap:12px;margin-bottom:1.5rem; }
+  .idx-eyebrow-line { width:28px;height:1px;background:var(--gold);flex-shrink:0; }
+  .idx-eyebrow-text { font-family:var(--font-sans);font-size:.6875rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--gold); }
+  .reveal { opacity:0;transform:translateY(22px);transition:opacity .6s ease,transform .6s ease; }
+  .reveal.in { opacity:1;transform:translateY(0); }
+
+  .leg-hero {
+    background:var(--navy);
+    padding:clamp(4rem,7vw,6rem) 0 clamp(3rem,5vw,4rem) 0;
+    color:#fff;
+    border-bottom:1px solid rgba(201,162,39,.2);
+  }
+  .leg-h1 { font-family:var(--font-serif);font-weight:400;font-size:clamp(2.5rem,4vw,3.5rem);color:#fff;line-height:1.08;margin-bottom:1rem; }
+  </style>
 </head>
 <body>
+
 <div id="announcement-bar-slot"></div>
 <header id="navbar-slot" data-active="terms"></header>
+
 <main>
 
-<section class="page-hero" aria-labelledby="terms-h1">
-  <div class="container page-hero-content">
-    <div class="page-hero-eyebrow"><span class="section-label">Legal</span></div>
-    <h1 id="terms-h1">Terms of Use</h1>
-    <p class="hero-sub">Last updated: January 2025</p>
+<section class="leg-hero" aria-labelledby="terms-h1">
+  <div class="container text-center" style="max-width:800px;">
+    <div class="idx-eyebrow" style="justify-content:center;"><span class="idx-eyebrow-line"></span><span class="idx-eyebrow-text">Legal &amp; Terms</span><span class="idx-eyebrow-line"></span></div>
+    <h1 id="terms-h1" class="leg-h1 reveal">Terms of Use</h1>
+    <p style="font-size:var(--fs-sm);color:rgba(248,250,252,.5);">Last updated: January 2025</p>
   </div>
 </section>
 
-<section class="section section-alt">
-  <div class="container container--lg">
-    <div class="prose reveal">
-      
-      <h3>1. Advisory Nature of Services</h3>
-      <p>College Corridor is an independent education consultancy and admissions advisory service. We provide educational guidance, college discovery, cutoff analysis, and choice-filling strategy based on publicly available data, historical trends, and individual student profiles.</p>
-      <p><strong>We do not create, guarantee, allot, or reserve college seats.</strong> We are not an official counselling, examination-conducting, or regulatory authority (such as MCC, NTA, JoSAA, State CET Cells, or individual universities).</p>
+<section style="padding:clamp(4rem,7vw,6rem) 0;background:var(--white);">
+  <div class="container" style="max-width:760px;font-size:var(--fs-base);color:var(--body);line-height:1.8;">
+    <div class="reveal">
+      <h3 style="font-family:var(--font-serif);font-size:1.5rem;color:var(--heading);margin-top:2rem;margin-bottom:1rem;">1. Advisory Services Scope</h3>
+      <p>College Corridor provides education consultancy, admission strategy, choice-filling guidance, and college evaluation services. We do not guarantee admission or seat allotment to any specific institution, as final allotments depend strictly on official examination authorities, government counselling boards (MCC, JoSAA, State Quota authorities), and university merit lists.</p>
 
-      <h3>2. No Admission Guarantee</h3>
-      <p>All college predictions, probability estimates, choice strategies, and cutoff projections provided on this website or during advisory sessions are indicative estimates. They do not constitute a guarantee of admission to any institution, course, or category. Admission outcomes depend strictly on official allotment processes, seat matrices, regulatory decisions, and competition in any given admission year.</p>
+      <h3 style="font-family:var(--font-serif);font-size:1.5rem;color:var(--heading);margin-top:2rem;margin-bottom:1rem;">2. Accuracy of Data</h3>
+      <p>Cutoff trends, fee structures, seat counts, and institutional details presented on our website or during advisory sessions are gathered from official publications and historical records. While every effort is made to maintain accurate data, official counselling authorities may update seat matrices and fee structures dynamically.</p>
 
-      <h3>3. Accuracy Disclaimer & Verification</h3>
-      <p>While we make reasonable efforts to maintain accurate and updated information regarding college fees, eligibility criteria, cutoffs, accreditation, and admission schedules, institutional details change frequently. Users are strongly advised to independently verify current details with official institutions, official counselling authorities, and regulatory bodies before making academic or financial commitments.</p>
-
-      <h3>4. Limitation of Liability</h3>
-      <p>College Corridor, its officers, employees, and advisors shall not be held liable for any decisions made, financial losses incurred, or missed deadlines arising from reliance on information provided on this website or through counselling services. All final admission choices and application submissions remain the sole responsibility of the candidate and their parent/guardian.</p>
-
-      <h3>5. Intellectual Property</h3>
-      <p>All content, design systems, text, graphics, logos, and tools on this website are the property of College Corridor. Unauthorized copying, reproduction, or redistribution of site content without prior written permission is prohibited.</p>
-
-      <h3>6. Governing Law & Contact</h3>
-      <p>These terms shall be governed by and construed in accordance with the laws of India. For any questions regarding these Terms of Use, please reach out via our <a href="contact.html" style="text-decoration:underline;">Contact Page</a>.</p>
+      <h3 style="font-family:var(--font-serif);font-size:1.5rem;color:var(--heading);margin-top:2rem;margin-bottom:1rem;">3. Intellectual Property</h3>
+      <p>All editorial content, admission frameworks, branding, decision graphics, and proprietary material on College Corridor are protected by copyright and intellectual property laws.</p>
     </div>
   </div>
 </section>
 
 </main>
-<div id="footer-slot"></div><div id="mobile-cta-slot"></div><div id="modal-slot"></div>
-<script src="js/shared.js"></script><script src="js/config.js"></script>
+
+<div id="footer-slot"></div>
+<script src="js/shared.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>

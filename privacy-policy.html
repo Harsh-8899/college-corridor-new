@@ -3,67 +3,74 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Privacy Policy | College Corridor</title>
+  <title>Privacy Policy | College Corridor Advisory</title>
   <meta name="description" content="College Corridor Privacy Policy detailing data collection, usage, retention, and user privacy rights.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/components.css">
   <link rel="stylesheet" href="css/animations.css">
+  <style>
+  body { background: var(--ivory); }
+  .idx-eyebrow { display:flex;align-items:center;gap:12px;margin-bottom:1.5rem; }
+  .idx-eyebrow-line { width:28px;height:1px;background:var(--gold);flex-shrink:0; }
+  .idx-eyebrow-text { font-family:var(--font-sans);font-size:.6875rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--gold); }
+  .reveal { opacity:0;transform:translateY(22px);transition:opacity .6s ease,transform .6s ease; }
+  .reveal.in { opacity:1;transform:translateY(0); }
+
+  .leg-hero {
+    background:var(--navy);
+    padding:clamp(4rem,7vw,6rem) 0 clamp(3rem,5vw,4rem) 0;
+    color:#fff;
+    border-bottom:1px solid rgba(201,162,39,.2);
+  }
+  .leg-h1 { font-family:var(--font-serif);font-weight:400;font-size:clamp(2.5rem,4vw,3.5rem);color:#fff;line-height:1.08;margin-bottom:1rem; }
+  </style>
 </head>
 <body>
+
 <div id="announcement-bar-slot"></div>
 <header id="navbar-slot" data-active="privacy"></header>
+
 <main>
 
-<section class="page-hero" aria-labelledby="privacy-h1">
-  <div class="container page-hero-content">
-    <div class="page-hero-eyebrow"><span class="section-label">Legal</span></div>
-    <h1 id="privacy-h1">Privacy Policy</h1>
-    <p class="hero-sub">Last updated: January 2025</p>
+<section class="leg-hero" aria-labelledby="privacy-h1">
+  <div class="container text-center" style="max-width:800px;">
+    <div class="idx-eyebrow" style="justify-content:center;"><span class="idx-eyebrow-line"></span><span class="idx-eyebrow-text">Legal &amp; Privacy</span><span class="idx-eyebrow-line"></span></div>
+    <h1 id="privacy-h1" class="leg-h1 reveal">Privacy Policy</h1>
+    <p style="font-size:var(--fs-sm);color:rgba(248,250,252,.5);">Last updated: January 2025</p>
   </div>
 </section>
 
-<section class="section section-alt">
-  <div class="container container--lg">
-    <div class="prose reveal">
-      
-      <h3>1. Information We Collect</h3>
+<section style="padding:clamp(4rem,7vw,6rem) 0;background:var(--white);">
+  <div class="container" style="max-width:760px;font-size:var(--fs-base);color:var(--body);line-height:1.8;">
+    <div class="reveal">
+      <h3 style="font-family:var(--font-serif);font-size:1.5rem;color:var(--heading);margin-top:2rem;margin-bottom:1rem;">1. Information We Collect</h3>
       <p>When you fill out lead forms, request counselling sessions, or interact with College Corridor, we may collect the following personal information:</p>
-      <ul>
+      <ul style="margin-left:1.5rem;margin-bottom:1.5rem;">
         <li><strong>Contact Details:</strong> Full Name, Phone Number, Email Address.</li>
-        <li><strong>Academic Profile:</strong> Program of Interest, Examination Scores/Ranks (NEET, JEE, CAT, CLAT, etc.), 10th/12th percentages, Category, Domicile state.</li>
+        <li><strong>Academic Profile:</strong> Program of Interest, Examination Scores/Ranks (NEET, JEE, CAT, CLAT, etc.), Category, Domicile state.</li>
         <li><strong>Preferences:</strong> Preferred budget, target locations, course preferences, and specific enquiry messages.</li>
-        <li><strong>Usage Data:</strong> IP address, browser type, device information, and site interaction data via cookies and analytics.</li>
       </ul>
 
-      <h3>2. How We Use Your Information</h3>
+      <h3 style="font-family:var(--font-serif);font-size:1.5rem;color:var(--heading);margin-top:2rem;margin-bottom:1rem;">2. How We Use Your Information</h3>
       <p>We use the collected information solely for legitimate education consultancy and advisory purposes:</p>
-      <ul>
+      <ul style="margin-left:1.5rem;margin-bottom:1.5rem;">
         <li>To contact you and provide requested counselling, college prediction, and admission guidance services.</li>
         <li>To evaluate eligibility for specific courses, quotas, state counselling, and institutions.</li>
         <li>To send updates on exam schedules, counselling deadlines, cutoff changes, and relevant educational opportunities.</li>
-        <li>To improve our website functionality, service quality, and user experience.</li>
       </ul>
 
-      <h3>3. Data Retention</h3>
-      <p>We retain personal information for as long as necessary to fulfill the counselling purpose for which it was collected, or to comply with applicable legal and administrative obligations. If you wish to have your data removed from our records, you may submit a request to us.</p>
-
-      <h3>4. Third-Party Sharing</h3>
-      <p>College Corridor does not sell or rent your personal information to third parties. Information may only be shared with authorized educational institutions or partner counselling service providers when explicitly requested by you or required to facilitate your admission guidance process.</p>
-
-      <h3>5. Security & User Rights</h3>
-      <p>We implement appropriate technical and organizational measures to safeguard your personal data. You have the right to request access to, correction of, or deletion of your personal data held by College Corridor by contacting us at our official email address.</p>
-
-      <h3>6. Contact Information</h3>
-      <p>If you have questions regarding this Privacy Policy or our privacy practices, please contact us via our <a href="contact.html" style="text-decoration:underline;">Contact Page</a> or write to admissions@collegecorridor.com.</p>
+      <h3 style="font-family:var(--font-serif);font-size:1.5rem;color:var(--heading);margin-top:2rem;margin-bottom:1rem;">3. Data Security &amp; Sharing</h3>
+      <p>College Corridor does not sell or rent your personal information to third parties. Information may only be shared with authorized educational institutions when explicitly requested by you to facilitate your admission guidance process.</p>
     </div>
   </div>
 </section>
 
 </main>
-<div id="footer-slot"></div><div id="mobile-cta-slot"></div><div id="modal-slot"></div>
-<script src="js/shared.js"></script><script src="js/config.js"></script>
+
+<div id="footer-slot"></div>
+<script src="js/shared.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>

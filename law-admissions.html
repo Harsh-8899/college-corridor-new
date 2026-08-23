@@ -3,44 +3,60 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Law Admissions & NLU Guidance — CLAT, AILET, SLAT | College Corridor</title>
-  <meta name="description" content="Strategic law school admission guidance for BA LLB, BBA LLB, and LLM aspirants across national law universities and premier private law schools.">
+  <title>Law Admissions Advisory | CLAT, AILET & NLU Strategy | College Corridor</title>
+  <meta name="description" content="Strategic law school admissions guidance for CLAT, AILET & SLAT aspirants targeting NLUs, Jindal, Symbiosis & premier legal institutions in India.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/components.css">
   <link rel="stylesheet" href="css/animations.css">
   <style>
-    :root {
-      --clr-gold: #C59B27;
-      --clr-gold-light: #FCD34D;
-      --clr-dark: #0F172A;
-      --clr-border-gold: rgba(197, 155, 39, 0.35);
-    }
-    .law-hero {
-      padding: var(--sp-12) 0 var(--sp-10) 0;
-      background: radial-gradient(circle at 50% 20%, rgba(197, 155, 39, 0.18) 0%, rgba(15, 23, 42, 0.98) 75%), #0F172A;
-      color: #FFFFFF;
-      text-align: center;
-      border-bottom: 2px solid var(--clr-border-gold);
-    }
-    .btn-gold {
-      background: linear-gradient(135deg, #C59B27 0%, #D97706 100%);
-      color: #0F172A !important;
-      font-weight: 900 !important;
-      font-size: 1.1rem !important;
-      padding: 16px 34px !important;
-      border-radius: var(--radius-md) !important;
-      box-shadow: 0 8px 25px rgba(197, 155, 39, 0.4) !important;
-      transition: all 0.3s ease !important;
-      border: 2px solid #FCD34D !important;
-      text-transform: uppercase;
-    }
-    .btn-gold:hover {
-      transform: translateY(-3px) scale(1.02);
-      box-shadow: 0 12px 35px rgba(197, 155, 39, 0.6) !important;
-      background: linear-gradient(135deg, #FCD34D 0%, #C59B27 100%);
-    }
+  body { background: var(--ivory); }
+  .idx-eyebrow { display:flex;align-items:center;gap:12px;margin-bottom:1.5rem; }
+  .idx-eyebrow-line { width:28px;height:1px;background:var(--gold);flex-shrink:0; }
+  .idx-eyebrow-text { font-family:var(--font-sans);font-size:.6875rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--gold); }
+  .reveal { opacity:0;transform:translateY(22px);transition:opacity .6s ease,transform .6s ease; }
+  .reveal.in { opacity:1;transform:translateY(0); }
+
+  .law-hero {
+    background:var(--navy);
+    min-height:90vh;
+    display:grid;
+    grid-template-columns:1.1fr .9fr;
+    overflow:hidden;
+    position:relative;
+  }
+  .law-hero-left {
+    display:flex;flex-direction:column;justify-content:center;
+    padding:clamp(4rem,8vw,7rem) clamp(2rem,5vw,5rem);
+    z-index:2;
+  }
+  .law-h1 { font-family:var(--font-serif);font-weight:400;font-size:clamp(2.5rem,4.8vw,4rem);color:#fff;line-height:1.06;letter-spacing:-.025em;margin-bottom:1rem; }
+  .law-h1 em { font-style:italic;color:var(--gold); }
+  .law-h1 strong { font-weight:500;display:block;font-size:clamp(1.125rem,2.2vw,1.6rem);letter-spacing:.05em;text-transform:uppercase;font-family:var(--font-sans);color:rgba(248,250,252,.45);margin-top:.75rem; }
+  .law-hero-body { font-size:var(--fs-md);color:rgba(248,250,252,.6);line-height:1.75;max-width:440px;margin-bottom:2.5rem; }
+
+  .law-hero-right { position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center; }
+  .law-hero-bg-img { width:100%;height:100%;object-fit:cover;object-position:center;filter:brightness(0.6) contrast(1.1); }
+  .law-hero-overlay { position:absolute;inset:0;background:linear-gradient(to right, var(--navy) 0%, rgba(11,18,32,0.4) 50%, transparent 100%);pointer-events:none; }
+
+  .law-grid { display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:1px solid var(--border); }
+  .law-card { padding:2rem 1.5rem;border-right:1px solid var(--border);border-bottom:1px solid var(--border);background:var(--white);transition:background var(--trans-fast); }
+  .law-card:nth-child(3n) { border-right:none; }
+  .law-card:hover { background:var(--ivory); }
+
+  .advisor-photo-wrap {
+    display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center;
+    background:var(--white);border:1px solid var(--border);padding:2.5rem;
+  }
+  .advisor-photo-wrap img { width:100%;height:100%;max-height:360px;object-fit:cover;border-radius:4px; }
+
+  @media(max-width:900px){
+    .law-hero { grid-template-columns:1fr; }
+    .law-hero-right { min-height:320px; }
+    .law-grid { grid-template-columns:1fr; }
+    .advisor-photo-wrap { grid-template-columns:1fr; }
+  }
   </style>
 </head>
 <body>
@@ -50,111 +66,177 @@
 
 <main>
 
-  <!-- HERO SECTION -->
-  <section class="law-hero" aria-labelledby="law-title">
-    <div class="container">
-      <span class="section-label" style="background: rgba(201,150,12,0.22); color: #FCD34D; border: 1px solid rgba(253,224,71,0.5);">
-        Legal Education Advisory
-      </span>
+<!-- HERO WITH VISUAL ASSET 01 -->
+<section class="law-hero" aria-labelledby="law-h1">
+  <div class="law-hero-left">
+    <div class="idx-eyebrow reveal"><span class="idx-eyebrow-line"></span><span class="idx-eyebrow-text">College Corridor Law Advisory</span></div>
+    <h1 id="law-h1" class="law-h1 reveal" style="transition-delay:.08s">
+      Law school is not just<br>
+      <em>a college choice.</em>
+      <strong>Strategic NLU &amp; 5-Year Law School Advisory</strong>
+    </h1>
+    <p class="law-hero-body reveal" style="transition-delay:.15s">
+      Your first legal network starts with your law school. We help students evaluate NLUs, private law faculties, moot court infrastructure, corporate law placement, and litigation pathways.
+    </p>
+    <div class="reveal" style="transition-delay:.22s">
+      <button class="btn btn-primary" data-modal="lead" data-program="Law Advisory" style="background:var(--blue);border-color:var(--blue);color:#fff;">Explore My Law Options &rarr;</button>
+    </div>
+  </div>
 
-      <h1 id="law-title" style="font-size: clamp(2rem, 4.8vw, 3.8rem); font-weight: 900; color: #FFFFFF !important; -webkit-text-fill-color: #FFFFFF !important; margin: 16px 0 12px 0; line-height: 1.15;">
-        LAW SCHOOL IS MORE THAN A DEGREE.<br>YOUR INSTITUTION CAN SHAPE YOUR EARLY CAREER.
-      </h1>
+  <div class="law-hero-right">
+    <img src="https://images.unsplash.com/photo-1453728013993-6d66e9c9123a?auto=format&fit=crop&w=1200&q=80" alt="Law School Library & Research" class="law-hero-bg-img">
+    <div class="law-hero-overlay"></div>
+    <div style="position:absolute;z-index:3;background:rgba(11,18,32,0.85);backdrop-filter:blur(12px);border:1px solid rgba(139,92,246,0.3);border-radius:8px;padding:1.75rem;max-width:360px;width:90%;" class="reveal">
+      <div style="font-size:.625rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:#8B5CF6;margin-bottom:.75rem;">Law School Decision Matrix</div>
+      <div style="display:flex;flex-direction:column;gap:.5rem;font-size:.75rem;color:rgba(248,250,252,.75);">
+        <div style="display:flex;justify-content:space-between;border-bottom:1px solid rgba(255,255,255,.08);padding-bottom:.375rem;"><span>Entrance</span><span style="font-weight:700;color:#fff;">CLAT, AILET, SLAT</span></div>
+        <div style="display:flex;justify-content:space-between;border-bottom:1px solid rgba(255,255,255,.08);padding-bottom:.375rem;"><span>Shortlist</span><span style="font-weight:700;color:var(--gold);">26 NLUs, JGLS, SLS</span></div>
+        <div style="display:flex;justify-content:space-between;border-bottom:1px solid rgba(255,255,255,.08);padding-bottom:.375rem;"><span>Key Factors</span><span style="font-weight:700;color:#fff;">Moots, Internships, Firms</span></div>
+        <div style="display:flex;justify-content:space-between;"><span>Career Tracks</span><span style="font-weight:700;color:#fff;">Corporate, Disputes, Judiciary</span></div>
+      </div>
+    </div>
+  </div>
+</section>
 
-      <p style="font-size: 1.15rem; color: #FCD34D; font-weight: 800; max-width: 820px; margin: 0 auto 24px auto;">
-        CLAT • AILET • SLAT • LSAT India • National Law Universities & Premier Private Law Schools
+<!-- CHAPTER 01 -->
+<section style="background:var(--navy-soft);padding:clamp(5rem,8vw,7rem) 0;" aria-labelledby="law-ch1">
+  <div class="container" style="max-width:840px;">
+    <div class="idx-eyebrow reveal"><span class="idx-eyebrow-line"></span><span class="idx-eyebrow-text">Strategic Context</span></div>
+    <h2 id="law-ch1" style="font-family:var(--font-serif);font-size:clamp(1.85rem,3.8vw,3rem);color:#fff;font-weight:400;margin-bottom:1.5rem;line-height:1.15;">
+      "Should I prefer a lower-tier NLU or a top private law school?"
+    </h2>
+    <p style="font-size:var(--fs-base);color:rgba(248,250,252,.65);line-height:1.8;margin-bottom:2rem;">
+      CLAT counselling moves rapidly through multiple allotment lists. Knowing whether to retain your allocated NLU seat, wait for upgraded rounds, or choose premier private options requires clear analysis of location, internships, and faculty.
+    </p>
+    <div style="padding:1.5rem;background:rgba(201,162,39,.08);border-left:3px solid var(--gold);" class="reveal">
+      <p style="font-family:var(--font-serif);font-style:italic;font-size:var(--fs-md);color:#fff;margin:0;">
+        "Your legal career depends on clinical exposure, mooting culture, and alumni placement."
       </p>
+    </div>
+  </div>
+</section>
 
-      <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 16px;">
-        <button class="btn btn-gold" data-modal="lead" data-program="Law Guidance">
-          GET LAW ADMISSION GUIDANCE
-        </button>
-        <button class="btn btn-secondary btn-lg" data-modal="lead" data-program="Law Options">
-          DISCUSS MY LAW OPTIONS
-        </button>
+<!-- VARIABLES -->
+<section style="background:var(--ivory);padding:clamp(5rem,8vw,7rem) 0;" aria-labelledby="vars-heading">
+  <div class="container">
+    <div class="idx-eyebrow reveal"><span class="idx-eyebrow-line"></span><span class="idx-eyebrow-text">Key Decision Pillars</span></div>
+    <h2 id="vars-heading" style="font-family:var(--font-sans);font-weight:700;font-size:clamp(1.25rem,2.5vw,1.75rem);letter-spacing:.04em;text-transform:uppercase;color:var(--heading);margin-bottom:2.5rem;" class="reveal">
+      What Defines a Premier Law School
+    </h2>
+
+    <div class="law-grid">
+      <div class="law-card reveal">
+        <div style="font-size:.625rem;font-weight:700;letter-spacing:.14em;color:#8B5CF6;text-transform:uppercase;margin-bottom:.5rem;">NLU PREFERENCE</div>
+        <div style="font-weight:700;font-size:var(--fs-md);color:var(--heading);margin-bottom:.5rem;">CLAT Merit List Hierarchy</div>
+        <p style="font-size:var(--fs-xs);color:var(--muted);line-height:1.5;">Mapping your rank against historical cutoff movement across all 26 National Law Universities.</p>
+      </div>
+
+      <div class="law-card reveal">
+        <div style="font-size:.625rem;font-weight:700;letter-spacing:.14em;color:#8B5CF6;text-transform:uppercase;margin-bottom:.5rem;">CORPORATE EXPOSURE</div>
+        <div style="font-weight:700;font-size:var(--fs-md);color:var(--heading);margin-bottom:.5rem;">Law Firm Recruitment</div>
+        <p style="font-size:var(--fs-xs);color:var(--muted);line-height:1.5;">Evaluating zero-day placements, PPO rates, and recruitment records of Tier-1 law firms.</p>
+      </div>
+
+      <div class="law-card reveal">
+        <div style="font-size:.625rem;font-weight:700;letter-spacing:.14em;color:#8B5CF6;text-transform:uppercase;margin-bottom:.5rem;">MOOT &amp; CLINICAL</div>
+        <div style="font-weight:700;font-size:var(--fs-md);color:var(--heading);margin-bottom:.5rem;">Practical Legal Skills</div>
+        <p style="font-size:var(--fs-xs);color:var(--muted);line-height:1.5;">Moot court achievements, legal aid clinics, ADR competitions, and judicial internships.</p>
+      </div>
+
+      <div class="law-card reveal">
+        <div style="font-size:.625rem;font-weight:700;letter-spacing:.14em;color:#8B5CF6;text-transform:uppercase;margin-bottom:.5rem;">DOMICILE &amp; RESERVATION</div>
+        <div style="font-weight:700;font-size:var(--fs-md);color:var(--heading);margin-bottom:.5rem;">State Quotas &amp; Seats</div>
+        <p style="font-size:var(--fs-xs);color:var(--muted);line-height:1.5;">Navigating state reservation rules, domicile reservations, and vertical/horizontal quotas.</p>
+      </div>
+
+      <div class="law-card reveal">
+        <div style="font-size:.625rem;font-weight:700;letter-spacing:.14em;color:#8B5CF6;text-transform:uppercase;margin-bottom:.5rem;">PRIVATE LAW SCHOOLS</div>
+        <div style="font-weight:700;font-size:var(--fs-md);color:var(--heading);margin-bottom:.5rem;">Alternative Top Pathways</div>
+        <p style="font-size:var(--fs-xs);color:var(--muted);line-height:1.5;">Deep analysis of Jindal Global Law School, Symbiosis Law, NMIMS, and Christ Law.</p>
+      </div>
+
+      <div class="law-card reveal">
+        <div style="font-size:.625rem;font-weight:700;letter-spacing:.14em;color:#8B5CF6;text-transform:uppercase;margin-bottom:.5rem;">COST &amp; SCHOLARSHIPS</div>
+        <div style="font-weight:700;font-size:var(--fs-md);color:var(--heading);margin-bottom:.5rem;">5-Year Total Investment</div>
+        <p style="font-size:var(--fs-xs);color:var(--muted);line-height:1.5;">Tuition, hostel, living costs, and merit scholarship evaluation for 5-year Integrated LL.B.</p>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- EMOTIONAL SECTION -->
-  <section class="section" aria-labelledby="impact-heading">
-    <div class="container">
-      <div class="section-heading centered reveal">
-        <span class="section-label">Institutional Ecosystem</span>
-        <h2 id="impact-heading">DON'T CHOOSE A LAW SCHOOL JUST BECAUSE YOU GOT AN OFFER.</h2>
-      </div>
-
-      <div style="max-width: 840px; margin: 0 auto; text-align: center;" class="reveal">
-        <p style="font-size: 1.1rem; color: var(--clr-text-main); line-height: 1.8; margin-bottom: 24px;">
-          Legal education relies heavily on institutional reputation and professional exposure. Your law school shapes your: <strong>Moot Court Culture • High-Court & Corporate Internships • Peer Group • Alumni Network • Recruitment & Placements • Professional Credibility.</strong>
-        </p>
-
-        <div style="background: var(--clr-surface); border: 2px solid var(--clr-border); border-radius: var(--radius-xl); padding: var(--sp-8); box-shadow: var(--shadow-lg); margin-bottom: 24px;">
-          <h3 style="font-size: 1.3rem; color: #0F172A; font-weight: 900; margin-bottom: 12px;">
-            The right law school accelerates corporate law, litigation, and judicial preparation pathways.
-          </h3>
-          <p style="font-size: 14px; color: var(--clr-text-2); margin: 0;">
-            Evaluate NLU tiering, corporate placement history, location advantages, and faculty credibility before committing five years.
-          </p>
-        </div>
-
-        <button class="btn btn-primary btn-lg" data-modal="lead" data-program="Law School Evaluation">
-          EVALUATE LAW SCHOOL OPTIONS
-        </button>
-      </div>
-    </div>
-  </section>
-
-  <!-- KNOWLEDGE SECTION -->
-  <section class="section section-alt" aria-labelledby="routes-heading">
-    <div class="container">
-      <div class="section-heading centered reveal">
-        <span class="section-label">Legal Admissions Routes</span>
-        <h2 id="routes-heading">WHAT WE COVER IN LAW ADMISSIONS</h2>
-      </div>
-
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; margin: 24px 0;" class="reveal">
-        <div style="padding: 14px; background: var(--clr-surface); border: 1px solid var(--clr-border); border-radius: var(--radius-md); font-weight: 800; font-size: 13px; text-align: center;">🏛️ CLAT Consortium Counselling</div>
-        <div style="padding: 14px; background: var(--clr-surface); border: 1px solid var(--clr-border); border-radius: var(--radius-md); font-weight: 800; font-size: 13px; text-align: center;">🏛️ NLU Delhi (AILET) Guidance</div>
-        <div style="padding: 14px; background: var(--clr-surface); border: 1px solid var(--clr-border); border-radius: var(--radius-md); font-weight: 800; font-size: 13px; text-align: center;">⚖️ Symbiosis Law School (SLAT)</div>
-        <div style="padding: 14px; background: var(--clr-surface); border: 1px solid var(--clr-border); border-radius: var(--radius-md); font-weight: 800; font-size: 13px; text-align: center;">📜 Jindal Global Law School</div>
-        <div style="padding: 14px; background: var(--clr-surface); border: 1px solid var(--clr-border); border-radius: var(--radius-md); font-weight: 800; font-size: 13px; text-align: center;">⚖️ Christ Law / NMIMS KPMOL</div>
-        <div style="padding: 14px; background: var(--clr-surface); border: 1px solid var(--clr-border); border-radius: var(--radius-md); font-weight: 800; font-size: 13px; text-align: center;">💼 Corporate vs Litigation Tracks</div>
-      </div>
-
-      <div style="text-align: center;" class="reveal">
-        <button class="btn btn-primary" data-modal="lead" data-program="Law Application Strategy">
-          BUILD MY APPLICATION STRATEGY
-        </button>
-      </div>
-    </div>
-  </section>
-
-  <!-- LAW FOMO -->
-  <section class="section dark-section" style="background: #0F172A; color: #FFFFFF;" aria-labelledby="fomo-heading">
-    <div class="container">
-      <div style="max-width: 840px; margin: 0 auto; text-align: center;" class="reveal">
-        <span class="section-label" style="background: rgba(239,68,68,0.2); color: #F87171;">Career Impact</span>
-        <h2 id="fomo-heading" style="color: #FFFFFF !important; -webkit-text-fill-color: #FFFFFF !important; font-size: clamp(1.6rem, 3.5vw, 2.4rem); margin: 12px 0;">
-          THE WRONG LAW SCHOOL CAN MEAN MORE THAN A DIFFERENT CAMPUS.
+<!-- ADVISOR PHOTO PANEL -->
+<section style="background:var(--white);padding:clamp(5rem,8vw,7rem) 0;" aria-labelledby="adv-law-h2">
+  <div class="container">
+    <div class="advisor-photo-wrap reveal">
+      <div>
+        <div class="idx-eyebrow"><span class="idx-eyebrow-line"></span><span class="idx-eyebrow-text">Legal Advisory</span></div>
+        <h2 id="adv-law-h2" style="font-family:var(--font-serif);font-size:clamp(1.75rem,3.2vw,2.5rem);font-weight:400;color:var(--heading);line-height:1.2;margin-bottom:1.5rem;">
+          Your score tells us where you stand.<br>
+          <em>Your goal tells us where to look.</em>
         </h2>
-        <p style="color: #CBD5E1; font-size: 1.05rem; line-height: 1.7; margin-bottom: 20px;">
-          It affects your network, exposure, internship opportunities, corporate law firm recruitment, and the people you spend your formative years with.
+        <p style="font-size:var(--fs-base);color:var(--body);line-height:1.7;margin-bottom:2rem;">
+          Our senior legal education advisors evaluate your CLAT/AILET rank, state quota eligibility, and corporate vs litigation preferences to help you select the optimal 5-year LL.B program.
         </p>
-        <h3 style="font-size: 1.4rem; color: #FCD34D !important; -webkit-text-fill-color: #FCD34D !important; font-weight: 900; margin-bottom: 24px;">
-          MAKE THE DECISION BEFORE THE DEADLINE MAKES IT FOR YOU.
-        </h3>
-        <button class="btn btn-gold" data-modal="lead" data-program="Discuss Law Options">
-          DISCUSS MY LAW OPTIONS
-        </button>
+        <button class="btn btn-primary" data-modal="lead" data-program="Law Strategy Session" style="background:var(--blue);border-color:var(--blue);color:#fff;">Build My Law Admission Strategy &rarr;</button>
+      </div>
+
+      <div>
+        <img src="assets/images/counselling-session.png" alt="Law Admission Advisory Meeting">
       </div>
     </div>
-  </section>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section style="background:var(--ivory);padding:clamp(5rem,8vw,7rem) 0;" aria-labelledby="pricing-heading">
+  <div class="container">
+    <div class="idx-eyebrow reveal"><span class="idx-eyebrow-line"></span><span class="idx-eyebrow-text">Law Advisory Plans</span></div>
+    <h2 id="pricing-heading" style="font-family:var(--font-sans);font-weight:700;font-size:clamp(1.25rem,2.5vw,1.75rem);letter-spacing:.04em;text-transform:uppercase;color:var(--heading);margin-bottom:2.5rem;" class="reveal">
+      Strategic Guidance for Law Aspirants
+    </h2>
+
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;">
+      <div style="padding:2.5rem 2rem;background:var(--white);border:1px solid var(--border);" class="reveal">
+        <div style="font-size:.625rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:.5rem;">STRATEGIC</div>
+        <div style="font-family:var(--font-serif);font-size:2rem;font-weight:700;color:var(--heading);margin-bottom:1rem;">₹25,000</div>
+        <p style="font-size:var(--fs-xs);color:var(--muted);margin-bottom:1.5rem;line-height:1.5;">CLAT/AILET score analysis, NLU preference order, and counseling strategy.</p>
+        <button class="btn btn-primary btn-sm" style="width:100%;background:var(--navy);border-color:var(--navy);color:#fff;" data-modal="lead" data-program="Law Strategic Plan">Choose Strategic Plan</button>
+      </div>
+
+      <div style="padding:2.5rem 2rem;background:var(--white);border:2px solid var(--gold);position:relative;" class="reveal">
+        <div style="position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:var(--gold);color:#0B1220;font-size:.5625rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;padding:2px 10px;border-radius:2px;">RECOMMENDED</div>
+        <div style="font-size:.625rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:.5rem;">PREMIUM ⭐</div>
+        <div style="font-family:var(--font-serif);font-size:2rem;font-weight:700;color:var(--heading);margin-bottom:1rem;">₹50,000</div>
+        <p style="font-size:var(--fs-xs);color:var(--muted);margin-bottom:1.5rem;line-height:1.5;">All-India NLU + Top Private Law School strategy, round-wise upgrades &amp; senior advisor.</p>
+        <button class="btn btn-primary btn-sm" style="width:100%;background:var(--blue);border-color:var(--blue);color:#fff;" data-modal="lead" data-program="Law Premium Plan">Choose Premium Plan</button>
+      </div>
+
+      <div style="padding:2.5rem 2rem;background:var(--navy);border:1px solid rgba(255,255,255,.1);color:#fff;" class="reveal">
+        <div style="font-size:.625rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:.5rem;">ELITE</div>
+        <div style="font-family:var(--font-serif);font-size:2rem;font-weight:700;color:#fff;margin-bottom:1rem;">₹1,00,000</div>
+        <p style="font-size:var(--fs-xs);color:rgba(248,250,252,.5);margin-bottom:1.5rem;line-height:1.5;">Concierge legal education advisory covering national &amp; international law pathways.</p>
+        <button class="btn btn-primary btn-sm" style="width:100%;background:var(--gold);border-color:var(--gold);color:#0B1220;" data-modal="lead" data-program="Law Elite Plan">Choose Elite Plan</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CLOSE -->
+<section style="background:var(--navy);padding:clamp(5rem,9vw,8rem) 0;text-align:center;" aria-labelledby="law-final">
+  <div class="container" style="max-width:640px;">
+    <h2 id="law-final" style="font-family:var(--font-serif);font-size:clamp(2.25rem,4.8vw,3.5rem);color:#fff;font-weight:400;line-height:1.08;margin-bottom:1.5rem;">
+      Your first legal network starts here.<br><em style="color:var(--gold);font-style:italic;">Make the decision with strategy.</em>
+    </h2>
+    <p style="font-size:var(--fs-md);color:rgba(248,250,252,.5);line-height:1.7;margin-bottom:2.5rem;">
+      Tell us your rank, score, category, and preferred law schools.<br>We'll help you navigate every counselling list.
+    </p>
+    <button class="btn btn-primary" data-modal="lead" data-program="Law Final CTA" style="background:var(--blue);border-color:var(--blue);color:#fff;">Speak With College Corridor</button>
+  </div>
+</section>
 
 </main>
 
 <div id="footer-slot"></div>
-
 <script src="js/shared.js"></script>
 <script src="js/main.js"></script>
 </body>

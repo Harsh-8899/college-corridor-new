@@ -3,44 +3,29 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Study Abroad Counselling & Global Admissions | College Corridor</title>
-  <meta name="description" content="Global admissions advisory for UK, USA, Canada, Australia, Ireland, UAE & Europe. Evaluate university programs, post-study work rights & career ecosystems.">
+  <title>Study Abroad & Global University Advisory | College Corridor</title>
+  <meta name="description" content="Strategic study abroad advisory for US, UK, Canada, Europe, Australia & Singapore university applications, SOP strategy, and scholarship guidance.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/components.css">
   <link rel="stylesheet" href="css/animations.css">
   <style>
-    :root {
-      --clr-gold: #C59B27;
-      --clr-gold-light: #FCD34D;
-      --clr-dark: #0F172A;
-      --clr-border-gold: rgba(197, 155, 39, 0.35);
-    }
-    .abroad-hero {
-      padding: var(--sp-12) 0 var(--sp-10) 0;
-      background: radial-gradient(circle at 50% 20%, rgba(59, 130, 246, 0.2) 0%, rgba(15, 23, 42, 0.98) 75%), #0F172A;
-      color: #FFFFFF;
-      text-align: center;
-      border-bottom: 2px solid var(--clr-border-gold);
-    }
-    .btn-gold {
-      background: linear-gradient(135deg, #C59B27 0%, #D97706 100%);
-      color: #0F172A !important;
-      font-weight: 900 !important;
-      font-size: 1.1rem !important;
-      padding: 16px 34px !important;
-      border-radius: var(--radius-md) !important;
-      box-shadow: 0 8px 25px rgba(197, 155, 39, 0.4) !important;
-      transition: all 0.3s ease !important;
-      border: 2px solid #FCD34D !important;
-      text-transform: uppercase;
-    }
-    .btn-gold:hover {
-      transform: translateY(-3px) scale(1.02);
-      box-shadow: 0 12px 35px rgba(197, 155, 39, 0.6) !important;
-      background: linear-gradient(135deg, #FCD34D 0%, #C59B27 100%);
-    }
+  body { background: var(--ivory); }
+  .idx-eyebrow { display:flex;align-items:center;gap:12px;margin-bottom:1.5rem; }
+  .idx-eyebrow-line { width:28px;height:1px;background:var(--gold);flex-shrink:0; }
+  .idx-eyebrow-text { font-family:var(--font-sans);font-size:.6875rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--gold); }
+  .reveal { opacity:0;transform:translateY(22px);transition:opacity .6s ease,transform .6s ease; }
+  .reveal.in { opacity:1;transform:translateY(0); }
+
+  .sa-hero {
+    background:var(--navy);
+    padding:clamp(5rem,8vw,7rem) 0 clamp(3.5rem,6vw,5rem) 0;
+    color:#fff;
+    border-bottom:1px solid rgba(201,162,39,.2);
+  }
+  .sa-h1 { font-family:var(--font-serif);font-weight:400;font-size:clamp(2.5rem,4.5vw,3.75rem);color:#fff;line-height:1.08;margin-bottom:1rem; }
+  .sa-h1 em { font-style:italic;color:var(--gold); }
   </style>
 </head>
 <body>
@@ -50,62 +35,52 @@
 
 <main>
 
-  <!-- HERO SECTION -->
-  <section class="abroad-hero" aria-labelledby="abroad-title">
-    <div class="container">
-      <span class="section-label" style="background: rgba(59,130,246,0.2); color: #60A5FA; border: 1px solid rgba(96,165,250,0.4);">
-        Global Admissions Advisory
-      </span>
+<section class="sa-hero" aria-labelledby="sa-h1">
+  <div class="container text-center" style="max-width:840px;">
+    <div class="idx-eyebrow" style="justify-content:center;"><span class="idx-eyebrow-line"></span><span class="idx-eyebrow-text">Global University Advisory</span><span class="idx-eyebrow-line"></span></div>
+    <h1 id="sa-h1" class="sa-h1 reveal">
+      Studying abroad starts<br>
+      <em>long before you board a flight.</em>
+    </h1>
+    <p style="font-size:var(--fs-md);color:rgba(248,250,252,.6);line-height:1.7;margin-bottom:2rem;" class="reveal">
+      University shortlisting, application strategy, SOP &amp; LOR editorial review, scholarship mapping &amp; visa guidance for US, UK, Canada, Europe, Australia &amp; Asia.
+    </p>
+    <button class="btn btn-primary" data-modal="lead" data-program="Study Abroad Advisory" style="background:var(--blue);border-color:var(--blue);color:#fff;">Discuss My Global Admission Path</button>
+  </div>
+</section>
 
-      <h1 id="abroad-title" style="font-size: clamp(2rem, 4.8vw, 3.8rem); font-weight: 900; color: #FFFFFF !important; -webkit-text-fill-color: #FFFFFF !important; margin: 16px 0 12px 0; line-height: 1.15;">
-        STUDY ABROAD IS NOT JUST ABOUT GETTING A VISA.<br>IT'S ABOUT CHOOSING YOUR NEXT CAREER ECOSYSTEM.
-      </h1>
+<section style="padding:clamp(4rem,7vw,6rem) 0;">
+  <div class="container">
+    <div class="idx-eyebrow reveal"><span class="idx-eyebrow-line"></span><span class="idx-eyebrow-text">Global Destinations</span></div>
+    <h2 style="font-family:var(--font-sans);font-weight:700;font-size:clamp(1.25rem,2.5vw,1.75rem);letter-spacing:.04em;text-transform:uppercase;color:var(--heading);margin-bottom:2.5rem;" class="reveal">
+      University Admissions Across Key Regions
+    </h2>
 
-      <p style="font-size: 1.15rem; color: #FCD34D; font-weight: 800; max-width: 840px; margin: 0 auto 24px auto;">
-        UK • USA • Canada • Australia • Ireland • UAE • Singapore • Europe
-      </p>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;">
+      <div style="padding:2rem;background:var(--white);border:1px solid var(--border);" class="reveal">
+        <div style="font-size:.625rem;font-weight:700;letter-spacing:.14em;color:var(--gold);text-transform:uppercase;margin-bottom:.5rem;">USA &amp; CANADA</div>
+        <div style="font-weight:700;font-size:var(--fs-md);color:var(--heading);margin-bottom:.5rem;">North American Universities</div>
+        <p style="font-size:var(--fs-xs);color:var(--muted);line-height:1.5;">Common App strategy, STEM OPT extension programmes, Assistantships &amp; Scholarship applications.</p>
+      </div>
 
-      <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 16px;">
-        <button class="btn btn-gold" data-modal="lead" data-program="Study Abroad Strategy">
-          GET STUDY ABROAD GUIDANCE
-        </button>
+      <div style="padding:2rem;background:var(--white);border:1px solid var(--border);" class="reveal">
+        <div style="font-size:.625rem;font-weight:700;letter-spacing:.14em;color:var(--gold);text-transform:uppercase;margin-bottom:.5rem;">UK &amp; IRELAND</div>
+        <div style="font-weight:700;font-size:var(--fs-md);color:var(--heading);margin-bottom:.5rem;">UCAS &amp; Post-Graduate Entry</div>
+        <p style="font-size:var(--fs-xs);color:var(--muted);line-height:1.5;">Russell Group universities, 1-year Master's ROI analysis, and Graduate Route visa compliance.</p>
+      </div>
+
+      <div style="padding:2rem;background:var(--white);border:1px solid var(--border);" class="reveal">
+        <div style="font-size:.625rem;font-weight:700;letter-spacing:.14em;color:var(--gold);text-transform:uppercase;margin-bottom:.5rem;">EUROPE &amp; ASIA</div>
+        <div style="font-weight:700;font-size:var(--fs-md);color:var(--heading);margin-bottom:.5rem;">Germany, Netherlands &amp; Singapore</div>
+        <p style="font-size:var(--fs-xs);color:var(--muted);line-height:1.5;">Tuition-free German public universities, NUS/NTU Singapore &amp; English-taught European programmes.</p>
       </div>
     </div>
-  </section>
-
-  <!-- KNOWLEDGE & STRATEGY SECTION -->
-  <section class="section" aria-labelledby="outcome-heading">
-    <div class="container">
-      <div class="section-heading centered reveal">
-        <span class="section-label">Outcome-Focused Planning</span>
-        <h2 id="outcome-heading">DON'T CHOOSE THE COUNTRY FIRST. CHOOSE THE OUTCOME YOU WANT.</h2>
-      </div>
-
-      <div style="max-width: 840px; margin: 0 auto; text-align: center;" class="reveal">
-        <p style="font-size: 1.1rem; color: var(--clr-text-main); line-height: 1.8; margin-bottom: 24px;">
-          Global education requires evaluating: <strong>Country • University • Program • Tuition • Living Cost • Post-Study Work Rights • Scholarships • Visa Compliance.</strong>
-        </p>
-
-        <div style="background: var(--clr-surface); border: 2px solid var(--clr-border); border-radius: var(--radius-xl); padding: var(--sp-8); box-shadow: var(--shadow-lg); margin-bottom: 24px;">
-          <h3 style="font-size: 1.3rem; color: #0F172A; font-weight: 900; margin-bottom: 12px;">
-            We align your international application with long-term global career opportunities.
-          </h3>
-          <p style="font-size: 14px; color: var(--clr-text-2); margin: 0;">
-            Get objective guidance on SOP/LOR documentation, university shortlisting, scholarship applications, and visa interview preparation.
-          </p>
-        </div>
-
-        <button class="btn btn-primary btn-lg" data-modal="lead" data-program="Global Application Strategy">
-          BUILD MY GLOBAL STRATEGY
-        </button>
-      </div>
-    </div>
-  </section>
+  </div>
+</section>
 
 </main>
 
 <div id="footer-slot"></div>
-
 <script src="js/shared.js"></script>
 <script src="js/main.js"></script>
 </body>

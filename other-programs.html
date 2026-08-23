@@ -3,55 +3,121 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Architecture, Design & Other Program Admissions | College Corridor</title>
-  <meta name="description" content="Guidance for Architecture, Design, Hotel Management, Agriculture, Computer Applications, Liberal Arts and other programs.">
+  <title>Architecture, Design & Specialised Admissions Advisory | College Corridor</title>
+  <meta name="description" content="Strategic admissions advisory for Architecture (NATA / JEE P2), Design (NID / NIFT / UCEED), Hotel Management, Agriculture & Liberal Arts.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/components.css">
   <link rel="stylesheet" href="css/animations.css">
+  <style>
+  body { background: var(--ivory); }
+  .idx-eyebrow { display:flex;align-items:center;gap:12px;margin-bottom:1.5rem; }
+  .idx-eyebrow-line { width:28px;height:1px;background:var(--gold);flex-shrink:0; }
+  .idx-eyebrow-text { font-family:var(--font-sans);font-size:.6875rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--gold); }
+  .reveal { opacity:0;transform:translateY(22px);transition:opacity .6s ease,transform .6s ease; }
+  .reveal.in { opacity:1;transform:translateY(0); }
+
+  .oth-hero {
+    background:var(--navy);
+    padding:clamp(5rem,8vw,7rem) 0 clamp(3.5rem,6vw,5rem) 0;
+    color:#fff;
+    border-bottom:1px solid rgba(201,162,39,.2);
+  }
+  .oth-h1 { font-family:var(--font-serif);font-weight:400;font-size:clamp(2.5rem,4.5vw,3.75rem);color:#fff;line-height:1.08;margin-bottom:1rem; }
+  .oth-h1 em { font-style:italic;color:var(--gold); }
+
+  .oth-grid { display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:1px solid var(--border); }
+  .oth-card { padding:2rem 1.5rem;border-right:1px solid var(--border);border-bottom:1px solid var(--border);transition:background var(--trans-fast); }
+  .oth-card:nth-child(3n) { border-right:none; }
+  .oth-card:hover { background:var(--white); }
+
+  @media(max-width:900px){ .oth-grid { grid-template-columns:1fr; } }
+  </style>
 </head>
 <body>
+
 <div id="announcement-bar-slot"></div>
 <header id="navbar-slot" data-active="other"></header>
+
 <main>
 
-<section class="page-hero" aria-labelledby="other-h1">
-  <div class="container page-hero-content">
-    <div class="page-hero-eyebrow"><span class="section-label">Other Programs</span></div>
-    <h1 id="other-h1">Architecture, Design & Other Programs</h1>
-    <p class="hero-sub" style="margin-bottom:var(--sp-8);max-width:720px;">Guidance can also cover Architecture, Design, Hotel Management, Agriculture, Computer Applications, Liberal Arts, Life Sciences and other undergraduate and postgraduate programs.</p>
-    <button class="btn btn-primary btn-lg" data-modal="lead" data-program="other">Talk to a Counsellor</button>
+<section class="oth-hero" aria-labelledby="oth-h1">
+  <div class="container text-center" style="max-width:840px;">
+    <div class="idx-eyebrow" style="justify-content:center;"><span class="idx-eyebrow-line"></span><span class="idx-eyebrow-text">Specialised Programme Advisory</span><span class="idx-eyebrow-line"></span></div>
+    <h1 id="oth-h1" class="oth-h1 reveal">
+      Architecture, Design &amp;<br>
+      <em>Specialised Career Admissions.</em>
+    </h1>
+    <p style="font-size:var(--fs-md);color:rgba(248,250,252,.6);line-height:1.7;margin-bottom:2rem;" class="reveal">
+      Advisory coverage across Architecture (NATA / JEE Paper 2), Design (NID / NIFT / UCEED), Hotel Management, Agriculture, BCA/MCA &amp; Liberal Arts.
+    </p>
+    <button class="btn btn-primary" data-modal="lead" data-program="Other Programs Advisory" style="background:var(--blue);border-color:var(--blue);color:#fff;">Speak With an Advisor</button>
   </div>
 </section>
 
-<section class="section section-alt">
+<section style="padding:clamp(4rem,7vw,6rem) 0;">
   <div class="container">
-    <div class="grid-auto stagger" style="margin-top:var(--sp-6)">
-      <div class="card reveal"><div class="card-icon purple">🏗️</div><h3>Architecture</h3><p>B.Arch and M.Arch admissions through NATA, JEE Paper 2 and other applicable routes.</p></div>
-      <div class="card reveal"><div class="card-icon blue">🎨</div><h3>Design</h3><p>B.Des, M.Des admissions at NID, NIFT, UCEED and other design institutions.</p></div>
-      <div class="card reveal"><div class="card-icon">🏨</div><h3>Hotel Management</h3><p>BHM, BSc Hospitality and hotel management program admissions.</p></div>
-      <div class="card reveal"><div class="card-icon green">🌾</div><h3>Agriculture</h3><p>BSc Agriculture, Forestry, Horticulture and allied agriculture programs.</p></div>
-      <div class="card reveal"><div class="card-icon teal">💻</div><h3>Computer Applications</h3><p>BCA, MCA and related computer application programs.</p></div>
-      <div class="card reveal"><div class="card-icon" style="background:rgba(245,158,11,0.15);border-color:rgba(245,158,11,0.3);">📚</div><h3>Liberal Arts & Sciences</h3><p>BA, BSc, MA, MSc and other liberal arts & science programs.</p></div>
+    <div class="idx-eyebrow reveal"><span class="idx-eyebrow-line"></span><span class="idx-eyebrow-text">Disciplines We Cover</span></div>
+    <h2 style="font-family:var(--font-sans);font-weight:700;font-size:clamp(1.25rem,2.5vw,1.75rem);letter-spacing:.04em;text-transform:uppercase;color:var(--heading);margin-bottom:2.5rem;" class="reveal">
+      Specialised Higher Education Pathways
+    </h2>
+
+    <div class="oth-grid">
+      <div class="oth-card reveal">
+        <div style="font-size:.625rem;font-weight:700;letter-spacing:.14em;color:var(--gold);text-transform:uppercase;margin-bottom:.5rem;">ARCHITECTURE</div>
+        <div style="font-weight:700;font-size:var(--fs-md);color:var(--heading);margin-bottom:.5rem;">B.Arch &amp; M.Arch</div>
+        <p style="font-size:var(--fs-xs);color:var(--muted);line-height:1.5;">NATA and JEE Paper 2 merit score mapping across SPA Delhi, SPA Bhopal, NITs, and premier private CoA institutions.</p>
+      </div>
+
+      <div class="oth-card reveal">
+        <div style="font-size:.625rem;font-weight:700;letter-spacing:.14em;color:var(--gold);text-transform:uppercase;margin-bottom:.5rem;">DESIGN</div>
+        <div style="font-weight:700;font-size:var(--fs-md);color:var(--heading);margin-bottom:.5rem;">B.Des &amp; M.Des</div>
+        <p style="font-size:var(--fs-xs);color:var(--muted);line-height:1.5;">NID DAT, NIFT &amp; UCEED application strategy, portfolio evaluation, and situational test guidance.</p>
+      </div>
+
+      <div class="oth-card reveal">
+        <div style="font-size:.625rem;font-weight:700;letter-spacing:.14em;color:var(--gold);text-transform:uppercase;margin-bottom:.5rem;">HOSPITALITY</div>
+        <div style="font-weight:700;font-size:var(--fs-md);color:var(--heading);margin-bottom:.5rem;">Hotel Management (BHM)</div>
+        <p style="font-size:var(--fs-xs);color:var(--muted);line-height:1.5;">NCHMCT JEE strategy across IHMs, private hospitality institutes &amp; international placement tracks.</p>
+      </div>
+
+      <div class="oth-card reveal">
+        <div style="font-size:.625rem;font-weight:700;letter-spacing:.14em;color:var(--gold);text-transform:uppercase;margin-bottom:.5rem;">AGRICULTURE</div>
+        <div style="font-weight:700;font-size:var(--fs-md);color:var(--heading);margin-bottom:.5rem;">B.Sc Agriculture &amp; Forestry</div>
+        <p style="font-size:var(--fs-xs);color:var(--muted);line-height:1.5;">ICAR AIEEA quota admissions, ICAR accredited state agriculture universities &amp; private degree verification.</p>
+      </div>
+
+      <div class="oth-card reveal">
+        <div style="font-size:.625rem;font-weight:700;letter-spacing:.14em;color:var(--gold);text-transform:uppercase;margin-bottom:.5rem;">COMPUTING</div>
+        <div style="font-weight:700;font-size:var(--fs-md);color:var(--heading);margin-bottom:.5rem;">BCA &amp; MCA Pathways</div>
+        <p style="font-size:var(--fs-xs);color:var(--muted);line-height:1.5;">NIMCET entrance strategy, top NIT MCA seats &amp; direct BCA to software industry transition planning.</p>
+      </div>
+
+      <div class="oth-card reveal">
+        <div style="font-size:.625rem;font-weight:700;letter-spacing:.14em;color:var(--gold);text-transform:uppercase;margin-bottom:.5rem;">LIBERAL ARTS</div>
+        <div style="font-weight:700;font-size:var(--fs-md);color:var(--heading);margin-bottom:.5rem;">BA &amp; B.Sc Humanities</div>
+        <p style="font-size:var(--fs-xs);color:var(--muted);line-height:1.5;">CUET UG score mapping across Delhi University, Ashoka, KREA, Flame &amp; premier interdisciplinary universities.</p>
+      </div>
     </div>
-    <div style="text-align:center;margin-top:var(--sp-10)">
-      <button class="btn btn-primary btn-lg" data-modal="lead" data-program="other">Get Program Guidance</button>
+
+    <!-- ADVISORY BANNER -->
+    <div style="background:var(--navy);padding:3.5rem;border-radius:6px;text-align:center;color:#fff;margin-top:3.5rem;" class="reveal">
+      <h2 style="font-family:var(--font-serif);font-size:clamp(1.75rem,3vw,2.5rem);font-weight:400;margin-bottom:1rem;color:#fff;">
+        Not sure which programme fits your career goals?
+      </h2>
+      <p style="font-size:var(--fs-base);color:rgba(248,250,252,.6);max-width:620px;margin:0 auto 2rem auto;line-height:1.7;">
+        Talk to an advisor about your aptitude, entrance scores, and multi-year career objectives.
+      </p>
+      <button class="btn btn-primary" data-modal="lead" data-program="Other Programs CTA" style="background:var(--blue);border-color:var(--blue);color:#fff;">Talk to an Advisor</button>
     </div>
   </div>
-</section>
-
-<section class="section section-dark">
-  <div class="container"><div class="cta-banner reveal"><div class="cta-banner-content">
-    <h2>Not Sure Which Program? We Can Help.</h2>
-    <p>Talk to a College Corridor counsellor about your interests, aptitude and career goals.</p>
-    <div class="cta-banner-actions"><button class="btn btn-primary btn-lg" data-modal="lead">Talk to a Counsellor</button></div>
-  </div></div></div>
 </section>
 
 </main>
-<div id="footer-slot"></div><div id="mobile-cta-slot"></div><div id="modal-slot"></div>
-<script src="js/shared.js"></script><script src="js/config.js"></script>
+
+<div id="footer-slot"></div>
+<script src="js/shared.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>

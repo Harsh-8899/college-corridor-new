@@ -3,182 +3,60 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>COLLEGE CORRIDOR — Premium Admissions Counselling & Strategy</title>
-  <meta name="description" content="Premium admissions counselling for MBBS, BDS, NEET PG, B.Tech and MBA. Strategic choice-filling, college shortlisting, and round-wise admission guidance across India.">
+  <title>Central & State Counselling Advisory | MCC, JoSAA, State Quota Strategy | College Corridor</title>
+  <meta name="description" content="Strategic counselling guidance for MCC, JoSAA, CSAB, State Quota, Deemed Universities, and private counselling rounds across India.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/components.css">
   <link rel="stylesheet" href="css/animations.css">
-
   <style>
-    :root {
-      --clr-gold: #C59B27;
-      --clr-gold-light: #FCD34D;
-      --clr-dark: #0F172A;
-      --clr-dark-card: #1E293B;
-      --clr-border-gold: rgba(197, 155, 39, 0.35);
-    }
+  body { background: var(--ivory); }
+  .idx-eyebrow { display:flex;align-items:center;gap:12px;margin-bottom:1.5rem; }
+  .idx-eyebrow-line { width:28px;height:1px;background:var(--gold);flex-shrink:0; }
+  .idx-eyebrow-text { font-family:var(--font-sans);font-size:.6875rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--gold); }
+  .reveal { opacity:0;transform:translateY(22px);transition:opacity .6s ease,transform .6s ease; }
+  .reveal.in { opacity:1;transform:translateY(0); }
 
-    /* Force Light Text on Dark Background Containers */
-    .dark-section,
-    .dark-card,
-    .section-dark-bg {
-      background: #0F172A !important;
-      color: #FFFFFF !important;
-    }
+  .cns-hero {
+    background:var(--navy);
+    min-height:90vh;
+    display:grid;
+    grid-template-columns:1.1fr .9fr;
+    overflow:hidden;
+    position:relative;
+  }
+  .cns-hero-left {
+    display:flex;flex-direction:column;justify-content:center;
+    padding:clamp(4rem,8vw,7rem) clamp(2rem,5vw,5rem);
+    z-index:2;
+  }
+  .cns-h1 { font-family:var(--font-serif);font-weight:400;font-size:clamp(2.5rem,4.8vw,4rem);color:#fff;line-height:1.06;letter-spacing:-.025em;margin-bottom:1rem; }
+  .cns-h1 em { font-style:italic;color:var(--gold); }
+  .cns-h1 strong { font-weight:500;display:block;font-size:clamp(1.125rem,2.2vw,1.6rem);letter-spacing:.05em;text-transform:uppercase;font-family:var(--font-sans);color:rgba(248,250,252,.45);margin-top:.75rem; }
+  .cns-hero-body { font-size:var(--fs-md);color:rgba(248,250,252,.6);line-height:1.75;max-width:440px;margin-bottom:2.5rem; }
 
-    .dark-section h1, .dark-section h2, .dark-section h3, .dark-section h4,
-    .dark-card h1, .dark-card h2, .dark-card h3, .dark-card h4,
-    .section-dark-bg h1, .section-dark-bg h2, .section-dark-bg h3, .section-dark-bg h4 {
-      color: #FFFFFF !important;
-      -webkit-text-fill-color: #FFFFFF !important;
-    }
+  /* Interactive Choice Filling Simulator */
+  .cf-simulator {
+    background:rgba(255,255,255,.025);border:1px solid rgba(201,162,39,.25);
+    border-radius:6px;padding:2rem;width:100%;max-width:420px;
+  }
+  .cf-header { font-size:.625rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem;padding-bottom:.75rem;border-bottom:1px solid rgba(201,162,39,.15); }
+  .cf-list { display:flex;flex-direction:column;gap:.625rem; }
+  .cf-item {
+    display:flex;align-items:center;justify-content:space-between;
+    padding:.625rem 1rem;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);
+    border-radius:4px;font-size:.75rem;color:#fff;font-family:var(--font-sans);
+  }
+  .cf-badge { font-size:.625rem;font-weight:700;padding:2px 8px;border-radius:2px; }
+  .cf-dream { background:rgba(239,68,68,.15);color:#FCA5A5; }
+  .cf-target { background:rgba(37,99,235,.15);color:#93C5FD; }
+  .cf-safe { background:rgba(16,185,129,.15);color:#6EE7B7; }
 
-    .gold-accent {
-      color: #FCD34D !important;
-      -webkit-text-fill-color: #FCD34D !important;
-    }
-
-    .brand-hero {
-      padding: var(--sp-12) 0 var(--sp-10) 0;
-      background: radial-gradient(circle at 50% 20%, rgba(197, 155, 39, 0.18) 0%, rgba(15, 23, 42, 0.98) 75%), #0F172A;
-      color: #FFFFFF;
-      text-align: center;
-      border-bottom: 2px solid var(--clr-border-gold);
-    }
-
-    .hero-badges {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 10px;
-      margin: var(--sp-5) 0 var(--sp-6) 0;
-    }
-
-    .hero-badge-pill {
-      background: rgba(197, 155, 39, 0.15);
-      color: #FCD34D;
-      border: 1px solid var(--clr-border-gold);
-      padding: 6px 16px;
-      border-radius: 20px;
-      font-size: 13px;
-      font-weight: 800;
-      letter-spacing: 0.05em;
-    }
-
-    .btn-gold {
-      background: linear-gradient(135deg, #C59B27 0%, #D97706 100%);
-      color: #0F172A !important;
-      font-weight: 900 !important;
-      font-size: 1.1rem !important;
-      padding: 16px 32px !important;
-      border-radius: var(--radius-md) !important;
-      box-shadow: 0 8px 25px rgba(197, 155, 39, 0.4) !important;
-      transition: all 0.3s ease !important;
-      border: 2px solid #FCD34D !important;
-      text-transform: uppercase;
-      letter-spacing: 0.03em;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-    }
-
-    .btn-gold:hover {
-      transform: translateY(-3px) scale(1.02);
-      box-shadow: 0 12px 35px rgba(197, 155, 39, 0.6) !important;
-      background: linear-gradient(135deg, #FCD34D 0%, #C59B27 100%);
-    }
-
-    .btn-outline-light {
-      background: rgba(255, 255, 255, 0.08);
-      color: #FFFFFF !important;
-      font-weight: 700 !important;
-      font-size: 1rem !important;
-      padding: 16px 28px !important;
-      border-radius: var(--radius-md) !important;
-      border: 1px solid rgba(255, 255, 255, 0.3) !important;
-      transition: all 0.3s ease !important;
-    }
-
-    .btn-outline-light:hover {
-      background: rgba(255, 255, 255, 0.2);
-      border-color: #FFFFFF !important;
-    }
-
-    .pathway-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: var(--sp-6);
-      margin-top: var(--sp-8);
-    }
-
-    .pathway-card {
-      background: var(--clr-surface);
-      border: 2px solid var(--clr-border);
-      border-radius: var(--radius-xl);
-      padding: var(--sp-8);
-      display: flex;
-      flex-direction: column;
-      height: 100%;
-      transition: all 0.3s ease;
-    }
-
-    .pathway-card:hover {
-      transform: translateY(-5px);
-      box-shadow: var(--shadow-xl);
-      border-color: var(--clr-gold);
-    }
-
-    .college-tag-cloud {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-top: 16px;
-    }
-
-    .college-tag {
-      background: rgba(15, 23, 42, 0.05);
-      border: 1px solid var(--clr-border);
-      padding: 6px 12px;
-      border-radius: 6px;
-      font-size: 12px;
-      font-weight: 700;
-      color: var(--clr-text-main);
-    }
-
-    .dark-card .college-tag {
-      background: rgba(255, 255, 255, 0.08);
-      border-color: rgba(255, 255, 255, 0.15);
-      color: #E2E8F0;
-    }
-
-    .timeline-flow {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: center;
-      gap: 12px;
-      margin: var(--sp-8) 0;
-    }
-
-    .timeline-node {
-      background: rgba(255, 255, 255, 0.06);
-      border: 1px solid var(--clr-border-gold);
-      padding: 10px 18px;
-      border-radius: var(--radius-md);
-      font-weight: 800;
-      font-size: 13px;
-      color: #FCD34D;
-      text-align: center;
-    }
-
-    .timeline-arrow {
-      color: #94A3B8;
-      font-weight: 900;
-      font-size: 16px;
-    }
+  @media(max-width:900px){
+    .cns-hero { grid-template-columns:1fr; }
+    .cns-hero-right { display:none; }
+  }
   </style>
 </head>
 <body>
@@ -188,703 +66,157 @@
 
 <main>
 
-  <!-- HERO SECTION -->
-  <section class="brand-hero" aria-labelledby="brand-title">
-    <div class="container">
-      <span class="section-label" style="background: rgba(201,150,12,0.22); color: #FCD34D; border: 1px solid rgba(253,224,71,0.5);">
-        College Corridor Advisory
-      </span>
+<!-- HERO -->
+<section class="cns-hero" aria-labelledby="cns-h1">
+  <div class="cns-hero-left">
+    <div class="idx-eyebrow reveal"><span class="idx-eyebrow-line"></span><span class="idx-eyebrow-text">College Corridor Counselling Command Centre</span></div>
+    <h1 id="cns-h1" class="cns-h1 reveal" style="transition-delay:.08s">
+      Counselling is not form filling.<br>
+      <em>It is strategy under a deadline.</em>
+      <strong>Central, State &amp; Private Counselling Advisory</strong>
+    </h1>
+    <p class="cns-hero-body reveal" style="transition-delay:.15s">
+      The order in which you fill your choices determines your seat allotment. One misstep in security deposit, choice order, or round upgrade rules can cost an entire academic year.
+    </p>
+    <div class="reveal" style="transition-delay:.22s">
+      <button class="btn btn-primary" data-modal="lead" data-program="Counselling Advisory" style="background:var(--blue);border-color:var(--blue);color:#fff;">Build My Counselling Strategy</button>
+    </div>
+  </div>
 
-      <h1 id="brand-title" style="font-size: clamp(2.4rem, 5.5vw, 4.2rem); font-weight: 900; color: #FFFFFF !important; -webkit-text-fill-color: #FFFFFF !important; line-height: 1.1; margin-top: 12px;">
-        COLLEGE CORRIDOR
-      </h1>
-
-      <p style="font-size: clamp(1.2rem, 2.8vw, 1.8rem); font-weight: 800; color: #FCD34D; max-width: 900px; margin: 12px auto var(--sp-4) auto; line-height: 1.35;">
-        Premium Admissions Counselling for Students Who Don't Want to Leave Their Future to Chance.
-      </p>
-
-      <div class="hero-badges">
-        <span class="hero-badge-pill">MBBS</span>
-        <span class="hero-badge-pill">BDS</span>
-        <span class="hero-badge-pill">NEET PG</span>
-        <span class="hero-badge-pill">MD / MS</span>
-        <span class="hero-badge-pill">B.TECH</span>
-        <span class="hero-badge-pill">MBA</span>
+  <div style="position:relative;display:flex;align-items:center;justify-content:center;padding:3rem 3rem 3rem 1rem;" class="cns-hero-right">
+    <div class="cf-simulator">
+      <div class="cf-header">Choice Preference Optimisation</div>
+      <div class="cf-list">
+        <div class="cf-item"><span>1. Option A (Tier-1 Institution)</span><span class="cf-badge cf-dream">DREAM</span></div>
+        <div class="cf-item"><span>2. Option B (Optimal ROI &amp; Clinical)</span><span class="cf-badge cf-target">TARGET</span></div>
+        <div class="cf-item"><span>3. Option C (Proven Domicile Seat)</span><span class="cf-badge cf-target">TARGET</span></div>
+        <div class="cf-item"><span>4. Option D (Confirmed Safety Choice)</span><span class="cf-badge cf-safe">SAFE</span></div>
       </div>
-
-      <div style="max-width: 840px; margin: 0 auto var(--sp-8) auto; background: rgba(255,255,255,0.05); border: 1px solid var(--clr-border-gold); padding: var(--sp-6); border-radius: var(--radius-xl);">
-        <h2 style="font-size: clamp(1.3rem, 2.5vw, 1.9rem); font-weight: 900; color: #FFFFFF !important; -webkit-text-fill-color: #FFFFFF !important; margin-bottom: 12px;">
-          Your Rank Opens the Door. Your Decisions Determine What Happens Next.
-        </h2>
-        <p style="color: #CBD5E1; font-size: 1.05rem; line-height: 1.7; margin-bottom: 16px;">
-          Choosing a college is not just about getting a seat. It is about choosing where you will spend the next few years of your life, who you will learn with, what opportunities you will access and what environment will shape your career.
-        </p>
-        <p style="color: #FCD34D; font-weight: 800; font-size: 1.1rem; margin: 0;">
-          College Corridor helps students and families make that decision strategically.
+      <div style="margin-top:1.25rem;padding:.875rem;background:rgba(201,162,39,.08);border:1px solid rgba(201,162,39,.2);border-radius:4px;text-align:center;">
+        <p style="font-family:var(--font-serif);font-style:italic;font-size:.8125rem;color:rgba(248,250,252,.85);margin:0;">
+          "Choice filling is not random ordering. Every preference must be strategically validated."
         </p>
       </div>
+    </div>
+  </div>
+</section>
 
-      <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 16px;">
-        <button class="btn btn-gold" data-modal="lead" data-program="General Counselling Strategy">
-          BOOK YOUR COUNSELLING NOW
-        </button>
+<!-- COUNSELLING PATHWAYS -->
+<section style="background:var(--ivory);padding:clamp(5rem,8vw,7rem) 0;" aria-labelledby="pw-heading">
+  <div class="container">
+    <div class="idx-eyebrow reveal"><span class="idx-eyebrow-line"></span><span class="idx-eyebrow-text">Pathways We Manage</span></div>
+    <h2 id="pw-heading" style="font-family:var(--font-sans);font-weight:700;font-size:clamp(1.25rem,2.5vw,1.75rem);letter-spacing:.04em;text-transform:uppercase;color:var(--heading);margin-bottom:2.5rem;" class="reveal">
+      All Admission Counselling Authorities
+    </h2>
+
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;">
+      <div style="padding:2rem;background:var(--white);border:1px solid var(--border);" class="reveal">
+        <div style="font-size:.625rem;font-weight:700;letter-spacing:.14em;color:var(--blue);text-transform:uppercase;margin-bottom:.5rem;">MEDICAL (UG/PG)</div>
+        <div style="font-weight:700;font-size:var(--fs-md);color:var(--heading);margin-bottom:.5rem;">MCC &amp; State NEET Counselling</div>
+        <p style="font-size:var(--fs-xs);color:var(--muted);line-height:1.5;">15% AIQ, 85% State Quotas, Deemed Universities, Central Institutions, Mop-Up &amp; Stray Vacancy.</p>
+      </div>
+
+      <div style="padding:2rem;background:var(--white);border:1px solid var(--border);" class="reveal">
+        <div style="font-size:.625rem;font-weight:700;letter-spacing:.14em;color:var(--blue);text-transform:uppercase;margin-bottom:.5rem;">ENGINEERING</div>
+        <div style="font-weight:700;font-size:var(--fs-md);color:var(--heading);margin-bottom:.5rem;">JoSAA, CSAB &amp; State Engineering</div>
+        <p style="font-size:var(--fs-xs);color:var(--muted);line-height:1.5;">IITs, NITs, IIITs, GFTIs round-wise strategy + State CET (UPSEAT, MHT CET, WBJEE, JAC Delhi).</p>
+      </div>
+
+      <div style="padding:2rem;background:var(--white);border:1px solid var(--border);" class="reveal">
+        <div style="font-size:.625rem;font-weight:700;letter-spacing:.14em;color:var(--blue);text-transform:uppercase;margin-bottom:.5rem;">LAW &amp; MANAGEMENT</div>
+        <div style="font-weight:700;font-size:var(--fs-md);color:var(--heading);margin-bottom:.5rem;">CLAT Consortium &amp; B-School Calls</div>
+        <p style="font-size:var(--fs-xs);color:var(--muted);line-height:1.5;">NLU Allotment lists, CAP rounds, IIM GD/PI shortlists &amp; private university seat confirmations.</p>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- SECTION 2: DON'T JUST GET A SEAT -->
-  <section class="section" aria-labelledby="strategy-heading">
-    <div class="container">
-      <div class="section-heading centered reveal">
-        <span class="section-label">Strategic Decision Making</span>
-        <h2 id="strategy-heading">DON'T JUST GET A SEAT. GET THE RIGHT STRATEGY.</h2>
+<!-- ROUND-BY-ROUND TIMELINE -->
+<section style="background:var(--navy);padding:clamp(5rem,8vw,7rem) 0;" aria-labelledby="tl-heading">
+  <div class="container">
+    <div class="idx-eyebrow reveal"><span class="idx-eyebrow-line"></span><span class="idx-eyebrow-text">Strategic Execution</span></div>
+    <h2 id="tl-heading" style="font-family:var(--font-sans);font-weight:700;font-size:clamp(1.25rem,2.5vw,1.75rem);letter-spacing:.04em;text-transform:uppercase;color:#fff;margin-bottom:2.5rem;" class="reveal">
+      The Counselling Round Cycle
+    </h2>
+
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem;">
+      <div style="padding:1.5rem;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);" class="reveal">
+        <div style="font-size:.625rem;color:var(--gold);font-weight:700;letter-spacing:.12em;margin-bottom:.5rem;">ROUND 01</div>
+        <div style="font-weight:700;font-size:var(--fs-xs);letter-spacing:.1em;text-transform:uppercase;color:#fff;margin-bottom:.375rem;">Registration &amp; Initial Fill</div>
+        <p style="font-size:var(--fs-xs);color:rgba(248,250,252,.5);line-height:1.5;">Document verification, security deposit, baseline choice preference submission.</p>
       </div>
 
-      <div style="max-width: 860px; margin: 0 auto;" class="reveal">
-        <p style="font-size: 1.15rem; line-height: 1.8; color: var(--clr-text-main); margin-bottom: var(--sp-6); text-align: center;">
-          A good score does not automatically guarantee the best possible outcome. A high rank can still be poorly utilized. A borderline rank can sometimes have more options than you expect. And a single counselling decision can change the colleges available to you in the next round.
-        </p>
-
-        <div style="background: var(--clr-surface); border: 2px solid var(--clr-border); border-radius: var(--radius-xl); padding: var(--sp-8); text-align: center; box-shadow: var(--shadow-lg); margin-bottom: var(--sp-8);">
-          <h3 style="font-size: 1.2rem; color: #0F172A; margin-bottom: 16px;">That's why we don't simply tell you: <em>"Here are some colleges."</em></h3>
-          <p style="font-size: 1.25rem; font-weight: 900; color: var(--clr-gold); line-height: 1.6; margin-bottom: 0;">
-            We help you understand:<br>
-            <span style="color: #0F172A;">Where you stand → What you can target → What you should avoid → How you should fill choices → How you should approach each round → What decision makes sense for your future.</span>
-          </p>
-        </div>
-
-        <div style="text-align: center;">
-          <h3 style="font-size: 1.5rem; font-weight: 900; color: #0F172A; margin-bottom: var(--sp-6);">
-            Your admission should be planned — not guessed.
-          </h3>
-          <button class="btn btn-primary btn-lg" data-modal="lead" data-program="Get My Admission Strategy">
-            GET MY ADMISSION STRATEGY
-          </button>
-        </div>
+      <div style="padding:1.5rem;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);" class="reveal">
+        <div style="font-size:.625rem;color:var(--gold);font-weight:700;letter-spacing:.12em;margin-bottom:.5rem;">ROUND 02</div>
+        <div style="font-weight:700;font-size:var(--fs-xs);letter-spacing:.1em;text-transform:uppercase;color:#fff;margin-bottom:.375rem;">Upgrade vs Retention</div>
+        <p style="font-size:var(--fs-xs);color:rgba(248,250,252,.5);line-height:1.5;">Analyzing allotment, free-exit rules, security forfeiture risk &amp; upgrade choice lists.</p>
       </div>
-    </div>
-  </section>
 
-  <!-- SECTION 3: ONE DECISION. YEARS OF YOUR LIFE. -->
-  <section class="section section-alt" aria-labelledby="impact-heading">
-    <div class="container">
-      <div style="max-width: 880px; margin: 0 auto;" class="reveal">
-        <div class="section-heading centered">
-          <span class="section-label">Long-Term Value</span>
-          <h2 id="impact-heading">ONE DECISION. YEARS OF YOUR LIFE.</h2>
-        </div>
+      <div style="padding:1.5rem;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);" class="reveal">
+        <div style="font-size:.625rem;color:var(--gold);font-weight:700;letter-spacing:.12em;margin-bottom:.5rem;">MOP-UP / ROUND 03</div>
+        <div style="font-weight:700;font-size:var(--fs-xs);letter-spacing:.1em;text-transform:uppercase;color:#fff;margin-bottom:.375rem;">Vacant Seat Matrix</div>
+        <p style="font-size:var(--fs-xs);color:rgba(248,250,252,.5);line-height:1.5;">High-stakes seat matrix evaluation for newly added or vacated seats.</p>
+      </div>
 
-        <p style="font-size: 1.1rem; text-align: center; color: var(--clr-text-main); margin-bottom: 24px; font-weight: 700;">
-          You are not only choosing a college. You are choosing:
-        </p>
-
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 14px; margin-bottom: 32px;">
-          <div style="padding: 14px; background: var(--clr-surface); border: 1px solid var(--clr-border); border-radius: var(--radius-md); font-weight: 800; font-size: 14px; text-align: center;">🌱 Your Environment</div>
-          <div style="padding: 14px; background: var(--clr-surface); border: 1px solid var(--clr-border); border-radius: var(--radius-md); font-weight: 800; font-size: 14px; text-align: center;">🤝 Your Peer Group</div>
-          <div style="padding: 14px; background: var(--clr-surface); border: 1px solid var(--clr-border); border-radius: var(--radius-md); font-weight: 800; font-size: 14px; text-align: center;">🏥 Your Exposure</div>
-          <div style="padding: 14px; background: var(--clr-surface); border: 1px solid var(--clr-border); border-radius: var(--radius-md); font-weight: 800; font-size: 14px; text-align: center;">🚀 Your Opportunities</div>
-          <div style="padding: 14px; background: var(--clr-surface); border: 1px solid var(--clr-border); border-radius: var(--radius-md); font-weight: 800; font-size: 14px; text-align: center;">🌐 Your Network</div>
-          <div style="padding: 14px; background: var(--clr-surface); border: 1px solid var(--clr-border); border-radius: var(--radius-md); font-weight: 800; font-size: 14px; text-align: center;">⏳ Your Next 4–5 Years</div>
-        </div>
-
-        <div style="background: #0F172A; color: #FFFFFF; border: 2px solid var(--clr-border-gold); border-radius: var(--radius-xl); padding: var(--sp-8); text-align: center;">
-          <p style="color: #CBD5E1; font-size: 1rem; margin-bottom: 12px;">For many families, education is one of the largest investments they will ever make.</p>
-          <p style="font-size: 1.1rem; color: #E2E8F0; margin-bottom: 8px;">So the question isn't: <em>"How do I get admission somewhere?"</em></p>
-          <h3 style="font-size: clamp(1.4rem, 3vw, 2.1rem); font-weight: 900; color: #FCD34D !important; -webkit-text-fill-color: #FCD34D !important; margin: 12px 0;">
-            "Where does it make sense for me to invest the next few years of my life?"
-          </h3>
-          <p style="font-weight: 700; color: #FFFFFF; margin: 0;">That's where professional counselling matters.</p>
-        </div>
+      <div style="padding:1.5rem;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);" class="reveal">
+        <div style="font-size:.625rem;color:var(--gold);font-weight:700;letter-spacing:.12em;margin-bottom:.5rem;">STRAY VACANCY</div>
+        <div style="font-weight:700;font-size:var(--fs-xs);letter-spacing:.1em;text-transform:uppercase;color:#fff;margin-bottom:.375rem;">Institutional Final Round</div>
+        <p style="font-size:var(--fs-xs);color:rgba(248,250,252,.5);line-height:1.5;">On-ground counselling coordination for remaining un-allotted vacant seats.</p>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- SECTION 4: FIVE PATHWAYS -->
-  <section class="section" aria-labelledby="pathways-heading">
-    <div class="container">
-      <div class="section-heading centered reveal">
-        <span class="section-label">Academic Disciplines</span>
-        <h2 id="pathways-heading">FIVE PATHWAYS. ONE PURPOSE.</h2>
+<!-- PRICING -->
+<section style="background:var(--ivory);padding:clamp(5rem,8vw,7rem) 0;" aria-labelledby="pricing-heading">
+  <div class="container">
+    <div class="idx-eyebrow reveal"><span class="idx-eyebrow-line"></span><span class="idx-eyebrow-text">Counselling Advisory Plans</span></div>
+    <h2 id="pricing-heading" style="font-family:var(--font-sans);font-weight:700;font-size:clamp(1.25rem,2.5vw,1.75rem);letter-spacing:.04em;text-transform:uppercase;color:var(--heading);margin-bottom:2.5rem;" class="reveal">
+      Get Expert Strategy Before You Fill Choices
+    </h2>
+
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;">
+      <div style="padding:2.5rem 2rem;background:var(--white);border:1px solid var(--border);" class="reveal">
+        <div style="font-size:.625rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:.5rem;">STRATEGIC</div>
+        <div style="font-family:var(--font-serif);font-size:2rem;font-weight:700;color:var(--heading);margin-bottom:1rem;">₹25,000</div>
+        <p style="font-size:var(--fs-xs);color:var(--muted);margin-bottom:1.5rem;line-height:1.5;">Single counselling route choice filling strategy and rank analysis.</p>
+        <button class="btn btn-primary btn-sm" style="width:100%;background:var(--navy);border-color:var(--navy);color:#fff;" data-modal="lead" data-program="Counselling Strategic Plan">Choose Strategic Plan</button>
       </div>
 
-      <div class="pathway-grid">
-        <!-- MBBS & BDS -->
-        <div class="pathway-card reveal" style="border-top: 4px solid #C59B27;">
-          <div style="font-size: 2rem; margin-bottom: 12px;">🏥</div>
-          <h3 style="font-size: 1.3rem; margin-bottom: 4px;">MBBS & BDS</h3>
-          <div style="font-size: 12px; font-weight: 800; color: var(--clr-gold); text-transform: uppercase; margin-bottom: 12px;">NEET UG Admissions & Counselling</div>
-          <p style="font-size: 13px; color: var(--clr-text-2); line-height: 1.6; margin-bottom: 16px;">
-            MCC + State Counselling. Government | Private | Deemed | Applicable Management Seats.<br>
-            <strong>We help you understand where your rank, category, domicile and budget can realistically take you.</strong>
-          </p>
-          <div style="margin-top: auto;">
-            <a href="medical-admissions.html" class="btn btn-primary btn-sm" style="width: 100%;">GET MBBS/BDS COUNSELLING</a>
-          </div>
-        </div>
+      <div style="padding:2.5rem 2rem;background:var(--white);border:2px solid var(--gold);position:relative;" class="reveal">
+        <div style="position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:var(--gold);color:#0B1220;font-size:.5625rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;padding:2px 10px;border-radius:2px;">RECOMMENDED</div>
+        <div style="font-size:.625rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:.5rem;">PREMIUM ⭐</div>
+        <div style="font-family:var(--font-serif);font-size:2rem;font-weight:700;color:var(--heading);margin-bottom:1rem;">₹50,000</div>
+        <p style="font-size:var(--fs-xs);color:var(--muted);margin-bottom:1.5rem;line-height:1.5;">Multi-state + MCC/JoSAA counselling management &amp; Dedicated Advisor.</p>
+        <button class="btn btn-primary btn-sm" style="width:100%;background:var(--blue);border-color:var(--blue);color:#fff;" data-modal="lead" data-program="Counselling Premium Plan">Choose Premium Plan</button>
+      </div>
 
-        <!-- NEET PG -->
-        <div class="pathway-card reveal" style="border-top: 4px solid #10B981;">
-          <div style="font-size: 2rem; margin-bottom: 12px;">🩺</div>
-          <h3 style="font-size: 1.3rem; margin-bottom: 4px;">NEET PG</h3>
-          <div style="font-size: 12px; font-weight: 800; color: #10B981; text-transform: uppercase; margin-bottom: 12px;">MD/MS & PG Medical Admissions</div>
-          <p style="font-size: 13px; color: var(--clr-text-2); line-height: 1.6; margin-bottom: 16px;">
-            MCC + State PG Counselling. Branch Selection | College Selection | Choice Filling | Round Strategy | Fee Evaluation.<br>
-            <strong>Your PG rank is important. What you do with it matters just as much.</strong>
-          </p>
-          <div style="margin-top: auto;">
-            <a href="medical-admissions.html" class="btn btn-outline btn-sm" style="width: 100%;">GET NEET PG COUNSELLING</a>
-          </div>
-        </div>
-
-        <!-- B.TECH -->
-        <div class="pathway-card reveal" style="border-top: 4px solid #3B82F6;">
-          <div style="font-size: 2rem; margin-bottom: 12px;">⚙️</div>
-          <h3 style="font-size: 1.3rem; margin-bottom: 4px;">B.TECH</h3>
-          <div style="font-size: 12px; font-weight: 800; color: #3B82F6; text-transform: uppercase; margin-bottom: 12px;">Top-Tier Engineering Admissions</div>
-          <p style="font-size: 13px; color: var(--clr-text-2); line-height: 1.6; margin-bottom: 16px;">
-            JEE | State Counselling | Private University Admissions. College Selection | Branch Selection | Direct Routes.<br>
-            <strong>Don't choose an engineering college simply because you received an offer. Choose it because it makes sense for your future.</strong>
-          </p>
-          <div style="margin-top: auto;">
-            <a href="engineering-admissions.html" class="btn btn-outline btn-sm" style="width: 100%;">GET B.TECH COUNSELLING</a>
-          </div>
-        </div>
-
-        <!-- MBA -->
-        <div class="pathway-card reveal" style="border-top: 4px solid #8B5CF6;">
-          <div style="font-size: 2rem; margin-bottom: 12px;">📊</div>
-          <h3 style="font-size: 1.3rem; margin-bottom: 4px;">MBA</h3>
-          <div style="font-size: 12px; font-weight: 800; color: #8B5CF6; text-transform: uppercase; margin-bottom: 12px;">Top-Tier B-School Admissions</div>
-          <p style="font-size: 13px; color: var(--clr-text-2); line-height: 1.6; margin-bottom: 16px;">
-            CAT | XAT | NMAT | SNAP | CMAT. Profile Evaluation | Application Strategy | Interview Guidance.<br>
-            <strong>The right MBA can accelerate your career. The wrong one can cost you years and a significant investment.</strong>
-          </p>
-          <div style="margin-top: auto;">
-            <a href="management-admissions.html" class="btn btn-outline btn-sm" style="width: 100%;">GET MBA COUNSELLING</a>
-          </div>
-        </div>
+      <div style="padding:2.5rem 2rem;background:var(--navy);border:1px solid rgba(255,255,255,.1);color:#fff;" class="reveal">
+        <div style="font-size:.625rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:.5rem;">ELITE</div>
+        <div style="font-family:var(--font-serif);font-size:2rem;font-weight:700;color:#fff;margin-bottom:1rem;">₹1,00,000</div>
+        <p style="font-size:var(--fs-xs);color:rgba(248,250,252,.5);margin-bottom:1.5rem;line-height:1.5;">Full concierge counselling support through all rounds, mop-up &amp; stray vacancy.</p>
+        <button class="btn btn-primary btn-sm" style="width:100%;background:var(--gold);border-color:var(--gold);color:#0B1220;" data-modal="lead" data-program="Counselling Elite Plan">Choose Elite Plan</button>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- SECTION 5: THE BIGGEST ADMISSION MISTAKE -->
-  <section class="section section-alt" aria-labelledby="mistakes-heading">
-    <div class="container">
-      <div class="section-heading centered reveal">
-        <span class="section-label">Pitfall Avoidance</span>
-        <h2 id="mistakes-heading">THE BIGGEST ADMISSION MISTAKE ISN'T ALWAYS A LOW SCORE.</h2>
-      </div>
-
-      <div style="max-width: 820px; margin: 0 auto;" class="reveal">
-        <div style="background: var(--clr-surface); border: 1px solid var(--clr-border); border-radius: var(--radius-xl); padding: var(--sp-8); box-shadow: var(--shadow-md); margin-bottom: var(--sp-8);">
-          <h3 style="font-size: 1.1rem; color: #0F172A; font-weight: 800; margin-bottom: 16px; text-align: center;">
-            Common Mistakes Made Every Admission Season:
-          </h3>
-          <div style="display: flex; flex-direction: column; gap: 12px; font-size: 14px; color: var(--clr-text-main);">
-            <div style="padding: 10px; background: rgba(239,68,68,0.06); border-radius: 6px;">❌ <strong>Choosing too quickly</strong> under pressure or last-day panic.</div>
-            <div style="padding: 10px; background: rgba(239,68,68,0.06); border-radius: 6px;">❌ <strong>Choosing too conservatively</strong> and missing out on better target colleges.</div>
-            <div style="padding: 10px; background: rgba(239,68,68,0.06); border-radius: 6px;">❌ <strong>Filling choices randomly</strong> without understanding round upgrade rules.</div>
-            <div style="padding: 10px; background: rgba(239,68,68,0.06); border-radius: 6px;">❌ <strong>Ignoring key counselling pathways</strong> (e.g. open state quotas, central quotas).</div>
-            <div style="padding: 10px; background: rgba(239,68,68,0.06); border-radius: 6px;">❌ <strong>Focusing only on brand name</strong> while ignoring fees, location, clinical exposure, placements, or long-term growth.</div>
-            <div style="padding: 10px; background: rgba(239,68,68,0.06); border-radius: 6px;">❌ <strong>Simply not knowing what you don't know.</strong></div>
-          </div>
-        </div>
-
-        <p style="text-align: center; font-size: 1.2rem; font-weight: 800; color: #0F172A; margin-bottom: var(--sp-6);">
-          You don't need more random information. You need a strategy built around <strong>your profile</strong>.
-        </p>
-
-        <div style="text-align: center;">
-          <button class="btn btn-primary btn-lg" data-modal="lead" data-program="Profile Strategy">
-            FIND MY STRATEGY
-          </button>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SECTION 6: WHAT HAPPENS WHEN COUNSELLING OPENS? -->
-  <section class="section dark-section" style="background: #0F172A; color: #FFFFFF;" aria-labelledby="clock-heading">
-    <div class="container">
-      <div class="section-heading centered reveal">
-        <span class="section-label" style="background: rgba(239,68,68,0.2); color: #F87171;">Process & Timing</span>
-        <h2 id="clock-heading" style="color: #FFFFFF !important; -webkit-text-fill-color: #FFFFFF !important;">
-          WHAT HAPPENS WHEN COUNSELLING OPENS?
-        </h2>
-        <p style="color: #FCD34D; font-size: 1.3rem; font-weight: 800; margin-top: 8px;">The clock starts moving.</p>
-      </div>
-
-      <div class="timeline-flow reveal">
-        <div class="timeline-node">Registration</div>
-        <div class="timeline-arrow">↓</div>
-        <div class="timeline-node">Eligibility</div>
-        <div class="timeline-arrow">↓</div>
-        <div class="timeline-node" style="border-color: #FCD34D; background: rgba(197,155,39,0.2);">Choice Filling</div>
-        <div class="timeline-arrow">↓</div>
-        <div class="timeline-node">Round 1</div>
-        <div class="timeline-arrow">↓</div>
-        <div class="timeline-node">Allotment</div>
-        <div class="timeline-arrow">↓</div>
-        <div class="timeline-node">Upgrade / Float / Exit</div>
-        <div class="timeline-arrow">↓</div>
-        <div class="timeline-node">Round 2</div>
-        <div class="timeline-arrow">↓</div>
-        <div class="timeline-node">Further Rounds</div>
-        <div class="timeline-arrow">↓</div>
-        <div class="timeline-node" style="background: #10B981; color: #0F172A;">Final Admission</div>
-      </div>
-
-      <div style="max-width: 800px; margin: var(--sp-8) auto 0 auto; text-align: center;" class="reveal">
-        <p style="color: #CBD5E1; font-size: 1.05rem; line-height: 1.7; margin-bottom: 24px;">
-          The problem? You may have only a limited window to make decisions. And when thousands of students are simultaneously making choices, <strong>waiting until the last moment can make an already complicated process even harder.</strong>
-        </p>
-
-        <h3 style="font-size: 1.5rem; color: #FCD34D !important; -webkit-text-fill-color: #FCD34D !important; font-weight: 900; margin-bottom: 24px;">
-          Don't build your strategy after the process starts.<br>Build it before the important decisions arrive.
-        </h3>
-
-        <button class="btn btn-gold" data-modal="lead" data-program="Early Counselling Booking">
-          BOOK MY COUNSELLING
-        </button>
-      </div>
-    </div>
-  </section>
-
-  <!-- SECTION 7: "I'LL JUST DO IT MYSELF." -->
-  <section class="section" aria-labelledby="diy-heading">
-    <div class="container">
-      <div class="section-heading centered reveal">
-        <span class="section-label">Objection Handling</span>
-        <h2 id="diy-heading">"I'LL JUST DO IT MYSELF."</h2>
-        <p style="font-size: 1.2rem; font-weight: 800; color: #0F172A; margin-top: 8px;">
-          You can. The question is whether you want to make a high-value career decision entirely by yourself.
-        </p>
-      </div>
-
-      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--sp-8); margin-top: var(--sp-8);" class="reveal">
-        <!-- DIY Side -->
-        <div style="background: rgba(239,68,68,0.04); border: 2px solid rgba(239,68,68,0.3); border-radius: var(--radius-xl); padding: var(--sp-8);">
-          <h3 style="color: #991B1B; font-size: 1.2rem; font-weight: 900; margin-bottom: 16px;">Doing it yourself can mean:</h3>
-          <div style="display: flex; flex-direction: column; gap: 10px; font-size: 13px; color: var(--clr-text-main);">
-            <div>❌ Searching dozens of fragmented websites</div>
-            <div>❌ Comparing conflicting counselling rules</div>
-            <div>❌ Tracking urgent state notifications manually</div>
-            <div>❌ Misinterpreting complex domicile & category eligibility</div>
-            <div>❌ Studying multi-year allotment trends alone</div>
-            <div>❌ Comparing colleges without verified clinical/placement data</div>
-            <div>❌ Decoding hidden fee structures & bond terms</div>
-            <div>❌ Creating preference lists based on guesswork</div>
-            <div>❌ Tracking multiple overlapping counselling rounds</div>
-            <div>❌ Rebuilding strategy while deadlines are approaching</div>
-          </div>
-        </div>
-
-        <!-- College Corridor Side -->
-        <div style="background: rgba(16,185,129,0.04); border: 2px solid rgba(16,185,129,0.4); border-radius: var(--radius-xl); padding: var(--sp-8);">
-          <h3 style="color: #065F46; font-size: 1.2rem; font-weight: 900; margin-bottom: 16px;">With College Corridor:</h3>
-          <div style="display: flex; flex-direction: column; gap: 10px; font-size: 13px; color: var(--clr-text-main); font-weight: 600;">
-            <div>✓ Profile Analysis</div>
-            <div>✓ Counselling Mapping</div>
-            <div>✓ College Shortlisting</div>
-            <div>✓ Preference Strategy</div>
-            <div>✓ Choice-Filling Guidance</div>
-            <div>✓ Round Strategy</div>
-            <div>✓ Decision Support</div>
-            <div>✓ Admission Guidance</div>
-          </div>
-        </div>
-      </div>
-
-      <div style="text-align: center; margin-top: var(--sp-8);" class="reveal">
-        <h3 style="font-size: 1.3rem; color: #0F172A; margin-bottom: 16px;">
-          Information is available everywhere. <strong>Strategic interpretation is what matters.</strong>
-        </h3>
-        <button class="btn btn-primary btn-lg" data-modal="lead" data-program="Guided Strategy Request">
-          DON'T GUESS. GET GUIDANCE
-        </button>
-      </div>
-    </div>
-  </section>
-
-  <!-- SECTION 8: YOUR COUNSELLING STRATEGY SHOULD MATCH YOUR RISK PROFILE -->
-  <section class="section section-alt" aria-labelledby="risk-heading">
-    <div class="container">
-      <div class="section-heading centered reveal">
-        <span class="section-label">Risk Profile Alignment</span>
-        <h2 id="risk-heading">YOUR COUNSELLING STRATEGY SHOULD MATCH YOUR RISK PROFILE.</h2>
-        <p>Not every student should fill choices the same way.</p>
-      </div>
-
-      <div class="grid-3 stagger" style="margin-top: var(--sp-8);">
-        <div class="card reveal" style="border-top: 4px solid #EF4444;">
-          <div style="font-weight: 900; font-size: 1.1rem; color: #EF4444; margin-bottom: 8px;">🔴 AGGRESSIVE</div>
-          <h3 style="font-size: 1rem; margin-bottom: 8px;">"I want to maximize my upside."</h3>
-          <p style="font-size: 13px; color: var(--clr-text-2); line-height: 1.6;">Higher-risk choices designed to pursue stronger opportunities. Best suited for students comfortable with uncertainty.</p>
-        </div>
-
-        <div class="card reveal" style="border-top: 4px solid #C59B27; background: rgba(197,155,39,0.05);">
-          <div style="font-weight: 900; font-size: 1.1rem; color: #B45309; margin-bottom: 8px;">🟡 BALANCED</div>
-          <h3 style="font-size: 1rem; margin-bottom: 8px;">"I want ambition + security."</h3>
-          <p style="font-size: 13px; color: var(--clr-text-2); line-height: 1.6;">A carefully structured combination of ambitious, realistic and safer options. <strong>The preferred approach for many students.</strong></p>
-        </div>
-
-        <div class="card reveal" style="border-top: 4px solid #10B981;">
-          <div style="font-weight: 900; font-size: 1.1rem; color: #059669; margin-bottom: 8px;">🟢 SAFE</div>
-          <h3 style="font-size: 1rem; margin-bottom: 8px;">"My priority is securing a seat."</h3>
-          <p style="font-size: 13px; color: var(--clr-text-2); line-height: 1.6;">A more conservative strategy focused on reducing admission uncertainty and securing a verified option early.</p>
-        </div>
-      </div>
-
-      <div style="max-width: 780px; margin: var(--sp-8) auto 0 auto; text-align: center;" class="reveal">
-        <h3 style="font-size: 1.2rem; color: #0F172A; margin-bottom: 12px;">Which one is right for you?</h3>
-        <p style="font-size: 14px; color: var(--clr-text-2); margin-bottom: 24px;">
-          There is no universal answer. It depends on: <strong>Your rank + category + domicile + budget + preferences + eligibility + available seats + risk tolerance.</strong>
-        </p>
-        <button class="btn btn-outline" data-modal="lead" data-program="Risk Strategy Match">
-          FIND MY COUNSELLING STRATEGY
-        </button>
-      </div>
-    </div>
-  </section>
-
-  <!-- SECTION 9 & 10 & 11: MBBS / MCC / STATE -->
-  <section class="section dark-section" style="background: #0F172A; color: #FFFFFF;" aria-labelledby="mbbs-section-heading">
-    <div class="container">
-      <div class="section-heading centered reveal">
-        <span class="section-label" style="background: rgba(201,150,12,0.2); color: #FCD34D;">MBBS & BDS Focus</span>
-        <h2 id="mbbs-section-heading" style="color: #FFFFFF !important; -webkit-text-fill-color: #FFFFFF !important;">
-          MBBS & BDS COUNSELLING — YOUR NEET SCORE IS ONLY THE BEGINNING.
-        </h2>
-      </div>
-
-      <div style="max-width: 860px; margin: 0 auto;" class="reveal">
-        <p style="font-size: 1.1rem; color: #CBD5E1; text-align: center; margin-bottom: 24px;">
-          After the NEET result, the next question isn't simply: <em>"What college can I get?"</em><br>
-          It becomes: <strong style="color: #FCD34D;">"What is the smartest way to use my rank?"</strong>
-        </p>
-
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; margin-bottom: 32px;">
-          <div style="padding: 10px; background: rgba(255,255,255,0.06); border-radius: 6px; font-size: 13px;">✓ MCC AIQ All-India Quota</div>
-          <div style="padding: 10px; background: rgba(255,255,255,0.06); border-radius: 6px; font-size: 13px;">✓ 28 State Counselling Authorities</div>
-          <div style="padding: 10px; background: rgba(255,255,255,0.06); border-radius: 6px; font-size: 13px;">✓ Government MBBS Seats</div>
-          <div style="padding: 10px; background: rgba(255,255,255,0.06); border-radius: 6px; font-size: 13px;">✓ Private MBBS Colleges</div>
-          <div style="padding: 10px; background: rgba(255,255,255,0.06); border-radius: 6px; font-size: 13px;">✓ Deemed Universities</div>
-          <div style="padding: 10px; background: rgba(255,255,255,0.06); border-radius: 6px; font-size: 13px;">✓ BDS Pathways</div>
-          <div style="padding: 10px; background: rgba(255,255,255,0.06); border-radius: 6px; font-size: 13px;">✓ Management & Open State Seats</div>
-          <div style="padding: 10px; background: rgba(255,255,255,0.06); border-radius: 6px; font-size: 13px;">✓ Domicile & Category Rules</div>
-        </div>
-
-        <div style="text-align: center;">
-          <h3 style="font-size: 1.4rem; color: #FCD34D !important; -webkit-text-fill-color: #FCD34D !important; margin-bottom: 20px;">
-            Don't enter counselling with a blank choice list. Enter with a plan.
-          </h3>
-          <a href="medical-admissions.html" class="btn btn-gold">
-            BOOK MBBS/BDS COUNSELLING
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SECTION 12 & 13: BDS & NEET PG -->
-  <section class="section" aria-labelledby="pg-bds-heading">
-    <div class="container">
-      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--sp-8);">
-        <!-- BDS Block -->
-        <div class="card reveal" style="padding: var(--sp-8); border: 1px solid var(--clr-border);">
-          <span class="section-label">Alternative Medical Pathway</span>
-          <h3 style="font-size: 1.3rem; margin: 12px 0 8px 0; color: #0F172A;">BDS ADMISSIONS — MBBS ISN'T THE ONLY MEDICAL PATHWAY.</h3>
-          <p style="font-size: 13px; color: var(--clr-text-2); line-height: 1.6; margin-bottom: 16px;">
-            If your NEET profile does not produce the MBBS outcome you originally expected, that does not mean you should make a rushed decision. We evaluate BDS opportunities based on college infrastructure, fees, clinical patient flow, and career goals.
-          </p>
-          <div style="margin-top: auto;">
-            <a href="medical-admissions.html" class="btn btn-outline btn-sm" style="width: 100%;">EXPLORE BDS OPTIONS</a>
-          </div>
-        </div>
-
-        <!-- NEET PG Block -->
-        <div class="card reveal" style="padding: var(--sp-8); border: 2px solid var(--clr-gold); background: rgba(197,155,39,0.04);">
-          <span class="section-label" style="background: rgba(201,150,12,0.15); color: #B45309;">Postgraduate Medical</span>
-          <h3 style="font-size: 1.3rem; margin: 12px 0 8px 0; color: #0F172A;">NEET PG COUNSELLING — YOUR PG RANK DESERVES A STRATEGY.</h3>
-          <p style="font-size: 13px; color: var(--clr-text-2); line-height: 1.6; margin-bottom: 16px;">
-            MD/MS admission involves evaluating <strong>Branch × College × Location × Fees × Clinical Exposure × Work-Life Balance</strong>. We align your rank with your long-term medical career objectives.
-          </p>
-          <div style="margin-top: auto;">
-            <a href="medical-admissions.html" class="btn btn-primary btn-sm" style="width: 100%;">BOOK NEET PG COUNSELLING</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SECTION 14 & 15: LOW SCORE vs HIGH SCORE -->
-  <section class="section section-alt" aria-labelledby="score-heading">
-    <div class="container">
-      <div class="section-heading centered reveal">
-        <span class="section-label">Score Perspective</span>
-        <h2 id="score-heading">NEET & EXAM SCORE SCENARIOS</h2>
-      </div>
-
-      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--sp-8); margin-top: var(--sp-6);">
-        <div class="card reveal" style="padding: var(--sp-8); background: var(--clr-surface);">
-          <h3 style="font-size: 1.2rem; color: #0F172A; margin-bottom: 8px;">"I HAVE A LOW SCORE."</h3>
-          <p style="font-weight: 700; color: #D97706; font-size: 14px; margin-bottom: 12px;">DON'T MAKE A DECISION BEFORE YOU KNOW YOUR ACTUAL OPTIONS.</p>
-          <p style="font-size: 13px; color: var(--clr-text-2); line-height: 1.6; margin-bottom: 16px;">
-            Instead of asking: <em>"Can I get a good college?"</em>, Ask: <strong>"What are the realistic paths available to me?"</strong> A lower score requires a wider search across open state quotas and fee structures.
-          </p>
-          <button class="btn btn-outline btn-sm" style="width: 100%;" data-modal="lead" data-program="Low Score Analysis">ANALYSE MY OPTIONS</button>
-        </div>
-
-        <div class="card reveal" style="padding: var(--sp-8); background: var(--clr-surface);">
-          <h3 style="font-size: 1.2rem; color: #0F172A; margin-bottom: 8px;">"I HAVE A GOOD SCORE."</h3>
-          <p style="font-weight: 700; color: #059669; font-size: 14px; margin-bottom: 12px;">THEN YOU HAVE MORE DECISIONS — NOT FEWER.</p>
-          <p style="font-size: 13px; color: var(--clr-text-2); line-height: 1.6; margin-bottom: 16px;">
-            A strong rank gives you multiple possibilities. The objective isn't simply to find a seat—it's to make the most sensible decision from the seats available to you.
-          </p>
-          <button class="btn btn-outline btn-sm" style="width: 100%;" data-modal="lead" data-program="Good Score Optimization">OPTIMIZE MY OPTIONS</button>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SECTION 16: PARENTS -->
-  <section class="section dark-section" style="background: #0F172A; color: #FFFFFF;" aria-labelledby="parents-card-heading">
-    <div class="container">
-      <div style="max-width: 880px; margin: 0 auto; border: 2px solid var(--clr-border-gold); border-radius: var(--radius-xl); padding: var(--sp-10); background: linear-gradient(135deg, #0F172A 0%, #1E293B 100%); text-align: center;" class="reveal">
-        <span class="section-label" style="background: rgba(201,150,12,0.2); color: #FCD34D; margin-bottom: 12px;">Family Advisory</span>
-        <h2 id="parents-card-heading" style="color: #FFFFFF !important; -webkit-text-fill-color: #FFFFFF !important; font-size: clamp(1.6rem, 3.2vw, 2.3rem); margin-bottom: 16px;">
-          PARENTS — THIS DECISION IS BIGGER THAN AN ADMISSION FORM.
-        </h2>
-        <p style="color: #FCD34D; font-size: 1.2rem; font-weight: 800; margin-bottom: 20px;">YOU ARE NOT JUST PAYING A FEE.</p>
-        <p style="color: #CBD5E1; font-size: 1.05rem; line-height: 1.7; margin-bottom: 24px;">
-          You are investing in: Years of your child's life, Their education, Their environment, Their confidence, Their professional network, Your family's savings, Your expectations, and Their dreams.
-        </p>
-        <h3 style="font-size: 1.3rem; color: #FFFFFF !important; -webkit-text-fill-color: #FFFFFF !important; margin-bottom: 24px;">
-          Bring the student. Bring the parents. Bring the questions. We'll help you evaluate the decision.
-        </h3>
-        <button class="btn btn-gold" data-modal="lead" data-program="Parent + Student Session">
-          BOOK A PARENT + STUDENT SESSION
-        </button>
-      </div>
-    </div>
-  </section>
-
-  <!-- SECTION 17 & 18: B.TECH & TOP ENGINEERING COLLEGES -->
-  <section class="section" aria-labelledby="btech-heading">
-    <div class="container">
-      <div class="section-heading centered reveal">
-        <span class="section-label">Engineering Focus</span>
-        <h2 id="btech-heading">B.TECH COUNSELLING — DON'T LET YOUR JEE RANK DECIDE YOUR COLLEGE WITHOUT A STRATEGY.</h2>
-        <p style="color: var(--clr-text-2); margin-top: 8px;">JoSAA | CSAB | State Counselling (JAC Delhi, UPTAC, MHT CET, KEA, COMEDK, WBJEE) | Private Universities</p>
-      </div>
-
-      <div style="background: var(--clr-surface); border: 1px solid var(--clr-border); border-radius: var(--radius-xl); padding: var(--sp-8); margin-top: var(--sp-6);" class="reveal">
-        <h3 style="font-size: 1.1rem; color: #0F172A; margin-bottom: 12px; text-align: center; font-weight: 800;">
-          Top Engineering Institutions We Guide Aspirants For:
-        </h3>
-        <div class="college-tag-cloud">
-          <span class="college-tag">BITS Pilani</span>
-          <span class="college-tag">VIT Vellore</span>
-          <span class="college-tag">Manipal (MIT)</span>
-          <span class="college-tag">Thapar University</span>
-          <span class="college-tag">Amrita University</span>
-          <span class="college-tag">SRM Institute</span>
-          <span class="college-tag">Shiv Nadar University</span>
-          <span class="college-tag">KIIT Bhubaneswar</span>
-          <span class="college-tag">PES University</span>
-          <span class="college-tag">MIT World Peace University</span>
-          <span class="college-tag">JIIT Noida</span>
-          <span class="college-tag">Bennett University</span>
-          <span class="college-tag">UPES Dehradun</span>
-          <span class="college-tag">Graphic Era</span>
-          <span class="college-tag">RV University</span>
-          <span class="college-tag">Amity University</span>
-          <span class="college-tag">REVA University</span>
-          <span class="college-tag">Jain University</span>
-          <span class="college-tag">Symbiosis SIT</span>
-          <span class="college-tag">VIT Pune</span>
-          <span class="college-tag">PCCOE Pune</span>
-          <span class="college-tag">GL Bajaj</span>
-          <span class="college-tag">JSS Noida</span>
-          <span class="college-tag">KIET Ghaziabad</span>
-          <span class="college-tag">MAIT / MSIT Delhi</span>
-        </div>
-        <p style="text-align: center; font-weight: 800; color: #0F172A; margin-top: 20px;">
-          Your objective shouldn't be to collect college offers. It should be to identify the offer that makes the most sense.
-        </p>
-        <div style="text-align: center; margin-top: 16px;">
-          <a href="engineering-admissions.html" class="btn btn-primary">DISCUSS MY B.TECH OPTIONS</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SECTION 19 & 20: MBA & TOP B-SCHOOLS -->
-  <section class="section section-alt" aria-labelledby="mba-heading">
-    <div class="container">
-      <div class="section-heading centered reveal">
-        <span class="section-label">Management Focus</span>
-        <h2 id="mba-heading">MBA COUNSELLING — YOUR MBA IS AN INVESTMENT. TREAT IT LIKE ONE.</h2>
-        <p>CAT | XAT | NMAT | SNAP | CMAT | Management Routes</p>
-      </div>
-
-      <div style="background: var(--clr-surface); border: 1px solid var(--clr-border); border-radius: var(--radius-xl); padding: var(--sp-8); margin-top: var(--sp-6);" class="reveal">
-        <h3 style="font-size: 1.1rem; color: #0F172A; margin-bottom: 12px; text-align: center; font-weight: 800;">
-          Top Business Schools We Guide Aspirants For:
-        </h3>
-        <div class="college-tag-cloud">
-          <span class="college-tag">XLRI Jamshedpur</span>
-          <span class="college-tag">SPJIMR Mumbai</span>
-          <span class="college-tag">MDI Gurugram</span>
-          <span class="college-tag">NMIMS Mumbai</span>
-          <span class="college-tag">SIBM Pune</span>
-          <span class="college-tag">IMT Ghaziabad</span>
-          <span class="college-tag">MICA Ahmedabad</span>
-          <span class="college-tag">XIM University</span>
-          <span class="college-tag">TAPMI Manipal</span>
-          <span class="college-tag">Great Lakes</span>
-          <span class="college-tag">IMI New Delhi</span>
-          <span class="college-tag">FORE School</span>
-          <span class="college-tag">KJ Somaiya</span>
-          <span class="college-tag">BIMTECH</span>
-          <span class="college-tag">IMI Kolkata</span>
-        </div>
-        <p style="text-align: center; font-weight: 800; color: #0F172A; margin-top: 20px;">
-          Don't choose an MBA only because you received an offer. Understand what you're buying with your time, money and career.
-        </p>
-        <div style="text-align: center; margin-top: 16px;">
-          <a href="management-admissions.html" class="btn btn-primary">DISCUSS MY MBA OPTIONS</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SECTION 21: WHAT EXACTLY DO YOU GET? -->
-  <section class="section" aria-labelledby="get-heading">
-    <div class="container">
-      <div class="section-heading centered reveal">
-        <span class="section-label">Deliverables</span>
-        <h2 id="get-heading">WHAT EXACTLY DO YOU GET? YOUR PERSONALIZED ADMISSION STRATEGY</h2>
-      </div>
-
-      <div class="grid-4 stagger" style="margin-top: var(--sp-8);">
-        <div class="card reveal" style="border-top: 4px solid var(--clr-gold);">
-          <div style="font-size: 1.8rem; font-weight: 900; color: var(--clr-gold);">01</div>
-          <h3 style="font-size: 1.1rem; margin: 6px 0;">PROFILE ANALYSIS</h3>
-          <p style="font-size: 13px; color: var(--clr-text-2);">Understand your exact standing before making choices.</p>
-        </div>
-        <div class="card reveal" style="border-top: 4px solid var(--clr-gold);">
-          <div style="font-size: 1.8rem; font-weight: 900; color: var(--clr-gold);">02</div>
-          <h3 style="font-size: 1.1rem; margin: 6px 0;">COUNSELLING MAPPING</h3>
-          <p style="font-size: 13px; color: var(--clr-text-2);">Identify all relevant admission and quota pathways.</p>
-        </div>
-        <div class="card reveal" style="border-top: 4px solid var(--clr-gold);">
-          <div style="font-size: 1.8rem; font-weight: 900; color: var(--clr-gold);">03</div>
-          <h3 style="font-size: 1.1rem; margin: 6px 0;">COLLEGE SHORTLIST</h3>
-          <p style="font-size: 13px; color: var(--clr-text-2);">Separate realistic, ambitious and safer options.</p>
-        </div>
-        <div class="card reveal" style="border-top: 4px solid var(--clr-gold);">
-          <div style="font-size: 1.8rem; font-weight: 900; color: var(--clr-gold);">04</div>
-          <h3 style="font-size: 1.1rem; margin: 6px 0;">PREFERENCE STRATEGY</h3>
-          <p style="font-size: 13px; color: var(--clr-text-2);">Build a logical preference order rather than guessing.</p>
-        </div>
-        <div class="card reveal" style="border-top: 4px solid var(--clr-gold);">
-          <div style="font-size: 1.8rem; font-weight: 900; color: var(--clr-gold);">05</div>
-          <h3 style="font-size: 1.1rem; margin: 6px 0;">ROUND STRATEGY</h3>
-          <p style="font-size: 13px; color: var(--clr-text-2);">Approach each round with upgrade & exit rules clarity.</p>
-        </div>
-        <div class="card reveal" style="border-top: 4px solid var(--clr-gold);">
-          <div style="font-size: 1.8rem; font-weight: 900; color: var(--clr-gold);">06</div>
-          <h3 style="font-size: 1.1rem; margin: 6px 0;">COLLEGE EVALUATION</h3>
-          <p style="font-size: 13px; color: var(--clr-text-2);">Compare academic, financial and career factors.</p>
-        </div>
-        <div class="card reveal" style="border-top: 4px solid var(--clr-gold);">
-          <div style="font-size: 1.8rem; font-weight: 900; color: var(--clr-gold);">07</div>
-          <h3 style="font-size: 1.1rem; margin: 6px 0;">DECISION SUPPORT</h3>
-          <p style="font-size: 13px; color: var(--clr-text-2);">Get expert guidance when choosing between options.</p>
-        </div>
-        <div class="card reveal" style="border-top: 4px solid var(--clr-gold);">
-          <div style="font-size: 1.8rem; font-weight: 900; color: var(--clr-gold);">08</div>
-          <h3 style="font-size: 1.1rem; margin: 6px 0;">ADMISSION GUIDANCE</h3>
-          <p style="font-size: 13px; color: var(--clr-text-2);">Navigate document verification and reporting smoothly.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SECTION 24: OBJECTION HANDLING STAGES -->
-  <section class="section section-alt" aria-labelledby="explore-heading">
-    <div class="container">
-      <div class="grid-3 stagger">
-        <!-- Stage 1 -->
-        <div class="card reveal" style="padding: var(--sp-6);">
-          <h3 style="font-size: 1.1rem; color: #0F172A; margin-bottom: 6px;">"I'M STILL JUST EXPLORING."</h3>
-          <p style="font-weight: 800; color: var(--clr-gold); font-size: 13px; margin-bottom: 10px;">THAT'S EXACTLY WHEN YOU SHOULD START.</p>
-          <p style="font-size: 12px; color: var(--clr-text-2); line-height: 1.6; margin-bottom: 16px;">
-            You don't need to know the answer before booking counselling. That's what counselling is for.
-          </p>
-          <button class="btn btn-outline btn-sm" style="width: 100%;" data-modal="lead" data-program="Exploration Advisory">EXPLORE MY OPTIONS</button>
-        </div>
-
-        <!-- Stage 2 -->
-        <div class="card reveal" style="padding: var(--sp-6);">
-          <h3 style="font-size: 1.1rem; color: #0F172A; margin-bottom: 6px;">"I'VE ALREADY DECIDED MY COLLEGE."</h3>
-          <p style="font-weight: 800; color: #3B82F6; font-size: 13px; margin-bottom: 10px;">BEFORE YOU FINALIZE — CHECK ONCE.</p>
-          <p style="font-size: 12px; color: var(--clr-text-2); line-height: 1.6; margin-bottom: 16px;">
-            A second opinion can be valuable before a major financial and career decision.
-          </p>
-          <button class="btn btn-outline btn-sm" style="width: 100%;" data-modal="lead" data-program="Second Opinion">GET A SECOND OPINION</button>
-        </div>
-
-        <!-- Stage 3 -->
-        <div class="card reveal" style="padding: var(--sp-6);">
-          <h3 style="font-size: 1.1rem; color: #0F172A; margin-bottom: 6px;">"I'M CONFUSED."</h3>
-          <p style="font-weight: 800; color: #10B981; font-size: 13px; margin-bottom: 10px;">GOOD. ASK BEFORE YOU DECIDE.</p>
-          <p style="font-size: 12px; color: var(--clr-text-2); line-height: 1.6; margin-bottom: 16px;">
-            You don't need another 50 browser tabs open. Let's turn your confusion into a strategy.
-          </p>
-          <button class="btn btn-outline btn-sm" style="width: 100%;" data-modal="lead" data-program="Advisor Consultation">TALK TO AN ADMISSION ADVISOR</button>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SECTION 25 & 26: FINAL CONVERSION & CLOSING MESSAGE -->
-  <section class="brand-hero dark-section" style="background: linear-gradient(135deg, #0F172A 0%, #1E293B 100%); padding: var(--sp-12) 0;" aria-labelledby="final-brand-heading">
-    <div class="container">
-      <div style="max-width: 840px; margin: 0 auto; text-align: center;" class="reveal">
-        <span class="section-label" style="background: rgba(201,150,12,0.2); color: #FCD34D; margin-bottom: 16px;">Final Decision Quality</span>
-        <h2 id="final-brand-heading" style="color: #FFFFFF !important; -webkit-text-fill-color: #FFFFFF !important; font-size: clamp(2rem, 4.5vw, 3.4rem); font-weight: 900; line-height: 1.15; margin-bottom: 16px;">
-          YOUR FUTURE DESERVES MORE THAN A RANDOM CHOICE.
-        </h2>
-        <p style="color: #CBD5E1; font-size: 1.2rem; line-height: 1.7; margin-bottom: 24px;">
-          You spent years preparing. You are now standing in front of a decision that can shape the next several years of your life.<br>
-          <strong style="color: #FCD34D;">Don't let the final decision be the least-planned part of the journey.</strong>
-        </p>
-
-        <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 16px; margin-bottom: 32px;">
-          <button class="btn btn-gold" data-modal="lead" data-program="Final Conversion Booking">
-            BOOK YOUR COUNSELLING NOW
-          </button>
-        </div>
-
-        <div style="border-top: 1px solid rgba(255,255,255,0.15); padding-top: 24px; margin-top: 32px;">
-          <h3 style="color: #FFFFFF !important; -webkit-text-fill-color: #FFFFFF !important; font-size: 1.4rem; font-weight: 900; margin-bottom: 8px;">
-            Your Rank Is Yours. Your Future Is Yours. Your Decision Is Yours.
-          </h3>
-          <p style="color: #FCD34D; font-size: 1.3rem; font-weight: 900; margin: 0;">Make it wisely.</p>
-          <div style="font-size: 13px; color: #94A3B8; margin-top: 12px; font-weight: 700;">
-            College Corridor • Premium Admissions Counselling & Education Advisory
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+<!-- FINAL CLOSE -->
+<section style="background:var(--navy);padding:clamp(5rem,9vw,8rem) 0;text-align:center;" aria-labelledby="cns-final">
+  <div class="container" style="max-width:640px;">
+    <h2 id="cns-final" style="font-family:var(--font-serif);font-size:clamp(2rem,4.5vw,3.25rem);color:#fff;font-weight:400;line-height:1.1;margin-bottom:1.5rem;">
+      The choice list is part of the strategy.<br><em style="color:var(--gold);font-style:italic;">Don't leave it to guesswork.</em>
+    </h2>
+    <p style="font-size:var(--fs-md);color:rgba(248,250,252,.5);line-height:1.7;margin-bottom:2.5rem;">
+      Speak with our counselling strategists before filling your choices online.
+    </p>
+    <button class="btn btn-primary" data-modal="lead" data-program="Counselling Final CTA" style="background:var(--blue);border-color:var(--blue);color:#fff;">Speak With College Corridor</button>
+  </div>
+</section>
 
 </main>
 
 <div id="footer-slot"></div>
-
 <script src="js/shared.js"></script>
 <script src="js/main.js"></script>
 </body>

@@ -3,139 +3,129 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Find Colleges & Admission Shortlisting | College Corridor</title>
-  <meta name="description" content="Filter and shortlisting tool for medical, engineering, management and law colleges in India. Convert generic search results into strategic admission shortlists.">
+  <title>Find Colleges & Admission Intelligence | College Corridor</title>
+  <meta name="description" content="College intelligence & discovery platform. Filter medical, engineering, management & law colleges in India by program, budget, location & admission route.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/components.css">
   <link rel="stylesheet" href="css/animations.css">
   <style>
-    :root {
-      --clr-gold: #C59B27;
-      --clr-gold-light: #FCD34D;
-      --clr-dark: #0F172A;
-      --clr-border-gold: rgba(197, 155, 39, 0.35);
-    }
-    .finder-hero {
-      padding: var(--sp-10) 0 var(--sp-8) 0;
-      background: radial-gradient(circle at 50% 20%, rgba(197, 155, 39, 0.18) 0%, rgba(15, 23, 42, 0.98) 75%), #0F172A;
-      color: #FFFFFF;
-      text-align: center;
-      border-bottom: 2px solid var(--clr-border-gold);
-    }
-    .btn-gold {
-      background: linear-gradient(135deg, #C59B27 0%, #D97706 100%);
-      color: #0F172A !important;
-      font-weight: 900 !important;
-      font-size: 1.1rem !important;
-      padding: 14px 28px !important;
-      border-radius: var(--radius-md) !important;
-      box-shadow: 0 8px 25px rgba(197, 155, 39, 0.4) !important;
-      transition: all 0.3s ease !important;
-      border: 2px solid #FCD34D !important;
-      text-transform: uppercase;
-    }
-    .btn-gold:hover {
-      transform: translateY(-3px) scale(1.02);
-      box-shadow: 0 12px 35px rgba(197, 155, 39, 0.6) !important;
-      background: linear-gradient(135deg, #FCD34D 0%, #C59B27 100%);
-    }
+  body { background: var(--ivory); }
+  .idx-eyebrow { display:flex;align-items:center;gap:12px;margin-bottom:1.5rem; }
+  .idx-eyebrow-line { width:28px;height:1px;background:var(--gold);flex-shrink:0; }
+  .idx-eyebrow-text { font-family:var(--font-sans);font-size:.6875rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--gold); }
+  .reveal { opacity:0;transform:translateY(22px);transition:opacity .6s ease,transform .6s ease; }
+  .reveal.in { opacity:1;transform:translateY(0); }
+
+  .fnd-hero {
+    background:var(--navy);
+    padding:clamp(4rem,7vw,6rem) 0 clamp(3rem,5vw,4.5rem) 0;
+    color:#fff;
+    border-bottom:1px solid rgba(201,162,39,.2);
+  }
+  .fnd-h1 { font-family:var(--font-serif);font-weight:400;font-size:clamp(2.5rem,4.5vw,3.75rem);color:#fff;line-height:1.08;margin-bottom:1rem; }
+  .fnd-h1 em { font-style:italic;color:var(--gold); }
+
+  .filter-box {
+    background:var(--navy-soft);border:1px solid rgba(255,255,255,.08);
+    border-radius:6px;padding:2rem;margin-bottom:3rem;
+  }
+  .filter-group label { display:block;font-size:var(--fs-xs);font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:rgba(248,250,252,.6);margin-bottom:.5rem; }
+  .filter-select {
+    width:100%;padding:12px 14px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.15);
+    border-radius:4px;color:#fff;font-family:var(--font-sans);font-size:var(--fs-sm);
+  }
+  .filter-select option { background:#0B1220;color:#fff; }
   </style>
 </head>
 <body>
 
 <div id="announcement-bar-slot"></div>
-<header id="navbar-slot" data-active="find"></header>
+<header id="navbar-slot" data-active="colleges"></header>
 
 <main>
 
-  <!-- HERO SECTION -->
-  <section class="finder-hero" aria-labelledby="finder-title">
-    <div class="container">
-      <span class="section-label" style="background: rgba(201,150,12,0.22); color: #FCD34D; border: 1px solid rgba(253,224,71,0.5);">
-        College Search & Advisory
-      </span>
+<section class="fnd-hero" aria-labelledby="fnd-h1">
+  <div class="container text-center" style="max-width:840px;">
+    <div class="idx-eyebrow" style="justify-content:center;"><span class="idx-eyebrow-line"></span><span class="idx-eyebrow-text">College Intelligence &amp; Discovery</span><span class="idx-eyebrow-line"></span></div>
+    <h1 id="fnd-h1" class="fnd-h1 reveal">
+      Don't just search for a college.<br>
+      <em>Understand it.</em>
+    </h1>
+    <p style="font-size:var(--fs-md);color:rgba(248,250,252,.6);line-height:1.7;margin-bottom:2rem;" class="reveal">
+      Filter by course, location, budget, college type, and admission route &#8212; then convert search results into a strategic personal shortlist.
+    </p>
+  </div>
+</section>
 
-      <h1 id="finder-title" style="font-size: clamp(2rem, 4.5vw, 3.5rem); font-weight: 900; color: #FFFFFF !important; -webkit-text-fill-color: #FFFFFF !important; margin: 12px 0 8px 0; line-height: 1.15;">
-        FIND COLLEGES.<br>THEN FIND OUT WHICH ONES MAKE SENSE FOR YOU.
-      </h1>
+<section style="padding:clamp(4rem,7vw,6rem) 0;">
+  <div class="container">
+    
+    <!-- SEARCH FILTER BOX -->
+    <div class="filter-box reveal">
+      <div style="display:grid;grid-template-columns:repeat(3,1fr) 1.2fr;gap:1.25rem;align-items:end;">
+        <div class="filter-group">
+          <label>Select Discipline</label>
+          <select id="filter-discipline" class="filter-select">
+            <option value="all">All Disciplines</option>
+            <option value="medical">Medical (MBBS / BDS / PG)</option>
+            <option value="engineering">Engineering (B.Tech)</option>
+            <option value="management">Management (MBA / PGDM)</option>
+            <option value="law">Law (BA LL.B / LL.M)</option>
+          </select>
+        </div>
 
-      <p style="font-size: 1.1rem; color: #CBD5E1; max-width: 800px; margin: 0 auto 16px auto;">
-        Filter by program, location, budget, college type, and admission route—then convert generic lists into a strategic personal shortlist.
-      </p>
-    </div>
-  </section>
+        <div class="filter-group">
+          <label>Select Region / State</label>
+          <select id="filter-region" class="filter-select">
+            <option value="all">All Regions</option>
+            <option value="delhi-ncr">Delhi NCR</option>
+            <option value="karnataka">Bengaluru / Karnataka</option>
+            <option value="maharashtra">Mumbai / Pune / Maharashtra</option>
+            <option value="uttar-pradesh">Uttar Pradesh</option>
+            <option value="rajasthan">Rajasthan</option>
+          </select>
+        </div>
 
-  <!-- SEARCH FILTER TOOL SECTION -->
-  <section class="section" style="padding-top: var(--sp-6);">
-    <div class="container">
-      <div style="background: var(--clr-surface); border: 1px solid var(--clr-border); border-radius: var(--radius-xl); padding: var(--sp-6); box-shadow: var(--shadow-md); margin-bottom: 28px;">
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 14px;">
-          <div>
-            <label style="font-size: 12px; font-weight: 800; color: #0F172A; display: block; margin-bottom: 4px;">Select Discipline</label>
-            <select id="filter-discipline" class="form-select">
-              <option value="all">All Disciplines</option>
-              <option value="medical">Medical (MBBS/BDS/PG)</option>
-              <option value="engineering">Engineering (B.Tech)</option>
-              <option value="management">Management (MBA/PGDM)</option>
-              <option value="law">Law (BA LLB/LLM)</option>
-            </select>
-          </div>
-          <div>
-            <label style="font-size: 12px; font-weight: 800; color: #0F172A; display: block; margin-bottom: 4px;">Select Region / State</label>
-            <select id="filter-region" class="form-select">
-              <option value="all">All Regions</option>
-              <option value="delhi-ncr">Delhi NCR</option>
-              <option value="karnataka">Bengaluru / Karnataka</option>
-              <option value="maharashtra">Mumbai / Pune / Maharashtra</option>
-              <option value="uttar-pradesh">Uttar Pradesh</option>
-              <option value="rajasthan">Rajasthan</option>
-            </select>
-          </div>
-          <div>
-            <label style="font-size: 12px; font-weight: 800; color: #0F172A; display: block; margin-bottom: 4px;">College Type</label>
-            <select id="filter-type" class="form-select">
-              <option value="all">All Types</option>
-              <option value="government">Government / Central</option>
-              <option value="private">Private / Deemed</option>
-            </select>
-          </div>
-          <div style="display: flex; align-items: flex-end;">
-            <button class="btn btn-primary" style="width: 100%;" id="btn-filter-search">Filter Colleges</button>
-          </div>
+        <div class="filter-group">
+          <label>College Type</label>
+          <select id="filter-type" class="filter-select">
+            <option value="all">All Types</option>
+            <option value="government">Government / Central</option>
+            <option value="private">Private / Deemed</option>
+          </select>
+        </div>
+
+        <div>
+          <button class="btn btn-primary" id="btn-filter-search" style="width:100%;background:var(--blue);border-color:var(--blue);color:#fff;">Filter Colleges</button>
         </div>
       </div>
-
-      <!-- RESULTS CONTAINER -->
-      <div id="college-results-grid" class="grid-3 stagger">
-        <!-- Dynamically rendered by JS -->
-      </div>
     </div>
-  </section>
 
-  <!-- POST-SEARCH CONVERSION BANNER -->
-  <section class="section dark-section" style="background: #0F172A; color: #FFFFFF;" aria-labelledby="post-search-heading">
-    <div class="container text-center">
-      <div style="max-width: 800px; margin: 0 auto;" class="reveal">
-        <span class="section-label" style="background: rgba(201,150,12,0.2); color: #FCD34D;">Shortlist Support</span>
-        <h2 id="post-search-heading" style="color: #FFFFFF !important; -webkit-text-fill-color: #FFFFFF !important; font-size: clamp(1.6rem, 3.5vw, 2.4rem); margin: 12px 0;">
-          DON'T KNOW WHICH OPTIONS BELONG IN YOUR FINAL SHORTLIST?
-        </h2>
-        <p style="color: #CBD5E1; font-size: 1.05rem; margin-bottom: 24px;">
-          A search engine list is not an admission strategy. Let our counsellors analyze your rank, domicile, category, and budget to construct a realistic target shortlist.
-        </p>
-        <button class="btn btn-gold" data-modal="lead" data-program="Personalized College List">
-          GET A PERSONALIZED COLLEGE LIST
-        </button>
-      </div>
+    <!-- RESULTS GRID -->
+    <div id="college-results-grid" class="grid-3 stagger" style="margin-bottom:4rem;">
+      <!-- Dynamically rendered by college-finder.js -->
     </div>
-  </section>
+
+    <!-- ADVISORY BANNER -->
+    <div style="background:var(--navy);padding:3.5rem;border-radius:6px;text-align:center;color:#fff;" class="reveal">
+      <div class="idx-eyebrow" style="justify-content:center;"><span class="idx-eyebrow-line"></span><span class="idx-eyebrow-text">Shortlist Support</span><span class="idx-eyebrow-line"></span></div>
+      <h2 style="font-family:var(--font-serif);font-size:clamp(1.75rem,3vw,2.5rem);font-weight:400;margin-bottom:1rem;color:#fff;">
+        Don't know which options belong in your final shortlist?
+      </h2>
+      <p style="font-size:var(--fs-base);color:rgba(248,250,252,.6);max-width:620px;margin:0 auto 2rem auto;line-height:1.7;">
+        A search engine list is not an admission strategy. Let our senior advisors analyze your rank, domicile, category, and budget to construct a realistic target shortlist.
+      </p>
+      <button class="btn btn-primary" data-modal="lead" data-program="College List Advisory" style="background:var(--blue);border-color:var(--blue);color:#fff;">Get a Personalised College Shortlist</button>
+    </div>
+
+  </div>
+</section>
 
 </main>
 
 <div id="footer-slot"></div>
-
 <script src="js/shared.js"></script>
 <script src="js/college-database.js"></script>
 <script src="js/college-finder.js"></script>

@@ -3,44 +3,36 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pharmacy, Nursing & Allied Health Admissions Guidance | College Corridor</title>
-  <meta name="description" content="Strategic admission guidance for B.Pharm, Pharm.D, BSc Nursing, Physiotherapy (BPT) & Allied Health Sciences across PCI/INC approved institutions.">
+  <title>Pharmacy, Nursing & Allied Health Advisory | College Corridor</title>
+  <meta name="description" content="Strategic admissions guidance for B.Pharm, Pharm.D, BSc Nursing, BPT Physiotherapy & Allied Health Sciences in PCI & INC approved institutions.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/components.css">
   <link rel="stylesheet" href="css/animations.css">
   <style>
-    :root {
-      --clr-gold: #C59B27;
-      --clr-gold-light: #FCD34D;
-      --clr-dark: #0F172A;
-      --clr-border-gold: rgba(197, 155, 39, 0.35);
-    }
-    .health-hero {
-      padding: var(--sp-12) 0 var(--sp-10) 0;
-      background: radial-gradient(circle at 50% 20%, rgba(16, 185, 129, 0.2) 0%, rgba(15, 23, 42, 0.98) 75%), #0F172A;
-      color: #FFFFFF;
-      text-align: center;
-      border-bottom: 2px solid var(--clr-border-gold);
-    }
-    .btn-gold {
-      background: linear-gradient(135deg, #C59B27 0%, #D97706 100%);
-      color: #0F172A !important;
-      font-weight: 900 !important;
-      font-size: 1.1rem !important;
-      padding: 16px 34px !important;
-      border-radius: var(--radius-md) !important;
-      box-shadow: 0 8px 25px rgba(197, 155, 39, 0.4) !important;
-      transition: all 0.3s ease !important;
-      border: 2px solid #FCD34D !important;
-      text-transform: uppercase;
-    }
-    .btn-gold:hover {
-      transform: translateY(-3px) scale(1.02);
-      box-shadow: 0 12px 35px rgba(197, 155, 39, 0.6) !important;
-      background: linear-gradient(135deg, #FCD34D 0%, #C59B27 100%);
-    }
+  body { background: var(--ivory); }
+  .idx-eyebrow { display:flex;align-items:center;gap:12px;margin-bottom:1.5rem; }
+  .idx-eyebrow-line { width:28px;height:1px;background:var(--gold);flex-shrink:0; }
+  .idx-eyebrow-text { font-family:var(--font-sans);font-size:.6875rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--gold); }
+  .reveal { opacity:0;transform:translateY(22px);transition:opacity .6s ease,transform .6s ease; }
+  .reveal.in { opacity:1;transform:translateY(0); }
+
+  .hlth-hero {
+    background:var(--navy);
+    padding:clamp(5rem,8vw,7rem) 0 clamp(3.5rem,6vw,5rem) 0;
+    color:#fff;
+    border-bottom:1px solid rgba(16,185,129,.2);
+  }
+  .hlth-h1 { font-family:var(--font-serif);font-weight:400;font-size:clamp(2.5rem,4.5vw,3.75rem);color:#fff;line-height:1.08;margin-bottom:1rem; }
+  .hlth-h1 em { font-style:italic;color:var(--gold); }
+
+  .hlth-grid { display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:1px solid var(--border); }
+  .hlth-card { padding:2rem 1.5rem;border-right:1px solid var(--border);border-bottom:1px solid var(--border);transition:background var(--trans-fast); }
+  .hlth-card:nth-child(3n) { border-right:none; }
+  .hlth-card:hover { background:var(--white); }
+
+  @media(max-width:900px){ .hlth-grid { grid-template-columns:1fr; } }
   </style>
 </head>
 <body>
@@ -50,69 +42,81 @@
 
 <main>
 
-  <!-- HERO SECTION -->
-  <section class="health-hero" aria-labelledby="health-title">
-    <div class="container">
-      <span class="section-label" style="background: rgba(16,185,129,0.2); color: #34D399; border: 1px solid rgba(52,211,153,0.4);">
-        Healthcare & Allied Health Advisory
-      </span>
+<section class="hlth-hero" aria-labelledby="hlth-h1">
+  <div class="container text-center" style="max-width:840px;">
+    <div class="idx-eyebrow" style="justify-content:center;"><span class="idx-eyebrow-line"></span><span class="idx-eyebrow-text">Healthcare &amp; Allied Health Advisory</span><span class="idx-eyebrow-line"></span></div>
+    <h1 id="hlth-h1" class="hlth-h1 reveal">
+      Not every healthcare career<br>
+      <em>starts with the same path.</em>
+    </h1>
+    <p style="font-size:var(--fs-md);color:rgba(248,250,252,.6);line-height:1.7;margin-bottom:2rem;" class="reveal">
+      Strategic guidance for B.Pharm, Pharm.D, B.Sc Nursing, BPT Physiotherapy, Radiology &amp; Allied Health Sciences in PCI &amp; INC approved institutions.
+    </p>
+    <button class="btn btn-primary" data-modal="lead" data-program="Pharmacy & Nursing Advisory" style="background:var(--blue);border-color:var(--blue);color:#fff;">Explore Health Pathways</button>
+  </div>
+</section>
 
-      <h1 id="health-title" style="font-size: clamp(2rem, 4.8vw, 3.8rem); font-weight: 900; color: #FFFFFF !important; -webkit-text-fill-color: #FFFFFF !important; margin: 16px 0 12px 0; line-height: 1.15;">
-        HEALTHCARE CAREERS BEGIN WITH THE RIGHT EDUCATIONAL FOUNDATION.
-      </h1>
+<section style="padding:clamp(4rem,7vw,6rem) 0;">
+  <div class="container">
+    <div class="idx-eyebrow reveal"><span class="idx-eyebrow-line"></span><span class="idx-eyebrow-text">Specialised Pathways</span></div>
+    <h2 style="font-family:var(--font-sans);font-weight:700;font-size:clamp(1.25rem,2.5vw,1.75rem);letter-spacing:.04em;text-transform:uppercase;color:var(--heading);margin-bottom:2.5rem;" class="reveal">
+      Healthcare Disciplines We Advise On
+    </h2>
 
-      <p style="font-size: 1.15rem; color: #FCD34D; font-weight: 800; max-width: 860px; margin: 0 auto 24px auto;">
-        B.Pharm • Pharm.D • BSc Nursing • Physiotherapy (BPT) • Allied Health Sciences • Biotechnology
+    <div class="hlth-grid">
+      <div class="hlth-card reveal">
+        <div style="font-size:.625rem;font-weight:700;letter-spacing:.14em;color:#10B981;text-transform:uppercase;margin-bottom:.5rem;">PHARMACY</div>
+        <div style="font-weight:700;font-size:var(--fs-md);color:var(--heading);margin-bottom:.5rem;">B.Pharm &amp; Pharm.D</div>
+        <p style="font-size:var(--fs-xs);color:var(--muted);line-height:1.5;">PCI approved pharmaceutical sciences, clinical pharmacy, and research track selection.</p>
+      </div>
+
+      <div class="hlth-card reveal">
+        <div style="font-size:.625rem;font-weight:700;letter-spacing:.14em;color:#10B981;text-transform:uppercase;margin-bottom:.5rem;">NURSING</div>
+        <div style="font-weight:700;font-size:var(--fs-md);color:var(--heading);margin-bottom:.5rem;">B.Sc Nursing (INC Approved)</div>
+        <p style="font-size:var(--fs-xs);color:var(--muted);line-height:1.5;">Evaluation of clinical hospital tie-ups, parent hospital beds &amp; global licensure eligibility.</p>
+      </div>
+
+      <div class="hlth-card reveal">
+        <div style="font-size:.625rem;font-weight:700;letter-spacing:.14em;color:#10B981;text-transform:uppercase;margin-bottom:.5rem;">PHYSIOTHERAPY</div>
+        <div style="font-weight:700;font-size:var(--fs-md);color:var(--heading);margin-bottom:.5rem;">BPT (Bachelor of Physiotherapy)</div>
+        <p style="font-size:var(--fs-xs);color:var(--muted);line-height:1.5;">4.5-year clinical degree mapping, hospital rotational postings, and sports/neuro rehab tracks.</p>
+      </div>
+
+      <div class="hlth-card reveal">
+        <div style="font-size:.625rem;font-weight:700;letter-spacing:.14em;color:#10B981;text-transform:uppercase;margin-bottom:.5rem;">ALLIED HEALTH</div>
+        <div style="font-weight:700;font-size:var(--fs-md);color:var(--heading);margin-bottom:.5rem;">B.Sc MLT, Radiology &amp; OT Tech</div>
+        <p style="font-size:var(--fs-xs);color:var(--muted);line-height:1.5;">Medical lab technology, diagnostic imaging, cardiac care, and critical care technology.</p>
+      </div>
+
+      <div class="hlth-card reveal">
+        <div style="font-size:.625rem;font-weight:700;letter-spacing:.14em;color:#10B981;text-transform:uppercase;margin-bottom:.5rem;">VETERINARY</div>
+        <div style="font-weight:700;font-size:var(--fs-md);color:var(--heading);margin-bottom:.5rem;">B.V.Sc &amp; AH</div>
+        <p style="font-size:var(--fs-xs);color:var(--muted);line-height:1.5;">VCI counselling guidance, state veterinary university seat allocations &amp; NEET score cutoff mapping.</p>
+      </div>
+
+      <div class="hlth-card reveal">
+        <div style="font-size:.625rem;font-weight:700;letter-spacing:.14em;color:#10B981;text-transform:uppercase;margin-bottom:.5rem;">OPTOMETRY</div>
+        <div style="font-weight:700;font-size:var(--fs-md);color:var(--heading);margin-bottom:.5rem;">B.Optom (Bachelor of Optometry)</div>
+        <p style="font-size:var(--fs-xs);color:var(--muted);line-height:1.5;">Clinical eye hospital training, optical industry partnerships, and clinical practice pathways.</p>
+      </div>
+    </div>
+
+    <!-- ADVISORY BANNER -->
+    <div style="background:var(--navy);padding:3.5rem;border-radius:6px;text-align:center;color:#fff;margin-top:3.5rem;" class="reveal">
+      <h2 style="font-family:var(--font-serif);font-size:clamp(1.75rem,3vw,2.5rem);font-weight:400;margin-bottom:1rem;color:#fff;">
+        Discuss Your Allied Health &amp; Pharmacy Options
+      </h2>
+      <p style="font-size:var(--fs-base);color:rgba(248,250,252,.6);max-width:620px;margin:0 auto 2rem auto;line-height:1.7;">
+        Let our advisors help you verify PCI/INC approvals, hospital clinical postings, and total 4-year tuition fees before taking admission.
       </p>
-
-      <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 16px;">
-        <button class="btn btn-gold" data-modal="lead" data-program="Healthcare Program Guidance">
-          GET PROGRAM GUIDANCE
-        </button>
-      </div>
+      <button class="btn btn-primary" data-modal="lead" data-program="Health Advisory CTA" style="background:var(--blue);border-color:var(--blue);color:#fff;">Speak With an Advisor</button>
     </div>
-  </section>
-
-  <!-- EMOTIONAL & KNOWLEDGE SECTION -->
-  <section class="section" aria-labelledby="foundation-heading">
-    <div class="container">
-      <div class="section-heading centered reveal">
-        <span class="section-label">Institutional Quality</span>
-        <h2 id="foundation-heading">A HEALTHCARE DEGREE IS AN INVESTMENT IN YOUR PROFESSIONAL LIFE.</h2>
-      </div>
-
-      <div style="max-width: 840px; margin: 0 auto; text-align: center;" class="reveal">
-        <p style="font-size: 1.1rem; color: var(--clr-text-main); line-height: 1.8; margin-bottom: 24px;">
-          In healthcare, regulatory approvals and clinical tie-ups determine whether your degree is recognized for practice and higher education.
-        </p>
-
-        <div style="background: var(--clr-surface); border: 2px solid var(--clr-border); border-radius: var(--radius-xl); padding: var(--sp-8); box-shadow: var(--shadow-lg); margin-bottom: 24px;">
-          <h3 style="font-size: 1.3rem; color: #0F172A; font-weight: 900; margin-bottom: 12px;">
-            DON'T CHOOSE A HEALTHCARE COLLEGE ONLY BECAUSE THE FEE LOOKS AFFORDABLE.
-          </h3>
-          <p style="font-size: 14px; color: var(--clr-text-2); margin-bottom: 16px;">
-            Always audit regulatory approvals (PCI for Pharmacy, INC/State Council for Nursing), attached hospital bed capacity, lab infrastructure, and internship postings.
-          </p>
-        </div>
-
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; margin-bottom: 32px;">
-          <div style="padding: 12px; background: var(--clr-surface); border: 1px solid var(--clr-border); border-radius: 6px; font-weight: 800; font-size: 13px;">💊 PCI Approval Status</div>
-          <div style="padding: 12px; background: var(--clr-surface); border: 1px solid var(--clr-border); border-radius: 6px; font-weight: 800; font-size: 13px;">💉 INC & Nursing Council</div>
-          <div style="padding: 12px; background: var(--clr-surface); border: 1px solid var(--clr-border); border-radius: 6px; font-weight: 800; font-size: 13px;">🏥 Hospital Tie-ups & Beds</div>
-          <div style="padding: 12px; background: var(--clr-surface); border: 1px solid var(--clr-border); border-radius: 6px; font-weight: 800; font-size: 13px;">🩺 Clinical Internships</div>
-        </div>
-
-        <button class="btn btn-primary btn-lg" data-modal="lead" data-program="Healthcare Audit">
-          AUDIT HEALTHCARE COLLEGES
-        </button>
-      </div>
-    </div>
-  </section>
+  </div>
+</section>
 
 </main>
 
 <div id="footer-slot"></div>
-
 <script src="js/shared.js"></script>
 <script src="js/main.js"></script>
 </body>

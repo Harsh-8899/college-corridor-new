@@ -3,61 +3,60 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MBA & B-School Admissions Guidance — Investment & Career Strategy | College Corridor</title>
-  <meta name="description" content="Strategic MBA and PGDM admissions guidance across leading business schools in India. ROI analysis, profile evaluation, and offer selection.">
+  <title>MBA & Management Admissions Advisory | CAT, XAT, B-School Strategy | College Corridor</title>
+  <meta name="description" content="Strategic management admissions guidance for CAT, XAT, NMAT, SNAP, CMAT aspirants targeting premier IIMs, XLRI, FMS & top private business schools in India.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/components.css">
   <link rel="stylesheet" href="css/animations.css">
   <style>
-    :root {
-      --clr-mba: #8B5CF6;
-      --clr-gold: #C59B27;
-      --clr-gold-light: #FCD34D;
-      --clr-dark: #0F172A;
-      --clr-border-gold: rgba(197, 155, 39, 0.35);
-    }
-    .mba-hero {
-      padding: var(--sp-12) 0 var(--sp-10) 0;
-      background: radial-gradient(circle at 50% 20%, rgba(139, 92, 246, 0.2) 0%, rgba(15, 23, 42, 0.98) 75%), #0F172A;
-      color: #FFFFFF;
-      text-align: center;
-      border-bottom: 2px solid var(--clr-border-gold);
-    }
-    .btn-gold {
-      background: linear-gradient(135deg, #C59B27 0%, #D97706 100%);
-      color: #0F172A !important;
-      font-weight: 900 !important;
-      font-size: 1.1rem !important;
-      padding: 16px 34px !important;
-      border-radius: var(--radius-md) !important;
-      box-shadow: 0 8px 25px rgba(197, 155, 39, 0.4) !important;
-      transition: all 0.3s ease !important;
-      border: 2px solid #FCD34D !important;
-      text-transform: uppercase;
-    }
-    .btn-gold:hover {
-      transform: translateY(-3px) scale(1.02);
-      box-shadow: 0 12px 35px rgba(197, 155, 39, 0.6) !important;
-      background: linear-gradient(135deg, #FCD34D 0%, #C59B27 100%);
-    }
-    .bschool-grid {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      justify-content: center;
-      margin-top: 16px;
-    }
-    .bschool-tag {
-      background: rgba(255, 255, 255, 0.06);
-      border: 1px solid var(--clr-border-gold);
-      padding: 8px 16px;
-      border-radius: 6px;
-      font-size: 13px;
-      font-weight: 800;
-      color: #F8FAFC;
-    }
+  body { background: var(--ivory); }
+  .idx-eyebrow { display:flex;align-items:center;gap:12px;margin-bottom:1.5rem; }
+  .idx-eyebrow-line { width:28px;height:1px;background:var(--gold);flex-shrink:0; }
+  .idx-eyebrow-text { font-family:var(--font-sans);font-size:.6875rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--gold); }
+  .reveal { opacity:0;transform:translateY(22px);transition:opacity .6s ease,transform .6s ease; }
+  .reveal.in { opacity:1;transform:translateY(0); }
+
+  .mba-hero {
+    background:var(--navy);
+    min-height:90vh;
+    display:grid;
+    grid-template-columns:1.1fr .9fr;
+    overflow:hidden;
+    position:relative;
+  }
+  .mba-hero-left {
+    display:flex;flex-direction:column;justify-content:center;
+    padding:clamp(4rem,8vw,7rem) clamp(2rem,5vw,5rem);
+    z-index:2;
+  }
+  .mba-h1 { font-family:var(--font-serif);font-weight:400;font-size:clamp(2.5rem,4.8vw,4rem);color:#fff;line-height:1.06;letter-spacing:-.025em;margin-bottom:1rem; }
+  .mba-h1 em { font-style:italic;color:var(--gold); }
+  .mba-h1 strong { font-weight:500;display:block;font-size:clamp(1.125rem,2.2vw,1.6rem);letter-spacing:.05em;text-transform:uppercase;font-family:var(--font-sans);color:rgba(248,250,252,.45);margin-top:.75rem; }
+  .mba-hero-body { font-size:var(--fs-md);color:rgba(248,250,252,.6);line-height:1.75;max-width:440px;margin-bottom:2.5rem; }
+
+  .mba-hero-right { position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center; }
+  .mba-hero-bg-img { width:100%;height:100%;object-fit:cover;object-position:center;filter:brightness(0.65) contrast(1.1); }
+  .mba-hero-overlay { position:absolute;inset:0;background:linear-gradient(to right, var(--navy) 0%, rgba(11,18,32,0.4) 50%, transparent 100%);pointer-events:none; }
+
+  .mba-grid { display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:1px solid var(--border); }
+  .mba-card { padding:2rem 1.5rem;border-right:1px solid var(--border);border-bottom:1px solid var(--border);background:var(--white);transition:background var(--trans-fast); }
+  .mba-card:nth-child(3n) { border-right:none; }
+  .mba-card:hover { background:var(--ivory); }
+
+  .advisor-photo-wrap {
+    display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center;
+    background:var(--white);border:1px solid var(--border);padding:2.5rem;
+  }
+  .advisor-photo-wrap img { width:100%;height:100%;max-height:360px;object-fit:cover;border-radius:4px; }
+
+  @media(max-width:900px){
+    .mba-hero { grid-template-columns:1fr; }
+    .mba-hero-right { min-height:320px; }
+    .mba-grid { grid-template-columns:1fr; }
+    .advisor-photo-wrap { grid-template-columns:1fr; }
+  }
   </style>
 </head>
 <body>
@@ -67,148 +66,177 @@
 
 <main>
 
-  <!-- HERO SECTION -->
-  <section class="mba-hero" aria-labelledby="mba-title">
-    <div class="container">
-      <span class="section-label" style="background: rgba(139,92,246,0.2); color: #A78BFA; border: 1px solid rgba(167,139,250,0.4);">
-        Strategic B-School Advisory
-      </span>
+<!-- HERO WITH VISUAL ASSET 01 -->
+<section class="mba-hero" aria-labelledby="mba-h1">
+  <div class="mba-hero-left">
+    <div class="idx-eyebrow reveal"><span class="idx-eyebrow-line"></span><span class="idx-eyebrow-text">College Corridor MBA Advisory</span></div>
+    <h1 id="mba-h1" class="mba-h1 reveal" style="transition-delay:.08s">
+      An MBA is an investment.<br>
+      <em>Treat the decision like one.</em>
+      <strong>Strategic B-School Advisory &amp; Profile Mapping</strong>
+    </h1>
+    <p class="mba-hero-body reveal" style="transition-delay:.15s">
+      The most expensive MBA is the one that doesn't move your career forward. We help aspirants evaluate business schools on ROI, alumni network, specialization, and long-term placement fit.
+    </p>
+    <div class="reveal" style="transition-delay:.22s">
+      <button class="btn btn-primary" data-modal="lead" data-program="MBA Advisory" style="background:var(--blue);border-color:var(--blue);color:#fff;">Build My MBA Strategy &rarr;</button>
+    </div>
+  </div>
 
-      <h1 id="mba-title" style="font-size: clamp(2.2rem, 5vw, 4rem); font-weight: 900; color: #FFFFFF !important; -webkit-text-fill-color: #FFFFFF !important; margin: 16px 0 12px 0; line-height: 1.12;">
-        YOUR MBA IS AN INVESTMENT.<br>TREAT IT LIKE ONE.
-      </h1>
+  <div class="mba-hero-right">
+    <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=1200&q=80" alt="B-School Business Meeting & Discussion" class="mba-hero-bg-img">
+    <div class="mba-hero-overlay"></div>
+    <div style="position:absolute;z-index:3;background:rgba(11,18,32,0.85);backdrop-filter:blur(12px);border:1px solid rgba(16,185,129,0.3);border-radius:8px;padding:1.75rem;max-width:360px;width:90%;" class="reveal">
+      <div style="font-size:.625rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:#10B981;margin-bottom:.75rem;">B-School Decision Matrix</div>
+      <div style="display:flex;flex-direction:column;gap:.5rem;font-size:.75rem;color:rgba(248,250,252,.75);">
+        <div style="display:flex;justify-content:space-between;border-bottom:1px solid rgba(255,255,255,.08);padding-bottom:.375rem;"><span>Entrance</span><span style="font-weight:700;color:#fff;">CAT, XAT, NMAT, SNAP</span></div>
+        <div style="display:flex;justify-content:space-between;border-bottom:1px solid rgba(255,255,255,.08);padding-bottom:.375rem;"><span>Shortlist</span><span style="font-weight:700;color:var(--gold);">IIMs, XLRI, FMS, SPJIMR</span></div>
+        <div style="display:flex;justify-content:space-between;border-bottom:1px solid rgba(255,255,255,.08);padding-bottom:.375rem;"><span>Profile Weight</span><span style="font-weight:700;color:#fff;">Acads + Work Exp + Percentile</span></div>
+        <div style="display:flex;justify-content:space-between;"><span>ROI Metric</span><span style="font-weight:700;color:#fff;">Median CTC vs Fee + Opp. Cost</span></div>
+      </div>
+    </div>
+  </div>
+</section>
 
-      <p style="font-size: 1.2rem; font-weight: 800; color: #FCD34D; max-width: 820px; margin: 0 auto 24px auto;">
-        Strategic MBA & B-School Admission Guidance (CAT • XAT • NMAT • SNAP • CMAT • Executive Routes)
+<!-- CHAPTER 01 -->
+<section style="background:var(--navy-soft);padding:clamp(5rem,8vw,7rem) 0;" aria-labelledby="mba-ch1">
+  <div class="container" style="max-width:840px;">
+    <div class="idx-eyebrow reveal"><span class="idx-eyebrow-line"></span><span class="idx-eyebrow-text">Strategic Assessment</span></div>
+    <h2 id="mba-ch1" style="font-family:var(--font-serif);font-size:clamp(1.85rem,3.8vw,3rem);color:#fff;font-weight:400;margin-bottom:1.5rem;line-height:1.15;">
+      "Is a ₹20 Lakh+ MBA fee justified for this specific B-School?"
+    </h2>
+    <p style="font-size:var(--fs-base);color:rgba(248,250,252,.65);line-height:1.8;margin-bottom:2rem;">
+      When investing 2 years of your career and significant capital, you cannot rely on advertised average packages alone. You need clarity on role profiles, sector placements, batch size dilution, and alumni strength.
+    </p>
+    <div style="padding:1.5rem;background:rgba(201,162,39,.08);border-left:3px solid var(--gold);" class="reveal">
+      <p style="font-family:var(--font-serif);font-style:italic;font-size:var(--fs-md);color:#fff;margin:0;">
+        "The wrong B-school delays your career trajectory. The right decision accelerates it."
       </p>
+    </div>
+  </div>
+</section>
 
-      <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 16px;">
-        <button class="btn btn-gold" data-modal="lead" data-program="MBA Strategy">
-          GET MY MBA STRATEGY
-        </button>
-        <button class="btn btn-secondary btn-lg" data-modal="lead" data-program="MBA Second Opinion">
-          GET A SECOND OPINION
-        </button>
+<!-- EVALUATION VARIABLES -->
+<section style="background:var(--ivory);padding:clamp(5rem,8vw,7rem) 0;" aria-labelledby="eval-heading">
+  <div class="container">
+    <div class="idx-eyebrow reveal"><span class="idx-eyebrow-line"></span><span class="idx-eyebrow-text">Evaluation Variables</span></div>
+    <h2 id="eval-heading" style="font-family:var(--font-sans);font-weight:700;font-size:clamp(1.25rem,2.5vw,1.75rem);letter-spacing:.04em;text-transform:uppercase;color:var(--heading);margin-bottom:2.5rem;" class="reveal">
+      How We Evaluate B-Schools
+    </h2>
+
+    <div class="mba-grid">
+      <div class="mba-card reveal">
+        <div style="font-size:.625rem;font-weight:700;letter-spacing:.14em;color:#10B981;text-transform:uppercase;margin-bottom:.5rem;">PROFILE FIT</div>
+        <div style="font-weight:700;font-size:var(--fs-md);color:var(--heading);margin-bottom:.5rem;">Academic &amp; Work Exp Audit</div>
+        <p style="font-size:var(--fs-xs);color:var(--muted);line-height:1.5;">Matching your 10th/12th/Grad scores and work experience to B-school call criteria.</p>
+      </div>
+
+      <div class="mba-card reveal">
+        <div style="font-size:.625rem;font-weight:700;letter-spacing:.14em;color:#10B981;text-transform:uppercase;margin-bottom:.5rem;">ENTRANCE MAPPING</div>
+        <div style="font-weight:700;font-size:var(--fs-md);color:var(--heading);margin-bottom:.5rem;">CAT, XAT, NMAT, SNAP</div>
+        <p style="font-size:var(--fs-xs);color:var(--muted);line-height:1.5;">Sectional cutoffs vs overall percentile strategies for Tier-1 and Tier-2 institutions.</p>
+      </div>
+
+      <div class="mba-card reveal">
+        <div style="font-size:.625rem;font-weight:700;letter-spacing:.14em;color:#10B981;text-transform:uppercase;margin-bottom:.5rem;">PLACEMENT DEPTH</div>
+        <div style="font-weight:700;font-size:var(--fs-md);color:var(--heading);margin-bottom:.5rem;">Median CTC &amp; Sector Roles</div>
+        <p style="font-size:var(--fs-xs);color:var(--muted);line-height:1.5;">Analyzing median salaries, domain roles (consulting vs sales), and top recruiter retention.</p>
+      </div>
+
+      <div class="mba-card reveal">
+        <div style="font-size:.625rem;font-weight:700;letter-spacing:.14em;color:#10B981;text-transform:uppercase;margin-bottom:.5rem;">SPECIALISATION</div>
+        <div style="font-weight:700;font-size:var(--fs-md);color:var(--heading);margin-bottom:.5rem;">Domain Alignment</div>
+        <p style="font-size:var(--fs-xs);color:var(--muted);line-height:1.5;">Finance, Marketing, Product Management, Analytics, Operations, HR domain specialization.</p>
+      </div>
+
+      <div class="mba-card reveal">
+        <div style="font-size:.625rem;font-weight:700;letter-spacing:.14em;color:#10B981;text-transform:uppercase;margin-bottom:.5rem;">FINANCIAL ROI</div>
+        <div style="font-weight:700;font-size:var(--fs-md);color:var(--heading);margin-bottom:.5rem;">Total Investment vs Payback</div>
+        <p style="font-size:var(--fs-xs);color:var(--muted);line-height:1.5;">Tuition, hostel, living costs, and lost salary evaluated against post-MBA compensation.</p>
+      </div>
+
+      <div class="mba-card reveal">
+        <div style="font-size:.625rem;font-weight:700;letter-spacing:.14em;color:#10B981;text-transform:uppercase;margin-bottom:.5rem;">ALUMNI &amp; BRAND</div>
+        <div style="font-weight:700;font-size:var(--fs-md);color:var(--heading);margin-bottom:.5rem;">Long-Term Mobility</div>
+        <p style="font-size:var(--fs-xs);color:var(--muted);line-height:1.5;">Network strength, industry reputation, and leadership placement across 5-10 year horizons.</p>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- EMOTIONAL SECTION -->
-  <section class="section" aria-labelledby="investment-heading">
-    <div class="container">
-      <div class="section-heading centered reveal">
-        <span class="section-label">Opportunity Cost</span>
-        <h2 id="investment-heading">AN MBA CAN COST YOU MONEY. THE WRONG MBA CAN ALSO COST YOU TIME.</h2>
-      </div>
-
-      <div style="max-width: 840px; margin: 0 auto; text-align: center;" class="reveal">
-        <p style="font-size: 1.1rem; color: var(--clr-text-main); line-height: 1.8; margin-bottom: 24px;">
-          When pursuing an MBA, you are investing: <strong>Tuition Fees • Two Years • Opportunity Cost • Career Momentum • Relocation • Expectations.</strong>
-        </p>
-
-        <div style="background: var(--clr-surface); border: 2px solid var(--clr-border); border-radius: var(--radius-xl); padding: var(--sp-8); box-shadow: var(--shadow-lg); margin-bottom: 24px;">
-          <p style="font-size: 1.1rem; color: var(--clr-text-2); margin-bottom: 8px;">Therefore: Don't ask only <em>"Can I get admission?"</em></p>
-          <h3 style="font-size: clamp(1.4rem, 3vw, 2rem); font-weight: 900; color: #0F172A; margin: 0;">
-            "Is this MBA worth the investment for me?"
-          </h3>
-        </div>
-
-        <button class="btn btn-primary btn-lg" data-modal="lead" data-program="MBA Investment Audit">
-          AUDIT MY B-SCHOOL OPTIONS
-        </button>
-      </div>
-    </div>
-  </section>
-
-  <!-- KNOWLEDGE SECTION -->
-  <section class="section section-alt" aria-labelledby="roi-heading">
-    <div class="container">
-      <div class="section-heading centered reveal">
-        <span class="section-label">Evaluation Matrix</span>
-        <h2 id="roi-heading">WHAT SHOULD YOU ACTUALLY COMPARE?</h2>
-      </div>
-
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 14px; margin: 24px 0;" class="reveal">
-        <div style="padding: 14px; background: var(--clr-surface); border: 1px solid var(--clr-border); border-radius: var(--radius-md); font-weight: 800; font-size: 13px; text-align: center;">📈 Placement Outcomes</div>
-        <div style="padding: 14px; background: var(--clr-surface); border: 1px solid var(--clr-border); border-radius: var(--radius-md); font-weight: 800; font-size: 13px; text-align: center;">💰 Total Program Fees & ROI</div>
-        <div style="padding: 14px; background: var(--clr-surface); border: 1px solid var(--clr-border); border-radius: var(--radius-md); font-weight: 800; font-size: 13px; text-align: center;">🌐 Alumni Network Strength</div>
-        <div style="padding: 14px; background: var(--clr-surface); border: 1px solid var(--clr-border); border-radius: var(--radius-md); font-weight: 800; font-size: 13px; text-align: center;">🎯 Specialization Focus</div>
-        <div style="padding: 14px; background: var(--clr-surface); border: 1px solid var(--clr-border); border-radius: var(--radius-md); font-weight: 800; font-size: 13px; text-align: center;">📍 Location & Corporate Ties</div>
-        <div style="padding: 14px; background: var(--clr-surface); border: 1px solid var(--clr-border); border-radius: var(--radius-md); font-weight: 800; font-size: 13px; text-align: center;">📊 Profile Fit & Cohort</div>
-      </div>
-
-      <div style="text-align: center;" class="reveal">
-        <h3 style="font-size: 1.4rem; color: #0F172A; font-weight: 900; margin-bottom: 16px;">
-          A COLLEGE OFFER IS NOT THE SAME THING AS A GOOD DECISION.
-        </h3>
-        <button class="btn btn-primary" data-modal="lead" data-program="Compare B-Schools">
-          COMPARE B-SCHOOL OFFERINGS
-        </button>
-      </div>
-    </div>
-  </section>
-
-  <!-- TOP B-SCHOOLS -->
-  <section class="section dark-section" style="background: #0F172A; color: #FFFFFF;" aria-labelledby="bschools-heading">
-    <div class="container">
-      <div class="section-heading centered reveal">
-        <span class="section-label" style="background: rgba(201,150,12,0.2); color: #FCD34D;">Leading Business Schools</span>
-        <h2 id="bschools-heading" style="color: #FFFFFF !important; -webkit-text-fill-color: #FFFFFF !important;">
-          TOP PRIVATE B-SCHOOLS WE GUIDE STUDENTS FOR
+<!-- ADVISOR PHOTO PANEL -->
+<section style="background:var(--white);padding:clamp(5rem,8vw,7rem) 0;" aria-labelledby="adv-mba-h2">
+  <div class="container">
+    <div class="advisor-photo-wrap reveal">
+      <div>
+        <div class="idx-eyebrow"><span class="idx-eyebrow-line"></span><span class="idx-eyebrow-text">Profile Advisory</span></div>
+        <h2 id="adv-mba-h2" style="font-family:var(--font-serif);font-size:clamp(1.75rem,3.2vw,2.5rem);font-weight:400;color:var(--heading);line-height:1.2;margin-bottom:1.5rem;">
+          Your profile is more<br>
+          <em>than your test score.</em>
         </h2>
-      </div>
-
-      <div class="bschool-grid reveal" style="max-width: 900px; margin: 24px auto;">
-        <span class="bschool-tag">XLRI Jamshedpur</span>
-        <span class="bschool-tag">SPJIMR Mumbai</span>
-        <span class="bschool-tag">MDI Gurugram</span>
-        <span class="bschool-tag">NMIMS Mumbai</span>
-        <span class="bschool-tag">SIBM Pune</span>
-        <span class="bschool-tag">IMT Ghaziabad</span>
-        <span class="bschool-tag">MICA Ahmedabad</span>
-        <span class="bschool-tag">XIM University</span>
-        <span class="bschool-tag">TAPMI Manipal</span>
-        <span class="bschool-tag">Great Lakes</span>
-        <span class="bschool-tag">IMI New Delhi</span>
-        <span class="bschool-tag">FORE School</span>
-        <span class="bschool-tag">KJ Somaiya</span>
-        <span class="bschool-tag">BIMTECH</span>
-        <span class="bschool-tag">IMI Kolkata</span>
-      </div>
-
-      <div style="text-align: center; margin-top: 24px;" class="reveal">
-        <p style="color: #FCD34D; font-weight: 800; font-size: 1.1rem; margin-bottom: 16px;">
-          "Don't choose an MBA only because you received an offer. Understand what you're buying with your time, money and career."
+        <p style="font-size:var(--fs-base);color:var(--body);line-height:1.7;margin-bottom:2rem;">
+          B-schools evaluate your academic consistency, work experience quality, leadership evidence, and SOP essays. We help present your background for maximum call conversions.
         </p>
-        <button class="btn btn-gold" data-modal="lead" data-program="Discuss MBA Options">
-          DISCUSS MY MBA OPTIONS
-        </button>
+        <button class="btn btn-primary" data-modal="lead" data-program="MBA Profile Advisory" style="background:var(--blue);border-color:var(--blue);color:#fff;">Build My MBA Strategy &rarr;</button>
+      </div>
+
+      <div>
+        <img src="assets/images/counselling-session.png" alt="B-School Profile Advisory Meeting">
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- MBA FOMO -->
-  <section class="section section-alt" aria-labelledby="fomo-heading">
-    <div class="container">
-      <div style="max-width: 820px; margin: 0 auto; text-align: center;" class="reveal">
-        <span class="section-label">Offer Decision Support</span>
-        <h2 id="fomo-heading" style="font-size: clamp(1.6rem, 3.5vw, 2.4rem); margin: 12px 0;">
-          DON'T WAIT UNTIL YOU HAVE AN OFFER TO START COMPARING.
-        </h2>
-        <p style="font-size: 1.05rem; color: var(--clr-text-2); margin-bottom: 24px;">
-          The difficult decision often comes after receiving multiple admits (College A vs College B, different fees, different locations, different career outcomes). That's when an objective second opinion becomes invaluable.
-        </p>
-        <button class="btn btn-primary btn-lg" data-modal="lead" data-program="MBA Second Opinion">
-          GET A SECOND OPINION
-        </button>
+<!-- PRICING -->
+<section style="background:var(--ivory);padding:clamp(5rem,8vw,7rem) 0;" aria-labelledby="pricing-heading">
+  <div class="container">
+    <div class="idx-eyebrow reveal"><span class="idx-eyebrow-line"></span><span class="idx-eyebrow-text">MBA Advisory Plans</span></div>
+    <h2 id="pricing-heading" style="font-family:var(--font-sans);font-weight:700;font-size:clamp(1.25rem,2.5vw,1.75rem);letter-spacing:.04em;text-transform:uppercase;color:var(--heading);margin-bottom:2.5rem;" class="reveal">
+      Advisory Built for Serious MBA Aspirants
+    </h2>
+
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;">
+      <div style="padding:2.5rem 2rem;background:var(--white);border:1px solid var(--border);" class="reveal">
+        <div style="font-size:.625rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:.5rem;">STRATEGIC</div>
+        <div style="font-family:var(--font-serif);font-size:2rem;font-weight:700;color:var(--heading);margin-bottom:1rem;">₹25,000</div>
+        <p style="font-size:var(--fs-xs);color:var(--muted);margin-bottom:1.5rem;line-height:1.5;">Profile audit, B-school shortlisting, and entrance exam mapping.</p>
+        <button class="btn btn-primary btn-sm" style="width:100%;background:var(--navy);border-color:var(--navy);color:#fff;" data-modal="lead" data-program="MBA Strategic Plan">Choose Strategic Plan</button>
+      </div>
+
+      <div style="padding:2.5rem 2rem;background:var(--white);border:2px solid var(--gold);position:relative;" class="reveal">
+        <div style="position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:var(--gold);color:#0B1220;font-size:.5625rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;padding:2px 10px;border-radius:2px;">RECOMMENDED</div>
+        <div style="font-size:.625rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:.5rem;">PREMIUM ⭐</div>
+        <div style="font-family:var(--font-serif);font-size:2rem;font-weight:700;color:var(--heading);margin-bottom:1rem;">₹50,000</div>
+        <p style="font-size:var(--fs-xs);color:var(--muted);margin-bottom:1.5rem;line-height:1.5;">Complete profile strategy, SOP/essay guidance, and multi-call final selection.</p>
+        <button class="btn btn-primary btn-sm" style="width:100%;background:var(--blue);border-color:var(--blue);color:#fff;" data-modal="lead" data-program="MBA Premium Plan">Choose Premium Plan</button>
+      </div>
+
+      <div style="padding:2.5rem 2rem;background:var(--navy);border:1px solid rgba(255,255,255,.1);color:#fff;" class="reveal">
+        <div style="font-size:.625rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:.5rem;">ELITE</div>
+        <div style="font-family:var(--font-serif);font-size:2rem;font-weight:700;color:#fff;margin-bottom:1rem;">₹1,00,000</div>
+        <p style="font-size:var(--fs-xs);color:rgba(248,250,252,.5);margin-bottom:1.5rem;line-height:1.5;">End-to-end B-school advisory, executive/global MBA strategy &amp; Senior Advisor.</p>
+        <button class="btn btn-primary btn-sm" style="width:100%;background:var(--gold);border-color:var(--gold);color:#0B1220;" data-modal="lead" data-program="MBA Elite Plan">Choose Elite Plan</button>
       </div>
     </div>
-  </section>
+  </div>
+</section>
+
+<!-- FINAL CLOSE -->
+<section style="background:var(--navy);padding:clamp(5rem,9vw,8rem) 0;text-align:center;" aria-labelledby="mba-final">
+  <div class="container" style="max-width:640px;">
+    <h2 id="mba-final" style="font-family:var(--font-serif);font-size:clamp(2.25rem,4.8vw,3.5rem);color:#fff;font-weight:400;line-height:1.08;margin-bottom:1.5rem;">
+      An MBA is an investment.<br><em style="color:var(--gold);font-style:italic;">Make the decision count.</em>
+    </h2>
+    <p style="font-size:var(--fs-md);color:rgba(248,250,252,.5);line-height:1.7;margin-bottom:2.5rem;">
+      Share your entrance scores, profile details, and career goals.<br>We'll help you build an optimal B-school strategy.
+    </p>
+    <button class="btn btn-primary" data-modal="lead" data-program="MBA Final CTA" style="background:var(--blue);border-color:var(--blue);color:#fff;">Speak With College Corridor</button>
+  </div>
+</section>
 
 </main>
 
 <div id="footer-slot"></div>
-
 <script src="js/shared.js"></script>
 <script src="js/main.js"></script>
 </body>

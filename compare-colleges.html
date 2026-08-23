@@ -3,44 +3,39 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Compare Colleges & B-Schools | College Corridor Advisory</title>
-  <meta name="description" content="Side-by-side college comparison tool for medical, engineering and management colleges. Evaluate total fees, clinical exposure, placements and ROI.">
+  <title>Side-by-Side College Intelligence Comparison | College Corridor</title>
+  <meta name="description" content="Side-by-side college evaluation tool for medical, engineering, management, and law colleges. Compare total multi-year fees, clinical exposure, placements & ROI.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/components.css">
   <link rel="stylesheet" href="css/animations.css">
   <style>
-    :root {
-      --clr-gold: #C59B27;
-      --clr-gold-light: #FCD34D;
-      --clr-dark: #0F172A;
-      --clr-border-gold: rgba(197, 155, 39, 0.35);
-    }
-    .compare-hero {
-      padding: var(--sp-10) 0 var(--sp-8) 0;
-      background: radial-gradient(circle at 50% 20%, rgba(197, 155, 39, 0.18) 0%, rgba(15, 23, 42, 0.98) 75%), #0F172A;
-      color: #FFFFFF;
-      text-align: center;
-      border-bottom: 2px solid var(--clr-border-gold);
-    }
-    .btn-gold {
-      background: linear-gradient(135deg, #C59B27 0%, #D97706 100%);
-      color: #0F172A !important;
-      font-weight: 900 !important;
-      font-size: 1.1rem !important;
-      padding: 14px 28px !important;
-      border-radius: var(--radius-md) !important;
-      box-shadow: 0 8px 25px rgba(197, 155, 39, 0.4) !important;
-      transition: all 0.3s ease !important;
-      border: 2px solid #FCD34D !important;
-      text-transform: uppercase;
-    }
-    .btn-gold:hover {
-      transform: translateY(-3px) scale(1.02);
-      box-shadow: 0 12px 35px rgba(197, 155, 39, 0.6) !important;
-      background: linear-gradient(135deg, #FCD34D 0%, #C59B27 100%);
-    }
+  body { background: var(--ivory); }
+  .idx-eyebrow { display:flex;align-items:center;gap:12px;margin-bottom:1.5rem; }
+  .idx-eyebrow-line { width:28px;height:1px;background:var(--gold);flex-shrink:0; }
+  .idx-eyebrow-text { font-family:var(--font-sans);font-size:.6875rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--gold); }
+  .reveal { opacity:0;transform:translateY(22px);transition:opacity .6s ease,transform .6s ease; }
+  .reveal.in { opacity:1;transform:translateY(0); }
+
+  .cmp-hero {
+    background:var(--navy);
+    padding:clamp(4rem,7vw,6rem) 0 clamp(3rem,5vw,4.5rem) 0;
+    color:#fff;
+    border-bottom:1px solid rgba(201,162,39,.2);
+  }
+  .cmp-h1 { font-family:var(--font-serif);font-weight:400;font-size:clamp(2.5rem,4.5vw,3.75rem);color:#fff;line-height:1.08;margin-bottom:1rem; }
+  .cmp-h1 em { font-style:italic;color:var(--gold); }
+
+  .cmp-box {
+    background:var(--navy-soft);border:1px solid rgba(255,255,255,.08);
+    border-radius:6px;padding:2rem;margin-bottom:2.5rem;
+  }
+  .cmp-select {
+    width:100%;padding:12px 14px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.15);
+    border-radius:4px;color:#fff;font-family:var(--font-sans);font-size:var(--fs-sm);
+  }
+  .cmp-select option { background:#0B1220;color:#fff; }
   </style>
 </head>
 <body>
@@ -50,69 +45,61 @@
 
 <main>
 
-  <!-- HERO SECTION -->
-  <section class="compare-hero" aria-labelledby="compare-title">
-    <div class="container">
-      <span class="section-label" style="background: rgba(201,150,12,0.22); color: #FCD34D; border: 1px solid rgba(253,224,71,0.5);">
-        Strategic Comparison Advisory
-      </span>
+<section class="cmp-hero" aria-labelledby="cmp-h1">
+  <div class="container text-center" style="max-width:840px;">
+    <div class="idx-eyebrow" style="justify-content:center;"><span class="idx-eyebrow-line"></span><span class="idx-eyebrow-text">Strategic Comparison Advisory</span><span class="idx-eyebrow-line"></span></div>
+    <h1 id="cmp-h1" class="cmp-h1 reveal">
+      Don't compare colleges<br>
+      <em>on name alone.</em>
+    </h1>
+    <p style="font-size:var(--fs-md);color:rgba(248,250,252,.6);line-height:1.7;margin-bottom:2rem;" class="reveal">
+      Evaluate total multi-year fees, clinical patient load, branch placement ROI, campus infrastructure &amp; admission probability side-by-side.
+    </p>
+  </div>
+</section>
 
-      <h1 id="compare-title" style="font-size: clamp(2rem, 4.5vw, 3.5rem); font-weight: 900; color: #FFFFFF !important; -webkit-text-fill-color: #FFFFFF !important; margin: 12px 0 8px 0; line-height: 1.15;">
-        DON'T COMPARE COLLEGES ON NAME ALONE.
-      </h1>
+<section style="padding:clamp(4rem,7vw,6rem) 0;">
+  <div class="container">
 
-      <p style="font-size: 1.1rem; color: #CBD5E1; max-width: 800px; margin: 0 auto 16px auto;">
-        Compare Total Fees • Course & Branch Fit • Career Outcomes • Location • Infrastructure • Clinical Exposure • Total Investment
-      </p>
-    </div>
-  </section>
-
-  <!-- COMPARISON TOOL SECTION -->
-  <section class="section" style="padding-top: var(--sp-6);">
-    <div class="container">
-      <div style="background: var(--clr-surface); border: 1px solid var(--clr-border); border-radius: var(--radius-xl); padding: var(--sp-6); box-shadow: var(--shadow-md); margin-bottom: 28px;">
-        <h3 style="font-size: 1.1rem; color: #0F172A; font-weight: 800; margin-bottom: 16px; text-align: center;">Select Colleges to Compare Side-by-Side:</h3>
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
-          <div>
-            <label style="font-size: 12px; font-weight: 800; color: #0F172A; display: block; margin-bottom: 4px;">College Option A</label>
-            <select id="compare-college-a" class="form-select"></select>
-          </div>
-          <div>
-            <label style="font-size: 12px; font-weight: 800; color: #0F172A; display: block; margin-bottom: 4px;">College Option B</label>
-            <select id="compare-college-b" class="form-select"></select>
-          </div>
+    <div class="cmp-box reveal">
+      <div style="font-size:var(--fs-sm);color:rgba(248,250,252,.7);font-weight:600;margin-bottom:1.25rem;text-align:center;letter-spacing:.04em;text-transform:uppercase;">
+        Select Two Institutions for Side-by-Side Evaluation:
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;">
+        <div>
+          <label style="font-size:var(--fs-xs);font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:.5rem;">Institution A</label>
+          <select id="compare-college-a" class="cmp-select"></select>
+        </div>
+        <div>
+          <label style="font-size:var(--fs-xs);font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:.5rem;">Institution B</label>
+          <select id="compare-college-b" class="cmp-select"></select>
         </div>
       </div>
-
-      <!-- COMPARISON RESULTS DISPLAY -->
-      <div id="comparison-display-wrap" style="margin-bottom: 32px;">
-        <!-- Rendered by JS -->
-      </div>
     </div>
-  </section>
 
-  <!-- POST-COMPARE CONVERSION BANNER -->
-  <section class="section dark-section" style="background: #0F172A; color: #FFFFFF;" aria-labelledby="post-compare-heading">
-    <div class="container text-center">
-      <div style="max-width: 800px; margin: 0 auto;" class="reveal">
-        <span class="section-label" style="background: rgba(201,150,12,0.2); color: #FCD34D;">Second Opinion Advisory</span>
-        <h2 id="post-compare-heading" style="color: #FFFFFF !important; -webkit-text-fill-color: #FFFFFF !important; font-size: clamp(1.6rem, 3.5vw, 2.4rem); margin: 12px 0;">
-          STILL CAN'T DECIDE? GET A SECOND OPINION.
-        </h2>
-        <p style="color: #CBD5E1; font-size: 1.05rem; margin-bottom: 24px;">
-          Choosing between two admits involves hidden financial costs, location trade-offs, and long-term career momentum. Discuss your choices with our senior admissions strategist.
-        </p>
-        <button class="btn btn-gold" data-modal="lead" data-program="Talk to Advisor Second Opinion">
-          TALK TO AN ADVISOR
-        </button>
-      </div>
+    <!-- DYNAMIC COMPARISON DISPLAY -->
+    <div id="comparison-display-wrap" style="margin-bottom:3.5rem;">
+      <!-- Rendered by js/compare.js -->
     </div>
-  </section>
+
+    <!-- POST-COMPARE SECOND OPINION BANNER -->
+    <div style="background:var(--navy);padding:3.5rem;border-radius:6px;text-align:center;color:#fff;" class="reveal">
+      <div class="idx-eyebrow" style="justify-content:center;"><span class="idx-eyebrow-line"></span><span class="idx-eyebrow-text">Second Opinion Advisory</span><span class="idx-eyebrow-line"></span></div>
+      <h2 style="font-family:var(--font-serif);font-size:clamp(1.75rem,3vw,2.5rem);font-weight:400;margin-bottom:1rem;color:#fff;">
+        Still torn between two admission choices?
+      </h2>
+      <p style="font-size:var(--fs-base);color:rgba(248,250,252,.6);max-width:620px;margin:0 auto 2rem auto;line-height:1.7;">
+        Choosing between two admits involves hidden financial costs, location trade-offs, and long-term career momentum. Discuss your choices with our senior admissions strategist.
+      </p>
+      <button class="btn btn-primary" data-modal="lead" data-program="Second Opinion Advisory" style="background:var(--blue);border-color:var(--blue);color:#fff;">Talk to an Advisor</button>
+    </div>
+
+  </div>
+</section>
 
 </main>
 
 <div id="footer-slot"></div>
-
 <script src="js/shared.js"></script>
 <script src="js/college-database.js"></script>
 <script src="js/compare.js"></script>
