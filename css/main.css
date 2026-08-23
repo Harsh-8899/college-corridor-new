@@ -140,10 +140,32 @@ body {
   line-height: 1.7;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  overflow-x: hidden;
-  cursor: default;
-  -webkit-tap-highlight-color: rgba(37,99,235,0.15);
-  max-width: 100vw;
+}
+
+img, picture, svg, video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ── CLS Stabilization & Image Aspect Ratios ── */
+.image-container, .aspect-ratio-box {
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  position: relative;
+  background: rgba(15, 23, 42, 0.05);
+}
+
+.college-logo, .inst-logo-card img {
+  width: 72px;
+  height: 72px;
+  object-fit: contain;
+  display: block;
+  flex-shrink: 0;
+}
+
+.hero-stable-minh {
+  min-height: clamp(480px, 60vh, 650px);
 }
 
 img, video, svg { display: block; max-width: 100%; height: auto; }

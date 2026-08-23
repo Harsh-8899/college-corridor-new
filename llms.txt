@@ -1,0 +1,61 @@
+# College Corridor — Admissions Advisory Platform
+
+> College Corridor is India's premier student-first college admissions advisory platform. We guide students and parents through NEET UG & NEET PG medical counselling, B.Tech engineering admissions, MBA management admissions, Law admissions, and top university selections with 100% data transparency.
+
+## About College Corridor
+- **Tagline**: The No.1 MBBS & Higher Education Admissions Consultants | We Guide. You Decide.
+- **Headquarters**: Greater Noida, Uttar Pradesh, India
+- **Contact Phone**: +91 8194 083 803
+- **Contact Email**: admissions@collegecorridor.com
+- **Website URL**: https://collegecorridor.com
+
+---
+
+## Key Admissions Advisory Pathways
+
+### 1. Medical & MBBS Admissions
+- **NEET UG Admissions**: Guidance for All India Quota (AIQ 15%), State Quota (85%), Deemed Universities, Private Medical Colleges, and BDS/AYUSH seats.
+- **NEET PG Admissions**: Specialization guidance across Radiology, General Medicine, Dermatology, Surgery, Paediatrics, Orthopaedics, and OBGYN.
+- **URL**: https://collegecorridor.com/medical-admissions.html
+
+### 2. Engineering Admissions
+- **B.Tech & Entrance Exams**: Counselling for JEE Main, JEE Advanced, BITSAT, VITEEE, SRMJEEE, MET, and top state engineering universities.
+- **URL**: https://collegecorridor.com/engineering-admissions.html
+
+### 3. Management & MBA Admissions
+- **B-School Selection**: Admissions advisory for CAT, XAT, NMAT, SNAP, MAT, and premier AICTE-approved PGDM & MBA programs.
+- **URL**: https://collegecorridor.com/management-admissions.html
+
+### 4. Law Admissions
+- **BA LLB & LLM**: Guidance for CLAT, AILET, LSAT India, SLAT, and top National Law Universities (NLUs) & private law schools.
+- **URL**: https://collegecorridor.com/law-admissions.html
+
+### 5. Allied Sciences & Specialized Admissions
+- **Pharmacy & Nursing**: B.Pharm, Pharm.D, and B.Sc Nursing admissions.
+- **URL**: https://collegecorridor.com/pharmacy-nursing.html
+- **NRI Quota Admissions**: Direct NRI & Management quota admissions guidance.
+- **URL**: https://collegecorridor.com/nri-admissions.html
+- **Study Abroad**: Medical & Engineering admissions across MBBS abroad and international universities.
+- **URL**: https://collegecorridor.com/study-abroad.html
+
+---
+
+## Core Advisory Services
+1. **Profile & Rank Audit**: Real-time evaluation of NEET/JEE/CAT scores against historical cutoff trends.
+2. **5-Year Fee & Budget Transparency**: Transparent fee audits detailing tuition, hostel fees, security deposits, and clinical exposure metrics.
+3. **Round-Wise Counselling Strategy**: Systematic choice-filling strategy for MCC All India Quota and State Counselling authorities.
+4. **Side-by-Side College Comparison**: Objective evaluation of hospital beds, OPD flow, faculty ratios, and campus infrastructure.
+
+---
+
+## Primary Page Directory
+- **Homepage**: https://collegecorridor.com/index.html
+- **Medical Admissions**: https://collegecorridor.com/medical-admissions.html
+- **Engineering Admissions**: https://collegecorridor.com/engineering-admissions.html
+- **Management Admissions**: https://collegecorridor.com/management-admissions.html
+- **Law Admissions**: https://collegecorridor.com/law-admissions.html
+- **Counselling Hub**: https://collegecorridor.com/counselling.html
+- **Find Colleges**: https://collegecorridor.com/find-colleges.html
+- **Compare Colleges**: https://collegecorridor.com/compare-colleges.html
+- **About Us**: https://collegecorridor.com/about.html
+- **Contact Advisory**: https://collegecorridor.com/contact.html

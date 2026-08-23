@@ -68,7 +68,7 @@
     <div class="filter-box reveal">
       <div style="display:grid;grid-template-columns:repeat(3,1fr) 1.2fr;gap:1.25rem;align-items:end;">
         <div class="filter-group">
-          <label>Select Discipline</label>
+          <label for="filter-discipline">Select Discipline</label>
           <select id="filter-discipline" class="filter-select">
             <option value="all">All Disciplines</option>
             <option value="medical">Medical (MBBS / BDS / PG)</option>
@@ -79,7 +79,7 @@
         </div>
 
         <div class="filter-group">
-          <label>Select Region / State</label>
+          <label for="filter-region">Select Region / State</label>
           <select id="filter-region" class="filter-select">
             <option value="all">All Regions</option>
             <option value="delhi-ncr">Delhi NCR</option>
@@ -91,7 +91,7 @@
         </div>
 
         <div class="filter-group">
-          <label>College Type</label>
+          <label for="filter-type">College Type</label>
           <select id="filter-type" class="filter-select">
             <option value="all">All Types</option>
             <option value="government">Government / Central</option>
@@ -100,7 +100,7 @@
         </div>
 
         <div>
-          <button class="btn btn-primary" id="btn-filter-search" style="width:100%;background:var(--blue);border-color:var(--blue);color:#fff;">Filter Colleges</button>
+          <button class="btn btn-primary" id="btn-filter-search" style="width:100%;background:var(--blue);border-color:var(--blue);color:#fff;" aria-label="Filter Colleges">Filter Colleges</button>
         </div>
       </div>
     </div>

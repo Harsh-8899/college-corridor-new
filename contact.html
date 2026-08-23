@@ -99,24 +99,24 @@
 
           <form id="contact-page-form" novalidate>
             <div>
-              <label style="display:block;font-size:var(--fs-xs);font-weight:700;color:var(--heading);margin-bottom:.375rem;" for="c-full-name">Full Name *</label>
-              <input class="c-input" type="text" id="c-full-name" name="full_name" placeholder="Your full name" required autocomplete="name">
+              <label style="display:block;font-size:var(--fs-xs);font-weight:700;color:var(--heading);margin-bottom:.375rem;" for="c-full-name">Full Name <span aria-hidden="true">*</span></label>
+              <input class="c-input" type="text" id="c-full-name" name="full_name" placeholder="Your full name" required aria-required="true" autocomplete="name">
             </div>
 
             <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;">
               <div>
-                <label style="display:block;font-size:var(--fs-xs);font-weight:700;color:var(--heading);margin-bottom:.375rem;" for="c-phone">Phone Number *</label>
-                <input class="c-input" type="tel" id="c-phone" name="phone" placeholder="+91 98765 43210" required autocomplete="tel">
+                <label style="display:block;font-size:var(--fs-xs);font-weight:700;color:var(--heading);margin-bottom:.375rem;" for="c-phone">Phone Number <span aria-hidden="true">*</span></label>
+                <input class="c-input" type="tel" id="c-phone" name="phone" placeholder="+91 98765 43210" required aria-required="true" autocomplete="tel">
               </div>
               <div>
-                <label style="display:block;font-size:var(--fs-xs);font-weight:700;color:var(--heading);margin-bottom:.375rem;" for="c-email">Email Address *</label>
-                <input class="c-input" type="email" id="c-email" name="email" placeholder="your@email.com" required autocomplete="email">
+                <label style="display:block;font-size:var(--fs-xs);font-weight:700;color:var(--heading);margin-bottom:.375rem;" for="c-email">Email Address <span aria-hidden="true">*</span></label>
+                <input class="c-input" type="email" id="c-email" name="email" placeholder="your@email.com" required aria-required="true" autocomplete="email">
               </div>
             </div>
 
             <div>
-              <label style="display:block;font-size:var(--fs-xs);font-weight:700;color:var(--heading);margin-bottom:.375rem;" for="c-program">Programme of Interest *</label>
-              <select class="c-input" id="c-program" name="program_interest" required>
+              <label style="display:block;font-size:var(--fs-xs);font-weight:700;color:var(--heading);margin-bottom:.375rem;" for="c-program">Programme of Interest <span aria-hidden="true">*</span></label>
+              <select class="c-input" id="c-program" name="program_interest" required aria-required="true">
                 <option value="" disabled selected>Select a programme</option>
                 <option value="mbbs">Medical — MBBS</option>
                 <option value="md-ms">Medical — MD / MS</option>
@@ -131,15 +131,15 @@
             </div>
 
             <div>
-              <label style="display:block;font-size:var(--fs-xs);font-weight:700;color:var(--heading);margin-bottom:.375rem;" for="c-message">Message / Details *</label>
-              <textarea class="c-input" id="c-message" name="message" rows="4" required placeholder="Tell us your score, rank, target colleges, budget or specific questions..."></textarea>
+              <label style="display:block;font-size:var(--fs-xs);font-weight:700;color:var(--heading);margin-bottom:.375rem;" for="c-message">Message / Details <span aria-hidden="true">*</span></label>
+              <textarea class="c-input" id="c-message" name="message" rows="4" required aria-required="true" placeholder="Tell us your score, rank, target colleges, budget or specific questions..."></textarea>
             </div>
 
             <p style="font-size:var(--fs-xs);color:var(--muted);line-height:1.5;margin-bottom:1.5rem;">
               By submitting, you consent to receive advisory communication from College Corridor.
             </p>
 
-            <button type="submit" class="btn btn-primary" style="width:100%;background:var(--blue);border-color:var(--blue);color:#fff;">Speak With an Advisor</button>
+            <button type="submit" class="btn btn-primary" style="width:100%;background:var(--blue);border-color:var(--blue);color:#fff;" aria-label="Speak With an Advisor">Speak With an Advisor</button>
           </form>
 
           <div id="contact-success" style="display:none;margin-top:1.5rem;padding:1.5rem;background:rgba(16,185,129,.1);border:1px solid rgba(16,185,129,.3);border-radius:4px;text-align:center;">

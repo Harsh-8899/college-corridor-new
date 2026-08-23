@@ -306,19 +306,28 @@
       <div style="font-size:.6875rem;font-weight:800;letter-spacing:.15em;text-transform:uppercase;color:var(--blue-sec);margin-bottom:.375rem;">QUICK CONSULTATION</div>
       <h3 style="font-size:1.25rem;font-weight:800;color:#fff;margin-bottom:1.25rem;text-transform:uppercase;">EVALUATE MY OPTIONS</h3>
       <form id="hero-quick-form">
-        <input class="h-input" type="text" name="full_name" placeholder="Full Name *" required autocomplete="name">
-        <input class="h-input" type="tel" name="phone" placeholder="Phone Number *" required autocomplete="tel">
-        <select class="h-input" name="program_interest" required>
-          <option value="" disabled selected>Select Course Interest *</option>
-          <option value="mbbs">MBBS / Medical</option>
-          <option value="btech">B.Tech / Engineering</option>
-          <option value="mba">MBA / Management</option>
-          <option value="law">BA LL.B / Law</option>
-          <option value="bca">BCA / Tech</option>
-          <option value="bba">BBA</option>
-          <option value="other">Other Course</option>
-        </select>
-        <button type="submit" class="btn btn-primary" style="width:100%;background:var(--blue);border-color:var(--blue);color:#fff;padding:12px;font-weight:800;border-radius:6px;margin-top:.25rem;">GET ADVISORY OPTIONS &rarr;</button>
+        <div style="margin-bottom:0.75rem;">
+          <label for="hero-q-name" style="display:block;font-size:0.75rem;font-weight:700;color:rgba(255,255,255,0.9);margin-bottom:4px;">Full Name <span aria-hidden="true">*</span></label>
+          <input class="h-input" type="text" id="hero-q-name" name="full_name" placeholder="Rahul Sharma" required aria-required="true" autocomplete="name">
+        </div>
+        <div style="margin-bottom:0.75rem;">
+          <label for="hero-q-phone" style="display:block;font-size:0.75rem;font-weight:700;color:rgba(255,255,255,0.9);margin-bottom:4px;">Phone Number <span aria-hidden="true">*</span></label>
+          <input class="h-input" type="tel" id="hero-q-phone" name="phone" placeholder="+91 98765 43210" required aria-required="true" autocomplete="tel">
+        </div>
+        <div style="margin-bottom:0.875rem;">
+          <label for="hero-q-program" style="display:block;font-size:0.75rem;font-weight:700;color:rgba(255,255,255,0.9);margin-bottom:4px;">Course Interest <span aria-hidden="true">*</span></label>
+          <select class="h-input" id="hero-q-program" name="program_interest" required aria-required="true">
+            <option value="" disabled selected>Select Course Interest</option>
+            <option value="mbbs">MBBS / Medical</option>
+            <option value="btech">B.Tech / Engineering</option>
+            <option value="mba">MBA / Management</option>
+            <option value="law">BA LL.B / Law</option>
+            <option value="bca">BCA / Tech</option>
+            <option value="bba">BBA</option>
+            <option value="other">Other Course</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn-primary" style="width:100%;background:var(--blue);border-color:var(--blue);color:#fff;padding:12px;font-weight:800;border-radius:6px;margin-top:.25rem;" aria-label="Submit Quick Consultation Form">GET ADVISORY OPTIONS &rarr;</button>
       </form>
     </div>
   </div>
@@ -522,51 +531,51 @@
     <!-- AIM HIGH LOGOS WALL -->
     <div class="aim-logos-grid reveal">
       <div class="aim-logo-card">
-        <img style="height:48px;object-fit:contain;margin-bottom:6px;" src="assets/images/logos/iitb.png" alt="IIT Logo">
+        <img style="width:48px;height:48px;object-fit:contain;margin-bottom:6px;" src="assets/images/logos/iitb.png" alt="IIT Bombay Logo" width="48" height="48" loading="lazy" decoding="async">
         <div style="font-weight:900;font-size:.9375rem;color:var(--heading);">IIT BOMBAY</div>
       </div>
       <div class="aim-logo-card">
-        <img style="height:48px;object-fit:contain;margin-bottom:6px;" src="assets/images/logos/bits.png" alt="BITS Logo">
+        <img style="width:48px;height:48px;object-fit:contain;margin-bottom:6px;" src="assets/images/logos/bits.png" alt="BITS Pilani Logo" width="48" height="48" loading="lazy" decoding="async">
         <div style="font-weight:900;font-size:.9375rem;color:var(--heading);">BITS PILANI</div>
       </div>
       <div class="aim-logo-card">
-        <img style="height:48px;object-fit:contain;margin-bottom:6px;" src="assets/images/logos/vit.png" alt="VIT Logo">
+        <img style="width:48px;height:48px;object-fit:contain;margin-bottom:6px;" src="assets/images/logos/vit.png" alt="VIT Vellore Logo" width="48" height="48" loading="lazy" decoding="async">
         <div style="font-weight:900;font-size:.9375rem;color:var(--heading);">VIT VELLORE</div>
       </div>
       <div class="aim-logo-card">
-        <img style="height:48px;object-fit:contain;margin-bottom:6px;" src="assets/images/logos/kmc.png" alt="KMC Logo">
+        <img style="width:48px;height:48px;object-fit:contain;margin-bottom:6px;" src="assets/images/logos/kmc.png" alt="KMC Manipal Logo" width="48" height="48" loading="lazy" decoding="async">
         <div style="font-weight:900;font-size:.9375rem;color:var(--heading);">MANIPAL (KMC)</div>
       </div>
       <div class="aim-logo-card">
-        <img style="height:48px;object-fit:contain;margin-bottom:6px;" src="assets/images/logos/thapar.png" alt="Thapar Logo">
+        <img style="width:48px;height:48px;object-fit:contain;margin-bottom:6px;" src="assets/images/logos/thapar.png" alt="Thapar Logo" width="48" height="48" loading="lazy" decoding="async">
         <div style="font-weight:900;font-size:.9375rem;color:var(--heading);">THAPAR</div>
       </div>
       <div class="aim-logo-card">
-        <img style="height:48px;object-fit:contain;margin-bottom:6px;" src="assets/images/logos/nmims.png" alt="NMIMS Logo">
+        <img style="width:48px;height:48px;object-fit:contain;margin-bottom:6px;" src="assets/images/logos/nmims.png" alt="NMIMS Mumbai Logo" width="48" height="48" loading="lazy" decoding="async">
         <div style="font-weight:900;font-size:.9375rem;color:var(--heading);">NMIMS MUMBAI</div>
       </div>
       <div class="aim-logo-card">
-        <img style="height:48px;object-fit:contain;margin-bottom:6px;" src="assets/images/logos/xlri.png" alt="XLRI Logo">
+        <img style="width:48px;height:48px;object-fit:contain;margin-bottom:6px;" src="assets/images/logos/xlri.png" alt="XLRI Jamshedpur Logo" width="48" height="48" loading="lazy" decoding="async">
         <div style="font-weight:900;font-size:.9375rem;color:var(--heading);">XLRI JAMSHEDPUR</div>
       </div>
       <div class="aim-logo-card">
-        <img style="height:48px;object-fit:contain;margin-bottom:6px;" src="assets/images/logos/nlsiu.png" alt="NLSIU Logo">
+        <img style="width:48px;height:48px;object-fit:contain;margin-bottom:6px;" src="assets/images/logos/nlsiu.png" alt="NLSIU Bengaluru Logo" width="48" height="48" loading="lazy" decoding="async">
         <div style="font-weight:900;font-size:.9375rem;color:var(--heading);">NLSIU BENGALURU</div>
       </div>
       <div class="aim-logo-card">
-        <img style="height:48px;object-fit:contain;margin-bottom:6px;" src="assets/images/logos/aiims.png" alt="AIIMS Logo">
+        <img style="width:48px;height:48px;object-fit:contain;margin-bottom:6px;" src="assets/images/logos/aiims.png" alt="AIIMS Delhi Logo" width="48" height="48" loading="lazy" decoding="async">
         <div style="font-weight:900;font-size:.9375rem;color:var(--heading);">AIIMS DELHI</div>
       </div>
       <div class="aim-logo-card">
-        <img style="height:48px;object-fit:contain;margin-bottom:6px;" src="assets/images/logos/iima.png" alt="IIM Logo">
+        <img style="width:48px;height:48px;object-fit:contain;margin-bottom:6px;" src="assets/images/logos/iima.png" alt="IIM Ahmedabad Logo" width="48" height="48" loading="lazy" decoding="async">
         <div style="font-weight:900;font-size:.9375rem;color:var(--heading);">IIM AHMEDABAD</div>
       </div>
       <div class="aim-logo-card">
-        <img style="height:48px;object-fit:contain;margin-bottom:6px;" src="assets/images/logos/jgu.png" alt="Jindal Logo">
+        <img style="width:48px;height:48px;object-fit:contain;margin-bottom:6px;" src="assets/images/logos/jgu.png" alt="Jindal Law Logo" width="48" height="48" loading="lazy" decoding="async">
         <div style="font-weight:900;font-size:.9375rem;color:var(--heading);">JINDAL LAW</div>
       </div>
       <div class="aim-logo-card">
-        <img style="height:48px;object-fit:contain;margin-bottom:6px;" src="assets/images/logos/symbiosis.png" alt="Symbiosis Logo">
+        <img style="width:48px;height:48px;object-fit:contain;margin-bottom:6px;" src="assets/images/logos/symbiosis.png" alt="Symbiosis Pune Logo" width="48" height="48" loading="lazy" decoding="async">
         <div style="font-weight:900;font-size:.9375rem;color:var(--heading);">SYMBIOSIS PUNE</div>
       </div>
     </div>
@@ -1016,24 +1025,24 @@
             <form id="contact-page-form" novalidate>
               <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1rem;">
                 <div>
-                  <label style="display:block;font-size:.75rem;font-weight:700;color:rgba(248,250,252,0.85);margin-bottom:6px;">Full Name *</label>
-                  <input class="h-input" style="margin-bottom:0;" type="text" id="c-full-name" name="full_name" placeholder="e.g. Rahul Sharma" required autocomplete="name">
+                  <label for="c-full-name" style="display:block;font-size:.75rem;font-weight:700;color:rgba(248,250,252,0.85);margin-bottom:6px;">Full Name <span aria-hidden="true">*</span></label>
+                  <input class="h-input" style="margin-bottom:0;" type="text" id="c-full-name" name="full_name" placeholder="e.g. Rahul Sharma" required aria-required="true" autocomplete="name">
                 </div>
                 <div>
-                  <label style="display:block;font-size:.75rem;font-weight:700;color:rgba(248,250,252,0.85);margin-bottom:6px;">Phone Number *</label>
-                  <input class="h-input" style="margin-bottom:0;" type="tel" id="c-phone" name="phone" placeholder="+91 98765 43210" required autocomplete="tel">
+                  <label for="c-phone" style="display:block;font-size:.75rem;font-weight:700;color:rgba(248,250,252,0.85);margin-bottom:6px;">Phone Number <span aria-hidden="true">*</span></label>
+                  <input class="h-input" style="margin-bottom:0;" type="tel" id="c-phone" name="phone" placeholder="+91 98765 43210" required aria-required="true" autocomplete="tel">
                 </div>
               </div>
 
               <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1rem;">
                 <div>
-                  <label style="display:block;font-size:.75rem;font-weight:700;color:rgba(248,250,252,0.85);margin-bottom:6px;">Email Address *</label>
-                  <input class="h-input" style="margin-bottom:0;" type="email" id="c-email" name="email" placeholder="rahul@gmail.com" required autocomplete="email">
+                  <label for="c-email" style="display:block;font-size:.75rem;font-weight:700;color:rgba(248,250,252,0.85);margin-bottom:6px;">Email Address <span aria-hidden="true">*</span></label>
+                  <input class="h-input" style="margin-bottom:0;" type="email" id="c-email" name="email" placeholder="rahul@gmail.com" required aria-required="true" autocomplete="email">
                 </div>
                 <div>
-                  <label style="display:block;font-size:.75rem;font-weight:700;color:rgba(248,250,252,0.85);margin-bottom:6px;">Select Course *</label>
-                  <select class="h-input" style="margin-bottom:0;" id="c-program" name="program_interest" required>
-                    <option value="" disabled selected>Choose Course *</option>
+                  <label for="c-program" style="display:block;font-size:.75rem;font-weight:700;color:rgba(248,250,252,0.85);margin-bottom:6px;">Select Course <span aria-hidden="true">*</span></label>
+                  <select class="h-input" style="margin-bottom:0;" id="c-program" name="program_interest" required aria-required="true">
+                    <option value="" disabled selected>Choose Course</option>
                     <option value="mbbs">MBBS / Medical</option>
                     <option value="btech">B.Tech / Engineering</option>
                     <option value="mba">MBA / Management</option>
@@ -1046,11 +1055,11 @@
               </div>
 
               <div style="margin-bottom:1.5rem;">
-                <label style="display:block;font-size:.75rem;font-weight:700;color:rgba(248,250,252,0.85);margin-bottom:6px;">Score / Rank / Budget Notes *</label>
-                <textarea class="h-input" style="margin-bottom:0;min-height:90px;resize:vertical;" id="c-message" name="message" rows="3" required placeholder="Tell us your NEET score, JEE rank, state domicile, or budget preferences..."></textarea>
+                <label for="c-message" style="display:block;font-size:.75rem;font-weight:700;color:rgba(248,250,252,0.85);margin-bottom:6px;">Score / Rank / Budget Notes <span aria-hidden="true">*</span></label>
+                <textarea class="h-input" style="margin-bottom:0;min-height:90px;resize:vertical;" id="c-message" name="message" rows="3" required aria-required="true" placeholder="Tell us your NEET score, JEE rank, state domicile, or budget preferences..."></textarea>
               </div>
 
-              <button type="submit" class="btn btn-primary" style="width:100%;background:var(--blue);border-color:var(--blue);color:#fff;padding:16px;font-weight:900;font-size:1rem;border-radius:8px;box-shadow:0 10px 25px rgba(37,99,235,0.35);letter-spacing:.02em;">
+              <button type="submit" class="btn btn-primary" style="width:100%;background:var(--blue);border-color:var(--blue);color:#fff;padding:16px;font-weight:900;font-size:1rem;border-radius:8px;box-shadow:0 10px 25px rgba(37,99,235,0.35);letter-spacing:.02em;" aria-label="Get My Options Advisory">
                 GET MY OPTIONS &rarr;
               </button>
             </form>

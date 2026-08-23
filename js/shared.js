@@ -186,21 +186,21 @@
       <form id="lead-form" novalidate>
         <div class="form-row">
           <div class="form-group">
-            <label class="form-label" for="full-name">Full Name *</label>
-            <input class="form-input" type="text" id="full-name" name="full_name" placeholder="Your full name" required autocomplete="name">
+            <label class="form-label" for="full-name">Full Name <span aria-hidden="true">*</span></label>
+            <input class="form-input" type="text" id="full-name" name="full_name" placeholder="Your full name" required aria-required="true" autocomplete="name">
           </div>
           <div class="form-group">
-            <label class="form-label" for="phone">Phone Number *</label>
-            <input class="form-input" type="tel" id="phone" name="phone" placeholder="+91 98765 43210" required autocomplete="tel">
+            <label class="form-label" for="phone">Phone Number <span aria-hidden="true">*</span></label>
+            <input class="form-input" type="tel" id="phone" name="phone" placeholder="+91 98765 43210" required aria-required="true" autocomplete="tel">
           </div>
         </div>
         <div class="form-group">
-          <label class="form-label" for="email">Email Address *</label>
-          <input class="form-input" type="email" id="email" name="email" placeholder="your@email.com" required autocomplete="email">
+          <label class="form-label" for="email">Email Address <span aria-hidden="true">*</span></label>
+          <input class="form-input" type="email" id="email" name="email" placeholder="your@email.com" required aria-required="true" autocomplete="email">
         </div>
         <div class="form-group">
-          <label class="form-label" for="program-interest">Program / Interest *</label>
-          <select class="form-select" id="program-interest" name="program_interest" required>
+          <label class="form-label" for="program-interest">Program / Interest <span aria-hidden="true">*</span></label>
+          <select class="form-select" id="program-interest" name="program_interest" required aria-required="true">
             <option value="" disabled selected>Select a program</option>
             <option value="mbbs">Medical — MBBS / BDS</option>
             <option value="md-ms">Medical — NEET PG (MD/MS)</option>
@@ -218,7 +218,7 @@
           <textarea class="form-textarea" id="message" name="message" placeholder="Tell us your score/rank, preferred colleges, budget or counselling questions..."></textarea>
         </div>
         <div class="form-note" style="margin-bottom:var(--sp-5);">By submitting this form, you agree to be contacted by College Corridor Advisory.</div>
-        <button type="submit" class="btn btn-primary" style="width:100%;font-size:var(--fs-base);padding:14px;background:#2563EB;" id="form-submit-btn">
+        <button type="submit" class="btn btn-primary" style="width:100%;font-size:var(--fs-base);padding:14px;background:#2563EB;" id="form-submit-btn" aria-label="Submit Counselling Session Request">
           Submit — Book Counselling Session
         </button>
       </form>
@@ -231,6 +231,51 @@
   </div>
 </div>`;
       document.body.insertAdjacentHTML('beforeend', modalHTML);
+    }
+  }
+
+  function injectStructuredData() {
+    if (!document.getElementById('cc-json-ld')) {
+      const schemaScript = document.createElement('script');
+      schemaScript.id = 'cc-json-ld';
+      schemaScript.type = 'application/ld+json';
+      schemaScript.text = JSON.stringify({
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "EducationalOrganization",
+            "@id": "https://collegecorridor.com/#organization",
+            "name": "College Corridor Advisory",
+            "url": "https://collegecorridor.com",
+            "logo": "https://collegecorridor.com/assets/images/logo-icon.png",
+            "telephone": "+918194083803",
+            "email": "admissions@collegecorridor.com",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Greater Noida",
+              "addressRegion": "Uttar Pradesh",
+              "addressCountry": "IN"
+            }
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://collegecorridor.com/#website",
+            "url": "https://collegecorridor.com",
+            "name": "College Corridor Advisory",
+            "publisher": { "@id": "https://collegecorridor.com/#organization" }
+          }
+        ]
+      });
+      document.head.appendChild(schemaScript);
+    }
+
+    if (!document.getElementById('cc-webmcp-script')) {
+      const p = getPathPrefix();
+      const mcpScript = document.createElement('script');
+      mcpScript.id = 'cc-webmcp-script';
+      mcpScript.src = `${p}js/webmcp.js`;
+      mcpScript.async = true;
+      document.head.appendChild(mcpScript);
     }
   }
 
@@ -248,6 +293,7 @@
     if (footSlot) footSlot.innerHTML = getFooter();
 
     ensureLeadModal();
+    injectStructuredData();
 
     // Setup Mobile Hamburger Menu & Responsive Drawer Logic
     const hamburger = document.querySelector('.hamburger');
