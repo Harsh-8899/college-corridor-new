@@ -16,27 +16,27 @@
 ### 1. Medical & MBBS Admissions
 - **NEET UG Admissions**: Guidance for All India Quota (AIQ 15%), State Quota (85%), Deemed Universities, Private Medical Colleges, and BDS/AYUSH seats.
 - **NEET PG Admissions**: Specialization guidance across Radiology, General Medicine, Dermatology, Surgery, Paediatrics, Orthopaedics, and OBGYN.
-- **URL**: https://collegecorridor.com/medical-admissions.html
+- **URL**: https://collegecorridor.com/medical-admissions
 
 ### 2. Engineering Admissions
 - **B.Tech & Entrance Exams**: Counselling for JEE Main, JEE Advanced, BITSAT, VITEEE, SRMJEEE, MET, and top state engineering universities.
-- **URL**: https://collegecorridor.com/engineering-admissions.html
+- **URL**: https://collegecorridor.com/engineering-admissions
 
 ### 3. Management & MBA Admissions
 - **B-School Selection**: Admissions advisory for CAT, XAT, NMAT, SNAP, MAT, and premier AICTE-approved PGDM & MBA programs.
-- **URL**: https://collegecorridor.com/management-admissions.html
+- **URL**: https://collegecorridor.com/management-admissions
 
 ### 4. Law Admissions
 - **BA LLB & LLM**: Guidance for CLAT, AILET, LSAT India, SLAT, and top National Law Universities (NLUs) & private law schools.
-- **URL**: https://collegecorridor.com/law-admissions.html
+- **URL**: https://collegecorridor.com/law-admissions
 
 ### 5. Allied Sciences & Specialized Admissions
 - **Pharmacy & Nursing**: B.Pharm, Pharm.D, and B.Sc Nursing admissions.
-- **URL**: https://collegecorridor.com/pharmacy-nursing.html
+- **URL**: https://collegecorridor.com/pharmacy-nursing
 - **NRI Quota Admissions**: Direct NRI & Management quota admissions guidance.
-- **URL**: https://collegecorridor.com/nri-admissions.html
+- **URL**: https://collegecorridor.com/nri-admissions
 - **Study Abroad**: Medical & Engineering admissions across MBBS abroad and international universities.
-- **URL**: https://collegecorridor.com/study-abroad.html
+- **URL**: https://collegecorridor.com/study-abroad
 
 ---
 
@@ -49,13 +49,14 @@
 ---
 
 ## Primary Page Directory
-- **Homepage**: https://collegecorridor.com/index.html
-- **Medical Admissions**: https://collegecorridor.com/medical-admissions.html
-- **Engineering Admissions**: https://collegecorridor.com/engineering-admissions.html
-- **Management Admissions**: https://collegecorridor.com/management-admissions.html
-- **Law Admissions**: https://collegecorridor.com/law-admissions.html
-- **Counselling Hub**: https://collegecorridor.com/counselling.html
-- **Find Colleges**: https://collegecorridor.com/find-colleges.html
-- **Compare Colleges**: https://collegecorridor.com/compare-colleges.html
-- **About Us**: https://collegecorridor.com/about.html
+- **Homepage**: https://collegecorridor.com/
+- **Medical Admissions**: https://collegecorridor.com/medical-admissions
+- **Engineering Admissions**: https://collegecorridor.com/engineering-admissions
+- **Management Admissions**: https://collegecorridor.com/management-admissions
+- **Law Admissions**: https://collegecorridor.com/law-admissions
+- **Counselling Hub**: https://collegecorridor.com/counselling
+- **Find Colleges**: https://collegecorridor.com/find-colleges
+- **Compare Colleges**: https://collegecorridor.com/compare-colleges
+- **About Us**: https://collegecorridor.com/about
+- **Contact Advisory**: https://collegecorridor.com/contact
 - **Contact Advisory**: https://collegecorridor.com/contact.html
