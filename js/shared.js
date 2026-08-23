@@ -23,7 +23,7 @@
     const p = getPathPrefix();
     return `<nav class="navbar" role="navigation" aria-label="Main navigation">
     <div class="nav-inner">
-      <a href="${p}index" class="nav-logo" aria-label="College Corridor Advisory Home">
+      <a href="${p}index.html" class="nav-logo" aria-label="College Corridor Advisory Home">
         <img src="${p}assets/images/logo-icon.png" alt="College Corridor" class="nav-logo-icon-img">
         <div class="nav-logo-text">
           <span class="logo-main">COLLEGE CORRIDOR</span>
@@ -31,12 +31,12 @@
         </div>
       </a>
       <div class="nav-links" role="menubar">
-        <a href="${p}medical-admissions" class="nav-link ${activePage==='medical'?'active':''}">Medical</a>
-        <a href="${p}engineering-admissions" class="nav-link ${activePage==='engineering'?'active':''}">Engineering</a>
-        <a href="${p}management-admissions" class="nav-link ${activePage==='management'?'active':''}">Management</a>
-        <a href="${p}law-admissions" class="nav-link ${activePage==='law'?'active':''}">Law</a>
-        <a href="${p}counselling" class="nav-link ${activePage==='counselling'?'active':''}">Counselling</a>
-        <a href="${p}about" class="nav-link ${activePage==='about'?'active':''}">About</a>
+        <a href="${p}medical-admissions.html" class="nav-link ${activePage==='medical'?'active':''}">Medical</a>
+        <a href="${p}engineering-admissions.html" class="nav-link ${activePage==='engineering'?'active':''}">Engineering</a>
+        <a href="${p}management-admissions.html" class="nav-link ${activePage==='management'?'active':''}">Management</a>
+        <a href="${p}law-admissions.html" class="nav-link ${activePage==='law'?'active':''}">Law</a>
+        <a href="${p}counselling.html" class="nav-link ${activePage==='counselling'?'active':''}">Counselling</a>
+        <a href="${p}about.html" class="nav-link ${activePage==='about'?'active':''}">About</a>
       </div>
       <div class="nav-cta">
         <button class="btn btn-primary btn-sm" data-modal="lead" data-program="Talk to Advisor Header" style="background:var(--blue);border-color:var(--blue);color:#fff;letter-spacing:0.03em;">Talk to an Advisor</button>
@@ -56,16 +56,16 @@
         Close
       </button>
     </div>
-    <a href="${p}medical-admissions" class="mobile-nav-link">Medical Admissions</a>
-    <a href="${p}engineering-admissions" class="mobile-nav-link">Engineering Admissions</a>
-    <a href="${p}management-admissions" class="mobile-nav-link">Management & MBA</a>
-    <a href="${p}law-admissions" class="mobile-nav-link">Law Admissions</a>
-    <a href="${p}pharmacy-nursing" class="mobile-nav-link">Pharmacy & Nursing</a>
-    <a href="${p}nri-admissions" class="mobile-nav-link">NRI Admissions</a>
-    <a href="${p}study-abroad" class="mobile-nav-link">Study Abroad</a>
-    <a href="${p}counselling" class="mobile-nav-link">Counselling</a>
-    <a href="${p}find-colleges" class="mobile-nav-link">Find Colleges</a>
-    <a href="${p}about" class="mobile-nav-link">About Us</a>
+    <a href="${p}medical-admissions.html" class="mobile-nav-link">Medical Admissions</a>
+    <a href="${p}engineering-admissions.html" class="mobile-nav-link">Engineering Admissions</a>
+    <a href="${p}management-admissions.html" class="mobile-nav-link">Management & MBA</a>
+    <a href="${p}law-admissions.html" class="mobile-nav-link">Law Admissions</a>
+    <a href="${p}pharmacy-nursing.html" class="mobile-nav-link">Pharmacy & Nursing</a>
+    <a href="${p}nri-admissions.html" class="mobile-nav-link">NRI Admissions</a>
+    <a href="${p}study-abroad.html" class="mobile-nav-link">Study Abroad</a>
+    <a href="${p}counselling.html" class="mobile-nav-link">Counselling</a>
+    <a href="${p}find-colleges.html" class="mobile-nav-link">Find Colleges</a>
+    <a href="${p}about.html" class="mobile-nav-link">About Us</a>
     <div style="margin-top:2rem;">
       <button class="btn btn-primary" style="width:100%;background:var(--blue);border-color:var(--blue);color:#fff;" data-modal="lead" data-program="Talk to Advisor Mobile Drawer">Talk to an Advisor</button>
     </div>
@@ -78,7 +78,7 @@
     <div class="container">
       <div style="display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:3rem;margin-bottom:3.5rem;">
         <div>
-          <a href="${p}index" style="display:inline-block;text-decoration:none;">
+          <a href="${p}index.html" style="display:inline-block;text-decoration:none;">
             <img src="${p}assets/images/logo-light.png" alt="College Corridor Logo" style="height:72px;width:auto;margin-bottom:1rem;display:block;filter:drop-shadow(0 4px 12px rgba(0,0,0,0.4));">
           </a>
           <div style="font-family:var(--font-sans);font-weight:800;font-size:1.125rem;color:#FFFFFF;letter-spacing:0.06em;text-transform:uppercase;margin-bottom:0.25rem;">COLLEGE CORRIDOR</div>
@@ -89,22 +89,22 @@
         <div>
           <div style="font-size:0.625rem;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:rgba(248,250,252,0.45);margin-bottom:1.25rem;">Advisory</div>
           <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:0.625rem;">
-            <li><a href="${p}medical-admissions" style="font-size:0.8125rem;color:rgba(248,250,252,0.7);text-decoration:none;transition:color 0.2s ease;" onmouseover="this.style.color='rgba(248,250,252,1)'" onmouseout="this.style.color='rgba(248,250,252,0.7)'">Medical Admissions</a></li>
-            <li><a href="${p}engineering-admissions" style="font-size:0.8125rem;color:rgba(248,250,252,0.7);text-decoration:none;transition:color 0.2s ease;" onmouseover="this.style.color='rgba(248,250,252,1)'" onmouseout="this.style.color='rgba(248,250,252,0.7)'">Engineering Admissions</a></li>
-            <li><a href="${p}management-admissions" style="font-size:0.8125rem;color:rgba(248,250,252,0.7);text-decoration:none;" onmouseover="this.style.color='rgba(248,250,252,1)'" onmouseout="this.style.color='rgba(248,250,252,0.7)'">Management & MBA</a></li>
-            <li><a href="${p}law-admissions" style="font-size:0.8125rem;color:rgba(248,250,252,0.7);text-decoration:none;" onmouseover="this.style.color='rgba(248,250,252,1)'" onmouseout="this.style.color='rgba(248,250,252,0.7)'">Law Admissions</a></li>
-            <li><a href="${p}nri-admissions" style="font-size:0.8125rem;color:rgba(248,250,252,0.7);text-decoration:none;" onmouseover="this.style.color='rgba(248,250,252,1)'" onmouseout="this.style.color='rgba(248,250,252,0.7)'">NRI Admissions</a></li>
-            <li><a href="${p}study-abroad" style="font-size:0.8125rem;color:rgba(248,250,252,0.7);text-decoration:none;" onmouseover="this.style.color='rgba(248,250,252,1)'" onmouseout="this.style.color='rgba(248,250,252,0.7)'">Study Abroad</a></li>
+            <li><a href="${p}medical-admissions.html" style="font-size:0.8125rem;color:rgba(248,250,252,0.7);text-decoration:none;transition:color 0.2s ease;" onmouseover="this.style.color='rgba(248,250,252,1)'" onmouseout="this.style.color='rgba(248,250,252,0.7)'">Medical Admissions</a></li>
+            <li><a href="${p}engineering-admissions.html" style="font-size:0.8125rem;color:rgba(248,250,252,0.7);text-decoration:none;transition:color 0.2s ease;" onmouseover="this.style.color='rgba(248,250,252,1)'" onmouseout="this.style.color='rgba(248,250,252,0.7)'">Engineering Admissions</a></li>
+            <li><a href="${p}management-admissions.html" style="font-size:0.8125rem;color:rgba(248,250,252,0.7);text-decoration:none;" onmouseover="this.style.color='rgba(248,250,252,1)'" onmouseout="this.style.color='rgba(248,250,252,0.7)'">Management & MBA</a></li>
+            <li><a href="${p}law-admissions.html" style="font-size:0.8125rem;color:rgba(248,250,252,0.7);text-decoration:none;" onmouseover="this.style.color='rgba(248,250,252,1)'" onmouseout="this.style.color='rgba(248,250,252,0.7)'">Law Admissions</a></li>
+            <li><a href="${p}nri-admissions.html" style="font-size:0.8125rem;color:rgba(248,250,252,0.7);text-decoration:none;" onmouseover="this.style.color='rgba(248,250,252,1)'" onmouseout="this.style.color='rgba(248,250,252,0.7)'">NRI Admissions</a></li>
+            <li><a href="${p}study-abroad.html" style="font-size:0.8125rem;color:rgba(248,250,252,0.7);text-decoration:none;" onmouseover="this.style.color='rgba(248,250,252,1)'" onmouseout="this.style.color='rgba(248,250,252,0.7)'">Study Abroad</a></li>
           </ul>
         </div>
         <div>
           <div style="font-size:0.625rem;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:rgba(248,250,252,0.45);margin-bottom:1.25rem;">Resources</div>
           <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:0.625rem;">
-            <li><a href="${p}counselling" style="font-size:0.8125rem;color:rgba(248,250,252,0.7);text-decoration:none;" onmouseover="this.style.color='rgba(248,250,252,1)'" onmouseout="this.style.color='rgba(248,250,252,0.7)'">Counselling Hub</a></li>
-            <li><a href="${p}find-colleges" style="font-size:0.8125rem;color:rgba(248,250,252,0.7);text-decoration:none;" onmouseover="this.style.color='rgba(248,250,252,1)'" onmouseout="this.style.color='rgba(248,250,252,0.7)'">Find Colleges</a></li>
-            <li><a href="${p}compare-colleges" style="font-size:0.8125rem;color:rgba(248,250,252,0.7);text-decoration:none;" onmouseover="this.style.color='rgba(248,250,252,1)'" onmouseout="this.style.color='rgba(248,250,252,0.7)'">Compare Colleges</a></li>
-            <li><a href="${p}entrance-exams" style="font-size:0.8125rem;color:rgba(248,250,252,0.7);text-decoration:none;" onmouseover="this.style.color='rgba(248,250,252,1)'" onmouseout="this.style.color='rgba(248,250,252,0.7)'">Entrance Exams</a></li>
-            <li><a href="${p}about" style="font-size:0.8125rem;color:rgba(248,250,252,0.7);text-decoration:none;" onmouseover="this.style.color='rgba(248,250,252,1)'" onmouseout="this.style.color='rgba(248,250,252,0.7)'">About Us</a></li>
+            <li><a href="${p}counselling.html" style="font-size:0.8125rem;color:rgba(248,250,252,0.7);text-decoration:none;" onmouseover="this.style.color='rgba(248,250,252,1)'" onmouseout="this.style.color='rgba(248,250,252,0.7)'">Counselling Hub</a></li>
+            <li><a href="${p}find-colleges.html" style="font-size:0.8125rem;color:rgba(248,250,252,0.7);text-decoration:none;" onmouseover="this.style.color='rgba(248,250,252,1)'" onmouseout="this.style.color='rgba(248,250,252,0.7)'">Find Colleges</a></li>
+            <li><a href="${p}compare-colleges.html" style="font-size:0.8125rem;color:rgba(248,250,252,0.7);text-decoration:none;" onmouseover="this.style.color='rgba(248,250,252,1)'" onmouseout="this.style.color='rgba(248,250,252,0.7)'">Compare Colleges</a></li>
+            <li><a href="${p}entrance-exams.html" style="font-size:0.8125rem;color:rgba(248,250,252,0.7);text-decoration:none;" onmouseover="this.style.color='rgba(248,250,252,1)'" onmouseout="this.style.color='rgba(248,250,252,0.7)'">Entrance Exams</a></li>
+            <li><a href="${p}about.html" style="font-size:0.8125rem;color:rgba(248,250,252,0.7);text-decoration:none;" onmouseover="this.style.color='rgba(248,250,252,1)'" onmouseout="this.style.color='rgba(248,250,252,0.7)'">About Us</a></li>
           </ul>
         </div>
         <!-- EXECUTIVE PROFESSIONAL CONTACT COLUMN -->
@@ -147,9 +147,9 @@
       <div style="border-top:1px solid rgba(255,255,255,0.08);padding-top:1.5rem;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:1rem;">
         <div style="font-size:0.75rem;color:rgba(248,250,252,0.35);">© ${new Date().getFullYear()} College Corridor Advisory. Independent Admissions Consultancy.</div>
         <div style="display:flex;gap:1.5rem;">
-          <a href="${p}privacy-policy" style="font-size:0.75rem;color:rgba(248,250,252,0.35);text-decoration:none;" onmouseover="this.style.color='rgba(248,250,252,0.7)'" onmouseout="this.style.color='rgba(248,250,252,0.35)'">Privacy Policy</a>
-          <a href="${p}terms-of-use" style="font-size:0.75rem;color:rgba(248,250,252,0.35);text-decoration:none;" onmouseover="this.style.color='rgba(248,250,252,0.7)'" onmouseout="this.style.color='rgba(248,250,252,0.35)'">Terms of Use</a>
-          <a href="${p}contact" style="font-size:0.75rem;color:rgba(248,250,252,0.35);text-decoration:none;" onmouseover="this.style.color='rgba(248,250,252,0.7)'" onmouseout="this.style.color='rgba(248,250,252,0.35)'">Contact</a>
+          <a href="${p}privacy-policy.html" style="font-size:0.75rem;color:rgba(248,250,252,0.35);text-decoration:none;" onmouseover="this.style.color='rgba(248,250,252,0.7)'" onmouseout="this.style.color='rgba(248,250,252,0.35)'">Privacy Policy</a>
+          <a href="${p}terms-of-use.html" style="font-size:0.75rem;color:rgba(248,250,252,0.35);text-decoration:none;" onmouseover="this.style.color='rgba(248,250,252,0.7)'" onmouseout="this.style.color='rgba(248,250,252,0.35)'">Terms of Use</a>
+          <a href="${p}contact.html" style="font-size:0.75rem;color:rgba(248,250,252,0.35);text-decoration:none;" onmouseover="this.style.color='rgba(248,250,252,0.7)'" onmouseout="this.style.color='rgba(248,250,252,0.35)'">Contact</a>
         </div>
       </div>
     </div>
@@ -352,8 +352,22 @@
         }
       }
     }
-    window.addEventListener('resize', handleStickyDisplay);
-    handleStickyDisplay();
+    // Handle Clean URL file:// protocol fallback
+    document.addEventListener('click', (e) => {
+      const link = e.target.closest('a[href]');
+      if (!link) return;
+      let href = link.getAttribute('href');
+      if (!href || href.startsWith('http') || href.startsWith('//') || href.startsWith('tel:') || href.startsWith('mailto:') || href.startsWith('javascript:') || href.startsWith('#')) return;
+      
+      const cleanPath = href.split('?')[0].split('#')[0];
+      if (cleanPath && !cleanPath.endsWith('/') && !cleanPath.includes('.')) {
+        if (window.location.protocol === 'file:') {
+          e.preventDefault();
+          const extra = href.slice(cleanPath.length);
+          window.location.href = cleanPath + '.html' + extra;
+        }
+      }
+    });
   }
 
   document.addEventListener('DOMContentLoaded', injectSlots);

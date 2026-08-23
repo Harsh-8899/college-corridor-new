@@ -74,7 +74,7 @@ document.addEventListener('DOMContentLoaded', () => {
           </div>
           <div style="display:flex;gap:var(--sp-2);margin-top:var(--sp-2);">
             <button class="btn btn-primary btn-sm" style="flex:1;" data-modal="lead" data-program="${col.program}">Get Guidance</button>
-            <a href="compare-colleges?col1=${col.id}" class="btn btn-secondary btn-sm">Compare</a>
+            <a href="compare-colleges.html?col1=${col.id}" class="btn btn-secondary btn-sm">Compare</a>
           </div>
         </div>
       `;

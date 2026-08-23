@@ -17,7 +17,7 @@
         required: ["course"]
       },
       execute: async function(args) {
-        window.location.href = `find-colleges?course=${encodeURIComponent(args.course || '')}`;
+        window.location.href = `find-colleges.html?course=${encodeURIComponent(args.course || '')}`;
         return { status: "success", message: `Navigating to college finder for ${args.course}` };
       }
     },
@@ -32,11 +32,11 @@
       },
       execute: async function(args) {
         const stream = (args.stream || '').toLowerCase();
-        if (stream.includes('med')) window.location.href = 'medical-admissions';
-        else if (stream.includes('eng')) window.location.href = 'engineering-admissions';
-        else if (stream.includes('man') || stream.includes('mba')) window.location.href = 'management-admissions';
-        else if (stream.includes('law')) window.location.href = 'law-admissions';
-        else window.location.href = 'counselling';
+        if (stream.includes('med')) window.location.href = 'medical-admissions.html';
+        else if (stream.includes('eng')) window.location.href = 'engineering-admissions.html';
+        else if (stream.includes('man') || stream.includes('mba')) window.location.href = 'management-admissions.html';
+        else if (stream.includes('law')) window.location.href = 'law-admissions.html';
+        else window.location.href = 'counselling.html';
         return { status: "success", message: `Navigating to ${stream} admissions page` };
       }
     },
