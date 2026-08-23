@@ -270,7 +270,36 @@
     padding-bottom: 72px !important;
   }
 
-  /* ── 10. Mobile Footer ── */
+  /* ── 10. Section 10: Critical Counselling Audit Mobile Fixes ── */
+  .questions-grid {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 0.875rem !important;
+    width: 100% !important;
+    margin-top: 1.5rem !important;
+  }
+
+  .q-card, .q-card-full {
+    grid-column: auto !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    padding: 1.125rem 1rem !important;
+    font-size: 0.9375rem !important;
+    line-height: 1.45 !important;
+    word-break: break-word !important;
+    overflow-wrap: break-word !important;
+    border-radius: 12px !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 10px !important;
+  }
+
+  .q-card span, .q-card-full span {
+    font-size: 1.25rem !important;
+    flex-shrink: 0 !important;
+  }
+
+  /* ── 11. Mobile Footer ── */
   .footer-grid, .site-footer-grid {
     grid-template-columns: 1fr !important;
     gap: 2rem !important;
