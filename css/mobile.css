@@ -270,7 +270,11 @@
     padding-bottom: 72px !important;
   }
 
-  /* ── 10. Section 10: Critical Counselling Audit Mobile Fixes ── */
+  /* ── 10. Section 10: Critical Counselling Audit Mobile Hide Directive ── */
+  .sec-critical-audit {
+    display: none !important;
+  }
+
   .questions-grid {
     display: flex !important;
     flex-direction: column !important;
