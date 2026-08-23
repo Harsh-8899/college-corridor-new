@@ -1,0 +1,288 @@
+/* =========================================================
+   College Corridor Advisory — mobile.css
+   Dedicated Smartphone Experience (< 768px)
+   ========================================================= */
+
+@media (max-width: 767px) {
+  
+  /* ── 1. Global Mobile Reset & Zero Horizontal Overflow ── */
+  html, body {
+    overflow-x: hidden !important;
+    width: 100%;
+    position: relative;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  body.nav-open {
+    overflow: hidden !important;
+    touch-action: none;
+  }
+
+  * {
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  /* ── 2. Mobile Container System ── */
+  .container, .med-container, .hero-container {
+    width: 100% !important;
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  /* ── 3. Mobile Header & Drawer Navigation ── */
+  .cc-header {
+    height: 64px !important;
+    padding: 0 1rem !important;
+  }
+
+  .cc-nav-desktop {
+    display: none !important;
+  }
+
+  .cc-nav-mobile-bar {
+    display: flex !important;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+  }
+
+  .hamburger-btn {
+    display: flex !important;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 1001;
+  }
+
+  .hamburger-btn span {
+    width: 24px;
+    height: 2px;
+    background: var(--navy, #0B1220);
+    margin: 3px 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    border-radius: 2px;
+  }
+
+  body.nav-open .hamburger-btn span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  body.nav-open .hamburger-btn span:nth-child(2) {
+    opacity: 0;
+  }
+
+  body.nav-open .hamburger-btn span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  /* Fullscreen Mobile Navigation Drawer */
+  .cc-mobile-drawer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: var(--navy, #0B1220);
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    padding: 80px 1.5rem 2rem 1.5rem;
+    transform: translateX(100%);
+    transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  body.nav-open .cc-mobile-drawer {
+    transform: translateX(0);
+  }
+
+  .mobile-nav-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 2rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .mobile-nav-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 16px;
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: #FFFFFF;
+    text-decoration: none;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.05);
+    min-height: 48px;
+    transition: background 0.2s ease;
+  }
+
+  .mobile-nav-link:active, .mobile-nav-link.active {
+    background: rgba(37, 99, 235, 0.2);
+    color: var(--blue-cyan, #38BDF8);
+  }
+
+  .mobile-drawer-cta {
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  /* ── 4. Mobile Typography Scaling ── */
+  h1, .hero-title, .med-hero-title {
+    font-size: clamp(2rem, 7.5vw, 2.75rem) !important;
+    line-height: 1.15 !important;
+    letter-spacing: -0.02em !important;
+  }
+
+  h2, .section-title {
+    font-size: clamp(1.625rem, 6vw, 2.125rem) !important;
+    line-height: 1.25 !important;
+  }
+
+  h3 {
+    font-size: clamp(1.25rem, 5vw, 1.5rem) !important;
+  }
+
+  p, .body-text {
+    font-size: 0.9375rem !important;
+    line-height: 1.6 !important;
+  }
+
+  /* ── 5. Mobile Hero Layouts ── */
+  .hero-grid, .med-hero-grid, .hero-split {
+    grid-template-columns: 1fr !important;
+    gap: 2rem !important;
+    padding-top: 1rem !important;
+  }
+
+  .hero-cta-group {
+    flex-direction: column !important;
+    width: 100% !important;
+    gap: 0.875rem !important;
+  }
+
+  .btn-hero-primary, .btn-hero-secondary, .btn-primary, .btn-secondary {
+    width: 100% !important;
+    text-align: center !important;
+    justify-content: center !important;
+    min-height: 48px !important;
+    padding: 14px 20px !important;
+    font-size: 0.9375rem !important;
+  }
+
+  /* ── 6. Mobile Touch Forms & Inputs ── */
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  select,
+  textarea {
+    font-size: 16px !important; /* Prevents iOS auto-zoom */
+    min-height: 48px !important;
+    padding: 12px 14px !important;
+    border-radius: 8px !important;
+    width: 100% !important;
+  }
+
+  .form-group, .form-row {
+    grid-template-columns: 1fr !important;
+    margin-bottom: 1rem !important;
+  }
+
+  /* ── 7. Mobile Responsive Grids & Cards ── */
+  .grid-4, .grid-3, .grid-2,
+  .flow-10-grid, .inst-logo-grid,
+  .fit-words-grid, .platforms-grid,
+  .spec-grid, .dash-table-grid,
+  .ug-pg-grid, .trust-split-grid, .promises-2-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.25rem !important;
+  }
+
+  .inst-logo-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 0.75rem !important;
+  }
+
+  .spec-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 0.75rem !important;
+  }
+
+  /* ── 8. Mobile Scrollable Table Containers ── */
+  .table-wrapper, .table-container {
+    width: 100% !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    margin-bottom: 1.5rem !important;
+    border-radius: 12px;
+    border: 1px solid var(--border, #E2E8F0);
+  }
+
+  .compare-matrix-table, .ethics-matrix-table, table {
+    min-width: 600px !important; /* Ensures readable column widths inside scroll container */
+  }
+
+  .ethics-matrix-table td, .compare-matrix-table td {
+    padding: 1rem 0.875rem !important;
+    font-size: 0.875rem !important;
+  }
+
+  /* ── 9. Mobile Sticky CTA Bar ── */
+  .mobile-sticky-cta {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #0B1220;
+    border-top: 1px solid rgba(201, 162, 39, 0.3);
+    padding: 0.75rem 1rem;
+    z-index: 999;
+    display: flex;
+    gap: 0.75rem;
+    box-shadow: 0 -10px 25px rgba(0, 0, 0, 0.3);
+  }
+
+  .mobile-sticky-cta .btn {
+    flex: 1;
+    min-height: 44px;
+    font-size: 0.875rem;
+    font-weight: 800;
+  }
+
+  /* Padding bottom helper for pages with sticky mobile CTA */
+  body.has-sticky-cta {
+    padding-bottom: 72px !important;
+  }
+
+  /* ── 10. Mobile Footer ── */
+  .footer-grid, .site-footer-grid {
+    grid-template-columns: 1fr !important;
+    gap: 2rem !important;
+    text-align: left !important;
+  }
+
+  .footer-col {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 1.5rem;
+  }
+
+  .footer-col:last-child {
+    border-bottom: none;
+  }
+}

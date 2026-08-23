@@ -1,0 +1,120 @@
+/* =========================================================
+   College Corridor Advisory — desktop.css
+   Desktop Experience (1024px+)
+   ========================================================= */
+
+@media (min-width: 1024px) {
+
+  /* ── 1. Desktop Layout System & Spacing ── */
+  .container, .med-container, .hero-container {
+    max-width: var(--max-w, 1280px);
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  /* ── 2. Desktop Navigation Bar ── */
+  .cc-header {
+    height: 76px;
+    padding: 0 2rem;
+  }
+
+  .cc-nav-desktop {
+    display: flex !important;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .cc-nav-mobile-bar, .hamburger-btn, .cc-mobile-drawer, .mobile-sticky-cta {
+    display: none !important;
+  }
+
+  /* ── 3. Desktop Multi-Column Hero ── */
+  .hero-grid, .med-hero-grid {
+    display: grid !important;
+    grid-template-columns: 1.2fr 0.8fr !important;
+    gap: 3.5rem !important;
+    align-items: center !important;
+  }
+
+  .hero-cta-group {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    gap: 1.25rem !important;
+  }
+
+  .btn-hero-primary, .btn-hero-secondary {
+    width: auto !important;
+  }
+
+  /* ── 4. Desktop Multi-Column Grids ── */
+  .grid-4 {
+    display: grid !important;
+    grid-template-columns: repeat(4, 1fr) !important;
+    gap: 1.75rem !important;
+  }
+
+  .grid-3 {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 2rem !important;
+  }
+
+  .grid-2 {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 2.5rem !important;
+  }
+
+  .flow-10-grid {
+    display: grid !important;
+    grid-template-columns: repeat(5, 1fr) !important;
+    gap: 1.25rem !important;
+  }
+
+  .inst-logo-grid {
+    display: grid !important;
+    grid-template-columns: repeat(6, 1fr) !important;
+    gap: 1.25rem !important;
+  }
+
+  .platforms-grid {
+    display: grid !important;
+    grid-template-columns: repeat(4, 1fr) !important;
+    gap: 1.5rem !important;
+  }
+
+  .spec-grid {
+    display: grid !important;
+    grid-template-columns: repeat(5, 1fr) !important;
+    gap: 1.25rem !important;
+  }
+
+  .dash-table-grid {
+    display: grid !important;
+    grid-template-columns: repeat(4, 1fr) !important;
+    gap: 1rem !important;
+  }
+
+  .ug-pg-grid, .trust-split-grid, .promises-2-grid {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 2.5rem !important;
+  }
+
+  /* ── 5. Desktop Side-by-Side Tables & Matrices ── */
+  .compare-matrix-table, .ethics-matrix-table {
+    width: 100% !important;
+    table-layout: auto !important;
+  }
+
+  /* ── 6. Desktop Multi-Column Footer ── */
+  .footer-grid, .site-footer-grid {
+    display: grid !important;
+    grid-template-columns: 2fr 1fr 1fr 1fr 1.5fr !important;
+    gap: 3rem !important;
+  }
+}

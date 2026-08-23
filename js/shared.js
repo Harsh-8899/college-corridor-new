@@ -249,23 +249,36 @@
 
     ensureLeadModal();
 
-    // Setup Mobile Hamburger Menu & Responsive sticky display
+    // Setup Mobile Hamburger Menu & Responsive Drawer Logic
     const hamburger = document.querySelector('.hamburger');
     const drawer = document.getElementById('mobile-nav-drawer');
     const closeBtn = document.querySelector('.mobile-nav-close-btn');
 
+    function toggleDrawer(open) {
+      if (!hamburger || !drawer) return;
+      const isOpen = open !== undefined ? open : !drawer.classList.contains('open');
+      hamburger.setAttribute('aria-expanded', isOpen);
+      drawer.classList.toggle('open', isOpen);
+      document.body.classList.toggle('nav-open', isOpen);
+    }
+
     if (hamburger && drawer) {
-      hamburger.addEventListener('click', () => {
-        const isExpanded = hamburger.getAttribute('aria-expanded') === 'true';
-        hamburger.setAttribute('aria-expanded', !isExpanded);
-        drawer.classList.toggle('open');
-      });
+      hamburger.addEventListener('click', () => toggleDrawer());
       if (closeBtn) {
-        closeBtn.addEventListener('click', () => {
-          hamburger.setAttribute('aria-expanded', 'false');
-          drawer.classList.remove('open');
-        });
+        closeBtn.addEventListener('click', () => toggleDrawer(false));
       }
+
+      // Close mobile menu when clicking any nav link
+      drawer.querySelectorAll('.mobile-nav-link, button').forEach(link => {
+        link.addEventListener('click', () => toggleDrawer(false));
+      });
+
+      // Close on Escape key
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && drawer.classList.contains('open')) {
+          toggleDrawer(false);
+        }
+      });
     }
 
     // Toggle Sticky CTA displays based on viewport width
