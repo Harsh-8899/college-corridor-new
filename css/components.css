@@ -1244,3 +1244,227 @@ body.mobile-menu-open {
 .cta-banner h2 {
   color: #FFFFFF !important;
 }
+
+/* ═══════════════════════════════════════════════════════
+   MBBS COUNSELLING PACKAGES SECTION
+   ═══════════════════════════════════════════════════════ */
+.sec-mbbs-packages {
+  background: #0B1220;
+  color: #FFFFFF;
+  padding: 6rem 0;
+  position: relative;
+}
+
+.mbbs-pkg-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-bottom: 3.5rem;
+}
+
+@media (max-width: 992px) {
+  .mbbs-pkg-grid {
+    grid-template-columns: 1fr;
+    max-width: 500px;
+    margin-inline: auto;
+  }
+}
+
+.mbbs-pkg-card {
+  background: rgba(15, 23, 42, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 16px;
+  padding: 2.25rem 1.75rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  backdrop-filter: blur(12px);
+}
+
+.mbbs-pkg-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(94, 234, 212, 0.4);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+}
+
+.mbbs-pkg-card.featured {
+  background: linear-gradient(180deg, rgba(30, 41, 59, 0.95) 0%, rgba(15, 23, 42, 0.98) 100%);
+  border: 2px solid #F59E0B;
+  box-shadow: 0 16px 48px rgba(245, 158, 11, 0.25);
+  transform: scale(1.03);
+}
+
+.mbbs-pkg-card.featured:hover {
+  transform: scale(1.05) translateY(-4px);
+  box-shadow: 0 24px 56px rgba(245, 158, 11, 0.35);
+}
+
+.mbbs-pkg-badge {
+  position: absolute;
+  top: -14px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(135deg, #F59E0B 0%, #D97706 100%);
+  color: #0F172A;
+  font-weight: 900;
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 4px 16px;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(245, 158, 11, 0.4);
+  white-space: nowrap;
+}
+
+.mbbs-pkg-badge.elite {
+  background: linear-gradient(135deg, #38BDF8 0%, #0284C7 100%);
+  color: #FFFFFF;
+  box-shadow: 0 4px 12px rgba(56, 189, 248, 0.4);
+}
+
+.mbbs-pkg-header {
+  text-align: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.mbbs-pkg-title {
+  font-size: 1.5rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.25rem;
+}
+
+.mbbs-pkg-type {
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: #38BDF8;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 1rem;
+}
+
+.mbbs-pkg-price {
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: #FFFFFF;
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+
+.mbbs-pkg-price span {
+  font-size: 1rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.mbbs-pkg-desc {
+  font-size: 0.875rem;
+  color: rgba(248, 250, 252, 0.8);
+  line-height: 1.5;
+  min-height: 48px;
+}
+
+/* Package Table Styling */
+.mbbs-table-card {
+  background: rgba(15, 23, 42, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+}
+
+.mbbs-pkg-table-wrapper {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.mbbs-pkg-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+  font-size: 0.875rem;
+  min-width: 760px;
+}
+
+.mbbs-pkg-table th,
+.mbbs-pkg-table td {
+  padding: 1rem 1.25rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.mbbs-pkg-table thead th {
+  background: #0F172A;
+  color: #FFFFFF;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 1.25rem 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.15);
+}
+
+.mbbs-pkg-table thead th:first-child {
+  text-align: left;
+  padding-left: 1.75rem;
+  width: 32%;
+}
+
+.mbbs-pkg-table thead th.col-featured {
+  background: #1E293B;
+  color: #FCD34D;
+  border-left: 2px solid #F59E0B;
+  border-right: 2px solid #F59E0B;
+}
+
+.mbbs-pkg-table tbody tr:hover {
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.mbbs-pkg-table tbody td:first-child {
+  text-align: left;
+  font-weight: 700;
+  color: #F8FAFC;
+  padding-left: 1.75rem;
+  background: rgba(15, 23, 42, 0.5);
+}
+
+.mbbs-pkg-table tbody td.col-featured {
+  background: rgba(245, 158, 11, 0.06);
+  border-left: 1px solid rgba(245, 158, 11, 0.3);
+  border-right: 1px solid rgba(245, 158, 11, 0.3);
+}
+
+.chk-yes {
+  color: #10B981;
+  font-weight: 900;
+  font-size: 1.15rem;
+}
+
+.chk-no {
+  color: rgba(255, 255, 255, 0.25);
+  font-weight: 600;
+}
+
+.pkg-val-badge {
+  display: inline-block;
+  font-size: 0.78125rem;
+  font-weight: 800;
+  padding: 3px 10px;
+  border-radius: 4px;
+  letter-spacing: 0.03em;
+}
+
+.pkg-val-badge.basic { background: rgba(148, 163, 184, 0.15); color: #CBD5E1; }
+.pkg-val-badge.advanced { background: rgba(56, 189, 248, 0.15); color: #38BDF8; }
+.pkg-val-badge.expert { background: rgba(168, 85, 247, 0.18); color: #C084FC; }
+.pkg-val-badge.vip { background: rgba(245, 158, 11, 0.2); color: #FCD34D; }
+.pkg-val-badge.priority { background: rgba(16, 185, 129, 0.2); color: #34D399; }
+.pkg-val-badge.end-to-end { background: rgba(99, 102, 241, 0.2); color: #818CF8; }
+
