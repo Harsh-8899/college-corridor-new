@@ -95,16 +95,17 @@
     }
   }
 
-  /* ── Lead Form Modal ───────────────────────────────── */
+  /* ── Universal Form Submit & Modal Controller ──────────────── */
   function initModal() {
-    const overlay = document.getElementById('lead-modal');
-    if (!overlay) return;
+    let overlay = document.getElementById('lead-modal');
+    if (!overlay && typeof window.ensureLeadModal === 'function') {
+      window.ensureLeadModal();
+      overlay = document.getElementById('lead-modal');
+    }
 
     // Enable iOS Safari event delegation
     document.body.setAttribute('onclick', '');
 
-    const closeBtn = overlay.querySelector('.modal-close');
-    const form     = overlay.querySelector('#lead-form');
     let lastModalTrigger = 0;
 
     function handleTrigger(e) {
@@ -117,7 +118,7 @@
         if (modalBtn.getAttribute('type') === 'submit' || modalBtn.closest('form') || modalBtn.classList.contains('hamburger') || modalBtn.classList.contains('mobile-nav-close-btn')) return;
 
         const txt = (modalBtn.textContent || '').trim().toUpperCase();
-        if (modalBtn.dataset.modal || txt.includes('COUNSELLING') || txt.includes('ADVISOR') || txt.includes('OPTIONS') || txt.includes('STRATEGY') || txt.includes('GUIDANCE') || txt.includes('EXPLORE') || txt.includes('MBBS') || txt.includes('B.TECH') || txt.includes('MBA') || txt.includes('SERVICES')) {
+        if (modalBtn.dataset.modal || txt.includes('COUNSELLING') || txt.includes('ADVISOR') || txt.includes('OPTIONS') || txt.includes('STRATEGY') || txt.includes('GUIDANCE') || txt.includes('EXPLORE') || txt.includes('MBBS') || txt.includes('B.TECH') || txt.includes('MBA') || txt.includes('SERVICES') || txt.includes('SELECT')) {
           e.preventDefault();
           lastModalTrigger = now;
           openModal(modalBtn.dataset.program || modalBtn.textContent.trim());
@@ -125,28 +126,31 @@
       }
     }
 
-    // Bind both click and touchend for 100% iOS Safari & Android Mobile support
+    // Bind click and touchend for modal triggers
     document.addEventListener('click', handleTrigger, true);
     document.addEventListener('touchend', handleTrigger, { passive: false });
 
-    // Close
-    if (closeBtn) {
-      closeBtn.addEventListener('click', closeModal);
-      closeBtn.addEventListener('touchend', (e) => { e.preventDefault(); closeModal(); });
-    }
-    overlay.addEventListener('click', (e) => { if (e.target === overlay) closeModal(); });
+    // Close button & overlay click
+    document.addEventListener('click', (e) => {
+      if (e.target.closest('.modal-close') || e.target.id === 'modal-close-btn') {
+        closeModal();
+      } else if (overlay && e.target === overlay) {
+        closeModal();
+      }
+    });
 
     // Escape key
     document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape' && overlay.classList.contains('open')) closeModal();
+      if (e.key === 'Escape' && overlay && overlay.classList.contains('open')) closeModal();
     });
 
-    // Form submit
-    if (form) {
-      form.addEventListener('submit', handleFormSubmit);
-    }
-
     function openModal(program) {
+      if (!overlay && typeof window.ensureLeadModal === 'function') {
+        window.ensureLeadModal();
+        overlay = document.getElementById('lead-modal');
+      }
+      if (!overlay) return;
+
       const formWrap = overlay.querySelector('.form-wrap');
       const success  = overlay.querySelector('.form-success');
       if (formWrap) formWrap.style.display = 'block';
@@ -160,7 +164,7 @@
       if (select && program) {
         const pLower = program.toLowerCase();
         let targetVal = '';
-        if (pLower.includes('mbbs') || pLower.includes('bds') || pLower.includes('medical counselling')) targetVal = 'mbbs';
+        if (pLower.includes('mbbs') || pLower.includes('bds') || pLower.includes('medical counselling') || pLower.includes('essential') || pLower.includes('premium') || pLower.includes('elite')) targetVal = 'mbbs';
         else if (pLower.includes('pg') || pLower.includes('md') || pLower.includes('ms')) targetVal = 'md-ms';
         else if (pLower.includes('tech') || pLower.includes('engineering') || pLower.includes('jee')) targetVal = 'btech';
         else if (pLower.includes('mba') || pLower.includes('management') || pLower.includes('b-school')) targetVal = 'mba';
@@ -183,22 +187,23 @@
     }
 
     function closeModal() {
-      overlay.classList.remove('open');
+      if (overlay) overlay.classList.remove('open');
       document.body.style.overflow = '';
     }
 
-    function handleFormSubmit(e) {
-      e.preventDefault();
-      const formEl  = e.target;
-      const success = overlay.querySelector('.form-success');
-      const formWrap = overlay.querySelector('.form-wrap');
+    // Global Form Submission Event Listener
+    document.addEventListener('submit', function(e) {
+      const formEl = e.target;
+      if (!formEl || formEl.tagName !== 'FORM') return;
 
-      // Basic validation
+      e.preventDefault();
+
+      // Basic required field validation
       const inputs = formEl.querySelectorAll('[required]');
       let valid = true;
       inputs.forEach(input => {
         if (!input.value.trim()) {
-          input.style.borderColor = 'var(--clr-red)';
+          input.style.borderColor = '#EF4444';
           valid = false;
         } else {
           input.style.borderColor = '';
@@ -206,7 +211,7 @@
       });
       if (!valid) return;
 
-      const submitBtn = formEl.querySelector('[type="submit"]');
+      const submitBtn = formEl.querySelector('[type="submit"]') || formEl.querySelector('button');
       if (submitBtn) {
         submitBtn.disabled = true;
         submitBtn.textContent = 'Submitting...';
@@ -216,8 +221,8 @@
       const name = formData.get('full_name') || formData.get('name') || 'Student';
       const phone = formData.get('phone') || 'N/A';
       const email = formData.get('email') || 'N/A';
-      const program = formData.get('program_interest') || 'General Counselling';
-      const message = formData.get('message') || '';
+      const program = formData.get('program_interest') || formData.get('course') || 'General Counselling';
+      const message = formData.get('message') || formData.get('notes') || '';
       const pageSource = window.location.pathname || 'homepage';
 
       formData.append('page_source', pageSource);
@@ -229,7 +234,7 @@
         body: formData
       }).catch(err => console.log('Local lead log notice:', err));
 
-      // 2. Post to FormSubmit API (Direct Delivery to admissions@collegecorridor.com)
+      // 2. Post to FormSubmit API (Direct Email Dispatch)
       const officialEmail = window.NOTIFICATION_EMAIL || 'admissions@collegecorridor.com';
       fetch(`https://formsubmit.co/ajax/${officialEmail}`, {
         method: 'POST',
@@ -245,21 +250,30 @@
         })
       }).catch(err => console.log('FormSubmit Client Dispatch:', err));
 
-      // 3. Post to Web3Forms API
-      if (window.WEB3FORMS_ACCESS_KEY && window.WEB3FORMS_ACCESS_KEY !== 'YOUR_WEB3FORMS_ACCESS_KEY') {
-        formData.append('access_key', window.WEB3FORMS_ACCESS_KEY);
-        formData.append('subject', `🎓 New Admission Enquiry: ${name} (${program})`);
-        fetch('https://api.web3forms.com/submit', {
-          method: 'POST',
-          body: formData
-        }).catch(err => console.log('Web3Forms Client Dispatch:', err));
+      // 3. UI Success Display
+      if (overlay && (formEl.id === 'lead-form' || formEl.closest('#lead-modal'))) {
+        const formWrap = overlay.querySelector('.form-wrap');
+        const success  = overlay.querySelector('.form-success');
+        if (formWrap) formWrap.style.display = 'none';
+        if (success)   success.classList.add('show');
+      } else {
+        // Inline form success banner replacement
+        let successBox = formEl.parentElement.querySelector('.form-inline-success');
+        if (!successBox) {
+          successBox = document.createElement('div');
+          successBox.className = 'form-inline-success';
+          successBox.style.cssText = 'background:rgba(16,185,129,0.15);border:2px solid #10B981;border-radius:12px;padding:1.5rem;text-align:center;color:#fff;margin-top:1rem;font-weight:700;line-height:1.6;';
+          formEl.parentElement.appendChild(successBox);
+        }
+        formEl.style.display = 'none';
+        successBox.innerHTML = `
+          <div style="font-size:2.5rem;margin-bottom:0.5rem;">🎉</div>
+          <h3 style="font-size:1.25rem;font-weight:900;color:#10B981;margin-bottom:0.5rem;">ENQUIRY SUBMITTED SUCCESSFULLY!</h3>
+          <p style="margin:0;font-size:0.9375rem;color:rgba(255,255,255,0.9);">Thank you, <strong>${name}</strong>! An advisory strategist will connect with you shortly on <strong>+91 8194 083 803</strong>.</p>
+        `;
       }
 
-      // Show UI Success
-      if (formWrap)  formWrap.style.display = 'none';
-      if (success)   success.classList.add('show');
-
-      // 3. Open WhatsApp with pre-filled enquiry message
+      // 4. Instant WhatsApp Connect
       const waNumber = window.WHATSAPP_NUMBER || '918194083803';
       const waText = encodeURIComponent(
         `🎓 *New College Corridor Admission Enquiry*\n\n` +
@@ -268,15 +282,14 @@
         `✉️ *Email:* ${email}\n` +
         `📚 *Program:* ${program}\n` +
         (message ? `📝 *Message:* ${message}\n` : '') +
-        `📍 *Source:* Website`
+        `📍 *Source:* Website (${pageSource})`
       );
       
       const waUrl = `https://wa.me/${waNumber}?text=${waText}`;
-      
       setTimeout(() => {
         window.open(waUrl, '_blank');
-      }, 1000);
-    }
+      }, 800);
+    });
   }
 
   /* ── Scroll Reveal ─────────────────────────────────── */

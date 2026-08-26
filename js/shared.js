@@ -233,6 +233,7 @@
       document.body.insertAdjacentHTML('beforeend', modalHTML);
     }
   }
+  window.ensureLeadModal = ensureLeadModal;
 
   function injectStructuredData() {
     if (!document.getElementById('cc-json-ld')) {
